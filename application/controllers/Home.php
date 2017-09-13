@@ -25,7 +25,21 @@ class Home extends MY_Controller {
             $data['banner_main'] = $this->lib_mod->load_all('banner', '', array('status' => 1, 'type_id' => 0), 1, '', array('sort' => 'desc'));
             $data['banner_1'] = $this->lib_mod->load_all('banner', '', array('status' => 1, 'type_id' => 1), 1, '', array('sort' => 'desc'));
             $data['banner_2'] = $this->lib_mod->load_all('banner', '', array('status' => 1, 'type_id' => 2), 2, '', array('sort' => 'desc'));
-            $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 12, '', array('sort' => 'desc'));
+
+            $this->load->model('courses_model');
+            $input = array();
+            $input1['select_max'] = 'time_start_sale';
+            $time_start_sale = $this->courses_model->load_all($input1);
+
+            $input2['select_max'] = 'time_end_sale';
+            $time_end_sale = $this->courses_model->load_all($input2);
+
+            if (($time_start_sale[0]['time_start_sale'] - 12 * 3600 < time()) && ($time_end_sale[0]['time_end_sale'] > time())) {
+                $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 12, '', array('price_sale' => 'asc'));
+            } else {
+                $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 12, '', array('create_date' => 'desc'));
+            }
+            
             $data['rates'] = $this->lib_mod->load_all('rate', '', array('status' => 1), '', '', array('create_date' => 'desc'), 'name');
             $data['title'] = 'Hệ thống học trực tuyến lakita, cùng bạn vươn xa - lakita.vn';
             $user_id = $this->session->userdata('user_id');

@@ -142,6 +142,7 @@
 <script>
     $(function () {
         var a = <?php echo json_encode($courses_sale); ?>;
+        console.log(a);
         var b = new Array();
 
         a.forEach(function (element) {
@@ -162,7 +163,7 @@
             return this.each(function () {
                 $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
             })
-        }
+        };
 
 
         /*$("#select_cb300, #select_cb300_free, #select_cb200_kt, #select_cb200_ex").hide();

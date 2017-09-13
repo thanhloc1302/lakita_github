@@ -104,6 +104,7 @@ class MY_Controller extends CI_Controller {
         $input = array();
         $input['select'] = 'course_code, name, price_sale';
         $input['where'] = array('status' => 1);
+        $input['order'] = array('price_sale' => 'DECR', 'time_start_sale' => 'DECR');
         $courses = $this->courses_model->load_all($input);
         foreach ($courses as $key => $value) {
             $courses_sale[$key]['course_code'] = $value['course_code'];
@@ -115,7 +116,6 @@ class MY_Controller extends CI_Controller {
     }
     
     private function _get_time_sale() {
-        $courses_sale = array();
         $this->load->model('courses_model');
         $input = array();
         $input1['select_max'] = 'time_start_sale';
