@@ -1,7 +1,7 @@
 <link href="<?php echo base_url() ?>plugin/flipclock/compiled/flipclock.css" rel="stylesheet" type="text/css"/>
 <script src="<?php echo base_url() ?>plugin/flipclock/compiled/flipclock.min.js" type="text/javascript"></script>
 <a data-toggle="modal" data-target="#modal_event" style="cursor: pointer" class="event2011 hidden-xs hidden-sm">
-<!--    <img class="event2011 img-responsive" style="position: fixed; bottom: 0; z-index: 100000000; width: 100%;" alt="học excel cơ bản" title="học excel cơ bản" src="https://lakita.vn/styles/v2.0/img/event/banner.png" /> -->
+    <img class="event2011 img-responsive" style="position: fixed; bottom: 0; z-index: 100000000; width: 100%;" alt="học excel cơ bản" title="học excel cơ bản" src="https://lakita.vn/styles/v2.0/img/event/banner.png" />
 <!--    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 40.2%; font-size: 62px;" class="num-day"> 0 <br></span>
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 41.3%; font-size: 10px;"> NGÀY <br></span>
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 32.9%; font-size: 62px;" class="num-hour"> 200 <br></span>
@@ -13,16 +13,16 @@
     <div class="clock" style="bottom: 0px; position: fixed; z-index: 100000000;width: 46%; right: -2%"></div>
 </a>
 <script type="text/javascript">
-    var end = 1505048400;
+    var end = <?php echo $time_end_sale; ?>;
     var now = <?php echo time(); ?>;
     var distance = end - now;
     if (distance <= 0) {
         distance = 0;
     }
-//    var clock = $('.clock').FlipClock(distance, {
-//        clockFace: 'DailyCounter',
-//        countdown: true
-//    });
+    var clock = $('.clock').FlipClock(distance, {
+        clockFace: 'DailyCounter',
+        countdown: true
+    });
 </script>
 
 <input type="hidden" id="base_url" value="<?php echo base_url(); ?>">
@@ -231,12 +231,12 @@
 <div class="modal fade" id="modal2_9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div id="popup_29" data-toggle="modal" data-target="#myModal" class="modal-content" 
-             style="cursor: pointer; background-image: url('https://lakita.vn/styles/images/event2_9.png');
-             background-repeat: no-repeat;background-size: contain; height: 390px; width: 506px;">
-            <button type="button" class="close" data-dismiss="modal" style="background-color: #fff">
+             style="cursor: pointer; background-size: contain; width: 506px;">
+            <button type="button" class="close" data-dismiss="modal" style="background-color: #fff;position: absolute; right: 0;">
                 <span aria-hidden="true">&times;</span>
                 <span class="sr-only">Close</span>
             </button>
+            <img style="width: 100%" src="https://lakita.vn/styles/v2.0/img/event/popup.png">
         </div>
     </div>
 </div>

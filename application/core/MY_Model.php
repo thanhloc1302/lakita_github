@@ -103,6 +103,10 @@ class MY_Model extends CI_Model {
         if (isset($input['select'])) {
             $this->db->select($input['select']);
         }
+       
+        if (isset($input['select_max'])) {
+            $this->db->select_max($input['select_max']);
+        }
 
         // Thêm điều kiện cho câu truy vấn truyền qua biến $input['where'] 
         //(vi du: $input['where'] = array('email' => 'hocphp@gmail.com'))
@@ -204,6 +208,8 @@ class MY_Model extends CI_Model {
                 $this->db->group_by($value);
             }
         }
+        
+        
     }
 
     function check_exists($where = array()) {

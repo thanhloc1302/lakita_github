@@ -95,6 +95,7 @@ class MY_Controller extends CI_Controller {
         }
 
         $this->_get_course_sale();
+        $this->_get_time_sale();
     }
 
     private function _get_course_sale() {
@@ -111,6 +112,22 @@ class MY_Controller extends CI_Controller {
         }
         $this->load->vars(array('courses_sale' => $courses_sale));
        // print_arr($courses_sale);
+    }
+    
+    private function _get_time_sale() {
+        $courses_sale = array();
+        $this->load->model('courses_model');
+        $input = array();
+        $input1['select_max'] = 'time_start_sale';
+        $time_start_sale = $this->courses_model->load_all($input1);
+       
+        $input2['select_max'] = 'time_end_sale';
+        $time_end_sale = $this->courses_model->load_all($input2);
+        $time_sale = array('time_start_sale' => $time_start_sale[0]['time_start_sale'],
+            'time_end_sale' => $time_end_sale[0]['time_end_sale']);
+        $this->load->vars($time_sale);
+      //  print_arr($time_sale);
+//        print_arr($this->load->vars(array('time_sale' => array($time_start_sale[0],$time_end_sale[0]))));
     }
 
     private function save_c2() {
