@@ -1070,6 +1070,9 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
             if (in_array($courses_id, array(77))) { // các khóa của thoDT
                 $emailTo .= ', daothotn@gmail.com';
             }
+            if (in_array($courses_id, array(82, 81, 80, 66))){ //các khóa học của TrungHQ
+                $emailTo .= ', quangtrung.hoang@yahoo.com';
+            }
             //$emailTo = 'thanhloc1302@gmail.com';
             $this->email->to($emailTo);
             $this->email->subject('Có thảo luận mới ở trang lakita');
