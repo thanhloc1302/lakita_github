@@ -6,6 +6,7 @@ class MY_Controller extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        $this->load->helper('cookie');
         $user_id = $this->session->userdata('user_id');
         $token = $this->session->userdata('token');
         if (!isset($token)) {
@@ -17,7 +18,6 @@ class MY_Controller extends CI_Controller {
             $this->data['facebook_login_url'] = $this->facebook_model->loginUrl();
         }
         if (isset($user_id)) {
-            $this->load->helper('cookie');
             $this->_check_exist_login($user_id);
             //$table, $select, $where, $limit, $offset, $order, $group_by=''
             $student_ids1 = $this->lib_mod->load_all('student_courses', 'student_id', array('courses_id' => 37, 'trial_learn' => 0));
@@ -90,7 +90,7 @@ class MY_Controller extends CI_Controller {
          */
 
         if (filter_has_var(INPUT_GET, 'link')) {
-            $this->session->set_tempdata('link_id', filter_input(INPUT_GET, 'link'));
+            set_cookie('link_id', filter_input(INPUT_GET, 'link'), 3600 * 2);
             $this->save_c2();
         }
 
@@ -112,21 +112,21 @@ class MY_Controller extends CI_Controller {
             $courses_sale[$key]['price_sale'] = str_replace('.', '', $value['price_sale']);
         }
         $this->load->vars(array('courses_sale' => $courses_sale));
-       // print_arr($courses_sale);
+        // print_arr($courses_sale);
     }
-    
+
     private function _get_time_sale() {
         $this->load->model('courses_model');
         $input = array();
         $input1['select_max'] = 'time_start_sale';
         $time_start_sale = $this->courses_model->load_all($input1);
-       
+
         $input2['select_max'] = 'time_end_sale';
         $time_end_sale = $this->courses_model->load_all($input2);
         $time_sale = array('time_start_sale' => $time_start_sale[0]['time_start_sale'],
             'time_end_sale' => $time_end_sale[0]['time_end_sale']);
         $this->load->vars($time_sale);
-      //  print_arr($time_sale);
+        //  print_arr($time_sale);
 //        print_arr($this->load->vars(array('time_sale' => array($time_start_sale[0],$time_end_sale[0]))));
     }
 

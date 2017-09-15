@@ -7,6 +7,7 @@ class Landingpage extends CI_Controller {
     public function __construct() {
         parent::__construct();
         require_once APPPATH . "../public/lakita/Rest_client/Rest_Client.php";
+         $this->load->helper('cookie');
     }
 
     function index($id = 0) {
@@ -31,7 +32,8 @@ class Landingpage extends CI_Controller {
 
     function show($id = 0) {
         if (filter_has_var(INPUT_GET, 'link')) {
-            $this->session->set_tempdata('link_id', filter_input(INPUT_GET, 'link'));
+             set_cookie('link_id', filter_input(INPUT_GET, 'link'), 3600 * 2);
+           // $this->session->set_tempdata('link_id', filter_input(INPUT_GET, 'link'));
             $this->save_c2();
         }
         $this->load->view('landingpage/' . $id . '/index');
@@ -67,9 +69,10 @@ class Landingpage extends CI_Controller {
          * nếu có thì lưu lại link_id
          */
         if ($post['link_id'] == 0) {
-            $link_id = $this->session->tempdata('link_id');
-            if (isset($link_id)) {
-                $post['link_id'] = $this->session->tempdata('link_id');
+            $link_id = get_cookie('link_id');
+           // $link_id = $this->session->tempdata('link_id');
+            if ($link_id) {
+                $post['link_id'] = $link_id;
             }
         }
 

@@ -44,7 +44,7 @@
                     <div class="row">
                         <div class="col-md-2 col-sm-2 hidden-xs"><img class="img-responsive" src="<?php echo base_url(); ?>styles/v2.0/img/icon_dienthoai.png"></div>
                         <div class="col-md-3 col-sm-3"><p><strong>Điện thoại:</strong></p></div>
-                        <div class="col-md-7 col-sm-7"><p class="colorlakita fontsize18"> <strong>1900 6361 95 - 04 7306 2468</strong></p></div>
+                        <div class="col-md-7 col-sm-7"><p class="colorlakita fontsize18"> <strong>1900 6361 95 - 024 7306 2468</strong></p></div>
                     </div>
 
                     <div class="row">
@@ -79,7 +79,7 @@
                                 <span class="locality">Phòng 701, nhà CT1, chung cư Skylight</span>,
                                 <span class="postal-code">100000</span>,
                                 <span class="country-name">VN</span>.
-                                <span class="tel">1900 6361 95 - 04 7306 2468</span>
+                                <span class="tel">1900 6361 95 - 024 7306 2468</span>
                             </address>
                         </div>
                     </div>
