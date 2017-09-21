@@ -32,6 +32,7 @@ $(function () {
         },
         success: function (response)
         {
+            console.log(response);
             console.log(hayFlash);
             var rs = response.split(":");
             console.log(rs[0]);

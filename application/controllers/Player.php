@@ -38,14 +38,14 @@ class Player extends MY_Controller {
         $Android = stripos($_SERVER['HTTP_USER_AGENT'], "Android");
         $webOS = stripos($_SERVER['HTTP_USER_AGENT'], "webOS");
         if ($iPod || $iPhone || $iPad) {
-            echo "http://27.118.22.33:1935/vod/mp4://" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']) . "/playlist.m3u8";
+            echo "http://lakita.vn:1935/vod/mp4://" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']) . "/playlist.m3u8";
             die;
         } else if ($Android) {
-            echo "rtsp://27.118.22.33:1935/vod/mp4:" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
+            echo "rtsp://lakita.vn:1935/vod/mp4:" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
             die;
         } else {
            // if ($this->input->post('hayFlash') == 'yes')
-                echo "rtmpt://27.118.22.33:1935/vod/mp4:" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
+                echo "rtmpt://lakita.vn:1935/vod/mp4:" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
            // else
              //   echo 'https://lakita.vn/' . $primary_video[0]['video_file'];
             //  echo "rtmpt://video.lakita.com.vn:1935/vod/mp4:" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
