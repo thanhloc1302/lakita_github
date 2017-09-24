@@ -11,6 +11,7 @@ $route['ky-thuat-quyet-toan-thue.html'] = 'landingpage/show/kt800';
 $route['quyet-toan-thue-tu-a-den-z.html'] = 'landingpage/show/kt210';
 $route['lap-bao-cao-tai-chinh-2016.html'] = 'landingpage/show/kt400';
 $route['lap-bao-cao-tai-chinh-2017.html'] = 'landingpage/show/kt400';
+$route['tron-bo-lap-bao-cao-tai-chinh-2017.html'] = 'landingpage/show/kt4002';
 $route['cach-xac-dinh-chi-phi-hop-ly.html'] = 'landingpage/show/kt110';
 $route['quan-tri-ke-toan.html'] = 'landingpage/show/kt120';
 $route['bao-cao-tai-chinh-nang-cao.html'] = 'landingpage/show/kt130';
