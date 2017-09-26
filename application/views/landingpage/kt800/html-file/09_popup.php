@@ -34,7 +34,7 @@
         .popup-wrapper .popup-loading .loading-container{
             position: relative;
             height: 100%;
-            background: url(https://www.shopdowntowneaston.com/images/loading.gif) center center no-repeat;
+            background: url(https://lakita.vn/styles/images/loading.gif) center center no-repeat;
         }
         .popup-wrapper .popup-loading .loading-container span{
             position: absolute;
