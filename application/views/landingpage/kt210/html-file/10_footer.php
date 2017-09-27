@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2 col-xs-12">
-            <div class="fb-comments" data-href="<?php echo current_url(); ?>" data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
+            <div class="fb-comments" data-href="https://lakita.vn/quyet-toan-thue-tu-a-den-z.html" data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
         </div>
     </div>
 </div>

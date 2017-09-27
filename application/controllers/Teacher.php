@@ -11,7 +11,6 @@ class Teacher extends MY_Controller {
         $data['category_news'] = $this->lib_mod->load_all('category_3s', '', array('status' => 1, 'type_id' => 4, 'parent' => 0), '', '', array('sort' => 'desc'));
         $data['courses_right'] = $this->lib_mod->load_all('courses', '', array('status' => 1, 'hot' => 1), 8, '', array('sort' => 'desc'));
         $data['courses_top'] = $this->lib_mod->load_all('courses', '', array('status' => 1), '', '', array('sort' => 'desc'));
-
         return $data;
     }
 
@@ -27,10 +26,18 @@ class Teacher extends MY_Controller {
     }
 
     public function action_rgt() {
+        $send_mail = $this->session->tempdata('send_mail');
+        if (isset($send_mail)) {
+            die;
+            exit;
+        } else {
+            $this->session->set_tempdata('send_mail', '1', 3600);
+        }
+
         $post = $this->input->post();
         if ($post['name'] != '' && isset($post['lakita-1']) && $post['lakita-1'] == 'lakita-v') {
             $post['time'] = time();
-           
+
             $this->load->library("email");
             $this->email->from('cskh@lakita.vn', "lakita.vn");
             //  $this->email->reply_to('mrtrinh89@gmail.com', "lakita.vn");
@@ -90,6 +97,9 @@ class Teacher extends MY_Controller {
                                   <pre>
                                     ' . json_encode($post, JSON_UNESCAPED_UNICODE) . '                            
                                   </pre>
+
+                                    <h4> IP: ' . $this->input->ip_address() . '</h4>
+
                                     Thân mến,<br><br>
                                     Lakita.vn            </div>
                             </td>

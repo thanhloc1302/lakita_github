@@ -17,6 +17,14 @@ $rs = json_decode($result);
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Quyết toán thuế từ A đến Z</title>
         <link rel="icon" href="https://lakita.vn/data/source/setting/favicon.png" />
+        <meta property="fb:admins" content="100001432238036"/>
+        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="og:type"   content="website" /> 
+        <meta property="og:url" content="https://lakita.vn/tron-bo-quyet-toan-thue-tu-a-den-z.html" />
+        <meta property="og:title" content="KHÓA HỌC QUYẾT TOÁN THUẾ TỪ A-Z - lakita.vn" />
+        <meta property="og:image" content="http://lakita.vn/data/source/courses/360x260/untitled-2-1493008878.png" />
+        <meta property="og:description" content="Dành cho kế toán ra trường nhiều năm nhưng chưa được kê khai thuế - quyết toán thuế" />
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -36,7 +44,7 @@ $rs = json_decode($result);
                 js.id = id;
                 js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10";
                 fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));</script>
+            }(document, 'script', 'facebook-jssdk'));</script>
         <div class="container-fluid header">
             <nav class="navbar navbar-default">
                 <div class="container">
@@ -94,7 +102,7 @@ $rs = json_decode($result);
                             </div>
                         </div>
 
-                       <form  class="LeadPanel_form promo-panel_action e_submit e_form_submit " action="thank-you.html" method="post" name="fr_register">
+                        <form  class="LeadPanel_form promo-panel_action e_submit e_form_submit " action="thank-you.html" method="post" name="fr_register">
                             <div  id="loading" style="display: none" class='alert'>
                                 <a class='close' data-dismiss='alert'>×</a>
                                 Loading
@@ -480,7 +488,7 @@ $rs = json_decode($result);
             <p style="font-size: 17px; font-weight: bold;">P/s: Lakita không dám hứa mức giá ưu đãi và toàn bộ quà tặng trên sẽ còn khi bạn quay lại một ngày nào đó. Vì vậy hãy đăng ký để giữ chỗ ngay!</p>
         </div>
 
-          <div class="container-fluid register-area">
+        <div class="container-fluid register-area">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-8 col-md-offset-2" style="background: rgba(0,0,0,0.61); border-radius: 5px; border: 1px solid white;">
@@ -583,58 +591,58 @@ $rs = json_decode($result);
             </div>
         </footer>
 
-        
-        
+
+
         <!-- *************************************************************Popup*************************************************************************-->
-    <div id="Popup" class="popup-wrapper" style="display: none;">
-        <div class="popup-loading">
-            <div class="loading-container">
-                <span>
-                    Hệ thống đang xử lý, vui lòng đợi trong giây lát...
-                </span>
+        <div id="Popup" class="popup-wrapper" style="display: none;">
+            <div class="popup-loading">
+                <div class="loading-container">
+                    <span>
+                        Hệ thống đang xử lý, vui lòng đợi trong giây lát...
+                    </span>
+                </div>
             </div>
         </div>
-    </div>
-    <style>
-        .popup-wrapper {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-            z-index: 999999;
-            background: url(https://lakita.vn/styles/v2.0/img/modal_overlay.png);
-        }
-        .popup-wrapper .popup-loading{
-            background-color: white;
-            opacity: 0.7;
-            filter:alpha(opacity=70);
-            height: 100%;
-            width: 100%;
-            z-index: 21;
-            position: absolute;
-            top: 0px;
-            left: 0px;
+        <style>
+            .popup-wrapper {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+                z-index: 999999;
+                background: url(https://lakita.vn/styles/v2.0/img/modal_overlay.png);
+            }
+            .popup-wrapper .popup-loading{
+                background-color: white;
+                opacity: 0.7;
+                filter:alpha(opacity=70);
+                height: 100%;
+                width: 100%;
+                z-index: 21;
+                position: absolute;
+                top: 0px;
+                left: 0px;
 
-        }
-        .popup-wrapper .popup-loading .loading-container{
-            position: relative;
-            height: 100%;
-            background: url(https://lakita.vn/styles/v2.0/img/loading.gif) center center no-repeat;
-        }
-        .popup-wrapper .popup-loading .loading-container span{
-            position: absolute;
-            top: 58%;
-            left: 30%;
-            opacity: 1;
-            z-index: 1000000000000;
-            font-size: 28px;
-            font-weight: bold;
-        }
-    </style>
-<!-- *************************************************************Popup (end)**********************************************************************-->
-        
+            }
+            .popup-wrapper .popup-loading .loading-container{
+                position: relative;
+                height: 100%;
+                background: url(https://lakita.vn/styles/v2.0/img/loading.gif) center center no-repeat;
+            }
+            .popup-wrapper .popup-loading .loading-container span{
+                position: absolute;
+                top: 58%;
+                left: 30%;
+                opacity: 1;
+                z-index: 1000000000000;
+                font-size: 28px;
+                font-weight: bold;
+            }
+        </style>
+        <!-- *************************************************************Popup (end)**********************************************************************-->
+
         <script type="text/javascript">
             $('.vie').click(function () {
                 $('.list-lesson').slideUp('fast');
@@ -654,6 +662,12 @@ $rs = json_decode($result);
                 $(this).css('display', 'none');
             });
         </script>
-        <div class="fb-comments" data-href="<?php echo current_url(); ?>" data-width="100%" data-numposts="5"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-xs-12">
+                    <div class="fb-comments" data-href="https://lakita.vn/tron-bo-quyet-toan-thue-tu-a-den-z.html" data-width="100%" data-numposts="5"></div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
