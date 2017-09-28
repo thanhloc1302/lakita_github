@@ -26,7 +26,7 @@ class Player extends MY_Controller {
 
         if (in_array($student_id, array('573', '4117', '4514', '5234',
 
-                    '5387', '5391', '5528', '5755', '5770', '6784', '15566')) || 
+                    '5387', '5391', '5528', '5755', '5770', '6784', '15566', '7572')) || 
 
                 (isset($is_trial_view) && $is_trial_view == 'yes')) {
             echo 'https://lakita.vn/' . $primary_video[0]['video_file'];

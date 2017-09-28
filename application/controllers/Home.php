@@ -40,7 +40,7 @@ class Home extends MY_Controller {
                 $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 12, '', array('sort' => 'desc'));
             }
             
-            $data['rates'] = $this->lib_mod->load_all('rate', '', array('status' => 1), '', '', array('create_date' => 'desc'), 'name');
+            $data['rates'] = $this->lib_mod->load_all('rate', '', array('status' => 1), 12, '', array('create_date' => 'desc'), 'name');
             $data['title'] = 'Hệ thống học trực tuyến lakita, cùng bạn vươn xa - lakita.vn';
             $user_id = $this->session->userdata('user_id');
             if (!isset($user_id)) {
