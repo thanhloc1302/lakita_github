@@ -1,8 +1,15 @@
 function activate() {
     var cod_cod = jQuery("#cod_cod").val();
     var intive_code = jQuery("#invite_code").val();
+    var filter = /^LKT+[0-9]{5}$/;
     if (cod_cod == '') {
         alert("Bạn phải nhập mã kích hoạt!");
+        return;
+    }
+    
+    if (!filter.test(intive_code))
+    {
+        alert('Mã giới thiệu chưa đúng định dạng');
         return;
     }
     jQuery.ajax({
