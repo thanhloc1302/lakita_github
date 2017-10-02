@@ -619,7 +619,8 @@ class Student extends MY_Controller {
                 return '';
             }
         } else {
-            $learn_first = $this->lib_mod->load_all('learn', '', array("courses_id" => $courseID, 'status' => 1), '', '', array("sort" => 'asc'));
+            $chapter_id = $this->lib_mod->load_all('chapter', '', array("courses_id" => $courseID, 'status' => 1), '', '', array("sort" => 'asc'));
+            $learn_first = $this->lib_mod->load_all('learn', '', array("chapter_id" => $chapter_id[0]['id'], 'status' => 1), '', '', array("sort" => 'asc'));
             return isset($learn_first[0]) ? (base_url() . $learn_first[0]['slug'] . '-4' . $learn_first[0]['id'] . '.html') : '';
         }
     }
