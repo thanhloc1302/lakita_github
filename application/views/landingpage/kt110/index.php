@@ -9,19 +9,20 @@ and open the template in the editor.
         <title>KHÓA HỌC CÁCH XÁC ĐỊNH CHI PHÍ HỢP LÝ THEO CHÍNH SÁCH THUẾ MỚI, CÔNG CỤ BẢO VỆ CHI PHÍ VÀ KỸ NĂNG GIẢI TRÌNH THANH TRA KIỂM TRA THUẾ</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:url"           content="<?php echo current_url(); ?>" />
-        <meta property="og:type"          content="website" />
-        <meta property="og:title"         content="Khóa học đào tạo kiến thức kiểm tra kế toán dành cho giám đốc doanh nghi - lakita.vn" />
-        <meta property="og:description"   content="Hệ thống đào tạo trực tuyến lakita – Cùng bạn vươn xa Học Online qua Video bài giảng - Học Online thỏa thích mọi lúc, mọi nơi - Học trên mọi thiết bị - Học với giảng viên, chuyên gia hàng đầu trong lĩnh vực - Hóa đơn chứng từ - Làm chủ hóa đơn chứng từ" />
-        <meta property="og:image"         content="https://lakita.vn/styles/v2.0/img/logo3.png" />
-        <meta name="description" content="Hệ thống đào tạo trực tuyến lakita – Cùng bạn vươn xa Học Online qua Video bài giảng - Học Online thỏa thích mọi lúc, mọi nơi - Học trên mọi thiết bị - Học với giảng viên, chuyên gia hàng đầu trong lĩnh vực - Hóa đơn chứng từ - Làm chủ hóa đơn chứng từ" />
+        <meta property="fb:admins" content="100001432238036"/>
+        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="og:type"   content="website" /> 
+        <meta property="og:url" content="https://lakita.vn/cach-xac-dinh-chi-phi-hop-ly.html" />
+        <meta property="og:title" content="Cách xác định chi phí hợp lý theo chính sách thuế mới, công cụ bảo vệ chi phí và kỹ năng giải trình thanh tra kiểm tra thuế" />
+        <meta property="og:image" content="https://lakita.vn/data/source/courses/360x260/kt110-3k6x2k6--1499486730.jpg" />
+        <meta property="og:description" content="Khóa học được thiết kế dành cho kế toán đi làm và máy tính có kết nối internet" />
         <link rel="icon" href="https://lakita.vn/data/source/setting/favicon.png" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="<?php echo base_url(); ?>public/kt110/main.css" rel="stylesheet" type="text/css"/>
         <script src="https://use.fontawesome.com/0b216c5f11.js"></script>
-          <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
         <link href="<?php echo base_url(); ?>public/kt110/newcss.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt110/newstyle.css">
     </head>

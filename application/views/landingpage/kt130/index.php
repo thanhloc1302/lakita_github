@@ -9,19 +9,20 @@ and open the template in the editor.
         <title>HƯỚNG DẪN LẬP BCTC HỢP LÝ VÀ PHÂN TÍCH CÁC CHỈ SỐ HỖ TRỢ DỰ THẦU, VAY VỐN NGÂN HÀNG</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:url"           content="<?php echo current_url(); ?>" />
-        <meta property="og:type"          content="website" />
-        <meta property="og:title"         content="HƯỚNG DẪN LẬP BCTC HỢP LÝ VÀ PHÂN TÍCH CÁC CHỈ SỐ HỖ TRỢ DỰ THẦU, VAY VỐN NGÂN HÀNG - lakita.vn" />
-        <meta property="og:description"   content="Hệ thống đào tạo trực tuyến lakita – Cùng bạn vươn xa Học Online qua Video bài giảng - Học Online thỏa thích mọi lúc, mọi nơi - Học trên mọi thiết bị - Học với giảng viên, chuyên gia hàng đầu trong lĩnh vực - Hóa đơn chứng từ - Làm chủ hóa đơn chứng từ" />
-        <meta property="og:image"         content="http://lakita.vn/styles/v2.0/img/logo3.png" />
-        <meta name="description" content="Hệ thống đào tạo trực tuyến lakita – Cùng bạn vươn xa Học Online qua Video bài giảng - Học Online thỏa thích mọi lúc, mọi nơi - Học trên mọi thiết bị - Học với giảng viên, chuyên gia hàng đầu trong lĩnh vực - Hóa đơn chứng từ - Làm chủ hóa đơn chứng từ" />
+        <meta property="fb:admins" content="100001432238036"/>
+        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="og:type"   content="website" /> 
+        <meta property="og:url" content="<?php echo current_url(); ?>" />
+        <meta property="og:title" content="Hướng dẫn lập báo cáo tài chính hợ lý và phân tích các chỉ số hỗ trợ dự thầu, vay vốn ngân hàng" />
+        <meta property="og:image" content="https://lakita.vn/data/source/courses/360x260/kt130-1498816492.jpg" />
+        <meta property="og:description" content="Khóa học được thiết kế dành cho kế toán đi làm và máy tính có kết nối internet" />
         <link rel="icon" href="https://lakita.vn/data/source/setting/favicon.png" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="<?php echo base_url(); ?>public/kt130/main.css" rel="stylesheet" type="text/css"/>
         <script src="https://use.fontawesome.com/0b216c5f11.js"></script>
-          <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt130/newcss.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt130/newstyle.css" />
     </head>

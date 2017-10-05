@@ -9,11 +9,14 @@ and open the template in the editor.
         <title>Khóa học đào tạo kiến thức kiểm tra kế toán dành cho giám đốc doanh nghiệp</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:url"           content="<?php echo current_url(); ?>" />
-        <meta property="og:type"          content="website" />
-        <meta property="og:title"         content="Khóa học đào tạo kiến thức kiểm tra kế toán dành cho giám đốc doanh nghi - lakita.vn" />
-        <meta property="og:description"   content="Hệ thống đào tạo trực tuyến lakita – Cùng bạn vươn xa Học Online qua Video bài giảng - Học Online thỏa thích mọi lúc, mọi nơi - Học trên mọi thiết bị - Học với giảng viên, chuyên gia hàng đầu trong lĩnh vực - Hóa đơn chứng từ - Làm chủ hóa đơn chứng từ" />
-        <meta property="og:image"         content="http://lakita.vn/styles/v2.0/img/logo3.png" />
+        <meta property="fb:admins" content="100001432238036"/>
+        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="og:type"   content="website" /> 
+        <meta property="og:url" content="<?php echo current_url();?>" />
+        <meta property="og:title" content="Kế toán dành cho giám đốc và các nhà quản lý" />
+        <meta property="og:image" content="https://lakita.vn/data/source/courses/360x260/ke-toan-giam-doc.png" />
+        <meta property="og:description" content="Khóa học đào tạo kiến thức kiểm tra kế toán dành cho giám đốc doanh nghiệp" />
+
         <meta name="description" content="Hệ thống đào tạo trực tuyến lakita – Cùng bạn vươn xa Học Online qua Video bài giảng - Học Online thỏa thích mọi lúc, mọi nơi - Học trên mọi thiết bị - Học với giảng viên, chuyên gia hàng đầu trong lĩnh vực - Hóa đơn chứng từ - Làm chủ hóa đơn chứng từ" />
         <link rel="icon" href="https://lakita.vn/data/source/setting/favicon.png" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
