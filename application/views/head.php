@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
+<!--    <script>(function (w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({'gtm.start':
                         new Date().getTime(), event: 'gtm.js'});
@@ -13,7 +13,7 @@
             j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-KRX79Q5');</script>
+        })(window, document, 'script', 'dataLayer', 'GTM-KRX79Q5');</script>-->
     <!-- End Google Tag Manager -->
     <base href="<?php echo base_url(); ?>" />   
     <meta http-equiv="content-language" content="vi" />
@@ -68,13 +68,7 @@
         console.log("%cLưu ý: Đây là chế độ dành cho nhà phát triển. Bạn không nên truy cập vào phần này. Xin cảm ơn!", "background: red; color: yellow; font-size: 40px;font-weight: bold;");
     </script>
     <link rel="shortcut icon" href="<?php echo base_url() . $setting[0]['favicon'] ?>" type="image/x-icon" />
-<!--    <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/jquery-3.1.0.min.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-<!--    <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/bootstrap.min.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
+   
     <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>styles/v2.0/css/reset.css" />
 
 <!--    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>styles/v2.0/css/bootstrap.min.css" />-->
@@ -112,11 +106,18 @@
         fbq('init', '1645549219061949');
         fbq('track', 'PageView');
     </script>
-<noscript><img height="1" width="1" style="display:none"
+<noscript>
+<img height="1" width="1" style="display:none"
                src="https://www.facebook.com/tr?id=1645549219061949&ev=PageView&noscript=1"
-               /></noscript>
+               />
+</noscript>
 <!-- End Facebook Pixel Code -->
 
 
 <?php include_once("plugin/analyticstracking.php") ?>
+<!--    <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/jquery-3.1.0.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!--    <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/bootstrap.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>

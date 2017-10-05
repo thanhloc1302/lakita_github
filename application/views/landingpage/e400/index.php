@@ -19,6 +19,16 @@ $rs = json_decode($result);
         <title> Excel từ A đến Z </title>
         <meta name="description" content="description">
         <meta name="author" content="Coralix Themes">
+
+        <meta property="fb:admins" content="100001432238036"/>
+        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="og:type"   content="website" /> 
+        <meta property="og:url" content="https://lakita.vn/excel-tu-a-den-z.html" />
+        <meta property="og:title" content="Excel từ A đến Z" />
+        <meta property="og:image" content="https://lakita.vn/data/source/courses/268x150/hoc-excel-co-ban-excel-tu-a-den-z.png" />
+        <meta property="og:description" content="Khóa học dành cho nhân viên hành chính văn phòng, kế toán, tài chính, ngân hàng. Hơn 2000 học viên tham gia, 78% hài lòng về sự hỗ trợ" />
+
+
 <!--        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>  1.9.1 -->
         <script>(function () {
                 var _fbq = window._fbq || (window._fbq = []);
@@ -103,7 +113,17 @@ $rs = json_decode($result);
 </head>
 
 <body>
-
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=315347858825221";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    </script>
     <header class="nav-down">
         <!-- Top Bar -->
         <div class="top">
@@ -829,18 +849,24 @@ $rs = json_decode($result);
     </section>
     <div id="fb-root"></div>
     <script>(function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
-                    return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
     <div style="margin-top: 17px; margin-left: 36px;" class="fb-like" expr:data-href='data:post.canonicalUrl'   data-send="true" data-width="90%" data-show-faces="true"></div>
 
-    <div id="fb-root"></div> 
-    <div  class="fb-comments" data-href="<?php echo current_url(); ?>" data-width="90%" data-numposts="7" data-order-by="reverse_time"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-xs-12">
+                <div class="fb-comments" data-href="https://lakita.vn/excel-tu-a-den-z.html" 
+                     data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -888,9 +914,9 @@ $rs = json_decode($result);
     </div> -->
 
     <div style="position: fixed; bottom: 0; width: 100%; z-index: 100000;">
-<!--        <a href="#register_area" title="Đăng ký ngay!">
-            <img src="https://lakita.vn/styles/images/email/rgt-now.png" alt="Đăng ký ngay!" id="img-rgt" style="float: right;">
-        </a>-->
+        <!--        <a href="#register_area" title="Đăng ký ngay!">
+                    <img src="https://lakita.vn/styles/images/email/rgt-now.png" alt="Đăng ký ngay!" id="img-rgt" style="float: right;">
+                </a>-->
         <a href="tel:1900636195" title="Đăng ký ngay!">
             <img src="https://lakita.vn/styles/images/email/contact.png" alt="Đăng ký ngay!" id="img-contact" style="float: left; transition: all 0.3s ease-in-out; --webkit-transition: all 0.3s ease-in-out;">
         </a>
@@ -1026,7 +1052,7 @@ $rs = json_decode($result);
     <script src="<?php echo base_url() ?>public/e400/lakita/js/jquery.form.js" type="text/javascript"></script>
     <script type="text/javascript"  src="<?php echo base_url() ?>public/e400/js/tracking.js"></script>
     <script type="text/javascript"  src="<?php echo base_url() ?>public/e400/js/main.js"></script>
-      <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
     <script>(function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id))

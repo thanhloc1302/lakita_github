@@ -5,7 +5,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"
                         style="position: absolute; top: 8px; right: -58px; z-index: 999999999;"><i class="fa fa-times" aria-hidden="true"></i></button>
                 <div style="margin-left: -4em;">
-                    <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=15212904"></script>                </div>
+<!--                    <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=15212904"></script>                </div>-->
             </div>
         </div>
     </div>

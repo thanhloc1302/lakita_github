@@ -9,6 +9,8 @@ and open the template in the editor.
         <title>ĐÀO TẠO KỸ THUẬT QUYẾT TOÁN THUẾ, CÔNG TÁC CHUẨN BỊ CHO THANH TRA THUẾ, TỐI ƯU THUẾ</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta property="fb:admins" content="100001432238036"/>
+        <meta property="fb:app_id" content="315347858825221" />
         <meta property="og:url"           content="https://lakita.vn/ky-thuat-quyet-toan-thue.html" />
         <meta property="og:type"          content="website" />
         <meta property="og:title"         content="Khóa học Kỹ thuật quyết toán thuế - lakita.vn" />

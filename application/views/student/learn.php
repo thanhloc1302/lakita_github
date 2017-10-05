@@ -135,7 +135,7 @@
                                             <a href="
                                             <?php
                                             $primary_video = $this->lib_mod->detail('learn', array('id' => $value), '');
-                                            echo "rtsp://27.118.22.33:1935/vod/mp4://" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
+                                            echo "rtsp://lakita.vn:1935/vod/mp4://" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
                                             ?>
                                                ">
                                                 <img src="<?php echo base_url(); ?>styles/v2.0/img/mobi/player.png" style="max-width: 100%"/>

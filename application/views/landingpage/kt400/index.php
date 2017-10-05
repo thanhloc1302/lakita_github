@@ -514,7 +514,7 @@ $rs = json_decode($result);
             </div>
         </div>
         <div class="container">
-            <div class="fb-comments" data-href="https://lakita.vn/lap-bao-cao-tai-chinh-2017.html" data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
+            <div class="fb-comments" data-href="http://lapbctc2016499.lakita.vn" data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
         </div>
         <!-- *************************************************************Popup*************************************************************************-->
         <div id="Popup" class="popup-wrapper" style="display: none;">

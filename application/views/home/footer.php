@@ -28,8 +28,8 @@
                 if (!$this->agent->is_mobile('iPad')) {
                     ?>
                     <div class="row receiveLetter">
-                        <p> Đăng kí nhận thư từ Lakita </p>
-                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>
+<!--                        <p> Đăng kí nhận thư từ Lakita </p>-->
+<!--                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>-->
                     </div>
                 <?php } ?>
             </div>
@@ -54,8 +54,9 @@
                     </div>
                     <div class="row">
                         <img class="img-responsive" src="<?php echo base_url(); ?>styles/v2.0/img/logo_bct.png" />
-                        <a href="//www.dmca.com/Protection/Status.aspx?ID=bdfc28bc-c09f-4458-961e-2fc07a4f9b6a" title="DMCA.com Protection Status" class="dmca-badge"> 
-                            <img src="//images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=bdfc28bc-c09f-4458-961e-2fc07a4f9b6a" alt="DMCA.com Protection Status">
+                        <a href="//www.dmca.com/Protection/Status.aspx?ID=bdfc28bc-c09f-4458-961e-2fc07a4f9b6a" 
+                           title="DMCA.com Protection Status" class="dmca-badge" target="_blank"> 
+                            <img src="<?php echo base_url(); ?>styles/v2.0/img/dmca_protected_sml_120m.png" alt="DMCA.com Protection Status">
                         </a> 
                     </div>
                 </div>   
@@ -84,7 +85,7 @@
                         </div>
                     </div>
                     <div class="row receiveLetter hidden-xs">
-                        <p> Đăng kí nhận thư từ Lakita </p>
+<!--                        <p> Đăng kí nhận thư từ Lakita </p>-->
                         <!--                    <div class="col-md-9">
                                                 <div class="form-group">
                                                     <label for="InputEmail1" class="sr-only">Email address</label>
@@ -94,7 +95,7 @@
                                             <div class="col-md-3">
                                                 <button class="btn btn-success btn-block btn-lg">ĐĂNG KÝ</button>
                                             </div>-->
-                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>
+<!--                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>-->
                     </div>
                 </div>
             <?php } ?>

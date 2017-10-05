@@ -17,6 +17,13 @@ $rs = json_decode($result);
         <title>Lakita - Bí quyết làm chủ Excel</title>
         <meta name="description" content="description">
         <meta name="author" content="Coralix Themes">
+        <meta property="fb:admins" content="100001432238036"/>
+        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="og:type"   content="website" /> 
+        <meta property="og:url" content="https://lakita.vn/bi-quyet-lam-chu-excel-2017.html" />
+        <meta property="og:title" content="Bí quyết làm chủ Excel" />
+        <meta property="og:image" content="https://lakita.vn/data/source/courses/268x150/hoc-excel-co-ban-bi-quyet-lam-chu-excel-2010.png" />
+        <meta property="og:description" content="Khóa học dành cho nhân viên hành chính văn phòng, kế toán, tài chính, ngân hàng. Hơn 2000 học viên tham gia, 78% hài lòng về sự hỗ trợ" />
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- 1.9.1 -->
         <script>(function () {
                 var _fbq = window._fbq || (window._fbq = []);
@@ -88,6 +95,16 @@ $rs = json_decode($result);
 </head>
 
 <body>
+      <div id="fb-root"></div>
+        <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                    return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=315347858825221";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
     <header class="nav-down">
         <!-- Top Bar -->
         <div class="top">
@@ -142,7 +159,7 @@ $rs = json_decode($result);
                     ❖ Phần lớn các Doanh Nghiệp tại Việt Nam không biết sử dụng Excel để <b>phân tích các dữ liệu kinh doanh về tiếp thị, phát triển sản phẩm, tài chính, nhân sự</b> vì chỉ dùng được <span style="font-size: 15pt;font-weight: 600;">10%</span> công dụng của phần mềm này.<br>
                     ❖ Theo một nghiên cứu ở Nhật Bản, <span style="font-size: 15pt;font-weight: 600;">86%</span> người được hỏi cho rằng kĩ năng sử dụng Excel là kĩ năng quan trọng trong việc <b>thăng tiến</b> tại doanh nghiệp<br>
                     ❖ <b>68%</b> Cơ bản sử dụng được <b>Excel</b> trong công việc văn phòng; <b>25%</b> Tùy chỉnh được <b>biểu mẫu Excel</b> cho công việc; <b>1%</b> Tự xây được <b>biểu mẫu Excel</b> dùng cho công việc
-                
+
                 </h3>
             </div>
         </div> 	
@@ -597,7 +614,14 @@ $rs = json_decode($result);
     <div style="    margin-top: 17px;    margin-left: 36px;" class="fb-like" expr:data-href='data:post.canonicalUrl'   data-send="true" data-width="90%" data-show-faces="true"></div>
 
     <div id="fb-root"></div> 
-    <div  class="fb-comments" data-href="<?php echo current_url(); ?>" data-width="90%" data-numposts="7" data-order-by="reverse_time"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-xs-12">
+                <div class="fb-comments" data-href="https://lakita.vn/bi-quyet-lam-chu-excel-2017.html" 
+                     data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -622,8 +646,8 @@ $rs = json_decode($result);
 
         <div class="main_nav_hotline site">
             <ul style="display: inline-flex;  ">
-                <li><img alt="" src="http://media.bizwebmedia.net/Sites/105084/data/banners/call.png?0" style="width: 16px; height: 16px;    vertical-align: text-top;">&nbsp;1900 6361 95 - 04 7306 2468</li>
-                <li><img alt="" src="http://media.bizwebmedia.net/Sites/105084/data/banners/fb.jpg?0" style="width: 16px; height: 16px;    vertical-align: text-top;">&nbsp;<a style="    color: #232323;" href="https://www.facebook.com/meovathuthuatexcel" target="_blank">FANPAGE LÀM CHỦ EXCEL</a></li>
+                <li><img alt="" src="https://media.bizwebmedia.net/Sites/105084/data/banners/call.png" style="width: 16px; height: 16px;    vertical-align: text-top;">&nbsp;1900 6361 95 - 04 7306 2468</li>
+                <li><img alt="" src="https://media.bizwebmedia.net/Sites/105084/data/banners/fb.jpg?0" style="width: 16px; height: 16px;    vertical-align: text-top;">&nbsp;<a style="    color: #232323;" href="https://www.facebook.com/meovathuthuatexcel" target="_blank">FANPAGE LÀM CHỦ EXCEL</a></li>
             </ul>
             <ul style="display: inline-flex;     width: 300px; ">
                 <div class="fb-like" data-href="https://www.facebook.com/meovathuthuatexcel" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
@@ -632,7 +656,7 @@ $rs = json_decode($result);
         <div class="nttkm hidden-xs" style="width:250px;float:right;">
             <div class="nttkm-title">
                 <span class="show_dkntt" style="padding-right:0px; color: #fff;font-weight: bold;font-size: 14px;">
-                    <img alt="" src="http://media.bizwebmedia.net/Sites/105084/data/banners/gift_mocskin.png" style="width: 16px; height: 16px;    vertical-align: text-top;">
+                    <img alt="" src="https://media.bizwebmedia.net/Sites/105084/data/banners/gift_mocskin.png" style="width: 16px; height: 16px;    vertical-align: text-top;">
                     <a style="    color: #fff;" href="#dangky">
                         ĐĂNG KÝ NGAY 
                     </a>
@@ -640,8 +664,8 @@ $rs = json_decode($result);
             </div>
         </div>
     </div>
-    
-    
+
+
     <div style="position: fixed; bottom: 0; width: 100%; z-index: 100000;">
         <a href="#register_area" title="Đăng ký ngay!">
             <img src="https://lakita.vn/styles/images/email/rgt-now.png" alt="Đăng ký ngay!" id="img-rgt" style="float: right;">
@@ -835,9 +859,11 @@ $rs = json_decode($result);
 
         fbq('init', '171846299916686');
         fbq('track', "PageView");</script>
-    <noscript><img height="1" width="1" style="display:none"
-                   src="https://www.facebook.com/tr?id=171846299916686&ev=PageView&noscript=1"
-                   /></noscript>
+    <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=171846299916686&ev=PageView&noscript=1"
+         />
+    </noscript>
 
     <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
     </script>
