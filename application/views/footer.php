@@ -49,6 +49,17 @@ if (!$this->agent->is_mobile()) {
             $("#myModal3").html("");
         }
     }
+    $(document).ready(function () {
+        $.ajaxSetup({cache: true});
+        $.getScript('//connect.facebook.net/vi_VN/sdk.js', function () {
+            FB.init({
+                appId: '315347858825221',
+                version: 'v2.7'
+            });
+          /* $('#loginbutton,#feedbutton').removeAttr('disabled');
+            FB.getLoginStatus(updateStatusCallback); */
+        });
+    });
 </script>
 <script src="https://use.fontawesome.com/0b216c5f11.js"></script>
 <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/media.css" /> 

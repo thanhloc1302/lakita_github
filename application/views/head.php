@@ -31,7 +31,7 @@
         <meta property="og:image" content="<?php echo base_url() . 'data/logo/share.jpg'; ?>"/>
     <?php } ?>
     <meta property="og:description" content="Hệ thống đào tạo trực tuyến lakita – Cùng bạn vươn xa Học Online qua Video bài giảng - Học Online thỏa thích mọi lúc, mọi nơi - Học trên mọi thiết bị - Học với giảng viên, chuyên gia hàng đầu trong lĩnh vực - Hóa đơn chứng từ - Làm chủ hóa đơn chứng từ"
-          <meta name="keywords" content="học excel, hoc excel, tự học excel, học excel cơ bản, học excel co ban, excel kế toán, excel ke toan, làm chủ hóa đơn chứng từ, lam chu hoa don chung tu, <?php if (isset($keywords)) echo $keywords; ?>" />
+    <meta name="keywords" content="học excel, hoc excel, tự học excel, học excel cơ bản, học excel co ban, excel kế toán, excel ke toan, làm chủ hóa đơn chứng từ, lam chu hoa don chung tu, <?php if (isset($keywords)) echo $keywords; ?>" />
     <meta name="robots" content="noodp" />
     <meta name="author" content="<?php echo base_url(); ?>" />
     <meta name="robots" content="index,follow"/>
@@ -68,7 +68,7 @@
         console.log("%cLưu ý: Đây là chế độ dành cho nhà phát triển. Bạn không nên truy cập vào phần này. Xin cảm ơn!", "background: red; color: yellow; font-size: 40px;font-weight: bold;");
     </script>
     <link rel="shortcut icon" href="<?php echo base_url() . $setting[0]['favicon'] ?>" type="image/x-icon" />
-   
+
     <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>styles/v2.0/css/reset.css" />
 
 <!--    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>styles/v2.0/css/bootstrap.min.css" />-->
@@ -106,18 +106,18 @@
         fbq('init', '1645549219061949');
         fbq('track', 'PageView');
     </script>
-<noscript>
+    <noscript>
 <img height="1" width="1" style="display:none"
-               src="https://www.facebook.com/tr?id=1645549219061949&ev=PageView&noscript=1"
-               />
+     src="https://www.facebook.com/tr?id=1645549219061949&ev=PageView&noscript=1"
+     />
 </noscript>
 <!-- End Facebook Pixel Code -->
 
 
 <?php include_once("plugin/analyticstracking.php") ?>
 <!--    <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/jquery-3.1.0.min.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <!--    <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/bootstrap.min.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
