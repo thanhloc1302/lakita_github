@@ -598,6 +598,7 @@ class Student extends MY_Controller {
     /* ==================================== video đầu tiên của khóa học ===================================== */
 
     private function find_first_course($cod_input, $courseID) {
+        
         if ($cod_input != '') {
             $cod = $this->lib_mod->detail('cod_course', array('cod' => $cod_input));
             //học thử
@@ -619,8 +620,10 @@ class Student extends MY_Controller {
                 return '';
             }
         } else {
-            $chapter_id = $this->lib_mod->load_all('chapter', '', array("courses_id" => $courseID, 'status' => 1), '', '', array("sort" => 'asc'));
-            $learn_first = $this->lib_mod->load_all('learn', '', array("chapter_id" => $chapter_id[0]['id'], 'status' => 1), '', '', array("sort" => 'asc'));
+            $chapter_id = $this->lib_mod->load_all('chapter', 'id', array("courses_id" => $courseID, 'status' => 1), 1, 0, array("sort" => 'asc'));
+            //print_r($chapter_id);
+            $learn_first = $this->lib_mod->load_all('learn', 'id, slug', array("chapter_id" => $chapter_id[0]['id'], 'status' => 1), 1, 0, array("sort" => 'asc'));
+           // print_r($learn_first);
             return isset($learn_first[0]) ? (base_url() . $learn_first[0]['slug'] . '-4' . $learn_first[0]['id'] . '.html') : '';
         }
     }
