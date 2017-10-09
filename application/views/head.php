@@ -23,7 +23,7 @@
     <meta property="fb:admins" content="100001432238036"/>
     <meta property="fb:app_id" content="315347858825221" />
     <meta property="og:type"   content="website" /> 
-    <meta property="og:url" content="https://lakita.vn/" />
+    <meta property="og:url" content="<?php echo current_url();?>" />
     <meta property="og:title" content="<?php echo $title; ?>" />
     <?php if (isset($image)) { ?>
         <meta property="og:image" content="<?php if (isset($image)) echo $image; ?>"/>
