@@ -669,7 +669,7 @@ class Course extends MY_Controller {
                         . 'location.replace("' . $first_learn . '")'
                         . '</script>';
                     } else {
-                        echo 'đường dẫn sai!';
+                        show_404();
                         die;
                     }
                 }
