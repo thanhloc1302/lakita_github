@@ -43,7 +43,7 @@ class Guest extends MY_Controller {
 
                 $tutor = array('2626', '5844', '4909', '3073', '7252', '7346');
                 if (in_array($member[0]['id'], $tutor)) {
-                    echo 'tutor';
+                    echo 2;
                 } else {
                     echo 1;
                 }

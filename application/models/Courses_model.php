@@ -34,7 +34,7 @@ class Courses_model extends MY_Model {
         $input2['select'] = 'price_sale';
         $courses = $this->load_all($input2);
         if (!empty($courses)) {
-            return $courses[0]['price_sale'];
+            return str_replace('.', '', $courses[0]['price_sale']);
         }
         return 295000;
     }
