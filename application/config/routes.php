@@ -45,7 +45,7 @@ $route['ex300youtube.html'] = 'landingpage/index/7';
 
 
 
-
+$route['dich-vu-excel.html'] = 'excel/index';
 $route['tin-tuc.html'] = 'news/view_all_news';
 $route['tin-tuc/(:any).html'] = 'news/view_news/$1';
 

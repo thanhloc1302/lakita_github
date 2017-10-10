@@ -23,7 +23,7 @@
             $this->load->view('home/comboKTE');
         }
         ?>
-        <?php //$this->load->view('home/try_learn'); ?>
+        <?php $this->load->view('home/try_learn'); ?>
         <?php //$this->load->view('home/event2'); ?>
         <?php
         if (isset($content)) {

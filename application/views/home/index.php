@@ -83,7 +83,7 @@ $(document).ready( function(){
             <ul class="nav nav-tabs fontsize16" style="border-bottom:none;">
                 <li role="presentation"> <a href="<?php echo base_url(); ?>"> TRANG CHỦ </a></li>
                 <li role="presentation"> <a href="tuyendung"> CƠ HỘI NGHỀ NGHIỆP </a></li>
-                <li role="presentation"> <a> CHO DOANH NGHIỆP </a></li>
+                <li role="presentation"> <a href="dich-vu-excel.html"> DỊCH VỤ EXCEL </a></li>
                 <li role="presentation" class="hidden-sm hidden-xs"> <a href="<?php echo base_url(); ?>"> <img alt="học excel cơ bản, excel cho kế toán, tự học excel" title="học excel cơ bản, excel cho kế toán, tự học excel" src="<?php echo base_url(); ?>styles/v2.0/img/logo2.png" /> </a></li>
                 <li role="presentation"> <a href="tro-thanh-giang-vien.html"> TRỞ THÀNH GIẢNG VIÊN </a></li>
                 <li role="presentation"> <a href="" id="menu_register"> ĐĂNG KÝ </a></li>
@@ -276,7 +276,7 @@ if ($this->agent->is_mobile()) {
     </div>
 </div>
 <?php
-    $this->load->view('home/popup_tang_sub');
+   // $this->load->view('home/popup_tang_sub');
 ?>
 
 
