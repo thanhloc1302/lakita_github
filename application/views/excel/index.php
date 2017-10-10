@@ -3,6 +3,9 @@
 <style>
     .content{
         font-size: 20px;
+        background-color: #FFF;
+        padding-top: 30px;
+        padding-bottom: 30px
     }
     .content ol li b{
         margin-top: 20px;
@@ -145,8 +148,10 @@
             Trân trọng,
             Lakita team.
 
-        </div>
-        <div class="col-md-6 col-md-offset-3">
+            <div class="clearfix"></div>
+            <div class="col-md-6 col-md-offset-3">
             <img style="width:100%; margin-top: 30px" class="img-reponsive" src="http://lakita.vn/data/source/BQLCE2017-tep-dinh-kem/dich-vu-bao-hanh.jpg">
         </div>
+        </div>
+        
     </div>
