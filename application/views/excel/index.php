@@ -1,5 +1,6 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/course_detail.css" />
+<script src="<?php echo base_url(); ?>styles/v2.0/js/login.js" type="text/javascript"></script>
 <style>
     .content{
         font-size: 20px;
