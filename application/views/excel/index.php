@@ -45,12 +45,13 @@
     </div>
 </div>
 
-<div class="course-summary paddingbottom30">
+<div class="course-summary paddingbottom30" style="background-color:#FFF">
     <div class="container">
         <div class="dir"> <img alt="học excel, hoc excel, học excel cơ bản, tự học excel" title="học excel, hoc excel, học excel cơ bản, tự học excel" src="<?php echo base_url(); ?>styles/v2.0/img/course-detail/excel.png">
             <a href="https://lakita.vn"> Trang chủ </a> / 
             <a href="<?php echo base_url(); ?>dich-vu-excel.html"> Dịch vụ Excel  </a>
         </div>
+        <hr>
         <div class="row col-md-11 col-md-offset-1 content">
             <b>Bạn thân mến</b>
             <br>

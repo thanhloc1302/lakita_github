@@ -28,7 +28,7 @@
                                 <a> Về chúng tôi </a>
                             </li>
                             <li> 
-                                <a> Lakita cho doanh nghiệp </a>
+                                <a href="<?php echo base_url(); ?>dich-vu-excel.html"> Dịch vụ excel </a>
                             </li>
                             <li> 
                                 <a> Trở thành giảng viên </a>
