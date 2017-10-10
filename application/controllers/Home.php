@@ -451,7 +451,7 @@ class Home extends MY_Controller {
                 $data['id_trial_learn'] = $id_trial_learn;
                 $this->load->view('template', $data);
             } else {
-                echo 'đường dẫn sai!';
+                show_404();
                 exit;
             }
         }
