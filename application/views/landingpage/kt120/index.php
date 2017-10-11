@@ -59,6 +59,9 @@ and open the template in the editor.
     <!-- End Facebook Pixel Code -->
 
 </head>
+<script>
+        fbq('track', 'CompleteRegistration');
+    </script>
 <body>        
     <?php
     $files = glob(APPPATH . 'views/landingpage/kt120/html-file/*.php');
