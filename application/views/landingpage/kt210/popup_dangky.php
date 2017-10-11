@@ -65,6 +65,9 @@
                 <!-- End Facebook Pixel Code -->
                 </head>
                 <script>
+                    fbq('track', 'CompleteRegistration');
+                </script>
+                <script>
                     fbq('track', 'Lead');
                 </script>
                 <script>

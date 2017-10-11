@@ -65,7 +65,7 @@
                 </script>
 
                 <script>
-                   
+
                 </script>
 
 
@@ -76,6 +76,9 @@
                 <!-- DO NOT MODIFY -->
                 <!-- End Facebook Pixel Code -->
                 </head>
+                <script>
+                    fbq('track', 'CompleteRegistration');
+                </script>
                 <script>
                     fbq('track', 'Lead');
                 </script>
