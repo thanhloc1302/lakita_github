@@ -189,6 +189,7 @@
                             TRANG CÁ NHÂN <span class="caret"></span> </a>
                         <ul class="dropdown-menu" aria-labelledby="drop2">
                             <li  class="list-odd"><a href="khoa-hoc-cua-toi.html"><i class="fa fa-leanpub" aria-hidden="true"></i> &nbsp; Khóa học của tôi </a></li>
+                            <li  class="list-odd"><a href="student/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> &nbsp; Thoát</a></li>
                             <li  class="list-odd"><a ><i class="fa fa-bar-chart" aria-hidden="true"></i> &nbsp;  Tiến độ học tập</a></li>
                             <li  class="list-even"><a ><i class="fa fa-leanpub" aria-hidden="true"></i> &nbsp; Bài tập luyện tập</a></li>
                             <li  class="list-odd"><a href="nap-tien-vao-tai-khoan.html"><i class="fa fa-usd" aria-hidden="true"></i> &nbsp; Nạp tiền vào tài khoản</a></li>

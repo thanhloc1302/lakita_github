@@ -152,7 +152,7 @@
 
             <div class="clearfix"></div>
             <div class="col-md-6 col-md-offset-3">
-            <img style="width:100%; margin-top: 30px" class="img-reponsive" src="http://lakita.vn/data/source/BQLCE2017-tep-dinh-kem/dich-vu-bao-hanh.jpg">
+                <img style="width:100%; margin-top: 30px" class="img-reponsive" src="<?php echo base_url();?>data/source/BQLCE2017-tep-dinh-kem/dich-vu-bao-hanh.jpg">
         </div>
         </div>
         

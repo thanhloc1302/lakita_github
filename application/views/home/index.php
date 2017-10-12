@@ -113,13 +113,13 @@ if ($this->agent->is_mobile()) {
         foreach ($group_courses as $key => $value) {
             ?>
             <li><a href="<?php echo base_url() . 'nhom-khoa-hoc/' . $value['slug'] . '-' . $value['id'] . '.html'; ?>" class="fontsize16"><?php echo $value['name']; ?> </a></li>
-<?php }
-?>
+        <?php }
+        ?>
     </ul>
 </div>
 <div class="listCourse">
     <div class="container">
-<?php $this->load->view('template/list_course'); ?>
+        <?php $this->load->view('template/list_course'); ?>
         <div class="clearfix"></div>
         <div>
             <!--                <ul class="nextCourse hidden-sm hidden-xs">
@@ -161,8 +161,8 @@ if ($this->agent->is_mobile()) {
     <div class="testimonial"> <strong>  CẢM NHẬN HỌC VIÊN </strong> </div>
     <p class="testimonial2"> Những nhận xét của các học viên khi tham gia khóa học tại Lakita </p>
     <div class="container">
-<?php if (!$this->agent->is_mobile()) {
-    ?>
+        <?php if (!$this->agent->is_mobile()) {
+            ?>
             <div class="carousel slide" id="carousel-example-generic1" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <?php
@@ -170,7 +170,7 @@ if ($this->agent->is_mobile()) {
                     for ($i = 0; $i < ceil(count($rates) / 3); $i++) {
                         ?>
                         <li data-target="#carousel-example-generic1" data-slide-to="<?php echo $i; ?>" class="<?php echo ($i == 0) ? 'active' : ''; ?> hidden-sm hidden-xs hidden-1000"></li>
-    <?php } ?>
+                    <?php } ?>
                 </ol>
 
                 <div class="carousel-inner" role="listbox">
@@ -267,16 +267,16 @@ if ($this->agent->is_mobile()) {
                 </div>
             </div>
         </div>
-<?php if (!$this->agent->is_mobile()) {
-    ?>
+        <?php if (!$this->agent->is_mobile()) {
+            ?>
             <div class="col-md-6 positionRelative">
                 <img alt="học excel cơ bản, excel cho kế toán, tự học excel" title="học excel cơ bản, excel cho kế toán, tự học excel" src="<?php echo base_url(); ?>styles/v2.0/img/aboutus.png" >
             </div>
-<?php } ?>
+        <?php } ?>
     </div>
 </div>
 <?php
-   // $this->load->view('home/popup_tang_sub');
+// $this->load->view('home/popup_tang_sub');
 ?>
 
 

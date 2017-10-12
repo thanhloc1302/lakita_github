@@ -6,12 +6,13 @@
 <div class="modal fade" id="modal_event" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="font-family: OpenSans-Regular;z-index: 9999999999;">
     <div class="modal-dialog" role="document" style="margin: 1em auto">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Đăng ký khóa học</h4>
-            </div>
-            <div class="modal-body">
-                <form id="form-event">
+            <form id="form-event">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Đăng ký khóa học</h4>
+                </div>
+                <div class="modal-body">
+
                     <h3> Mời bạn nhập thông tin đăng ký</h3>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Tên</label>
@@ -48,7 +49,7 @@
                             );
                             foreach ($courses_kt as $key => $cour) {
                                 ?>
-                                <option value="<?php echo $cour['course_code']; ?>"><?php echo $cour['name'].' - '.$cour['price'] ?></option>
+                                <option value="<?php echo $cour['course_code']; ?>"><?php echo $cour['name'] . ' - ' . $cour['price'] ?></option>
                                 <?php
                             }
                             ?>
@@ -69,7 +70,7 @@
                             );
                             foreach ($courses_e as $key => $cour) {
                                 ?>
-                                <option value="<?php echo $cour['course_code']; ?>"><?php echo $cour['name'].' - '.$cour['price'] ?></option>
+                                <option value="<?php echo $cour['course_code']; ?>"><?php echo $cour['name'] . ' - ' . $cour['price'] ?></option>
                                 <?php
                             }
                             ?>
@@ -78,11 +79,11 @@
                     <div class="form-group" id="price_combo">
                         <label id="test">Tạm tính : 499.000 vnđ</label>
                     </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default close_modal" data-dismiss="modal">Đóng</button>
-                <button type="button" class="btn btn-success confirm_event">Xác nhận</button>
-            </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default close_modal" data-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-success confirm_event">Xác nhận</button>
+                </div>
             </form>
         </div>
     </div>

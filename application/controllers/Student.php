@@ -265,6 +265,7 @@ class Student extends MY_Controller {
 
     function logout() {
         $this->lib_mod->update('student', array('id' => $this->session->userdata('user_id')), array('temp_pass' => 0));
+        $this->lib_mod->update('watching_time', array('student_id' => $this->session->userdata('user_id')), array('time' => 0));
         $this->load->helper('cookie');
         if (get_cookie('357a466f0c8940e87378a641479e9ff8d9770318') != NULL)
             delete_cookie('357a466f0c8940e87378a641479e9ff8d9770318');

@@ -15,7 +15,6 @@
         </script>-->
         <!--ghi thời gian học viên đang đăng nhâp-->
         <?php $this->load->view('student/watching_video') ?>
-
         <?php
         if (($time_start_sale - 12 * 3600 < time()) && ($time_end_sale > time())) {
             $this->load->view('home/event');
