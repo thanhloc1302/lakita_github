@@ -460,7 +460,7 @@ $rs = json_decode($result);
             <div class="section-inner">
                 <h2 class="section-title text-center">ĐĂNG KÝ THAM DỰ</h2>
                 <div class="form container-fluid" style="padding: 0;">
-                    <form class="LeadPanel_form promo-panel_action e_submit e_form_submit form-inline" action="thank-you.html" method="post" accept-charset="utf-8">
+                    <form class="LeadPanel_form promo-panel_action e_submit e_form_submit form-inline" action="<?php echo $code_ladingpage.'/';?>thank-you.html" method="post" accept-charset="utf-8">
                         <a name="dangky"></a>
                         <div id="msbox">        
                         </div>

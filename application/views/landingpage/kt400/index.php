@@ -411,7 +411,7 @@ $rs = json_decode($result);
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-7 margin-top-50 padding-left-50" id="register">
-                    <form class="LeadPanel_form promo-panel_action e_submit e_form_submit" action="thank-you.html" method="post" name="fr_register">
+                    <form class="LeadPanel_form promo-panel_action e_submit e_form_submit" action="<?php echo $code_ladingpage.'/';?>thank-you.html" method="post" name="fr_register">
                         <!--                        <div class="my-form">
                                                     <input type="text" class="form-input" name="name" placeholder="Họ tên" value=""/>
                                                 </div>

@@ -47,7 +47,7 @@ $rs = json_decode($result);
                 </div>
             </div>
             <div class="col-md-4 col-sm-5 col-xs-12 form-rgt">
-                <form id="fr_save_c3" class="LeadPanel_form promo-panel_action e_submit e_form_submit" action="thank-you.html" method="post" name="fr_register">
+                <form id="fr_save_c3" class="LeadPanel_form promo-panel_action e_submit e_form_submit" action="<?php echo $code_ladingpage.'/';?>thank-you.html" method="post" name="fr_register">
                     <div class="form-group">
                         <input type="text" class="form-control" name="name" placeholder="Họ và tên" required>
                     </div>

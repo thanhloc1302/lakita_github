@@ -31,7 +31,7 @@ $rs = json_decode($result);
                 <div style="margin: 0 auto;">
                     <div class="tc" style="margin-top: 80px; margin-bottom: 30px; "><p style="font-size: 24px; font-weight: 600; text-align: center">Thành công cần hành động quyết liệt !<p></div>
                     <div class="phom">
-                        <form id="fr_save_c3" class="LeadPanel_form promo-panel_action e_submit e_form_submit" action="thank-you.html" method="post" name="fr_register">
+                        <form id="fr_save_c3" class="LeadPanel_form promo-panel_action e_submit e_form_submit" action="<?php echo $code_ladingpage.'/';?>thank-you.html" method="post" name="fr_register">
                             <div class="form-group">
                                 <input type="text" class="form-control dauvao hoten" name="name" placeholder="Họ và tên" >
                             </div>

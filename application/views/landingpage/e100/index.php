@@ -506,7 +506,7 @@ $rs = json_decode($result);
                             <a></a><br><br>
                             <p style="color:#fff; font-size:19px;"> Thành công cần hành động quyết liệt</p>
                             <div id="dangky" style="    max-width: 450px;    margin: auto;     //border: solid 1px #CFCFCF;    //padding: 5px;">
-                                <form class="LeadPanel_form promo-panel_action e_submit e_form_submit" role="form" id="dang-ky-2"  method="POST"  name="fr_register" action="thank-you.html">
+                                <form class="LeadPanel_form promo-panel_action e_submit e_form_submit" role="form" id="dang-ky-2"  method="POST"  name="fr_register" action="<?php echo $code_ladingpage.'/';?>thank-you.html">
                                     <div class="wrap-icon-fullname">
                                         <input  type="text" name="name" id="name" class="LeadPanel_form_name" placeholder="Họ tên" required="required" />
                                     </div>

@@ -125,7 +125,7 @@ $rs = json_decode($result);
                             </div>
                         </div>
 
-                        <form  class="LeadPanel_form promo-panel_action e_submit e_form_submit " action="thank-you.html" method="post" name="fr_register">
+                        <form  class="LeadPanel_form promo-panel_action e_submit e_form_submit " action="<?php echo $code_ladingpage.'/';?>thank-you.html" method="post" name="fr_register">
                             <div  id="loading" style="display: none" class='alert'>
                                 <a class='close' data-dismiss='alert'>×</a>
                                 Loading
@@ -543,7 +543,7 @@ $rs = json_decode($result);
                                 <div style="width: 80%; margin: auto;">
                                     <div><img src="<?php echo base_url(); ?>public/kt310/img/logo-rgt.png" alt="Lakita.vn" style="max-width: 100%;"></div>
                                     <p class="text-center" style="margin-bottom: 20px;">Nhập thông tin đăng ký</p>
-                                    <form class="LeadPanel_form promo-panel_action e_submit e_form_submit" action="thank-you.html" method="post" name="fr_register" accept-charset="utf-8">
+                                    <form class="LeadPanel_form promo-panel_action e_submit e_form_submit" action="<?php echo $code_ladingpage.'/';?>thank-you.html" method="post" name="fr_register" accept-charset="utf-8">
                                         <input type="text" name="name" value="" placeholder="Họ tên">
                                         <input type="email" name="email" value="" placeholder="Email">
                                         <input type="tel" name="phone" value="" placeholder="Số điện thoại">
