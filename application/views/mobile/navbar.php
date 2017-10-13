@@ -10,23 +10,22 @@
     }
     .navbarsm .navbar-header{
         background-color: #2B9148;
-        min-height: 60px;
+/*       / min-height: 60px;*/
     }
     .navbarsm .navbar-header a.logo-header{
         display: inline-block;
         margin-left: 20px;
         margin-top: 10px;
     }
-    .navbarsm #bs-example-navbar-collapse-2{
-        width: 100%;
-        float: right;
+    .navbarsm #menu-navbar{
+        width: 110%;
         background-color:  #2B9148;
     }
-    .navbarsm #bs-example-navbar-collapse-2 .btn-mobi{
+    .navbarsm #menu-navbar .btn-mobi{
         margin: 36px auto;
         text-align: center;
     }
-    .navbarsm #bs-example-navbar-collapse-2 .btn-mobi a{
+    .navbarsm #menu-navbar .btn-mobi a{
         margin: 5px auto;
         color: #fff;
         text-decoration: none;
@@ -34,44 +33,44 @@
         padding: 13px 45px;
         border-radius: 3px;
     }
-    .navbarsm #bs-example-navbar-collapse-2 .btn-mobi a.register{
+    .navbarsm #menu-navbar .btn-mobi a.register{
         padding: 13px 49px;
     }
-    .navbarsm #bs-example-navbar-collapse-2 .home{
+    .navbarsm #menu-navbar .home{
         background-color: #2A8B46;
-        padding-left: 20px;
+/*        padding-left: 20px;*/
     }
-    .navbarsm #bs-example-navbar-collapse-2 .home a{
+    .navbarsm #menu-navbar .home a{
         color:#fff;
         text-decoration: none;
         padding: 10px 0px;
         display: inline-block;
     }
-    .navbarsm #bs-example-navbar-collapse-2 .home a:hover{
+    .navbarsm #menu-navbar .home a:hover{
         background-color: #035D1D;
     }
     .navbarsm #bs-example-navbar-collapse-2 .home a#drop1, .navbarsm #bs-example-navbar-collapse-2 .home a#drop2, .navbarsm #bs-example-navbar-collapse-2 .home a#drop3 {
         padding-left: 15px;
     }
-    .navbarsm #bs-example-navbar-collapse-2 .home li.list-odd{
+    .navbarsm #menu-navbar .home li.list-odd{
         margin-left: -3px;
         background-color: #2A8B46;
     }
-    .navbarsm #bs-example-navbar-collapse-2 .home li.list-odd a{
-        margin-left: 18px;
+    .navbarsm #menu-navbar .home li.list-odd a{
+        margin-left: 44px;
         display: block;
         padding: 13px 0px;
     }
-    .navbarsm #bs-example-navbar-collapse-2 .home li.list-even{
+    .navbarsm #menu-navbar .home li.list-even{
         background-color: #298542;
         margin-left: -3px;
     }
-    .navbarsm #bs-example-navbar-collapse-2 .home li.list-even a{
-        margin-left: 18px;
+    .navbarsm #menu-navbar .home li.list-even a{
+        margin-left: 44px;
         display: block;
         padding: 13px 0px;
     }
-    .navbarsm #bs-example-navbar-collapse-2 .course{
+    .navbarsm #menu-navbar .course{
         background-color: #045D1E;
     }
     button.navbar-toggle {
@@ -128,9 +127,9 @@
 </style>
 <div class="navbarsm hidden-lg hidden-md">
     <nav class="navbar" style="border:none;">
-        <div class="container-fluid" style="overflow: hidden;">
+        <div class="container-fluid">
             <div class="navbar-header" style="width: 130%; margin-left: -6%; padding-left: 3%; padding-right: 21%;">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-navbar" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -139,7 +138,7 @@
                 <a href="<?php echo base_url(); ?>" class="logo-header"> <img src="<?php echo base_url(); ?>styles/v2.0/img/mobi/logo-header.png" /> </a>
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+            <div class="collapse navbar-collapse" id="menu-navbar">
                 <?php
                 $user_id = $this->session->userdata('user_id');
                 if (!isset($user_id)) {
@@ -170,12 +169,12 @@
                     </div>
                 <?php } ?>
                 <div class="home">
-                    <a href=""> <i class="fa fa-home" aria-hidden="true"></i> &nbsp;&nbsp; Trang chủ </a>
+                    <a href="">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-home" aria-hidden="true"></i>Trang chủ </a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="home course dropdown open"> 
+                    <li class="home course dropdown"> 
                         <a href="#" class="dropdown-toggle" id="drop1" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> 
-                            CÁC KHÓA HỌC <span class="caret"></span> </a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CÁC KHÓA HỌC <span class="caret"></span> </a>
                         <ul class="dropdown-menu" aria-labelledby="drop1">
                             <li  class="list-odd"><a href="<?php echo base_url() . 'nhom-khoa-hoc/'; ?>nang-cao-nang-luc-van-phong-11.html"> <i class="fa fa-file-word-o" aria-hidden="true"></i> &nbsp;&nbsp;Nâng cao năng lực Văn phòng</a></li>
                             <li  class="list-even"><a href="<?php echo base_url() . 'nhom-khoa-hoc/'; ?>ke-toan-21.html"> <i class="fa fa-money" aria-hidden="true"></i> &nbsp;&nbsp;Kế toán</a></li>
@@ -184,9 +183,9 @@
                             <li  class="list-even"><a href="<?php echo base_url() . 'nhom-khoa-hoc/'; ?>cong-nghe-thong-tin-13.html"> <i class="fa fa-television" aria-hidden="true"></i> &nbsp;&nbsp;Công nghệ thông tin</a></li>
                         </ul>
                     </li>
-                    <li class="home course dropdown open"> 
+                    <li class="home course dropdown"> 
                         <a href="#" class="dropdown-toggle" id="drop2" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> 
-                            TRANG CÁ NHÂN <span class="caret"></span> </a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRANG CÁ NHÂN <span class="caret"></span> </a>
                         <ul class="dropdown-menu" aria-labelledby="drop2">
                             <li  class="list-odd"><a href="khoa-hoc-cua-toi.html"><i class="fa fa-leanpub" aria-hidden="true"></i> &nbsp; Khóa học của tôi </a></li>
                             <li  class="list-odd"><a href="student/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> &nbsp; Thoát</a></li>
@@ -205,9 +204,9 @@
                             <li  class="list-odd"><a href="student/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> &nbsp; Thoát</a></li>
                         </ul>
                     </li>
-                    <li class="home course dropdown open"> 
+                    <li class="home course dropdown"> 
                         <a href="#" class="dropdown-toggle" id="drop3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> 
-                            THÔNG TIN KHÁC <span class="caret"></span> </a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;THÔNG TIN KHÁC <span class="caret"></span> </a>
                         <ul class="dropdown-menu" aria-labelledby="drop3">
                             <li  class="list-even"><a href="khoa-hoc-cua-toi.html"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp; Về chúng tôi </a></li>
                             <li  class="list-odd"><a href="#footer_link"><i class="fa fa-phone-square" aria-hidden="true"></i> &nbsp; Liên hệ</a></li>
@@ -231,4 +230,6 @@ if (!isset($user_id)) {
     <?php $this->load->view('template/login_modal_mobile'); ?>
 
     <?php
-} 
+} ?>
+<script>
+</script>
