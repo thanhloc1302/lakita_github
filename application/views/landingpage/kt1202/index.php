@@ -24,34 +24,19 @@ $rs = json_decode($result);
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&amp;subset=vietnamese" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>public/kt1202/css/style.css" rel="stylesheet" />
         <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
-    <!-- Facebook Pixel Code -->
-        <script>
-            !function (f, b, e, v, n, t, s) {
-                if (f.fbq)
-                    return;
-                n = f.fbq = function () {
-                    n.callMethod ?
-                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-                };
-                if (!f._fbq)
-                    f._fbq = n;
-                n.push = n;
-                n.loaded = !0;
-                n.version = '2.0';
-                n.queue = [];
-                t = b.createElement(e);
-                t.async = !0;
-                t.src = v;
-                s = b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t, s)
-            }(window,
-                    document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1645549219061949'); // Insert your pixel ID here.
-            fbq('track', 'PageView');
-        </script>
-        <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1645549219061949&ev=PageView&noscript=1"/></noscript>
-        <!-- DO NOT MODIFY -->
-        <!-- End Facebook Pixel Code -->
+     <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1645549219061949');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1645549219061949&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
     </head>
     <script>
         fbq('track', 'CompleteRegistration');
