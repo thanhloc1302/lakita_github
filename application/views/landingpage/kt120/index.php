@@ -12,7 +12,7 @@ and open the template in the editor.
         <meta property="fb:admins" content="100001432238036"/>
         <meta property="fb:app_id" content="315347858825221" />
         <meta property="og:type"   content="website" /> 
-        <meta property="og:url" content="<?php echo current_url();?>" />
+        <meta property="og:url" content="<?php echo current_url(); ?>" />
         <meta property="og:title" content="Kế toán dành cho giám đốc và các nhà quản lý" />
         <meta property="og:image" content="https://lakita.vn/data/source/courses/360x260/ke-toan-giam-doc.png" />
         <meta property="og:description" content="Khóa học đào tạo kiến thức kiểm tra kế toán dành cho giám đốc doanh nghiệp" />
@@ -27,24 +27,38 @@ and open the template in the editor.
         <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt120/newcss.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt120/newstyle.css" />
-          <!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1645549219061949');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1645549219061949&ev=PageView&noscript=1"/></noscript>
-<!-- End Facebook Pixel Code -->
+        <!-- Facebook Pixel Code -->
+        <script>
+            !function (f, b, e, v, n, t, s)
+            {
+                if (f.fbq)
+                    return;
+                n = f.fbq = function () {
+                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq)
+                    f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1645549219061949');
+            fbq('track', 'PageView');
+        </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1645549219061949&ev=PageView&noscript=1"/></noscript>
+    <!-- End Facebook Pixel Code -->
 
 </head>
 <script>
-        fbq('track', 'CompleteRegistration');
-    </script>
+    fbq('track', 'CompleteRegistration');
+</script>
+<?php include_once("plugin/analyticstracking.php") ?>
 <body>        
     <?php
     $files = glob(APPPATH . 'views/landingpage/kt120/html-file/*.php');
