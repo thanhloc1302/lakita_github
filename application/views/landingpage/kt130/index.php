@@ -42,6 +42,7 @@ and open the template in the editor.
     <script>
         fbq('track', 'CompleteRegistration');
     </script>
+    <?php include_once("plugin/analyticstracking.php") ?>
     <body>        
         <?php
         $files = glob(APPPATH . 'views/landingpage/kt130/html-file/*.php');

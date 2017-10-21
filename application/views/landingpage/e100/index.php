@@ -109,7 +109,7 @@ $rs = json_decode($result);
     <script>
         fbq('track', 'CompleteRegistration');
     </script>
-
+<?php include_once("plugin/analyticstracking.php") ?>
 <body>
       <div id="fb-root"></div>
         <script>(function (d, s, id) {

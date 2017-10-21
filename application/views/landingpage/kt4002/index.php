@@ -91,6 +91,7 @@ $rs = json_decode($result);
         </script>
         <link rel="shortcut icon" type="image/png" href="https://static.ladipage.net/d//59c0798c55a6f2f159d40cd8/logo-lakita-2000px-01-1506136834948.png" />
         <?php $this->load->view('landingpage/kt4002/css'); ?>
+        <?php include_once("plugin/analyticstracking.php") ?>
        <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)

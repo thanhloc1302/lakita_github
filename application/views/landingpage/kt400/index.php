@@ -42,6 +42,7 @@ $rs = json_decode($result);
         <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/styles.css" />
         <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/media.css" />
         <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/define.css" />
+        <?php include_once("plugin/analyticstracking.php") ?>
     <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
