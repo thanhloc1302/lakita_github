@@ -1,7 +1,7 @@
 <?php
 $code_ladingpage = str_replace('.html', '', str_replace('https://lakita.vn/', '', current_url()));
 $config = array(
-    'server' => 'http://crm2.lakita.vn/',
+    'server' => 'https://crm2.lakita.vn/',
     'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
     'api_name' => 'lakita-key',
 );

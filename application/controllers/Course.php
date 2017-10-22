@@ -1241,7 +1241,7 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
 
         $this->load->library('session');
         require_once 'plugin/Rest_Client.php';
-        $config = array('server' => 'http://crm2.lakita.vn/',
+        $config = array('server' => 'https://crm2.lakita.vn/',
             'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
             'api_name' => 'lakita-key'
         );

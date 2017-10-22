@@ -138,7 +138,7 @@ class MY_Controller extends CI_Controller {
             $post['link_id'] = $get['link'];
             $post['ip'] = $this->input->ip_address();
             $config = array(
-                'server' => 'http://crm2.lakita.vn/',
+                'server' => 'https://crm2.lakita.vn/',
                 'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
                 'api_name' => 'lakita-key'
             );

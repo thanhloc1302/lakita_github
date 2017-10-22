@@ -45,7 +45,7 @@ class Landingpage extends CI_Controller {
             die;
         }
         $config0 = array(
-            'server' => 'http://crm2.lakita.vn/',
+            'server' => 'https://crm2.lakita.vn/',
             'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
             'api_name' => 'lakita-key',
         );
@@ -56,7 +56,7 @@ class Landingpage extends CI_Controller {
         $post['course_code'] = $rs->course_code;
         $post['price_purchase'] = $rs->price;
         $config = array(
-            'server' => 'http://crm2.lakita.vn/',
+            'server' => 'https://crm2.lakita.vn/',
             //'server' => 'http://chuyenpn.com/CRM2/',
             'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
             'api_name' => 'lakita-key'
@@ -102,7 +102,7 @@ class Landingpage extends CI_Controller {
             $post['link_id'] = $get['link'];
             $post['ip'] = $this->input->ip_address();
             $config = array(
-                'server' => 'http://crm2.lakita.vn/',
+                'server' => 'https://crm2.lakita.vn/',
                 'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
                 'api_name' => 'lakita-key'
             );
