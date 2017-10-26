@@ -70,7 +70,7 @@ class Event extends MY_Controller {
                     'dia_chi' => strtoupper($combo) . ' - ' . $this->input->post('address'),
                     'course' => 'EVENT 2/9',
                     'id_camp_landingpage' => 2261,
-                    'price_purchase' => $this->courses_model->find_price_course_event($value)
+                    'price_purchase' => $this->courses_model->find_course_price($value)
                 );
 
                 if (strpos($value, "_free") !== FALSE) {
