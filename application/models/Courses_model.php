@@ -23,7 +23,7 @@ class Courses_model extends MY_Model {
         $input2['where'] = array('course_code' => $course_code);
         $courses = $this->load_all($input2);
         if (!empty($courses)) {
-            return $courses[0]['price_root2'];
+            return str_replace('.', '', $courses[0]['price_root2']);
         }
         return 600000;
     }
