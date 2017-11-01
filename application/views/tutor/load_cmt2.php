@@ -162,7 +162,7 @@
                                     }
                                     ?>   
                                 </div>    
-                                <div class="modal-footer" style="padding : 0 0 10px 0">
+                                <div class="modal-footer" style="padding : 0 0 10px 0">   
                                     <div class="rep_box" id ="rep_box_<?php echo $cmt1['id']; ?>">
                                         <div class="form-group">
                                             <div class="input-group2">

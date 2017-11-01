@@ -23,7 +23,7 @@
             d.setTime(d.getTime() + (360 * 24 * 60 * 60 * 1000));
             var expires = "expires=" + d.toUTCString();
             document.cookie = cmt_id + "=" + content + ";" + expires + ";path=/";
-            alert('Nội dung đã lưu vào bộ nhớ tạm!');
+            alert('Nội dung đã lưu vào bộ nhớ tạm của trình duyệt !');
         }
     });
 
@@ -69,7 +69,10 @@
 
                 } else
                 {
-                    alert('Đã có lỗi xảy ra khi gửi bình luận');
+                    var d = new Date();
+                    $("#modal_body_" + parent).append('<div class="row margintop10"><div class="col-md-2 text-right marginleft25 paddingright0"> <img src="https://lakita.vn/data/source/student/logo3.png" alt="" class="img-circle height-30 width-30"> </div><div class="col-md-9"> <span> <span class="lakita"> <strong>TRỢ GIẢNG LAKITA</strong> </span> trả lời lúc &nbsp; 16:55:35 23/07/2017</span> <p> </p><p>' + content + '</p> <p></p> </div></div>');
+                    $("#tr_" + parent).removeClass('warning');
+                    $("#tr_" + parent).addClass('success');
                 }
                 $('#content_rep_' + parent).text('');
                 return false;
