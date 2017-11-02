@@ -41,7 +41,7 @@ class Guest extends MY_Controller {
                     $this->lib_mod->update('student', array('email' => $email), array('temp_pass' => $randStr));
                 }
 
-                $tutor = array('2626', '5844', '4909', '3073', '7252', '7346');
+                $tutor = array('2626', '5844', '4909', '3073', '7252', '7346', '7949', '7950', '7951');
                 if (in_array($member[0]['id'], $tutor)) {
                     echo 2;
                 } else {

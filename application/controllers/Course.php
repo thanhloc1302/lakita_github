@@ -721,7 +721,7 @@ class Course extends MY_Controller {
         $coupon = strtoupper(trim($this->input->post('coupon')));
 
         //kiểm tra voucher đặc biệt ở file data/voucher.excel
-      //  $this->load->library('PHPExcel');
+        //  $this->load->library('PHPExcel');
 //        require_once APPPATH . 'libraries/Rest_Client.php';
 //        
 //        $config = array('server' => 'https://sheets.googleapis.com/');
@@ -740,9 +740,9 @@ class Course extends MY_Controller {
 //        $tweets = $this->rest->get('v4/spreadsheets/18x9FB074aMpgm66PbaPMtmol6HgG6eeidl3P5wJcH6w/values/Sheet1!A1:C' . $key);
 //        
         $tweets = file_get_contents('https://sheets.googleapis.com/v4/spreadsheets/18x9FB074aMpgm66PbaPMtmol6HgG6eeidl3P5wJcH6w/values/Sheet1!A2:C?key=AIzaSyCdjll4ib79ZGtUEEEAxksl6zff2NkLCII');
-  $tweets = json_decode($tweets);
-         //print_r($tweets);die;
-       $data1 = $tweets->values;
+        $tweets = json_decode($tweets);
+        //print_r($tweets);die;
+        $data1 = $tweets->values;
 //        $Rest->debug();
 //        print_r($data1);
 //        die;
@@ -1039,6 +1039,11 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
 </table>');
             $this->email->send();
             $this->email->clear(TRUE);
+
+            $this->load->helper('cookie');
+            if (!is_null(get_cookie($parent))) {
+                delete_cookie($parent);
+            }
         } else {
 
 
@@ -1070,7 +1075,7 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
             if (in_array($courses_id, array(77))) { // các khóa của thoDT
                 $emailTo .= ', daothotn@gmail.com';
             }
-            if (in_array($courses_id, array(82, 81, 80, 66))){ //các khóa học của TrungHQ
+            if (in_array($courses_id, array(82, 81, 80, 66))) { //các khóa học của TrungHQ
                 $emailTo .= ', quangtrung.hoang@yahoo.com';
             }
             //$emailTo = 'thanhloc1302@gmail.com';
@@ -1241,7 +1246,7 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
 
         $this->load->library('session');
         require_once 'plugin/Rest_Client.php';
-        $config = array('server' => 'http://crm2.lakita.vn/',
+        $config = array('server' => 'https://crm2.lakita.vn/',
             'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
             'api_name' => 'lakita-key'
         );

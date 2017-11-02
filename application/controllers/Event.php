@@ -70,9 +70,8 @@ class Event extends MY_Controller {
                     'dia_chi' => strtoupper($combo) . ' - ' . $this->input->post('address'),
                     'course' => 'EVENT 2/9',
                     'id_camp_landingpage' => 2261,
-                    'price_purchase' => $this->courses_model->find_price_course_event($value)
+                    'price_purchase' => $this->courses_model->find_course_price($value)
                 );
-
                 if (strpos($value, "_free") !== FALSE) {
                     $param1['price_purchase'] = '0';
                     $param1['course_code'] = str_replace('_free', '', $value);
@@ -87,7 +86,6 @@ class Event extends MY_Controller {
         echo 1;
         die;
     }
-  
 
     function setIDTrial() {
         $user_id = $this->session->userdata('user_id');
@@ -152,5 +150,4 @@ class Event extends MY_Controller {
 //            echo number_format($price_combo);
 //        }
 //    }
-
 }

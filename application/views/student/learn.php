@@ -158,6 +158,9 @@
                                 <input type="hidden" id="curr_learn_id" value="<?php echo $curr_id; ?>" />
                                 <?php $this->session->set_tempdata('is_playable', $curr_id, 3600); ?>
                             </div>
+                            <div style="color :red; text-align: center; font-weight: bold">
+                                <p>Nếu bạn gặp sự cố, vui lòng cài đặt <a href="https://www.youtube.com/watch?v=HjZU99M7398" target="blank">Teamview</a> và liên hệ tới số điện thoại 1900 6361 95 để được hỗ trợ</p>
+                            </div>
                         </div>
                     </div>
                 </div>
