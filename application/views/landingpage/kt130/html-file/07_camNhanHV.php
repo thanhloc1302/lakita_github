@@ -70,7 +70,7 @@
 
     <div class="row hidden-sm hidden-xs videocamnhan">
         <div class="col-md-10 col-md-offset-1">
-            <div class="col-md-4" style="100%"> 
+            <div class="col-md-4"> 
                 <iframe width="370" height="210" src="https://www.youtube.com/embed/Wy6NdzKgPuY" frameborder="0" allowfullscreen></iframe>            
             </div>
             <div class="col-md-4"> 

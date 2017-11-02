@@ -738,7 +738,7 @@ $rs = json_decode($result);
                             <div class="form-arrow"></div>
                             <a></a><br><br>
                             <p style="color:#fff; font-size:19px;"> Thành công cần hành động quyết liệt</p>
-                            <div id="dangky" style="    max-width: 450px;    margin: auto;     //border: solid 1px #CFCFCF;    //padding: 5px;">
+                            <div id="dangky" style="    max-width: 450px;    margin: auto;">
                                 <form class="LeadPanel_form promo-panel_action e_submit e_form_submit" role="form" id="dang-ky-2"  method="POST"  name="fr_register" action="<?php echo $code_ladingpage.'/';?>thank-you.html">
                                     <div class="wrap-icon-fullname">
                                         <input  type="text" name="name" id="name" class="LeadPanel_form_name" placeholder="Họ tên" required="required" />
@@ -934,7 +934,7 @@ $rs = json_decode($result);
                     <img src="https://lakita.vn/styles/images/email/rgt-now.png" alt="Đăng ký ngay!" id="img-rgt" style="float: right;">
                 </a>-->
         <a href="tel:1900636195" title="Đăng ký ngay!">
-            <img src="https://lakita.vn/styles/images/email/contact.png" alt="Đăng ký ngay!" id="img-contact" style="float: left; transition: all 0.3s ease-in-out; --webkit-transition: all 0.3s ease-in-out;">
+            <img src="https://lakita.vn/styles/images/email/contact.png" alt="Đăng ký ngay!" id="img-contact" style="float: left; transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;">
         </a>
     </div>
     <script type="text/javascript">
