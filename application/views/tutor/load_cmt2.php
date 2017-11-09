@@ -88,7 +88,7 @@
                 </td>
                 <td>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#<?php echo $cmt1['id']; ?>">Trả lời </button>
-                    <div class="modal fade" id="<?php echo $cmt1['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index:1000000000">
+                    <div class="modal fade" id="<?php echo $cmt1['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index:10009">
                         <div class="modal-dialog">
                             <div class="modal-content" style="background-color:#FFF; ">
                                 <div class="modal-header">
