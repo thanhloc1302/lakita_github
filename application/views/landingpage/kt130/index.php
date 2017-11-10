@@ -71,5 +71,6 @@ and open the template in the editor.
             <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/845378743/?value=1.00&amp;label=X6FtCMy5jnMQt-mNkwM&amp;guid=ON&amp;script=0"/>
         </div>
         </noscript>
+		
     </body>
 </html>

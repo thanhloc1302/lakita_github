@@ -60,6 +60,7 @@ and open the template in the editor.
 </script>
 <?php include_once("plugin/analyticstracking.php") ?>
 <body>        
+
     <?php
     $files = glob(APPPATH . 'views/landingpage/kt120/html-file/*.php');
     foreach ($files as $file) {

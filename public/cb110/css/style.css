@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.slider {
+  background: linear-gradient(to bottom right, #000, rgba(0, 0, 0, 0)), url("../img-ladipage/rgt-cover.png");
+  background-size: cover;
+  width: 100%;
+  z-index: -10; }
+  .slider h2 {
+    margin: auto;
+    padding: 40px 0;
+    font-size: 45px;
+    line-height: 60px;
+    color: #fff;
+    width: 80%;
+    background: #653e23;
+    text-transform: uppercase;
+    border: 2px solid  #653e22;
+    -moz-border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    border-radius: 60px;
+    opacity: 0.85; }
+
+.img-slogan {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  width: 250px;
+  height: 60px; }
+
+.title-slider {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 120px;
+  margin-bottom: 60px;
+  text-transform: uppercase; }
+
+.btn {
+  background: #fd6a00;
+  font-size: 20px;
+  border: 2px solid  #fd6a00;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+  opacity: 0.85;
+  margin-bottom: 100px;
+  padding: 10px 40px; }
+
+.info-combo {
+  background: #fff; }
+  .info-combo .container {
+    background: #fff;
+    position: relative;
+    top: -50px;
+    box-shadow: 0px 0px 50px 5px #6f7880; }
+  .info-combo .price {
+    font-size: 25px;
+    color: #ff9000;
+    font-weight: bold;
+    margin: 50px 0; }
+    .info-combo .price span {
+      font-size: 40px; }
+  .info-combo .warning {
+    padding: 20px 20px;
+    margin-top: 30px;
+    font-size: 25px;
+    line-height: 50px;
+    color: #000;
+    font-weight: bold;
+    background: #e1f1fd;
+    border-radius: 60px;
+    position: relative;
+    top: 30px; }
+  .info-combo img {
+    width: 50%; }
+  .info-combo .title-course {
+    padding: 20px 20px;
+    margin-top: 20px;
+    font-size: 23px;
+    color: #000;
+    font-weight: bold;
+    background: #e1f1fd;
+    border-radius: 60px; }
+
+.courses {
+  background: linear-gradient(to right, #000, rgba(0, 0, 0, 0)), url("../img-ladipage/rgt-cover.png");
+  background-size: cover;
+  width: 100%;
+  z-index: -10;
+  text-transform: uppercase; }
+  .courses h3 {
+    margin: 50px 0; }
+    .courses h3 span {
+      padding: 20px 20px;
+      font-size: 35px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 60px; }
+  .courses .item-course {
+    font-size: 20px;
+    margin: 25px 0;
+    list-style-type: none; }
+    .courses .item-course a {
+      color: #ff6b00;
+      margin-left: 0px; }
+
+.feedback .feedback-title {
+  font-size: 35px;
+  color: #000;
+  text-align: center;
+  margin-top: 20px;
+  text-transform: uppercase; }
+.feedback .screen-Apple img {
+  width: 450px;
+  position: relative;
+  top: 130px; }
+.feedback .screen-Apple .video {
+  position: relative;
+  bottom: 217px;
+  left: 1px; }
+
+@media screen and (min-width: 768px) {
+  .feedback {
+/*    width: 50%; */ } }
+.supporting {
+  background: linear-gradient(to bottom right, #123456, rgba(255, 0, 0, 0)), url("../img-ladipage/rgt-cover.png");
+  background-size: cover;
+  width: 100%;
+  z-index: -10;
+  font-family: Calibri; }
+  .supporting h2 {
+    font-size: 33px;
+    color: #fff;
+    margin-top: -40px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: bold; }
+  .supporting .sup-item {
+    color: #fff;
+    font-size: 22px; }
+    .supporting .sup-item p:nth-child(2) {
+      font-size: 21px;
+      text-transform: uppercase;
+      margin-top: 20px;
+/*      margin-bottom: 50px;*/
+      font-weight: bold; }
+    .supporting .sup-item p:nth-child(3) {
+      margin: 30px;
+      padding: 0 5px; }
+    .supporting .sup-item img {
+      width: 30%; }
+
+.register {
+  background: linear-gradient(to right, #000, rgba(0, 0, 0, 0)), url("../img-ladipage/rgt-cover.png");
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  z-index: -10; }
+  .register p {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px; }
+  .register .form-group div input {
+    height: 40px;
+    width: 90%;
+    margin: 10px; }
+  .register .form-group div .btn-register {
+    width: 600px; }
+
+.BOX {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  display: table;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  line-height: 75px;
+  background: #494949; }
+
+.ThoiGianHienThi table {
+  width: 70%;
+  color: white;
+  margin-top: 60px;
+  margin-left: 15%; }
+  .ThoiGianHienThi table tr th {
+    width: 24%;
+    padding-left: 15px; }
+
+.FormDangKy {
+  margin-top: 60px; }
+
+@media screen and (max-width: 768px) {
+  .FormDangKy form .btn-register {
+    margin-left: 25%; }
+
+  .ThoiGianHienThi div p {
+    margin-left: 0px; } }
+@media screen and (min-width: 992px) {
+  .FormDangKy form .btn-register {
+    margin-left: 20%; }
+
+  .ThoiGianHienThi div p {
+    margin-left: -10%; } }
+
+/*# sourceMappingURL=style.css.map */
+
+/*=============================== register ====================================*/
+.register2{
+/*    margin-bottom: 50px;*/
+}
+.register2 .hr{
+    border: 1px solid #38bb6b;
+    height: 1px;
+    margin-bottom: 20px;
+}
+.register2 .register-notice{
+    color:#cecbcb;
+}
+.register2 .price_root{
+    padding: 20px 10px;
+    border: 1px solid #38bb6b;
+    font-size: 30px;
+    border-radius: 25px 0 0 25px;
+    color:#38bb6b;
+    text-decoration: line-through;
+}
+.register2 .price_sale{
+    padding: 20px 10px;
+    border: 1px solid #38bb6b;
+    font-size: 30px;
+    border-radius: 0px 25px 25px 0px;
+    margin-left: -5px;
+    background-color: #38bb6b;
+    color: #fff;
+}
+.register-notice-2{
+    color:#6a6a6a;
+    margin-top: 55px;
+}
+.count-down .num-wrap{
+    background-color: #38bb6b;
+    border-radius: 10px;
+    width: 110%;
+    margin-top: 25px;
+}
+.num-day, .num-hour, .num-minute, .num-second{
+    font-size: 80px;
+    margin-bottom: -15px;
+    color: #fff;
+    padding: 0px 5px;
+}
+.txt-time{
+    font-size: 22px;
+    color: #fff;
+    padding-bottom: 10px;
+}
+.my-form{
+    margin-bottom: 5px;
+}
+.my-form .form-input{
+    padding: 14px 0px;
+    border: none;
+    width: 100%;
+    padding-left: 5px;
+}
+.my-btn{
+    background-image: none;
+    background-color: #38bb6b;;
+    border-radius: 0;
+}
+.register2 .warning{
+    margin-top: 40px;
+}
+.register2 .warning .col-xs-12{
+    background-color: #ffe0b2;
+    padding: 10px;
+}
+.register2 .warning .col-xs-12 > div {
+    float: left;
+
+}
+.register2 .warning-1{
+    color: #f57c00;
+    width: 10%;
+}
+.register2 .warning-2{
+    font-family: helvetica-neue-medium;
+    font-size: 24px;
+    width: 13%;
+}
+.register2 .warning-3{
+    width: 70%;
+}
+
+

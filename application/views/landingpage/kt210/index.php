@@ -77,6 +77,7 @@ and open the template in the editor.
 </script>
 
 <body>        
+
     <?php
     $files = glob(APPPATH . 'views/landingpage/kt210/html-file/*.php');
     foreach ($files as $file) {

@@ -1,7 +1,7 @@
 <?php
 $code_ladingpage = str_replace('.html', '', str_replace('https://lakita.vn/', '', current_url()));
 $config = array(
-    'server' => 'https://crm2.lakita.vn/',
+    'server' => 'http://crm2.lakita.vn/',
     'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
     'api_name' => 'lakita-key',
 );
@@ -1037,7 +1037,7 @@ $rs = json_decode($result);
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 col-xs-12">
-                        <div class="fb-comments" data-href="http://lapbctc2016499.lakita.vn" 
+                        <div class="fb-comments" data-href="https://lakita.vn/tron-bo-lap-bao-cao-tai-chinh-2017.html" 
                              data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
                     </div>
                 </div>

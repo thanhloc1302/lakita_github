@@ -48,6 +48,19 @@
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1645549219061949&ev=PageView&noscript=1"/></noscript>
 <!-- End Facebook Pixel Code -->
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '171846299916686');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=171846299916686&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
                 </head>
                 <script>
                     fbq('track', 'CompleteRegistration');
@@ -62,6 +75,21 @@
                     });
                 </script>
                 <body>
+				<!-- Google Code for conversion Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 836926464;
+var google_conversion_label = "uWw8CMzZvnQQgPiJjwM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/836926464/?label=uWw8CMzZvnQQgPiJjwM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
                     <!-- Google Code for KT400 Conversions Conversion Page -->
                     <script type="text/javascript">
                         /* <![CDATA[ */

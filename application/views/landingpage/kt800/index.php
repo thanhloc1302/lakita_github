@@ -76,7 +76,8 @@ and open the template in the editor.
 <script>
     fbq('track', 'CompleteRegistration');
 </script>
-<body>        
+<body>      
+
     <?php
     $files = glob(APPPATH . 'views/landingpage/kt800/html-file/*.php');
     foreach ($files as $file) {
