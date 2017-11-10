@@ -88,7 +88,7 @@
                 </td>
                 <td>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#<?php echo $cmt1['id']; ?>">Trả lời </button>
-                    <div class="modal fade" id="<?php echo $cmt1['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index:1000000000">
+                    <div class="modal fade" id="<?php echo $cmt1['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="z-index:10009">
                         <div class="modal-dialog">
                             <div class="modal-content" style="background-color:#FFF; ">
                                 <div class="modal-header">
@@ -162,20 +162,22 @@
                                     }
                                     ?>   
                                 </div>    
-                                <div class="modal-footer" style="padding : 0 0 10px 0">
+                                <div class="modal-footer" style="padding : 0 0 10px 0">   
                                     <div class="rep_box" id ="rep_box_<?php echo $cmt1['id']; ?>">
                                         <div class="form-group">
                                             <div class="input-group2">
                                                 <!-- /btn-group -->
-                                                <div class=" col-md-11">
-                                                    <textarea name="editor_<?php echo $cmt1['id']; ?>" id="editor_<?php echo $cmt1['id']; ?>" class="form-control share-text" required placeholder="Nhập dữ liệu..." style="height: 36px;"></textarea>
+                                                <div class=" col-md-10">
+                                                    <textarea name="editor_<?php echo $cmt1['id']; ?>" id="editor_<?php echo $cmt1['id']; ?>" class="form-control share-text" required placeholder="Nhập dữ liệu..." style="height: 36px;"><?php $this->load->helper('cookie'); if(!is_null(get_cookie($cmt1['id']))){ echo get_cookie($cmt1['id']);} ?></textarea>
                                                     <script>
                                                         CKEDITOR.replace('editor_<?php echo $cmt1['id']; ?>', {height: '120px'});
                                                         CKEDITOR.add;
                                                     </script>
                                                 </div>
-                                                <div class="col-md-1" style="padding : 0">
-                                                    <button class="btn btn-primary" url="<?php echo $learn_slug; ?>" course_id="<?php echo $cmt1['courses_id']; ?>" learn_id="<?php echo $cmt1['learn_id']; ?>" value='<?php echo $cmt1['id']; ?>' id="save_rep_<?php echo $cmt1['id']; ?>">Trả lời</button>
+                                                <div class="col-md-2" style="padding : 0;">
+                                                    <button style=" float: left;" class="btn btn-primary" url="<?php echo $learn_slug; ?>" course_id="<?php echo $cmt1['courses_id']; ?>" learn_id="<?php echo $cmt1['learn_id']; ?>" value='<?php echo $cmt1['id']; ?>' id="save_rep_<?php echo $cmt1['id']; ?>">&nbsp;&nbsp;Trả lời&nbsp;&nbsp;&nbsp;</button>
+                                                    <button style=" float: left; margin-left: 0; margin-top: 15px" class="btn btn-success" value='<?php echo $cmt1['id']; ?>' id="temp_rep_<?php echo $cmt1['id']; ?>">Lưu nháp</button>
+
                                                 </div>
                                             </div>
                                             <!-- /input-group -->

@@ -296,7 +296,5 @@ if ($this->agent->is_mobile()) {
             }
         });
     });
-
-   
 </script>
 

@@ -24,6 +24,13 @@
     .content ol li p{
         margin-left: 40px;
     }
+    .btn{
+        display: table;
+        margin: auto;
+        padding: 10px 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 </style>
 <div class="header">
     <?php $this->load->view('home/navbar'); ?>
@@ -98,9 +105,12 @@
                             </ul>
                     </ul>
                 </li>
+                <li>
+                    <a class="btn btn-success" href="https://goo.gl/forms/yiZDYnIzzy2pg6Ep1" target="blank">ĐĂNG KÝ NGAY</a>
+                </li>
                 <li><b>2. XÂY DỰNG HỆ THỐNG</b>
                     <ul>
-                        <li><b>B. AI LÀ NGƯỜI CẦN DỊCH VỤ NÀY?</b>
+                        <li><b>A. AI LÀ NGƯỜI CẦN DỊCH VỤ NÀY?</b>
                             <ul>
                                 <li>
                                     Là những người đã có hệ thống nhưng hệ thống này không dùng được, hoặc không áp dụng vào công việc được.
@@ -135,12 +145,50 @@
                     </ul>
                 </li>
                 <li>
-                    <b>3. CAM KẾT TỪ LAKITA.VN</b>
+                    <a class="btn btn-success" href="https://goo.gl/forms/yiZDYnIzzy2pg6Ep1" target="blank">ĐĂNG KÝ NGAY</a>
+                </li>
+                <li>
+                    <b>3. XỬ LÝ DỮ LIỆU</b>
+                    <ul>
+                        <li><b>A. AI LÀ NGƯỜI CẦN DỊCH VỤ NÀY?</b>
+                            <ul>
+                                <li>
+                                    Là những người có dữ liệu mà không biết cách xử lý để thỏa mãn yêu cầu công việc.
+                                </li>
+                                <li>
+                                    Là những người cần xử lý dữ liệu nhanh để kịp tiến độ công việc.
+                                </li>
+                            </ul>
+                        </li>
+                        <li><b>B. DỊCH VỤ SẼ MANG LẠI ĐIỀU GÌ CHO BẠN?</b>
+                            <ul>
+                                <li>
+                                    Giảm thời gian làm việc.
+                                </li>
+                                <li>
+                                    Tăng năng suất lao động.
+                                </li>
+                                <li>
+                                    Không phải đau đầu vì xử lý dữ liệu
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><b>C.CHI PHÍ</b>
+                            <p>Từ 0 VNĐ trở lên theo khối lượng cũng như tính chất công việc. Nội dung này sẽ được bàn cụ thể trong quá trình tư vấn</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="btn btn-success" href="https://goo.gl/forms/yiZDYnIzzy2pg6Ep1" target="blank">ĐĂNG KÝ NGAY</a>
+                </li>
+                <li>
+                    <b>4. CAM KẾT TỪ LAKITA.VN</b>
                     <p>Bảo hành trọn đời Sử dụng tốt mới phải thanh toán cũng như cho CẢM NHẬN về sản phẩm</p>
                 </li>
                 <li>
                 <li>    
-                    <b>4. HÌNH THỨC ĐĂNG KÝ</b>
+                    <b>5. HÌNH THỨC ĐĂNG KÝ</b>
                     <p>Các bạn sẽ đăng ký tư vấn bằng cách điền thông tin vào link sau</p>
                     <p><a href="https://goo.gl/forms/yiZDYnIzzy2pg6Ep1" target="blank" >https://goo.gl/forms/yiZDYnIzzy2pg6Ep1</a></p>
                 </li>
@@ -152,8 +200,10 @@
 
             <div class="clearfix"></div>
             <div class="col-md-6 col-md-offset-3">
-                <img style="width:100%; margin-top: 30px" class="img-reponsive" src="<?php echo base_url();?>data/source/BQLCE2017-tep-dinh-kem/dich-vu-bao-hanh.jpg">
+                <a href="https://goo.gl/forms/yiZDYnIzzy2pg6Ep1" target="blank" >
+                    <img style="width:100%; margin-top: 30px" class="img-reponsive" src="https://lakita.vn/data/source/BQLCE2017-tep-dinh-kem/dich-vu-bao-hanh.jpg">
+                </a>
+            </div>
         </div>
-        </div>
-        
+
     </div>

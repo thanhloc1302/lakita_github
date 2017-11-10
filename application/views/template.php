@@ -20,6 +20,7 @@
             $this->load->view('home/event');
         } else {
             $this->load->view('home/comboKTE');
+            $this->load->view('home/bannerExcel');
         }
         ?>
         <?php $this->load->view('home/try_learn'); ?>

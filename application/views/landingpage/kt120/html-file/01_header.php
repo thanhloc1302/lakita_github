@@ -7,8 +7,9 @@
         <div class="row">
             <div class="col-md-12">
                 <p class="course text-center"> KHÓA HỌC ĐỘC QUYỀN </p>
-                <h1 class="course_name text-center"> KẾ TOÁN DÀNH CHO  </h1>
-                <h1 class="course_name text-center"> GIÁM ĐỐC VÀ CÁC NHÀ QUẢN LÝ </h1>
+                <h1 class="course_name text-center"> TRỌN BỘ QUẢN TRỊ  </h1>
+                <h1 class="course_name text-center"> TÀI CHÍNH KẾ TOÁN  </h1>
+                <h1 class="course_name text-center"> DÀNH CHO CÁC NHÀ QUẢN LÝ </h1>
                 <h3 class="text-center"> CÙNG CHUYÊN GIA TƯ VẤN TS.HOÀNG QUANG TRUNG </h3>
                 <div class="row research">
                     <div class="col-md-2 col-md-offset-2 hr1 hidden-md hidden-xs"><hr></div>

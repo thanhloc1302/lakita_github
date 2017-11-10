@@ -10,7 +10,7 @@
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 27.5%; font-size: 10px;"> PHÚT <br></span>
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 19.4%; font-size: 62px;" class="num-second"> 400 <br></span>
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 21.0%; font-size: 10px;"> GIÂY <br></span>-->
-    <div class="clock" style="bottom: 0px; position: fixed; z-index: 10008;width: 46%; right: -10%"></div>
+    <div class="clock" style="bottom: 0px; position: fixed; z-index: 100000000;width: 46%; right: -10%"></div>
 </a>
 <script type="text/javascript">
     var end = <?php echo $time_end_sale; ?>;
