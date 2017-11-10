@@ -50,14 +50,68 @@ $rs = json_decode($result);
                         <div><H1><img src="<?php echo base_url() ?>public/cb110/img-ladipage/logo-slogan-lakita-co-may-bay.png" class="img-slogan" title="LAKITA.VN Học kế toán online"></H1></div>
                         <h2 class="text-center">Combo kế toán excel tin học văn phòng siêu khuyến mãi</h2>
                         <p class="title-slider">Giỏi nghiệp vụ kế toán - thành thạo kỹ năng văn phòng chỉ 545K</p>
-                        <button type="button" class="btn btn-success">Đăng ký ngay</button>
-                    </div>
+                        <a href="#register-area" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg">Đăng ký ngay</a>
 
+                        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background-color: #5cb85c; color: #fff">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title"> Đăng ký khóa học </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="pop-up-register" >
+                                            <h4 class="text-center" style="line-height: 25px; text-align: left; padding: 5px;">Quý khách vui lòng điền đầy đủ thông tin cá nhân để nhân viên gọi điện tư vấn cho quý khách. Chân thành cảm ơn. </h4>
+                                            <form class="LeadPanel_form promo-panel_action e_submit e_form_submit" role="form" id="dang-ky-2"  method="POST"  name="fr_register" action="<?php echo $code_ladingpage . '/'; ?>thank-you.html">
+                                                <div class="form-group">
+                                                    <div class="col-md-12 col-xs-12 col-sm-12">
+                                                        <input class="form-control" type="text" name="name" required="" placeholder="Họ và tên:">
+                                                    </div>
+                                                    <div class="col-md-12 col-xs-12 col-sm-12">
+                                                        <input class="form-control" type="tel" name="phone" required="" placeholder="Điện thoại: ">
+                                                    </div>
+                                                    <div class="col-md-12 col-xs-12 col-sm-12">
+                                                        <input class="form-control" type="text" name="email" placeholder="Email:">
+                                                    </div>
+                                                    <div class="col-md-12 col-xs-12 col-sm-12">
+                                                        <input class="form-control" type="text" name="dia_chi" placeholder="Địa chỉ:">
+                                                    </div>
+                                                    <div class="col-md-12 col-xs-12 col-sm-12">
+                                                        <select class="form-control type-combo" name="type-combo">
+                                                            <option value="0"> Mời bạn chọn khóa học kế toán cần đăng ký </option>
+                                                            <option value="CB110"> Kế toán thuế cho người mới bắt đầu </option>
+                                                            <option value="CB120"> Hướng dẫn lập báo cáo tài chính </option>
+                                                            <option value="CB130"> Kế toán thuế nâng cao </option>
+                                                            <option value="CB140"> Cách xác định chi phí hợp lý, công cụ bảo về về thanh tra thuế</option>
+                                                            <option value="CB150"> Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn </option>
+                                                        </select>
+                                                    </div>
+                                                    <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
+                                                    <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
+                                                    <button type="submit" 
+                                                            class="btn btn-register btn-success LeadPanel_action button radius e_btn_submit reg_bt btn-rgt"
+                                                            style="background-color: #5cb85c; border: 2px solid #5cb85c;">
+                                                        Đăng ký ngay
+                                                    </button>
+                                                </div>
+                                                <div class="col-md-12">
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal" style="margin-bottom: 0px">Close</button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="info-combo" class="info-combo">
-            <div class="container">
+            <div class="container" style="width: 80%;">
                 <div class="row text-center">
                     <div class="combo">
                         <span class="warning">Bạn sẽ bỏ lỡ điều gì nếu không đăng ký</span>		
@@ -86,19 +140,19 @@ $rs = json_decode($result);
                     <div class="list-courses col-sm-offset-3 col-md-6 col-sm-offset-3 col-ms-6">
                         <div class="row item-course">
                             <div class="col-md-1">  <img src="<?php echo base_url() ?>public/cb110/img-ladipage/checked.png"> </div>
-                            <div class="col-md-10 col-md-offset-1">
+                            <div class="col-md-10 col-md-offset-1" style="line-height: 64px;">
                                 <span><a href="https://lakita.vn/quyet-toan-thue-tu-a-den-z.html?link=164" target="_blank">Kế toán thuế cho người mới bắt đầu</a></span>
                             </div>
                         </div>
                         <div class="row item-course">
                             <div class="col-md-1">  <img src="<?php echo base_url() ?>public/cb110/img-ladipage/checked.png"> </div>
-                            <div class="col-md-10 col-md-offset-1">
+                            <div class="col-md-10 col-md-offset-1" style="line-height: 64px;">
                                 <span><a href="https://lakita.vn/lap-bao-cao-tai-chinh-2017.html?link=165" target="_blank">Hướng dẫn lập báo cáo tài chính</a></span>
                             </div>
                         </div>
                         <div class="row item-course">
                             <div class="col-md-1">  <img src="<?php echo base_url() ?>public/cb110/img-ladipage/checked.png"> </div>
-                            <div class="col-md-10 col-md-offset-1">
+                            <div class="col-md-10 col-md-offset-1" style="line-height: 64px;">
                                 <span><a href="https://lakita.vn/ky-thuat-quyet-toan-thue.html?link=169" target="_blank">Kế toán thuế nâng cao</a></span>
                             </div>
                         </div>
@@ -123,9 +177,7 @@ $rs = json_decode($result);
             <div class="container">
 
                 <p class="feedback-title">Cảm nhận học viên</p>
-
                 <div class="row">
-
                     <div class="screen-Apple col-md-6 col-sm-6 col-xs-12 text-center">
                         <img src="<?php echo base_url() ?>public/cb110/img-ladipage/Apple-Mac-Computer-Screen-PNG.png">
                         <iframe class="video" width="420" height="238" src="https://www.youtube.com/embed/5TJhF4Gtu5I" frameborder="0" allowfullscreen></iframe>
@@ -219,9 +271,19 @@ $rs = json_decode($result);
                                 <div class="col-md-12 col-xs-12 col-sm-12">
                                     <input class="form-control" type="text" name="dia_chi" placeholder="Địa chỉ:">
                                 </div>
+                                <div class="col-md-12 col-xs-12 col-sm-12">
+                                    <select class="form-control type-combo-2" name="type-combo">
+                                        <option value="0"> Mời bạn chọn khóa học kế toán cần đăng ký </option>
+                                        <option value="CB110"> Kế toán thuế cho người mới bắt đầu </option>
+                                        <option value="CB120"> Hướng dẫn lập báo cáo tài chính </option>
+                                        <option value="CB130"> Kế toán thuế nâng cao </option>
+                                        <option value="CB140"> Cách xác định chi phí hợp lý, công cụ bảo về về thanh tra thuế</option>
+                                        <option value="CB150"> Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn </option>
+                                    </select>
+                                </div>
                                 <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
                                 <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
-                                <button type="submit" class="btn btn-register btn-success LeadPanel_action button radius e_btn_submit reg_bt">
+                                <button type="submit" class="btn btn-register btn-success LeadPanel_action button radius e_btn_submit reg_bt btn-rgt-2">
                                     Đăng ký ngay
                                 </button>
                             </div>
@@ -287,11 +349,24 @@ $rs = json_decode($result);
         </style>
 
         <script>
-            $(".e_btn_submit").click(function () {
-                $(".popup-wrapper").show();
-            });
+          
         </script>
         <!-- *************************************************************Popup (end)**********************************************************************-->
 
+        
+        <script>
+            $(".btn-rgt-2").click(function(e){
+                if($(".type-combo-2").val() == 0){
+                    alert("Mời bạn chọn khóa học kế toán cần đăng ký!");
+                    e.preventDefault();
+                }
+            });
+             $(".btn-rgt").click(function(e){
+                if($(".type-combo").val() == 0){
+                    alert("Mời bạn chọn khóa học kế toán cần đăng ký!");
+                    e.preventDefault();
+                }
+            });
+        </script>
     </body>
 </html>

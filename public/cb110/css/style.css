@@ -1,13 +1,13 @@
 * {
-  margin: 0;
-  padding: 0; }
+    margin: 0;
+    padding: 0; }
 
 .slider {
-  background: linear-gradient(to bottom right, #000, rgba(0, 0, 0, 0)), url("../img-ladipage/rgt-cover.png");
-  background-size: cover;
-  width: 100%;
-  z-index: -10; }
-  .slider h2 {
+    background: linear-gradient(to bottom right, #000, rgba(0, 0, 0, 0)), url("../img-ladipage/rgt-cover.png");
+    background-size: cover;
+    width: 100%;
+    z-index: -10; }
+.slider h2 {
     margin: auto;
     padding: 40px 0;
     font-size: 45px;
@@ -25,46 +25,50 @@
     opacity: 0.85; }
 
 .img-slogan {
-  margin-top: 10px;
-  margin-bottom: 50px;
-  width: 250px;
-  height: 60px; }
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: 250px;
+    height: 60px; }
 
 .title-slider {
-  color: #fff;
-  font-size: 20px;
-  margin-top: 120px;
-  margin-bottom: 60px;
-  text-transform: uppercase; }
+    color: #fff;
+    font-size: 20px;
+    margin-top: 120px;
+    margin-bottom: 60px;
+    text-transform: uppercase; }
 
 .btn {
-  background: #fd6a00;
-  font-size: 20px;
-  border: 2px solid  #fd6a00;
-  -moz-border-radius: 60px;
-  -webkit-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
-  border-radius: 60px;
-  opacity: 0.85;
-  margin-bottom: 100px;
-  padding: 10px 40px; }
+    background: #fd6a00;
+    font-size: 20px;
+    border: 2px solid  #fd6a00;
+    -moz-border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    border-radius: 60px;
+    opacity: 0.85;
+    margin-bottom: 100px;
+    padding: 10px 40px; }
+
+.combo .col-md-4{
+    margin-bottom: 25px;
+}
 
 .info-combo {
-  background: #fff; }
-  .info-combo .container {
+    background: #fff; }
+.info-combo .container {
     background: #fff;
     position: relative;
     top: -50px;
     box-shadow: 0px 0px 50px 5px #6f7880; }
-  .info-combo .price {
+.info-combo .price {
     font-size: 25px;
     color: #ff9000;
     font-weight: bold;
     margin: 50px 0; }
-    .info-combo .price span {
-      font-size: 40px; }
-  .info-combo .warning {
+.info-combo .price span {
+    font-size: 40px; }
+.info-combo .warning {
     padding: 20px 20px;
     margin-top: 30px;
     font-size: 25px;
@@ -75,144 +79,156 @@
     border-radius: 60px;
     position: relative;
     top: 30px; }
-  .info-combo img {
-    width: 50%; }
-  .info-combo .title-course {
+.info-combo img {
+    width: 50%; 
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+.info-combo .title-course {
     padding: 20px 20px;
     margin-top: 20px;
-    font-size: 23px;
+    font-size: 21px;
     color: #000;
     font-weight: bold;
     background: #e1f1fd;
-    border-radius: 60px; }
+    border-radius: 10px;
+    height: 136px;
+    /* line-height: 90px; */
+    vertical-align: middle;
+    display: table-cell;
+
+}
 
 .courses {
-  background: linear-gradient(to right, #000, rgba(0, 0, 0, 0)), url("../img-ladipage/rgt-cover.png");
-  background-size: cover;
-  width: 100%;
-  z-index: -10;
-  text-transform: uppercase; }
-  .courses h3 {
+    background: linear-gradient(to right, #000, rgba(0, 0, 0, 0)), url("../img-ladipage/rgt-cover.png");
+    background-size: cover;
+    width: 100%;
+    z-index: -10;
+    text-transform: uppercase; }
+.courses h3 {
     margin: 50px 0; }
-    .courses h3 span {
-      padding: 20px 20px;
-      font-size: 35px;
-      color: #fff;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 60px; }
-  .courses .item-course {
+.courses h3 span {
+    padding: 20px 20px;
+    font-size: 35px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 60px; }
+.courses .item-course {
     font-size: 20px;
     margin: 25px 0;
-    list-style-type: none; }
-    .courses .item-course a {
-      color: #ff6b00;
-      margin-left: 0px; }
+    list-style-type: none; 
+    display: flex;
+}
+.courses .item-course a {
+    color: #ff6b00;
+    margin-left: 0px; }
 
 .feedback .feedback-title {
-  font-size: 35px;
-  color: #000;
-  text-align: center;
-  margin-top: 20px;
-  text-transform: uppercase; }
+    font-size: 35px;
+    color: #000;
+    text-align: center;
+    margin-top: 20px;
+    text-transform: uppercase; }
 .feedback .screen-Apple img {
-  width: 450px;
-  position: relative;
-  top: 130px; }
+    width: 450px;
+    position: relative;
+    top: 130px; }
 .feedback .screen-Apple .video {
-  position: relative;
-  bottom: 217px;
-  left: 1px; }
+    position: relative;
+    bottom: 217px;
+    left: 1px; }
 
 @media screen and (min-width: 768px) {
-  .feedback {
-/*    width: 50%; */ } }
+    .feedback {
+        /*    width: 50%; */ } }
 .supporting {
-  background: linear-gradient(to bottom right, #123456, rgba(255, 0, 0, 0)), url("../img-ladipage/rgt-cover.png");
-  background-size: cover;
-  width: 100%;
-  z-index: -10;
-  font-family: Calibri; }
-  .supporting h2 {
+    background: linear-gradient(to bottom right, #123456, rgba(255, 0, 0, 0)), url("../img-ladipage/rgt-cover.png");
+    background-size: cover;
+    width: 100%;
+    z-index: -10;
+    font-family: Calibri; }
+.supporting h2 {
     font-size: 33px;
     color: #fff;
     margin-top: -40px;
     margin-bottom: 50px;
     text-transform: uppercase;
     font-weight: bold; }
-  .supporting .sup-item {
+.supporting .sup-item {
     color: #fff;
     font-size: 22px; }
-    .supporting .sup-item p:nth-child(2) {
-      font-size: 21px;
-      text-transform: uppercase;
-      margin-top: 20px;
-/*      margin-bottom: 50px;*/
-      font-weight: bold; }
-    .supporting .sup-item p:nth-child(3) {
-      margin: 30px;
-      padding: 0 5px; }
-    .supporting .sup-item img {
-      width: 30%; }
+.supporting .sup-item p:nth-child(2) {
+    font-size: 21px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    /*      margin-bottom: 50px;*/
+    font-weight: bold; }
+.supporting .sup-item p:nth-child(3) {
+    margin: 30px;
+    padding: 0 5px; }
+.supporting .sup-item img {
+    width: 30%; }
 
 .register {
-  background: linear-gradient(to right, #000, rgba(0, 0, 0, 0)), url("../img-ladipage/rgt-cover.png");
-  background-size: cover;
-  width: 100%;
-  height: 600px;
-  z-index: -10; }
-  .register p {
+    background: linear-gradient(to right, #000, rgba(0, 0, 0, 0)), url("../img-ladipage/rgt-cover.png");
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    z-index: -10; }
+.register p {
     font-size: 20px;
     color: #fff;
     margin-top: 20px; }
-  .register .form-group div input {
+.register .form-group div input, .register .form-group div select {
     height: 40px;
     width: 90%;
     margin: 10px; }
-  .register .form-group div .btn-register {
+.register .form-group div .btn-register {
     width: 600px; }
 
 .BOX {
-  position: absolute;
-  height: 70px;
-  width: 70px;
-  display: table;
-  vertical-align: middle;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  line-height: 75px;
-  background: #494949; }
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    line-height: 75px;
+    background: #494949; }
 
 .ThoiGianHienThi table {
-  width: 70%;
-  color: white;
-  margin-top: 60px;
-  margin-left: 15%; }
-  .ThoiGianHienThi table tr th {
+    width: 70%;
+    color: white;
+    margin-top: 60px;
+    margin-left: 15%; }
+.ThoiGianHienThi table tr th {
     width: 24%;
     padding-left: 15px; }
 
 .FormDangKy {
-  margin-top: 60px; }
+    margin-top: 60px; }
 
 @media screen and (max-width: 768px) {
-  .FormDangKy form .btn-register {
-    margin-left: 25%; }
+    .FormDangKy form .btn-register {
+        margin-left: 25%; }
 
-  .ThoiGianHienThi div p {
-    margin-left: 0px; } }
+    .ThoiGianHienThi div p {
+        margin-left: 0px; } }
 @media screen and (min-width: 992px) {
-  .FormDangKy form .btn-register {
-    margin-left: 20%; }
+    .FormDangKy form .btn-register {
+        margin-left: 20%; }
 
-  .ThoiGianHienThi div p {
-    margin-left: -10%; } }
+    .ThoiGianHienThi div p {
+        margin-left: -10%; } }
 
 /*# sourceMappingURL=style.css.map */
 
 /*=============================== register ====================================*/
 .register2{
-/*    margin-bottom: 50px;*/
+    /*    margin-bottom: 50px;*/
 }
 .register2 .hr{
     border: 1px solid #38bb6b;
@@ -297,5 +313,12 @@
 .register2 .warning-3{
     width: 70%;
 }
-
-
+.pop-up-register .form-control{
+    height: 45px;
+}
+.pop-up-register .col-md-12{
+        margin-bottom: 5px;
+}
+.pop-up-register .btn{
+    margin-bottom: 0px;
+}
