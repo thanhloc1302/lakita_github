@@ -202,13 +202,34 @@ $rs = json_decode($result);
             </div>
             <div class="col-xs-12 col-sm-6" id="kinhnghiem">
                 <ul>
-                    <li> <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> <span> Chứng chỉ kế toán quốc tế CAT</span></li>
-                    <li> <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png">
-                        <span>
-                            Kế toán tổng hợp tại chi nhánh công ty TNHH Dịch vụ Thực phẩm và Giải khát Cánh Diều Xanh, thuộc tập đoàn Tập đoàn Liên Thái Bình Dương (Imex Pan Pacific Group).
-                        </span>
+                    <li> 
+                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <span>Kế toán trưởng tại chi nhánh công ty TNHH thực phẩm và giải khát "Cánh diều xanh", thuộc tập đoàn IPP liên Thái Bình Dương </span>
                     </li>
-                    <li> <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"><span> 4 năm kinh nghiệm ở vị trí kế toán tổng hợp kiêm phụ trách toàn bộ mảng thuế </span></li>
+                    <li> 
+                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <span>Chứng chỉ kế toán quốc tế CAT/ACCA do Hiệp hội kế toán công chứng Anh Quốc Cấp bằng.	Kế toán tổng hợp tại chi nhánh công ty TNHH thực phẩm và giải khát "Cánh diều xanh",	thuộc tập đoàn IPP liên Thái Bình Dương </span>
+                    </li>
+                    <li> 
+                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <span>4 năm ở vị trí kế toán tổng hợp kiêm phụ trách toàn bộ mảng thuế. </span>
+                    </li>
+                    <li> 
+                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <span>Kế toán trưởng công ty TNHH Emotive 100% vốn của Mỹ</span>
+                    </li>
+                    <li> 
+                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <span>Tư vấn kế toán, thuế cho nhiều doanh nghiệp trong nước và doanh nghiệp có vốn đầu tư nước ngoài FDI</span>
+                    </li>
+                    <li> 
+                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <span>04 năm kế toán tổng hợp và thuế Chuỗi nhà hàng ăn nhanh (BurgerKing, Pizza Domino,	Gà Popeys, Dunkin Donut) thuôc tập đoàn Liên Thái Bình Dương (IPP group)</span>
+                    </li>
+                    <li> 
+                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <span>Tham gia nhiều kỳ quyết toán, hoàn thuế giá trị gia tăng</span>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -447,48 +468,48 @@ $rs = json_decode($result);
 
                         <div class="cont">
 
-                       
-                                <div class="row-fluid">
-                                    <div class="span12 wrap-icon-fullname1">
-                                        <input class="input-large LeadPanel_form_name" type="text" required="" placeholder="Họ tên" name="name" id="name">
-                                    </div>
 
-                                </div>	
-                                <div class="row-fluid hidden">
-                                    <div class="span12 wrap-icon-email1">
-                                        <input type="email" name="email" id="email" class="input-large LeadPanel_form_name" required="" placeholder="Email" value="NO_PARAM@gmail.com">
-                                    </div>
+                            <div class="row-fluid">
+                                <div class="span12 wrap-icon-fullname1">
+                                    <input class="input-large LeadPanel_form_name" type="text" required="" placeholder="Họ tên" name="name" id="name">
                                 </div>
-                                <div class="row-fluid">
-                                    <div class="span12 wrap-icon-phone1">
-                                        <input class="input-large LeadPanel_form_name" required="" placeholder="Số điện thoại" type="tel" name="phone" id="phone">
-                                    </div>
-                                </div>			  
 
-                                <div class="row-fluid hidden">
-                                    <div class="span6 wrap-icon-province1">
-                                        <input class="input-large LeadPanel_form_company" id="tinh" type="text" name="tinh" required="" placeholder="Tỉnh thành" value="NO_PARAM">
-                                    </div>
-                                    <div class="span6 wrap-icon-district1">
-                                        <input class="input-large LeadPanel_form_company" id="quan" type="text" name="quan" required="" placeholder="Quận huyện" value="NO_PARAM">
-                                    </div>
-
-                                </div>				  
-                                <div class="row-fluid">
-                                    <div class="span12 wrap-icon-address1">
-                                        <input class="input-large LeadPanel_form_company" id="dia_chi" type="text" name="dia_chi" required="" placeholder="Địa chỉ nhận khóa học">
-                                    </div>
+                            </div>	
+                            <div class="row-fluid hidden">
+                                <div class="span12 wrap-icon-email1">
+                                    <input type="email" name="email" id="email" class="input-large LeadPanel_form_name" required="" placeholder="Email" value="NO_PARAM@gmail.com">
                                 </div>
-                                <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
-                                <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
-                                <div class="row-fluid">
-                                    <div class="span12 text-center">
-                                        <input class="btn btn-large btn-primary LeadPanel_action button radius e_btn_submit reg_bt" type="submit" name="some_name" value="Đăng ký ngay" id="form-submit">
-                                    </div>
-                                </div>  
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span12 wrap-icon-phone1">
+                                    <input class="input-large LeadPanel_form_name" required="" placeholder="Số điện thoại" type="tel" name="phone" id="phone">
+                                </div>
+                            </div>			  
 
-                                <input type="hidden" name="content" value="1">
-                        
+                            <div class="row-fluid hidden">
+                                <div class="span6 wrap-icon-province1">
+                                    <input class="input-large LeadPanel_form_company" id="tinh" type="text" name="tinh" required="" placeholder="Tỉnh thành" value="NO_PARAM">
+                                </div>
+                                <div class="span6 wrap-icon-district1">
+                                    <input class="input-large LeadPanel_form_company" id="quan" type="text" name="quan" required="" placeholder="Quận huyện" value="NO_PARAM">
+                                </div>
+
+                            </div>				  
+                            <div class="row-fluid">
+                                <div class="span12 wrap-icon-address1">
+                                    <input class="input-large LeadPanel_form_company" id="dia_chi" type="text" name="dia_chi" required="" placeholder="Địa chỉ nhận khóa học">
+                                </div>
+                            </div>
+                            <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
+                            <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
+                            <div class="row-fluid">
+                                <div class="span12 text-center">
+                                    <input class="btn btn-large btn-primary LeadPanel_action button radius e_btn_submit reg_bt" type="submit" name="some_name" value="Đăng ký ngay" id="form-submit">
+                                </div>
+                            </div>  
+
+                            <input type="hidden" name="content" value="1">
+
                         </div>
                     </div>
                     <input  type="hidden" name="content" value="1" />

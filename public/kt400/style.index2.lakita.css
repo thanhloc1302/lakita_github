@@ -177,7 +177,6 @@ header{
 
 #kinhnghiem ul{
     list-style-type:none;
-    margin-top: 35px;
 }
 #kinhnghiem ul li{
     padding: 3px;
@@ -2190,7 +2189,6 @@ font-size:18pt;
 
 }
 #kinhnghiem ul{
-    margin-top:40px;
     list-style-type:none;
 }
 #kinhnghiem ul li{
