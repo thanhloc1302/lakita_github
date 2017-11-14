@@ -269,8 +269,10 @@ class Home extends MY_Controller {
                 $data['count_all_learn'] = count($this->lib_mod->detail('student_learn', array('student_id' => $user_id, 'courseID' => $course[0]['id'])));
 
                 $data['learn_note'] = $this->lib_mod->detail('learn_note', array('student_id' => $user_id, 'learn_id' => $id));
-                $data['comment'] = $this->lib_mod->load_all('comment', '', array('courses_id' => $curr_learn[0]['courses_id'], 'learn_id' => $id, 'parent' => ''), '', '', array('createdate' => 'desc'));
-
+                $data['comment'] = $this->lib_mod->load_all('comment', '', array('courses_id' => $curr_learn[0]['courses_id'], 'learn_id' => $id, 'parent' => ''), 4, '', array('createdate' => 'desc'));
+                $data['page'] = 1;
+                $total_cmt = count($this->lib_mod->load_all('comment', '', array('courses_id' => $curr_learn[0]['courses_id'], 'learn_id' => $id, 'parent' => ''), '', '', array('createdate' => 'desc')));
+                $data['pages'] = ceil($total_cmt/4);
                 //danh sách bài học
                 $data['chapter'] = $this->lib_mod->load_all('chapter', '', array("courses_id" => $curr_learn[0]['courses_id'], 'status' => 1), '', '', array("sort" => 'asc'));
                 foreach ($data['chapter'] as $key => $value) {
