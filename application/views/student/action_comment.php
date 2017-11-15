@@ -236,10 +236,15 @@
 
     /* load more comment */
 
+    if (parseInt($(".pagenum:last").val()) >= parseInt($(".total-page:last").val())) {
+        $('.load_more_cmt').css("display", "none");
+    }
 
     $(document).on('click', '.load_more_cmt', function (e) {
         e.preventDefault();
-        if ($(".pagenum:last").val() <= $(".total-page").val()) {
+        var pagenumLast = parseInt($(".pagenum:last").val());
+        var totalPage = parseInt($(".total-page:last").val());
+        if (pagenumLast <= totalPage) {
             var pagenum = parseInt($(".pagenum:last").val()) + 1;
             $.ajax({
                 url: "course/loadMoreComment",
@@ -259,9 +264,11 @@
 
                 }
             });
-            if (pagenum == $(".total-page").val()) {
+            if (pagenum >= $(".total-page").val()) {
                 $('.load_more_cmt').css("display", "none");
-            } 
+            }
+        } else {
+            console.log('abc');
         }
     });
 

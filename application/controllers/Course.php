@@ -1212,8 +1212,8 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
         $learn_id = trim($this->input->post('learn_id'));
         $courses_id = trim($this->input->post('courses_id'));
         $data['page'] = $page;
-        $data['pages'] = count($this->lib_mod->load_all('comment', '', array('courses_id' => $courses_id, 'learn_id' => $learn_id, 'parent' => ''), '', '', ''));
-        $data['comment'] = $this->lib_mod->load_all('comment', '', array('courses_id' => $courses_id, 'learn_id' => $learn_id, 'parent' => ''), $perPage, $start, array('createdate' => 'desc'));
+        $data['pages'] = ceil(count($this->lib_mod->load_all('comment', '', array('courses_id' => $courses_id, 'learn_id' => $learn_id, 'parent' => 0), '', '', ''))/4);
+        $data['comment'] = $this->lib_mod->load_all('comment', '', array('courses_id' => $courses_id, 'learn_id' => $learn_id, 'parent' => 0), $perPage, $start, array('createdate' => 'desc'));
       //  var_dump($data);
  $this->load->view('course/load_cmt_ajax', $data);
     }
