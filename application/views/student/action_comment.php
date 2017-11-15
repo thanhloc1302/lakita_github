@@ -235,37 +235,36 @@
 
 
     /* load more comment */
-    $(document).ready(function () {
 
-        $(window).scroll(function () {
-            /*  console.log($(document).height() - 1100);
-             console.log($(window).scrollTop()); */
-            if ($(window).scrollTop() > $(document).height() - 1450 && $(window).scrollTop() < $(document).height() - 1440) {
-                /*alert(1); */
-                 if ($(".pagenum:last").val() <= $(".total-page").val()) {
-                    var pagenum = parseInt($(".pagenum:last").val()) + 1;
-                    $.ajax({
-                        url: "course/loadMoreComment",
-                        type: "post",
-                        data: {page: pagenum,
-                            learn_id: $('#learn_id').val(),
-                            courses_id: $('#courses_id').val()
-                        },
-                        beforeSend: function () {
-                            $(".popup-wrapper").show();
-                        },
-                        success: function (data) {
-                            console.log(1);
-                            $("#list_cmt").append(data);
-                        },
-                        complete: function () {
-                            $(".popup-wrapper").hide();
-                        }
-                    });
-                } 
-            }
-        });
+
+    $(document).on('click', '.load_more_cmt', function (e) {
+        e.preventDefault();
+        if ($(".pagenum:last").val() <= $(".total-page").val()) {
+            var pagenum = parseInt($(".pagenum:last").val()) + 1;
+            $.ajax({
+                url: "course/loadMoreComment",
+                type: "post",
+                data: {page: pagenum,
+                    learn_id: $('#learn_id').val(),
+                    courses_id: $('#courses_id').val()
+                },
+                beforeSend: function () {
+                    $(".popup-wrapper").show();
+                },
+                success: function (data) {
+                    $("#list_cmt").append(data);
+                },
+                complete: function () {
+                    $(".popup-wrapper").hide();
+
+                }
+            });
+            if (pagenum == $(".total-page").val()) {
+                $('.load_more_cmt').css("display", "none");
+            } 
+        }
     });
+
 </script>
 
 

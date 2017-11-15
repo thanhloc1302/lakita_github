@@ -10,8 +10,8 @@ $(function () {
     }('Shockwave', 'Flash');
     var hasFlash = '';
     if (hayFlash) {
-      // alert("Flash Player is installed");
-      hasFlash ='yes';
+        // alert("Flash Player is installed");
+        hasFlash = 'yes';
     } else {
         hasFlash = 'no';
         //lert("Your browser doesn't have Flash Player installed");
@@ -22,8 +22,8 @@ $(function () {
         type: "POST",
         url: 'player/index',
         data: {
-            video_id: video_id, 
-            hayFlash : hasFlash
+            video_id: video_id,
+            hayFlash: hasFlash
         },
         dataType: "text",
         beforeSend: function (xhr)
@@ -44,14 +44,13 @@ $(function () {
 
             jwplayer('mediaspace').setup({
                 file: response,
-                autostart: 'true',
+                autostart: 'false',
                 width: "100%",
                 aspectratio: "16:9",
                 stretching: 'fill',
                 abouttext: "Lakita.vn",
                 aboutlink: "https://lakita.vn",
                 primary: "flash",
-                skin: "plugin/jwplayer/skins/lakita.xml",
                 image: "https://lakita.vn/styles/images/play.jpg",
                 events: {
                     onComplete: function () {
