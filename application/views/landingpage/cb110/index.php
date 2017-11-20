@@ -117,15 +117,15 @@ $rs = json_decode($result);
                         <span class="warning">Bạn sẽ bỏ lỡ điều gì nếu không đăng ký</span>		
                         <p class="price">Combo 3 khóa học chỉ <span>545K</span></p>
                         <div class="col-md-4 col-sm-4 col-xs-12">
-                            <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/600811.png">
+                            <a href="#courses"> <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/600811.png"></a>
                             <p class="title-course">Tất cả các nghiệp vụ kế toán hóa đơn chứng từ, kế toán thuế, báo cáo tài chính </p>
                         </div>
                         <div class="col-md-4 col-sm-4 col-xs-12">
-                            <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/excel-file.png">
+                            <a href="https://lakita.vn/bi-quyet-lam-chu-excel-2017.html?link=199" target="_blank"> <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/excel-file.png"></a>
                             <p class="title-course">Trọn bộ kiến thức về Excel dành cho kế toán mới nhất</p>
                         </div>
                         <div class="col-md-4 col-sm-4 col-xs-12">
-                            <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/265695.png">
+                            <a href="https://lakita.vn/nhom-khoa-hoc/hanh-chinh-22.html" target="_blank"> <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/265695.png"></a>
                             <p class="title-course">Kỹ năng tin học văn phòng</p>
                         </div>
                     </div>
