@@ -1203,6 +1203,21 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
         header('Location:' . $duong_dan);
     }
 
+    function loadMoreComment() {
+        $perPage = 4;
+        $page = $this->input->post('page');
+        $start = ($page - 1) * $perPage;
+        if ($start < 0)
+            $start = 0;
+        $learn_id = trim($this->input->post('learn_id'));
+        $courses_id = trim($this->input->post('courses_id'));
+        $data['page'] = $page;
+        $data['pages'] = ceil(count($this->lib_mod->load_all('comment', '', array('courses_id' => $courses_id, 'learn_id' => $learn_id, 'parent' => 0), '', '', ''))/4);
+        $data['comment'] = $this->lib_mod->load_all('comment', '', array('courses_id' => $courses_id, 'learn_id' => $learn_id, 'parent' => 0), $perPage, $start, array('createdate' => 'desc'));
+      //  var_dump($data);
+ $this->load->view('course/load_cmt_ajax', $data);
+    }
+
     /* ==================================== video đầu tiên của khóa học ===================================== */
 
     private function find_first_course($cod_input, $courseID) {

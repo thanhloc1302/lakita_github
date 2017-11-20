@@ -27,6 +27,7 @@ $route['ke-toan-danh-cho-giam-doc.html'] = 'landingpage/show/kt1202';
 $route['bi-quyet-lam-chu-excel-2017.html'] = 'landingpage/show/e100';
 $route['excel-tu-a-den-z.html'] = 'landingpage/show/e400';
 $route['combo-ke-toan-excel-van-phong-2017.html'] = 'landingpage/show/cb110';
+$route['quan-tri-tai-chinh-ke-toan.html'] = 'landingpage/show/kt120';
 $route['save_c3'] = 'landingpage/save_c3';
 $route['thank-you.html'] = 'landingpage/save_c3';
 $route['(:any)/thank-you.html'] = 'landingpage/save_c3';

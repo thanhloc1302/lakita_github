@@ -4,7 +4,7 @@
 <input type="hidden" id="curr_url" value="<?php echo $learn_slug; ?>" >
 
 <script>
-    
+
     /*ghi comment*/
     $('#save_cmt').click(function () {
         var learn_id = $('#learn_id').val();
@@ -37,7 +37,8 @@
                 $(".popup-wrapper").show();
             },
             success: function (response)
-            {console.log(response);
+            {
+                console.log(response);
                 if (response == 1)
                 {
                     $.ajax({
@@ -53,7 +54,7 @@
                 } else
                 {
                     /*alert('Đã có lỗi xảy ra khi gửi bình luận');*/
-                     $.ajax({
+                    $.ajax({
                         type: "POST",
                         url: "course/reload_comment",
                         data: {
@@ -77,9 +78,9 @@
             CKEDITOR.instances[instance].setData('');
         }
     });
-    
-    
-    
+
+
+
     /*trả lời comment*/
     $('body').on('click', '.reply_parent', function () {
         var learn_id = $('#learn_id').val();
@@ -87,15 +88,15 @@
         var parent_id = $(this).attr('parentid');
         if ($(this).attr('code') == '1') {
             $(this).text('Ẩn');
-            $(this).attr('code','10');
+            $(this).attr('code', '10');
             $("#rep_box_" + parent_id).show();
         } else {
             $(this).text('Trả lời');
-            $(this).attr('code','1');
+            $(this).attr('code', '1');
             $("#rep_box_" + parent_id).hide();
         }
     });
-    
+
     $('body').on('click', '[id^=save_rep_]', function () {
         var learn_id = $('#learn_id').val();
         var course_id = $('#courses_id').val();
@@ -125,7 +126,8 @@
                 $(".popup-wrapper").show();
             },
             success: function (response)
-            { console.log(response);
+            {
+                console.log(response);
                 if (response == 1)
                 {
                     $.ajax({
@@ -151,7 +153,7 @@
                         success: function (result) {
                             $("#list_cmt").html(result);
                         }});
-                    
+
                 }
                 $('#content_rep_' + parent).text('');
                 return false;
@@ -161,20 +163,20 @@
             }
         });
     });
-    
-/*sửa comment*/
-    $('.repair_cmt').click(function () 
+
+    /*sửa comment*/
+    $('.repair_cmt').click(function ()
     {
         var learn_id = $('#learn_id').val();
         var courses_id = $('#courses_id').val();
         var cmtid = $(this).attr('cmtid');
         if ($(this).attr('code') == '2') {
             $(this).text('Ẩn');
-            $(this).attr('code','20');
+            $(this).attr('code', '20');
             $("#repair_box_" + cmtid).show();
         } else {
             $(this).text('Sửa');
-            $(this).attr('code','2');
+            $(this).attr('code', '2');
             $("#repair_box_" + cmtid).hide();
         }
     });
@@ -205,7 +207,8 @@
                 $(".popup-wrapper").show();
             },
             success: function (response)
-            { console.log(response);
+            {
+                console.log(response);
                 if (response == 1)
                 {
                     $.ajax({
@@ -220,7 +223,7 @@
                         }});
                 } else
                 {
-                    alert('Đã có lỗi xảy ra khi sửa bình luận');                     
+                    alert('Đã có lỗi xảy ra khi sửa bình luận');
                 }
 
             },
@@ -229,7 +232,46 @@
             }
         });
     });
-   
+
+
+    /* load more comment */
+
+    if (parseInt($(".pagenum:last").val()) >= parseInt($(".total-page:last").val())) {
+        $('.load_more_cmt').css("display", "none");
+    }
+
+    $(document).on('click', '.load_more_cmt', function (e) {
+        e.preventDefault();
+        var pagenumLast = parseInt($(".pagenum:last").val());
+        var totalPage = parseInt($(".total-page:last").val());
+        if (pagenumLast <= totalPage) {
+            var pagenum = parseInt($(".pagenum:last").val()) + 1;
+            $.ajax({
+                url: "course/loadMoreComment",
+                type: "post",
+                data: {page: pagenum,
+                    learn_id: $('#learn_id').val(),
+                    courses_id: $('#courses_id').val()
+                },
+                beforeSend: function () {
+                    $(".popup-wrapper").show();
+                },
+                success: function (data) {
+                    $("#list_cmt").append(data);
+                },
+                complete: function () {
+                    $(".popup-wrapper").hide();
+
+                }
+            });
+            if (pagenum >= $(".total-page").val()) {
+                $('.load_more_cmt').css("display", "none");
+            }
+        } else {
+            console.log('abc');
+        }
+    });
+
 </script>
 
 
