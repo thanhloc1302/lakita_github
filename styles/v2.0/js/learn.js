@@ -129,11 +129,18 @@ if (browserName() != 'Chrome') {
 /* float video */
 $(document).ready(function () {
     $(window).scroll(function () {
-        if ($(window).scrollTop() > $(".videolayout").offset().top && $(window).width() >= 1000) {
+        if ($(window).scrollTop() > $(".videolayout").offset().top && $(window).scrollTop() < $(".videolayout").offset().top + 10  && $(window).width() >= 1000) {
             $(".js-video").addClass('float_video');
-        } else {
+            $('.js-video-btn').css('display','block');
+        } else if($(window).scrollTop() < $(".videolayout").offset().top && $(window).width() >= 1000) {
             $(".js-video").removeClass('float_video');
-        }
+            $('.js-video-btn').css('display','none');
+        } 
+    });
+
+    $('.js-video-btn').click(function(){
+        $(".js-video").removeClass('float_video');
+        $('.js-video-btn').css('display','none');
     });
 
 //setInterval(function(){

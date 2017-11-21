@@ -10,6 +10,9 @@
         bottom: 70px;
        -webkit-transition:all 3s ease;
     }
+    .js-video-btn{
+        display: none
+    }
     .event2011{
         display: none;
     }
@@ -122,7 +125,9 @@
                 <div class="st-content">
                     <div class="st-content-inner padding-none">
                         <div class="container-fluid videolayout">
+                            
                             <div class="js-video widescreen">
+                                <button class="js-video-btn btn btn-success">Đóng</button>
                                 <?php
                                 if (!empty($curr_learn[0]['video_file'])) {
                                     $value = $curr_learn[0]['id'];

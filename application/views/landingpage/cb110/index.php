@@ -82,7 +82,7 @@ $rs = json_decode($result);
                                                             <option value="CB110"> Kế toán thuế cho người mới bắt đầu </option>
                                                             <option value="CB120"> Hướng dẫn lập báo cáo tài chính </option>
                                                             <option value="CB130"> Kế toán thuế nâng cao </option>
-                                                            <option value="CB140"> Cách xác định chi phí hợp lý, công cụ bảo về về thanh tra thuế</option>
+                                                            <option value="CB140"> Cách xác định chi phí hợp lý, công cụ bảo vệ về thanh tra thuế</option>
                                                             <option value="CB150"> Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn </option>
                                                         </select>
                                                     </div>
@@ -277,7 +277,7 @@ $rs = json_decode($result);
                                         <option value="CB110"> Kế toán thuế cho người mới bắt đầu </option>
                                         <option value="CB120"> Hướng dẫn lập báo cáo tài chính </option>
                                         <option value="CB130"> Kế toán thuế nâng cao </option>
-                                        <option value="CB140"> Cách xác định chi phí hợp lý, công cụ bảo về về thanh tra thuế</option>
+                                        <option value="CB140"> Cách xác định chi phí hợp lý, công cụ bảo vệ về thanh tra thuế</option>
                                         <option value="CB150"> Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn </option>
                                     </select>
                                 </div>
