@@ -284,17 +284,21 @@ if ($this->agent->is_mobile()) {
 
 <script>
     $(document).ready(function () {
-        $('#modal2_9').modal('show');
-        var close = false;
-        $(".close").click(function () {
-            close = true;
-        });
-        $('#popup_29').click(function () {
+        if ($(window).width() < 1000) {
             $('#modal2_9').modal('hide');
-            if (!close) {
-                $('#modal_event').modal('show');
-            }
-        });
+        } else {
+            $('#modal2_9').modal('show');
+            var close = false;
+            $(".close").click(function () {
+                close = true;
+            });
+            $('#popup_29').click(function () {
+                $('#modal2_9').modal('hide');
+                if (!close) {
+                    $('#modal_event').modal('show');
+                }
+            });
+        }
     });
 </script>
 

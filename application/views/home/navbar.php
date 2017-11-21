@@ -218,7 +218,9 @@
                         </a>
                     </li>
 
-                    <li role="presentation" class="icon-bar paddingleft56"> <a href="" class="commingsoon"> <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                    <li role="presentation" class="icon-bar paddingleft56"> <!--<a href="" class="commingsoon"> <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>-->
+                    <a href="<?php echo base_url(); ?>khoa-hoc-cua-toi.html"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Khóa học của tôi</a>
+                    </li>
                     <?php
                     if (!isset($user_id)) {
                         ?>
@@ -244,7 +246,6 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-header-1" role="menu" aria-labelledby="drop1">
-                                <li> <a href="<?php echo base_url(); ?>khoa-hoc-cua-toi.html"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> &nbsp; Khóa học của tôi </a></li>
                                 <li> <a href="<?php echo base_url(); ?>kich-hoat-khoa-hoc.html"> <i class="fa fa-compress" aria-hidden="true"></i> &nbsp; Kích hoạt khóa học </a></li>
                                 <li> <a href="<?php echo base_url(); ?>nap-tien-vao-tai-khoan.html"> <i class="fa fa-usd" aria-hidden="true"></i> &nbsp; Nạp tiền vào tài khoản </a> </li>
                                 <li> <a href="<?php echo base_url(); ?>thong-tin-tai-khoan.html"> <i class="fa fa-user" aria-hidden="true"></i> &nbsp; Tài khoản </a> </li>

@@ -1067,17 +1067,28 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
             $this->load->library("email");
             $this->email->from('cskh@lakita.vn', "lakita.vn");
             $emailTo = 'lakitavn@gmail.com, chuyenpn@lakita.vn, ngoccongtt1@gmail.com, '
-                    . 'huynhdaihai@gmail.com, trinhnv@bkindex.com, tund@bkindex.com,';
-            if (in_array($courses_id, array(77, 74, 73, 72, 71, 68, 66, 78))) { // các khóa của nhungPT
-                $emailTo .= ', hoanhung1991@gmail.com';
-            }
+                    . 'huynhdaihai@gmail.com, trinhnv@bkindex.com, tund@bkindex.com';
+            
+            
+            //tìm email của giảng viên theo khóa
+            
+            $this->load->model('courses_model');
+            $input['select'] = 'speaker_id';
+            $input['where'] = array('id' => $courses_id);
+            $speaker_id = $this->courses_model->load_all($input);
+            $speaker_id = str_replace('-', '', $speaker_id[0]['speaker_id']);
+            
+            
+            $this->load->model('speaker_model');
+            $input_speaker['select'] = 'email';
+            $input_speaker['where'] = array('id' => $speaker_id);
+            $email = $this->speaker_model->load_all($input_speaker);
+            $email=$email[0]['email'];
 
-            if (in_array($courses_id, array(77))) { // các khóa của thoDT
-                $emailTo .= ', daothotn@gmail.com';
-            }
-            if (in_array($courses_id, array(82, 81, 80, 66))) { //các khóa học của TrungHQ
-                $emailTo .= ', quangtrung.hoang@yahoo.com';
-            }
+            //hết tìm
+            
+            $emailTo .= ', '.$email;
+
             //$emailTo = 'thanhloc1302@gmail.com';
             $this->email->to($emailTo);
             $this->email->subject('Có thảo luận mới ở trang lakita');
