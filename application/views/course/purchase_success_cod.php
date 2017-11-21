@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/course_purchase.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/style.bootstrap8.lakita.css" />
 <script src="<?php echo base_url(); ?>styles/v2.0/js/course_purchase.min.js"></script>
-<script src="<?php echo base_url(); ?>styles/v2.0/js/login.min.js"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/login.js"></script>
 <?php
 if ($this->agent->is_mobile())
     $this->load->view('mobile/mobile_purchase_success');

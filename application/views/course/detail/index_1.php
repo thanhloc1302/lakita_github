@@ -1,7 +1,7 @@
 <!--    <script src="<?php echo base_url(); ?>styles/v2.0/js/home.js"></script>-->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/course_detail.css" />
 <script src="<?php echo base_url(); ?>styles/v2.0/js/course_detail.min.js"></script>
-<script src="<?php echo base_url(); ?>styles/v2.0/js/login.min.js"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/login.js"></script>
 <div class="header">
     <?php $this->load->view('home/navbar'); ?>
     <div class="row">

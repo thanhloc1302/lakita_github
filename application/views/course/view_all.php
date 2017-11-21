@@ -1,7 +1,7 @@
 <!--    <script src="<?php echo base_url(); ?>styles/v2.0/js/home.js"></script>-->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/view_all.css" />
 <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/view_all.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/login.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/login.js"></script>
 <?php if (!$this->agent->is_mobile()) { ?>
     <div class="header">
         <?php $this->load->view('home/navbar'); ?>
