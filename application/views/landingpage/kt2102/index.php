@@ -475,9 +475,12 @@ var google_remarketing_only = false;
                         <p style="font-size: 17.8px;">Giảng viên</p>
                         <p style="font-size: 26.7px;">Phạm Thị Nhung</p>
                         <ul>
-                            <li style="font-size: 17.8px;"><i class="fa fa-check-square-o" aria-hidden="true"></i><span style="padding-left: 10px; line-height: 33px;">Kế toán tổng hợp tại chi nhánh công ty TNHH Dịch vụ Thực phẩm và Giải khát Cánh Diều Xanh, thuộc tập đoàn Tập đoàn Liên Thái Bình Dương (Imex Pan Pacific Group).</span></li>
-                            <li style="font-size: 17.8px; margin-top: 25px"><i class="fa fa-check-square-o" aria-hidden="true"></i><span style="padding-left: 10px; line-height: 33px;">Chứng chỉ kế toán quốc tế CAT</span></li>
-                            <li style="font-size: 17.8px; margin-top: 25px"><i class="fa fa-check-square-o" aria-hidden="true"></i><span style="padding-left: 10px; line-height: 33px;">7 năm kinh nghiệm ở vị trí kế toán tổng hợp kiêm phụ trách toàn bộ mảng thuế</span></li>
+                            <li style="font-size: 17.8px;"><i class="fa fa-check-square-o" aria-hidden="true"></i><span style="padding-left: 10px; line-height: 33px;">Chứng chỉ kế toán quốc tế CAT/ACCA do Hiệp hội kế toán công chứng Anh Quốc Cấp bằng.	Kế toán tổng hợp tại chi nhánh công ty TNHH thực phẩm và giải khát "Cánh diều xanh",	thuộc tập đoàn IPP liên Thái Bình Dương</span></li>
+                            <li style="font-size: 17.8px; margin-top: 25px"><i class="fa fa-check-square-o" aria-hidden="true"></i><span style="padding-left: 10px; line-height: 33px;">4 năm ở vị trí kế toán tổng hợp kiêm phụ trách toàn bộ mảng thuế.</span></li>
+                            <li style="font-size: 17.8px; margin-top: 25px"><i class="fa fa-check-square-o" aria-hidden="true"></i><span style="padding-left: 10px; line-height: 33px;">Kế toán trưởng công ty TNHH Emotive 100% vốn của Mỹ</span></li>
+                            <li style="font-size: 17.8px; margin-top: 25px"><i class="fa fa-check-square-o" aria-hidden="true"></i><span style="padding-left: 10px; line-height: 33px;">Tư vấn kế toán, thuế cho nhiều doanh nghiệp trong nước và doanh nghiệp có vốn đầu tư nước ngoài FDI</span></li>
+                            <li style="font-size: 17.8px; margin-top: 25px"><i class="fa fa-check-square-o" aria-hidden="true"></i><span style="padding-left: 10px; line-height: 33px;">04 năm kế toán tổng hợp và thuế Chuỗi nhà hàng ăn nhanh (BurgerKing, Pizza Domino,	Gà Popeys, Dunkin Donut) thuôc tập đoàn Liên Thái Bình Dương (IPP group)</span></li>
+                            <li style="font-size: 17.8px; margin-top: 25px"><i class="fa fa-check-square-o" aria-hidden="true"></i><span style="padding-left: 10px; line-height: 33px;">Tham gia nhiều kỳ quyết toán, hoàn thuế giá trị gia tăng</span></li>
                         </ul>
                     </div>
                     <div class="col-sm-5">

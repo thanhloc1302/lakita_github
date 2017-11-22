@@ -2,6 +2,17 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>plugin/ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/swfobject.js" ></script>
 <style>
+    .float_video{
+        position: fixed;
+        width: 500px;
+        z-index: 1000000000;
+        right: 0;
+        bottom: 70px;
+       -webkit-transition:all 3s ease;
+    }
+    .js-video-btn{
+        display: none
+    }
     .event2011{
         display: none;
     }
@@ -113,8 +124,10 @@
             <div class="st-pusher" id="content">
                 <div class="st-content">
                     <div class="st-content-inner padding-none">
-                        <div class="container-fluid">
+                        <div class="container-fluid videolayout">
+                            
                             <div class="js-video widescreen">
+                                <button class="js-video-btn btn btn-success">Đóng</button>
                                 <?php
                                 if (!empty($curr_learn[0]['video_file'])) {
                                     $value = $curr_learn[0]['id'];
@@ -258,6 +271,9 @@
             <!--============================thảo luận ================================================-->
             <div id="list_cmt">
                 <?php $this->load->view('course/load_cmt'); ?>
+            </div>
+            <div class="col-md-offset-1">
+                <a href="#" class="load_more_cmt" >Tải bình luận cũ hơn</a>
             </div>
             <!--============================thảo luận (hết) ==========================================-->
         <?php } ?>

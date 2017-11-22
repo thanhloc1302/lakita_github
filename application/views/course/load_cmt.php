@@ -1,3 +1,7 @@
+<?php if(isset($page) && !empty($page)){ ?>
+<input type="hidden" class="pagenum" value="<?php echo $page ?>" /><input type="hidden" class="total-page" value="<?php echo $pages ?>" />
+<?php } ?>
+
 <div class="row margintop10">
     <div class="col-md-2 text-right">
         <img src="https://graph.facebook.com/1913733622187366/picture?type=large" alt="" class="img-circle height-30 width-30">

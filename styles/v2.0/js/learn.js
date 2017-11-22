@@ -107,8 +107,8 @@ function browserName() {
 }
 
 var ismobile = false;
-if( /Android|webOS|iPhone|iPad|iPod|BB10|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- var ismobile = true;
+if (/Android|webOS|iPhone|iPad|iPod|BB10|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    var ismobile = true;
 }
 
 if (!swfobject.hasFlashPlayerVersion("1"))
@@ -116,7 +116,7 @@ if (!swfobject.hasFlashPlayerVersion("1"))
     $('#myModal').modal('show');
 }
 
-if(ismobile == true){
+if (ismobile == true) {
     $('#myModal').modal('hide');
 }
 
@@ -125,5 +125,30 @@ if (browserName() != 'Chrome') {
 }
 /***************************** check have flash trên chrome và cốc cốc ***************************************/
 
+
+/* float video */
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > $(".videolayout").offset().top && $(window).scrollTop() < $(".videolayout").offset().top + 10  && $(window).width() >= 1000) {
+            $(".js-video").addClass('float_video');
+            $('.js-video-btn').css('display','block');
+        } else if($(window).scrollTop() < $(".videolayout").offset().top && $(window).width() >= 1000) {
+            $(".js-video").removeClass('float_video');
+            $('.js-video-btn').css('display','none');
+        } 
+    });
+
+    $('.js-video-btn').click(function(){
+        $(".js-video").removeClass('float_video');
+        $('.js-video-btn').css('display','none');
+    });
+
+//setInterval(function(){
+//        if (jwplayer().getState() == "playing") {
+//            console.log('playing!!!');
+//        }    
+//}, 1000);
+
+});
 
 

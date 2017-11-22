@@ -194,7 +194,7 @@
                         </ul>
                     </li>
                     <li role="presentation" class="icon-bar paddingleft56"> 
-                            <?php $data = null; ?>
+                        <?php $data = null; ?>
                         <a data-toggle="modal" data-target="#modal_course_love" class="pointer"> 
                             <i class="fa fa-heart-o" aria-hidden="true"></i>
                             <?php
@@ -202,9 +202,9 @@
                                 $courses_love = $this->lib_mod->detail('love', array('user_id' => $user_id));
                                 if (count($courses_love)) {
                                     ?>
-                                <!--                                    <span class="badge">
+                                                <!--                                    <span class="badge">
                                     <?php echo count($courses_love); ?>
-                                                                    </span>-->
+                                                                                    </span>-->
 
                                     <?php
                                     $courses_detail = [];
@@ -218,7 +218,13 @@
                         </a>
                     </li>
 
-                    <li role="presentation" class="icon-bar paddingleft56"> <a href="" class="commingsoon"> <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                    
+                        <?php if (isset($user_id) && !empty($user_id)) { ?>
+                    <li role="presentation" class="icon-bar paddingleft35"><a href="<?php echo base_url(); ?>khoa-hoc-cua-toi.html"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Khóa học của tôi</a></li>
+                        <?php } else { ?>
+                            <li role="presentation" class="icon-bar paddingleft56"><a href="" class="commingsoon"> <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                        <?php } ?>
+                    
                     <?php
                     if (!isset($user_id)) {
                         ?>
@@ -227,7 +233,7 @@
                         <?php
                     } else {
                         ?>
-                        <li class="dropdown login-bar paddingleft35 avatar-li dropdown_hover">
+                        <li class="dropdown login-bar avatar-li dropdown_hover">
                             <a id="drop1" href="#" role="button" class="dropdown-toggle avatar" data-toggle="dropdown">
                                 <img src="<?php
                                 if (!empty($student[0]['id_fb']))
@@ -240,11 +246,11 @@
                                 }
                                 ?>" alt="" class="img-circle avatar" />
                                 &nbsp;&nbsp;&nbsp;
-    <?php echo $student[0]['name']; ?>
+                                <?php echo $student[0]['name']; ?>
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-header-1" role="menu" aria-labelledby="drop1">
-                                <li> <a href="<?php echo base_url(); ?>khoa-hoc-cua-toi.html"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> &nbsp; Khóa học của tôi </a></li>
+                                <li><a href="<?php echo base_url(); ?>khoa-hoc-cua-toi.html"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Khóa học của tôi</a></li>
                                 <li> <a href="<?php echo base_url(); ?>kich-hoat-khoa-hoc.html"> <i class="fa fa-compress" aria-hidden="true"></i> &nbsp; Kích hoạt khóa học </a></li>
                                 <li> <a href="<?php echo base_url(); ?>nap-tien-vao-tai-khoan.html"> <i class="fa fa-usd" aria-hidden="true"></i> &nbsp; Nạp tiền vào tài khoản </a> </li>
                                 <li> <a href="<?php echo base_url(); ?>thong-tin-tai-khoan.html"> <i class="fa fa-user" aria-hidden="true"></i> &nbsp; Tài khoản </a> </li>
@@ -252,7 +258,7 @@
                                 <li> <a href="student/logout"> <i class="fa fa-sign-out" aria-hidden="true"></i> &nbsp; Đăng xuất </a> </li>
                             </ul>
                         </li>
-<?php } ?>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
@@ -403,7 +409,7 @@
                                                     </div>
                                                     <div class="my-form-control-1 paddingleft0">
                                                         Tôi đồng ý với <a class="lakita" data-toggle="modal" href="#modal-terms"> Điều khoản & dịch vụ </a> của Lakita
-    <?php $this->load->view('home/terms'); ?>
+                                                        <?php $this->load->view('home/terms'); ?>
                                                     </div>
                                                     <div class="clr"></div>
                                                 </div>

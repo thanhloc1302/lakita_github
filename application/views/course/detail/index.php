@@ -1,7 +1,7 @@
 <!--    <script src="<?php echo base_url(); ?>styles/v2.0/js/home.js"></script>-->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/course_detail.css" />
 <script src="<?php echo base_url(); ?>styles/v2.0/js/course_detail.js"></script>
-<script src="<?php echo base_url(); ?>styles/v2.0/js/login.min.js"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/login.js"></script>
 <?php
 if ($this->agent->is_mobile())
     $this->load->view('mobile/mobile_detail');
