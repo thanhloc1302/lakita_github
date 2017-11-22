@@ -242,6 +242,7 @@
 
     $(document).on('click', '.load_more_cmt', function (e) {
         e.preventDefault();
+        alert($('#courses_id').val());
         var pagenumLast = parseInt($(".pagenum:last").val());
         var totalPage = parseInt($(".total-page:last").val());
         if (pagenumLast <= totalPage) {
@@ -268,7 +269,7 @@
                 $('.load_more_cmt').css("display", "none");
             }
         } else {
-            console.log('abc');
+            console.log('khong load them dc cmt, kiem tra lai di');
         }
     });
 

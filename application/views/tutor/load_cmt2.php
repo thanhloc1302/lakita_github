@@ -46,14 +46,18 @@
         foreach ($comment as $key => $cmt1) {
             $comment2 = $this->lib_mod->load_all('comment', '', array('parent' => $cmt1['id']), '', '', array('createdate' => 'asc'));
             $student = $this->lib_mod->detail('student', array('id' => $cmt1['student_id']));
+            if($cmt1['courses_id'] != 0){
+                $course = $this->lib_mod->detail('courses', array('id' => $cmt1['courses_id']));
+                $course_name = $course[0]['name'];
+                $learn_slug = base_url() . $course[0]['slug'] . '-7' . $course[0]['id'] . '.html';
+            }
             if ($cmt1['courses_id'] != 0 && $cmt1['learn_id'] != 0) {
                 $learn = $this->lib_mod->detail('learn', array('id' => $cmt1['learn_id']));
                 if (!empty($learn)) {
                     $learn_slug = base_url() . $learn[0]['slug'] . '-4' . $learn[0]['id'] . '.html';
                     $learn_name = $learn[0]['name'];
                 }
-                $course = $this->lib_mod->detail('courses', array('id' => $cmt1['courses_id']));
-                $course_name = $course[0]['name'];
+                
             }
             ?>
             <tr class="<?php

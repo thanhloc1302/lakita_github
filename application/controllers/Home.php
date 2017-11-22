@@ -39,7 +39,7 @@ class Home extends MY_Controller {
             } else {
                 $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 12, '', array('sort' => 'desc'));
             }
-            
+
             $data['rates'] = $this->lib_mod->load_all('rate', '', array('status' => 1), 12, '', array('create_date' => 'desc'), 'name');
             $data['title'] = 'Hệ thống học trực tuyến lakita, cùng bạn vươn xa - lakita.vn';
             $user_id = $this->session->userdata('user_id');
@@ -272,7 +272,7 @@ class Home extends MY_Controller {
                 $data['comment'] = $this->lib_mod->load_all('comment', '', array('courses_id' => $curr_learn[0]['courses_id'], 'learn_id' => $id, 'parent' => ''), 4, '', array('createdate' => 'desc'));
                 $data['page'] = 1;
                 $total_cmt = count($this->lib_mod->load_all('comment', '', array('courses_id' => $curr_learn[0]['courses_id'], 'learn_id' => $id, 'parent' => ''), '', '', array('createdate' => 'desc')));
-                $data['pages'] = ceil($total_cmt/4);
+                $data['pages'] = ceil($total_cmt / 4);
                 //danh sách bài học
                 $data['chapter'] = $this->lib_mod->load_all('chapter', '', array("courses_id" => $curr_learn[0]['courses_id'], 'status' => 1), '', '', array("sort" => 'asc'));
                 foreach ($data['chapter'] as $key => $value) {
@@ -451,6 +451,71 @@ class Home extends MY_Controller {
                 $data['meta_description'] = $curr_learn[0]['description'];
                 $data['content'] = 'student/trial_learn_5';
                 $data['id_trial_learn'] = $id_trial_learn;
+                $this->load->view('template', $data);
+            }
+            /*             * ************************ TRANG THÔNG TIN KHÓA HỌC KHI NGƯỜI DÙNG ĐÃ MUA, ĐĂNG NHẬP ************************ */ else if ($sub_flag == 7) {
+                $user_id = $this->session->userdata('user_id');
+                $data = $this->data;
+                $this->load->model('student_model');
+                $this->load->model('courses_model');
+                $this->load->model('comment_model');
+                $data['student'] = $this->student_model->load_all(array('where' => array('id' => $user_id)));
+                $data['curr_learn'][0] = array('id' => 0, 'courses_id' => $id);
+                $course = $this->courses_model->load_all(array('where' => array('id' => $id)));
+                $data['learn_slug'] = base_url() . $course[0]['slug'] . '-7' . $id . '.html';
+
+                $videoDemoArr = [
+                    '37' => '784', //excel 2010
+                    '41' => '435', // 99 tuyet chieu
+                    '65' => '497', // 99 thu thuat van phong
+                    '67' => '591', // excel a-z
+                    '39' => '366', // 18 thu thuat
+                    '16' => '175', //excel ke toan
+                    '69' => '647', //thu thuat excel
+                    '68' => '635', //ke toan (Nhung)
+                    '66' => '513', //ke toan Elink
+                    '10' => '160', //excel 2007
+                    '71' => '696', //báo cáo tài chính elink
+                    '72' => '724', //xác định chi phí
+                    '73' => '726', //báo cáo tài chính nhungpt
+                    '74' => '788', //quyết toán thuế
+                    '77' => '872', //quyết toán thuế ThơĐT
+                    '78' => '953', //trọn bộ kế toán thuế từ a đến z
+                    '80' => '1012', // giám đốc vè quản lý TrungHQ
+                    '81' => '1086',
+                    '82' => '1087'
+                ];
+                if (array_key_exists($id, $videoDemoArr)) {
+                    $data['id_video_demo'] = $videoDemoArr[$id];
+                    $this->session->set_tempdata('is_playable', $videoDemoArr[$id], 3600);
+                } else {
+                    $data['id_video_demo'] = 0;
+                }
+          
+
+                $this->session->set_tempdata('is_trial_view', 'yes', 3600);
+
+                $data['chapter'] = $this->lib_mod->load_all('chapter', '', array("courses_id" => $id, 'status' => 1), '', '', array("sort" => 'asc'));
+                foreach ($data['chapter'] as $key => $value) {
+                    $data['all_learn'][$key] = $this->get_course_learn($value['id'], $user_id);
+                }
+
+
+                $input_comment['where'] = array('courses_id' => $id, 'parent' => '0');
+                $data['total_cmt'] = count($this->comment_model->load_all($input_comment));
+                $input_comment['limit'] = array(4, 0);
+                $input_comment['order'] = array('createdate' => 'desc');
+                $data['comment'] = $this->comment_model->load_all($input_comment);
+
+                $data['page'] = 1;
+                $data['pages'] = ceil($data['total_cmt'] / 4);
+                
+                $data['curr_learn'] = array(0=>array('id' => '0','courses_id' => $id));
+                
+
+                
+                $data['title'] = 'Tổng quan khóa học';
+                $data['content'] = 'course/detail/detail_bought';
                 $this->load->view('template', $data);
             } else {
                 show_404();
