@@ -117,23 +117,40 @@ $rs = json_decode($result);
                         <span class="warning">Bạn sẽ bỏ lỡ điều gì nếu không đăng ký</span>		
                         <p class="price">Combo 3 khóa học chỉ <span>545K</span></p>
                         <div class="col-md-4 col-sm-4 col-xs-12">
-                            <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/600811.png">
-                            <p class="title-course">Tất cả các nghiệp vụ kế toán hóa đơn chứng từ, kế toán thuế, báo cáo tài chính </p>
+                            <a href="#courses">
+                                <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/600811.png">
+                            </a>
+                            <p class="title-course">
+                                 <a href="#courses"> 
+                                     Tất cả các nghiệp vụ kế toán hóa đơn chứng từ, kế toán thuế, báo cáo tài chính 
+                                 </a>
+                            </p>
                         </div>
                         <div class="col-md-4 col-sm-4 col-xs-12">
-                            <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/excel-file.png">
-                            <p class="title-course">Trọn bộ kiến thức về Excel dành cho kế toán mới nhất</p>
+                            <a href="https://lakita.vn/bi-quyet-lam-chu-excel-2017.html?link=199" target="_blank">
+                                <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/excel-file.png" />
+                            </a>
+                            <p class="title-course">
+                                <a href="https://lakita.vn/bi-quyet-lam-chu-excel-2017.html?link=199" target="_blank">
+                                    Trọn bộ kiến thức về Excel dành cho kế toán mới nhất
+                                </a>
+                            </p>
                         </div>
                         <div class="col-md-4 col-sm-4 col-xs-12">
-                            <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/265695.png">
-                            <p class="title-course">Kỹ năng tin học văn phòng</p>
+                            <a href="https://lakita.vn/nhom-khoa-hoc/hanh-chinh-22.html" target="_blank">
+                                <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/265695.png">
+                            </a>
+                            <p class="title-course">
+                                <a href="https://lakita.vn/nhom-khoa-hoc/hanh-chinh-22.html" target="_blank">
+                                    Kỹ năng tin học văn phòng
+                                </a>    
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="courses" class="courses">
-
             <div class="container">
                 <div class="row">
                     <h3 class="text-center"><span>Các khóa học kế toán</span></h3>
@@ -349,20 +366,20 @@ $rs = json_decode($result);
         </style>
 
         <script>
-          
+
         </script>
         <!-- *************************************************************Popup (end)**********************************************************************-->
 
-        
+
         <script>
-            $(".btn-rgt-2").click(function(e){
-                if($(".type-combo-2").val() == 0){
+            $(".btn-rgt-2").click(function (e) {
+                if ($(".type-combo-2").val() == 0) {
                     alert("Mời bạn chọn khóa học kế toán cần đăng ký!");
                     e.preventDefault();
                 }
             });
-             $(".btn-rgt").click(function(e){
-                if($(".type-combo").val() == 0){
+            $(".btn-rgt").click(function (e) {
+                if ($(".type-combo").val() == 0) {
                     alert("Mời bạn chọn khóa học kế toán cần đăng ký!");
                     e.preventDefault();
                 }

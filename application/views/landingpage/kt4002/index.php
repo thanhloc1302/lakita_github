@@ -1038,7 +1038,7 @@ $rs = json_decode($result);
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 col-xs-12">
                         <div class="fb-comments" data-href="https://lakita.vn/tron-bo-lap-bao-cao-tai-chinh-2017.html" 
-                             data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
+                             data-width="100%" data-numposts="10" data-order-by="time"></div>
                     </div>
                 </div>
             </div>
