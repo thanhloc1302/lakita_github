@@ -7,7 +7,14 @@ class Home extends MY_Controller {
     public function __construct() {
         parent::__construct();
     }
-
+    
+    function login_page(){
+        $data = $this->data;
+        $data['content'] = 'template/login_page';
+        $data['title'] = 'Đăng nhập';
+        $this->load->view('template', $data);
+    }
+    
     function index($page = '') {
         //==========================================================TRANG CHỦ =======================================================
         if (empty($page)) {
