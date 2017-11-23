@@ -28,8 +28,8 @@
                 if (!$this->agent->is_mobile('iPad')) {
                     ?>
                     <div class="row receiveLetter">
-<!--                        <p> Đăng kí nhận thư từ Lakita </p>-->
-<!--                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>-->
+                        <p> Đăng kí nhận thư từ Lakita </p>
+                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>
                     </div>
                 <?php } ?>
             </div>
@@ -85,17 +85,17 @@
                         </div>
                     </div>
                     <div class="row receiveLetter hidden-xs">
-<!--                        <p> Đăng kí nhận thư từ Lakita </p>-->
-                        <!--                    <div class="col-md-9">
-                                                <div class="form-group">
-                                                    <label for="InputEmail1" class="sr-only">Email address</label>
-                                                    <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="Email">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <button class="btn btn-success btn-block btn-lg">ĐĂNG KÝ</button>
-                                            </div>-->
-<!--                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>-->
+                        <p> Đăng kí nhận thư từ Lakita </p>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <label for="InputEmail1" class="sr-only">Email address</label>
+                                <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-success btn-block btn-lg">ĐĂNG KÝ</button>
+                        </div>
+                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>
                     </div>
                 </div>
             <?php } ?>

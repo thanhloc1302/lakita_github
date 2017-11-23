@@ -83,7 +83,7 @@ $rs = json_decode($result);
                                                             <option value="CB120"> Hướng dẫn lập báo cáo tài chính </option>
                                                             <option value="CB130"> Kế toán thuế nâng cao </option>
                                                             <option value="CB140"> Cách xác định chi phí hợp lý, công cụ bảo vệ về thanh tra thuế</option>
-                                                            <option value="CB150"> Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn </option>
+                                                            <option value="CB150"> Hướng dẫn lập, đọc, hiểu Báo cáo Tài Chính </option>
                                                         </select>
                                                     </div>
                                                     <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
@@ -165,7 +165,7 @@ $rs = json_decode($result);
                         <div class="row item-course">
                             <div class="col-md-1">  <img src="<?php echo base_url() ?>public/cb110/img-ladipage/checked.png"> </div>
                             <div class="col-md-10 col-md-offset-1">
-                                <span><a href="https://lakita.vn/bao-cao-tai-chinh-nang-cao.html?link=168" target="_blank">Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn</a></span>
+                                <span><a href="https://lakita.vn/bao-cao-tai-chinh-nang-cao.html?link=168" target="_blank">Hướng dẫn lập, đọc, hiểu Báo Cáo Tài Chính</a></span>
                             </div>
                         </div>
                     </div>
@@ -278,7 +278,7 @@ $rs = json_decode($result);
                                         <option value="CB120"> Hướng dẫn lập báo cáo tài chính </option>
                                         <option value="CB130"> Kế toán thuế nâng cao </option>
                                         <option value="CB140"> Cách xác định chi phí hợp lý, công cụ bảo vệ về thanh tra thuế</option>
-                                        <option value="CB150"> Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn </option>
+                                        <option value="CB150"> Hướng dẫn lập, đọc, hiểu Báo Cáo Tài Chính </option>
                                     </select>
                                 </div>
                                 <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />

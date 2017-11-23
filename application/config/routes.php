@@ -33,6 +33,9 @@ $route['thank-you.html'] = 'landingpage/save_c3';
 $route['(:any)/thank-you.html'] = 'landingpage/save_c3';
 
 
+$route['tai-lieu-ke-toan/bang-can-doi.html'] = 'download/index/1';
+
+
 
 
 
