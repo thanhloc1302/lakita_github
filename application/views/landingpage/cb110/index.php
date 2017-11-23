@@ -79,11 +79,11 @@ $rs = json_decode($result);
                                                     <div class="col-md-12 col-xs-12 col-sm-12">
                                                         <select class="form-control type-combo" name="type-combo">
                                                             <option value="0"> Mời bạn chọn khóa học kế toán cần đăng ký </option>
-                                                            <option value="CB110"> Kế toán thuế cho người mới bắt đầu </option>
-                                                            <option value="CB120"> Hướng dẫn lập báo cáo tài chính </option>
-                                                            <option value="CB130"> Kế toán thuế nâng cao </option>
-                                                            <option value="CB140"> Cách xác định chi phí hợp lý, công cụ bảo vệ về thanh tra thuế</option>
-                                                            <option value="CB150"> Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn </option>
+                                                            <option value="CBKT210"> Kế toán thuế cho người mới bắt đầu </option>
+                                                            <option value="CBKT400"> Hướng dẫn lập báo cáo tài chính </option>
+                                                            <option value="CBKT800"> Kế toán thuế nâng cao </option>
+                                                            <option value="CBKT110"> Cách xác định chi phí hợp lý, công cụ bảo vệ về thanh tra thuế</option>
+                                                            <option value="CBKT130"> Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn </option>
                                                         </select>
                                                     </div>
                                                     <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
@@ -117,13 +117,13 @@ $rs = json_decode($result);
                         <span class="warning">Bạn sẽ bỏ lỡ điều gì nếu không đăng ký</span>		
                         <p class="price">Combo 3 khóa học chỉ <span>545K</span></p>
                         <div class="col-md-4 col-sm-4 col-xs-12">
-                            <a href="#courses">
+                            <a href="#courses" id="go-to-course">
                                 <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/600811.png">
                             </a>
                             <p class="title-course">
-                                 <a href="#courses"> 
-                                     Tất cả các nghiệp vụ kế toán hóa đơn chứng từ, kế toán thuế, báo cáo tài chính 
-                                 </a>
+                                <a href="#courses"> 
+                                    Tất cả các nghiệp vụ kế toán hóa đơn chứng từ, kế toán thuế, báo cáo tài chính 
+                                </a>
                             </p>
                         </div>
                         <div class="col-md-4 col-sm-4 col-xs-12">
@@ -291,11 +291,11 @@ $rs = json_decode($result);
                                 <div class="col-md-12 col-xs-12 col-sm-12">
                                     <select class="form-control type-combo-2" name="type-combo">
                                         <option value="0"> Mời bạn chọn khóa học kế toán cần đăng ký </option>
-                                        <option value="CB110"> Kế toán thuế cho người mới bắt đầu </option>
-                                        <option value="CB120"> Hướng dẫn lập báo cáo tài chính </option>
-                                        <option value="CB130"> Kế toán thuế nâng cao </option>
-                                        <option value="CB140"> Cách xác định chi phí hợp lý, công cụ bảo vệ về thanh tra thuế</option>
-                                        <option value="CB150"> Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn </option>
+                                        <option value="CBKT210"> Kế toán thuế cho người mới bắt đầu </option>
+                                        <option value="CBKT400"> Hướng dẫn lập báo cáo tài chính </option>
+                                        <option value="CBKT800"> Kế toán thuế nâng cao </option>
+                                        <option value="CBKT110"> Cách xác định chi phí hợp lý, công cụ bảo vệ về thanh tra thuế</option>
+                                        <option value="CBKT130"> Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn </option>
                                     </select>
                                 </div>
                                 <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
@@ -374,14 +374,16 @@ $rs = json_decode($result);
         <script>
             $(".btn-rgt-2").click(function (e) {
                 if ($(".type-combo-2").val() == 0) {
-                    alert("Mời bạn chọn khóa học kế toán cần đăng ký!");
+                    alert("Mời tìm hiểu khóa học kế toán, sau đó chọn đăng ký!");
                     e.preventDefault();
+                     $("#go-to-course").click();
                 }
             });
             $(".btn-rgt").click(function (e) {
                 if ($(".type-combo").val() == 0) {
-                    alert("Mời bạn chọn khóa học kế toán cần đăng ký!");
+                    alert("Mời tìm hiểu khóa học kế toán, sau đó chọn đăng ký!");
                     e.preventDefault();
+                     $("#go-to-course").click();
                 }
             });
         </script>

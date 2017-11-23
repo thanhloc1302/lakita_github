@@ -10,19 +10,19 @@ class Courses_model extends MY_Model {
 
     function find_course_id($course_code) {
         $courseId = 10;
-        if($course_code == 'CB110'){
+        if($course_code == 'CBKT210'){
             $courseId = [78, 37, 65];
         }
-        if($course_code == 'CB120'){
+        if($course_code == 'CBKT400'){
             $courseId = [73, 37, 65];
         }
-        if($course_code == 'CB130'){
+        if($course_code == 'CBKT800'){
             $courseId = [77, 37, 65];
         }
-        if($course_code == 'CB140'){
+        if($course_code == 'CBKT110'){
             $courseId = [82, 37, 65];
         }
-        if($course_code == 'CB150'){
+        if($course_code == 'CBKT130'){
             $courseId = [81, 37, 65];
         }
         $input2 = array();
