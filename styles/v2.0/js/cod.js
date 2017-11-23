@@ -6,11 +6,13 @@ function activate() {
         alert("Bạn phải nhập mã kích hoạt!");
         return;
     }
-    
-    if (!filter.test(intive_code))
-    {
-        alert('Mã giới thiệu chưa đúng định dạng');
-        return;
+
+    if (intive_code != '') {
+        if (!filter.test(intive_code))
+        {
+            alert('Mã giới thiệu chưa đúng định dạng');
+            return;
+        }
     }
     jQuery.ajax({
         type: "POST",
@@ -36,10 +38,9 @@ function activate() {
                 console.log(response);
                 alert("Chúc mừng bạn đã kích hoạt thành công khóa học \"" + resultArr[2] + "\", chúng tôi sẽ đưa bạn đến trang khóa học để học ngay!");
                 location.replace(resultArr[1]);
-            } else if(resultArr[0] == 99){
+            } else if (resultArr[0] == 99) {
                 location.assign('nhan-qua-tang.html');
-            }
-            else
+            } else
             {
                 alert(resultArr[1]);
             }

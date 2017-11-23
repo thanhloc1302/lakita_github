@@ -106,11 +106,6 @@ jQuery(function () {
                 alert('Bạn phải nhập mật khẩu xác nhận');
                 return;
             }
-            if (!$("#agree_term").is(':checked'))
-            {
-                alert('Bạn cần đồng ý với điều khoản và dịch vụ vủa Lakita!');
-                return;
-            }
             url = 'guest/action_register';
         } else
         {
