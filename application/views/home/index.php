@@ -69,13 +69,14 @@ $(document).ready( function(){
                 </div>
                 <div class="row">
                     <div class="col-md-3 loginBtn col-sm-4 col-sm-offset-4 col-xs-5 col-sm-xs">
-                        <button data-toggle="modal" data-target="#myModal3" class="btn btn-block btn-success" id="show_modal"> ĐĂNG NHẬP </button>
+                        <a href="<?php echo base_url(); ?>dang-nhap.html">
+                            <button class="btn btn-block btn-success" id="show_modal"> ĐĂNG NHẬP </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <?php $this->load->view('template/login_modal'); ?>
 </div><!-- /.modal -->
 <div class="navBar hidden-sm hidden-xs">
     <div class="navBarCenter">
@@ -284,17 +285,21 @@ if ($this->agent->is_mobile()) {
 
 <script>
     $(document).ready(function () {
-        $('#modal2_9').modal('show');
-        var close = false;
-        $(".close").click(function () {
-            close = true;
-        });
-        $('#popup_29').click(function () {
+        if ($(window).width() < 1000) {
             $('#modal2_9').modal('hide');
-            if (!close) {
-                $('#modal_event').modal('show');
-            }
-        });
+        } else {
+            $('#modal2_9').modal('show');
+            var close = false;
+            $(".close").click(function () {
+                close = true;
+            });
+            $('#popup_29').click(function () {
+                $('#modal2_9').modal('hide');
+                if (!close) {
+                    $('#modal_event').modal('show');
+                }
+            });
+        }
     });
 </script>
 

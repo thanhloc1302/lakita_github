@@ -570,7 +570,7 @@ $rs = json_decode($result);
                         <div>Hướng dẫn lập đúng và 08 bước kiểm tra Bảng cân đối phát sinh</div>
                     </ol>
                 </div>
-                <div id="YOUTUBE550" class="widget-element widget-snap" lp-type="videoyoutube" lp-lang="YOUTUBE" lp-autoplay="1" lp-display="block">
+                <div id="YOUTUBE550" class="widget-element widget-snap" lp-type="videoyoutube" lp-lang="YOUTUBE" lp-autoplay="0" lp-display="block">
                     <iframe class="widget-content" src="https://www.youtube.com/embed/UPkqH3VV7jc?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen=""></iframe>
                     <div class="ladi-widget-overlay"></div>
                 </div>
@@ -901,7 +901,7 @@ $rs = json_decode($result);
                 <div id="HEADLINE636" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                     <h2 class="widget-content" lp-node="h2"><span style="color: rgb(255, 255, 255);">MIỄN PHÍ GIAO HÀNG</span> <span style="color: rgb(255, 255, 255);">TRÊN TOÀN QUỐC</span></h2> </div>
                 <div id="HEADLINE637" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                    <h3 class="widget-content" lp-node="h3"><span style="color: rgb(255, 255, 255);">ÁP DỤNG ĐẾN HẾT NGÀY 23/09/2017</span>&nbsp;</h3> </div>
+                    <h3 class="widget-content" lp-node="h3"><span style="color: rgb(255, 255, 255);">ÁP DỤNG ĐẾN HẾT NGÀY HÔM NAY</span>&nbsp;</h3> </div>
                 <div id="GROUP452" class="widget-element widget-snap widget-group wow bounceInLeft animated" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
                     <div class="widget-content">
                         <div id="BOX439" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP452" lp-display="block">

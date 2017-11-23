@@ -9,13 +9,29 @@ class Courses_model extends MY_Model {
     }
 
     function find_course_id($course_code) {
+        $courseId = 10;
+        if($course_code == 'CBKT210'){
+            $courseId = [78, 37, 65];
+        }
+        if($course_code == 'CBKT400'){
+            $courseId = [73, 37, 65];
+        }
+        if($course_code == 'CBKT800'){
+            $courseId = [77, 37, 65];
+        }
+        if($course_code == 'CBKT110'){
+            $courseId = [82, 37, 65];
+        }
+        if($course_code == 'CBKT130'){
+            $courseId = [81, 37, 65];
+        }
         $input2 = array();
         $input2['where'] = array('course_code' => $course_code);
         $courses = $this->load_all($input2);
         if (!empty($courses)) {
-            return $courses[0]['id'];
+            $courseId =  $courses[0]['id'];
         }
-        return 10;
+        return $courseId;
     }
 
     function find_course_price($course_code) {

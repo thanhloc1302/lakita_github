@@ -79,11 +79,11 @@ $rs = json_decode($result);
                                                     <div class="col-md-12 col-xs-12 col-sm-12">
                                                         <select class="form-control type-combo" name="type-combo">
                                                             <option value="0"> Mời bạn chọn khóa học kế toán cần đăng ký </option>
-                                                            <option value="CB110"> Kế toán thuế cho người mới bắt đầu </option>
-                                                            <option value="CB120"> Hướng dẫn lập báo cáo tài chính </option>
-                                                            <option value="CB130"> Kế toán thuế nâng cao </option>
-                                                            <option value="CB140"> Cách xác định chi phí hợp lý, công cụ bảo vệ về thanh tra thuế</option>
-                                                            <option value="CB150"> Hướng dẫn lập, đọc, hiểu Báo cáo Tài Chính </option>
+                                                            <option value="CBKT210"> Kế toán thuế cho người mới bắt đầu </option>
+                                                            <option value="CBKT400"> Hướng dẫn lập báo cáo tài chính </option>
+                                                            <option value="CBKT800"> Kế toán thuế nâng cao </option>
+                                                            <option value="CBKT110"> Cách xác định chi phí hợp lý, công cụ bảo vệ về thanh tra thuế</option>
+                                                            <option value="CBKT130"> Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn </option>
                                                         </select>
                                                     </div>
                                                     <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
@@ -117,23 +117,40 @@ $rs = json_decode($result);
                         <span class="warning">Bạn sẽ bỏ lỡ điều gì nếu không đăng ký</span>		
                         <p class="price">Combo 3 khóa học chỉ <span>545K</span></p>
                         <div class="col-md-4 col-sm-4 col-xs-12">
-                            <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/600811.png">
-                            <p class="title-course">Tất cả các nghiệp vụ kế toán hóa đơn chứng từ, kế toán thuế, báo cáo tài chính </p>
+                            <a href="#courses" id="go-to-course">
+                                <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/600811.png">
+                            </a>
+                            <p class="title-course">
+                                <a href="#courses"> 
+                                    Tất cả các nghiệp vụ kế toán hóa đơn chứng từ, kế toán thuế, báo cáo tài chính 
+                                </a>
+                            </p>
                         </div>
                         <div class="col-md-4 col-sm-4 col-xs-12">
-                            <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/excel-file.png">
-                            <p class="title-course">Trọn bộ kiến thức về Excel dành cho kế toán mới nhất</p>
+                            <a href="https://lakita.vn/bi-quyet-lam-chu-excel-2017.html?link=199" target="_blank">
+                                <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/excel-file.png" />
+                            </a>
+                            <p class="title-course">
+                                <a href="https://lakita.vn/bi-quyet-lam-chu-excel-2017.html?link=199" target="_blank">
+                                    Trọn bộ kiến thức về Excel dành cho kế toán mới nhất
+                                </a>
+                            </p>
                         </div>
                         <div class="col-md-4 col-sm-4 col-xs-12">
-                            <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/265695.png">
-                            <p class="title-course">Kỹ năng tin học văn phòng</p>
+                            <a href="https://lakita.vn/nhom-khoa-hoc/hanh-chinh-22.html" target="_blank">
+                                <img class="img-item" src="<?php echo base_url() ?>public/cb110/img-ladipage/265695.png">
+                            </a>
+                            <p class="title-course">
+                                <a href="https://lakita.vn/nhom-khoa-hoc/hanh-chinh-22.html" target="_blank">
+                                    Kỹ năng tin học văn phòng
+                                </a>    
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="courses" class="courses">
-
             <div class="container">
                 <div class="row">
                     <h3 class="text-center"><span>Các khóa học kế toán</span></h3>
@@ -165,7 +182,7 @@ $rs = json_decode($result);
                         <div class="row item-course">
                             <div class="col-md-1">  <img src="<?php echo base_url() ?>public/cb110/img-ladipage/checked.png"> </div>
                             <div class="col-md-10 col-md-offset-1">
-                                <span><a href="https://lakita.vn/bao-cao-tai-chinh-nang-cao.html?link=168" target="_blank">Hướng dẫn lập, đọc, hiểu Báo Cáo Tài Chính</a></span>
+                                <span><a href="https://lakita.vn/bao-cao-tai-chinh-nang-cao.html?link=168" target="_blank">Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn</a></span>
                             </div>
                         </div>
                     </div>
@@ -274,11 +291,11 @@ $rs = json_decode($result);
                                 <div class="col-md-12 col-xs-12 col-sm-12">
                                     <select class="form-control type-combo-2" name="type-combo">
                                         <option value="0"> Mời bạn chọn khóa học kế toán cần đăng ký </option>
-                                        <option value="CB110"> Kế toán thuế cho người mới bắt đầu </option>
-                                        <option value="CB120"> Hướng dẫn lập báo cáo tài chính </option>
-                                        <option value="CB130"> Kế toán thuế nâng cao </option>
-                                        <option value="CB140"> Cách xác định chi phí hợp lý, công cụ bảo vệ về thanh tra thuế</option>
-                                        <option value="CB150"> Hướng dẫn lập, đọc, hiểu Báo Cáo Tài Chính </option>
+                                        <option value="CBKT210"> Kế toán thuế cho người mới bắt đầu </option>
+                                        <option value="CBKT400"> Hướng dẫn lập báo cáo tài chính </option>
+                                        <option value="CBKT800"> Kế toán thuế nâng cao </option>
+                                        <option value="CBKT110"> Cách xác định chi phí hợp lý, công cụ bảo vệ về thanh tra thuế</option>
+                                        <option value="CBKT130"> Hướng dẫn phân tích các chỉ số hỗ trợ dự thầu vay vốn </option>
                                     </select>
                                 </div>
                                 <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
@@ -349,22 +366,24 @@ $rs = json_decode($result);
         </style>
 
         <script>
-          
+
         </script>
         <!-- *************************************************************Popup (end)**********************************************************************-->
 
-        
+
         <script>
-            $(".btn-rgt-2").click(function(e){
-                if($(".type-combo-2").val() == 0){
-                    alert("Mời bạn chọn khóa học kế toán cần đăng ký!");
+            $(".btn-rgt-2").click(function (e) {
+                if ($(".type-combo-2").val() == 0) {
+                    alert("Mời tìm hiểu khóa học kế toán, sau đó chọn đăng ký!");
                     e.preventDefault();
+                     $("#go-to-course").click();
                 }
             });
-             $(".btn-rgt").click(function(e){
-                if($(".type-combo").val() == 0){
-                    alert("Mời bạn chọn khóa học kế toán cần đăng ký!");
+            $(".btn-rgt").click(function (e) {
+                if ($(".type-combo").val() == 0) {
+                    alert("Mời tìm hiểu khóa học kế toán, sau đó chọn đăng ký!");
                     e.preventDefault();
+                     $("#go-to-course").click();
                 }
             });
         </script>

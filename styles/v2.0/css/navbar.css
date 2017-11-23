@@ -73,8 +73,8 @@ div.header div.navBar ul li a.avatar{
     text-decoration: none;
 }
 div.header div.navBar ul li img.avatar{
-    width:50px;
-    height: 50px;
+    width:40px;
+    height:40px;
 }
 div.header .logo-link{
     display: inline-block;
