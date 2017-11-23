@@ -38,7 +38,7 @@ $(function () {
             console.log(rs[0]);
             if (response == '')
             {
-                //alert('Video không tồn tại')
+                alert('Video không tồn tại')
                 return;
             }
 

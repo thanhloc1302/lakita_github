@@ -2,7 +2,6 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/style.bootstrap11.lakita.css" />
 <script src="<?php echo base_url(); ?>styles/v2.0/js/student.min.js"></script>
 <?php
-
 if ($this->agent->is_mobile())
     $this->load->view('mobile/my_courses');
 else {
@@ -14,15 +13,15 @@ else {
                 <div class="row">
                     <div class="col-md-1 col-md-offset-3 margintop22">
                         <img src="<?php
-                        if (!empty($student[0]['id_fb']))
-                            echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
-                        else {
-                            if (!empty($student[0]['thumbnail']))
-                                echo 'https://lakita.vn/' . $student[0]['thumbnail'];
-                            else
-                                echo base_url() . 'styles/images/people/110/user.png';
-                        }
-                        ?>" alt="lakita" class="img-circle avatar" />
+        if (!empty($student[0]['id_fb']))
+            echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
+        else {
+            if (!empty($student[0]['thumbnail']))
+                echo 'https://lakita.vn/' . $student[0]['thumbnail'];
+            else
+                echo base_url() . 'styles/images/people/110/user.png';
+        }
+        ?>" alt="lakita" class="img-circle avatar" />
                     </div>
                     <div class="col-md-6 marginleft15">
                         <h1> <strong> <?php echo $student[0]['name']; ?> </strong></h1>
@@ -121,19 +120,15 @@ else {
                                             <div class="row">
                                                 <div class="col-md-5 paddingright0">
                                                     <a 
-                                                    <?php if ($value['first_course'] != '') { ?>
-                                                            href="<?php echo $value['first_course']; ?>" 
-                                                        <?php } ?>
+                                                        href="<?php echo base_url() . $value['slug'] . '-7' . $value['id'] . '.html'; ?>" 
                                                         title="<?php echo $value['name']; ?>">
                                                         <img alt="<?php echo $value['name']; ?>" src="<?php echo 'https://lakita.vn/' . $value['image']; ?>" class="lesson-thumnail" />
                                                     </a>
                                                 </div>
                                                 <div class="col-md-7 paddingleft0">
-                                                    <p>
+                                                    <p>               
                                                         <a 
-                                                        <?php if ($value['first_course'] != '') { ?>
-                                                                href="<?php echo $value['first_course']; ?>" 
-                                                            <?php } ?>
+                                                            href="<?php echo base_url() . $value['slug'] . '-7' . $value['id'] . '.html'; ?>" 
                                                             title="<?php echo $value['name']; ?>">
                                                             <strong><?php echo ($value['is_trial_learn'] == true) ? '[Học thử] ' . $value['name'] : (($value['trial_learn'] == 1) ? '[Trial] ' . $value['name'] : $value['name']); ?> </strong>
                                                         </a>
@@ -179,29 +174,29 @@ else {
                         </tbody>
                     </table>
                 </section>
-<!--                <section class="group2">
+    <!--                <section class="group2">
                     <p style="color: green; margin-left: 5px; font-size: 17px;"><i class="fa fa-toggle-on" aria-hidden="true"></i><strong> Khóa học khác</strong></p>
                     <div class="row listCourse">
-                        <?php
-                        $i = 1;
-                        foreach ($other_courses as $key => $value) {
-                            ?>
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                <a href="<?php echo base_url() . $value['slug'] . '-2' . $value['id']; ?>.html" title="<?php echo $value['name']; ?>">
-                                    <div> <img src="<?php echo 'https://lakita.vn/' . $value['image']; ?>" alt="<?php echo $value['name']; ?>" class="img-responsive"> </div>
-                                    <p class="courseName"><?php echo $value['name']; ?></p>
-                                </a>
-                                <p class="teacher"><?php echo $value['speaker_name']; ?></p>
-                                <p class="price"> <?php echo number_format(str_replace('.', '', $value['price_root']), 0, ',', '.') . " VNĐ"; ?></p>
-                            </div>
-                            <?php
-                            if ($i % 3 == 0)
-                                echo '<div class="clearfix visible-md-block visible-lg-block"></div>';
-                            if ($i % 2 == 0)
-                                echo '<div class="clearfix visible-sm-block"></div>';
-                            $i++;
-                        }
-                        ?>
+                <?php
+                $i = 1;
+                foreach ($other_courses as $key => $value) {
+                    ?>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <a href="<?php echo base_url() . $value['slug'] . '-2' . $value['id']; ?>.html" title="<?php echo $value['name']; ?>">
+                                        <div> <img src="<?php echo 'https://lakita.vn/' . $value['image']; ?>" alt="<?php echo $value['name']; ?>" class="img-responsive"> </div>
+                                        <p class="courseName"><?php echo $value['name']; ?></p>
+                                    </a>
+                                    <p class="teacher"><?php echo $value['speaker_name']; ?></p>
+                                    <p class="price"> <?php echo number_format(str_replace('.', '', $value['price_root']), 0, ',', '.') . " VNĐ"; ?></p>
+                                </div>
+                    <?php
+                    if ($i % 3 == 0)
+                        echo '<div class="clearfix visible-md-block visible-lg-block"></div>';
+                    if ($i % 2 == 0)
+                        echo '<div class="clearfix visible-sm-block"></div>';
+                    $i++;
+                }
+                ?>
                     </div>
                 </section>-->
             </div>
@@ -209,5 +204,5 @@ else {
     </div>
 
     <!--*********************************************************DUNG TT (hết)***********************************************-->
-<?php
+    <?php
 }

@@ -69,13 +69,14 @@ $(document).ready( function(){
                 </div>
                 <div class="row">
                     <div class="col-md-3 loginBtn col-sm-4 col-sm-offset-4 col-xs-5 col-sm-xs">
-                        <button data-toggle="modal" data-target="#myModal3" class="btn btn-block btn-success" id="show_modal"> ĐĂNG NHẬP </button>
+                        <a href="<?php echo base_url(); ?>dang-nhap.html">
+                            <button class="btn btn-block btn-success" id="show_modal"> ĐĂNG NHẬP </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <?php $this->load->view('template/login_modal'); ?>
 </div><!-- /.modal -->
 <div class="navBar hidden-sm hidden-xs">
     <div class="navBarCenter">

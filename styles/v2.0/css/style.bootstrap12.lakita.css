@@ -301,8 +301,8 @@ ul.nextCourse2 li.active{
 }
 
 .avatar{
-    width:66px;
-    height: 66px;
+   /* width:66px;
+    height: 66px;*/
 }
 .love_link{
     cursor: pointer;
