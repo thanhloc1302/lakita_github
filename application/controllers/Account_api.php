@@ -17,11 +17,15 @@ use Restserver\Libraries\REST_Controller;
 
 class Account_api extends REST_Controller {
 
-    function create_new_account_post() {
-        $post = $this->input->post();
+    public function __construct() {
+        parent::__construct();
         $this->load->model('student_model');
         $this->load->model('student_courses_model');
         $this->load->model('courses_model');
+    }
+
+    function create_new_account_post() {
+        $post = $this->input->post();
         $course_id = $this->courses_model->find_course_id($post['course_code']);
         $result = array('success' => '1', 'message' => '');
 
@@ -40,14 +44,7 @@ class Account_api extends REST_Controller {
                 'status' => 1
             );
             $student_id = $this->student_model->insert_return_id($studentInsertArr, 'id');
-            $studentCourseInsertArr = array(
-                'student_id' => $student_id,
-                'courses_id' => $course_id,
-                'status' => 1,
-                'cod' => '',
-                'create_date' => time()
-            );
-            $this->student_courses_model->insert($studentCourseInsertArr);
+            $this->createStudentCourse($student_id, $course_id);
             $result['message'] = 'Tạo tài khoản thành công cho khách hàng!';
             $result['password'] = 'new';
         } else {
@@ -57,14 +54,7 @@ class Account_api extends REST_Controller {
             $input2['where'] = array('student_id' => $student_id, 'courses_id' => $course_id);
             $studentCourseExist = $this->student_courses_model->load_all($input2);
             if (empty($studentCourseExist)) {
-                $studentCourseInsertArr = array(
-                    'student_id' => $student_id,
-                    'courses_id' => $course_id,
-                    'status' => 1,
-                    'cod' => '',
-                    'create_date' => time()
-                );
-                $this->student_courses_model->insert($studentCourseInsertArr);
+                $this->createStudentCourse($student_id, $course_id);
                 $result['message'] = 'Tài khoản của khách hàng đã tồn tại (mật khẩu như cũ), đã thêm khóa học cho khách hàng!';
                 $result['password'] = 'old';
             } else {
@@ -73,6 +63,30 @@ class Account_api extends REST_Controller {
             }
         }
         $this->response($result, REST_Controller::HTTP_OK);
+    }
+
+    private function createStudentCourse($student_id, $course_id) {
+        if (is_array($course_id)) {
+            foreach ($course_id as $courseId) {
+                $studentCourseInsertArr = array(
+                    'student_id' => $student_id,
+                    'courses_id' => $courseId,
+                    'status' => 1,
+                    'cod' => '',
+                    'create_date' => time()
+                );
+                $this->student_courses_model->insert($studentCourseInsertArr);
+            }
+        } else {
+            $studentCourseInsertArr = array(
+                'student_id' => $student_id,
+                'courses_id' => $course_id,
+                'status' => 1,
+                'cod' => '',
+                'create_date' => time()
+            );
+            $this->student_courses_model->insert($studentCourseInsertArr);
+        }
     }
 
 }

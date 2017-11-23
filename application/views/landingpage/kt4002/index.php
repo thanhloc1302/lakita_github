@@ -570,7 +570,7 @@ $rs = json_decode($result);
                         <div>Hướng dẫn lập đúng và 08 bước kiểm tra Bảng cân đối phát sinh</div>
                     </ol>
                 </div>
-                <div id="YOUTUBE550" class="widget-element widget-snap" lp-type="videoyoutube" lp-lang="YOUTUBE" lp-autoplay="1" lp-display="block">
+                <div id="YOUTUBE550" class="widget-element widget-snap" lp-type="videoyoutube" lp-lang="YOUTUBE" lp-autoplay="0" lp-display="block">
                     <iframe class="widget-content" src="https://www.youtube.com/embed/UPkqH3VV7jc?rel=0&amp;showinfo=1" frameborder="0" allowfullscreen=""></iframe>
                     <div class="ladi-widget-overlay"></div>
                 </div>
