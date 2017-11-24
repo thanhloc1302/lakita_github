@@ -171,7 +171,7 @@ class Guest extends MY_Controller {
         }
 
         if (!$this->execute($email)) {
-            $error = 'Email không tồn tại ';
+            $error = 'Email không tồn tại, mời bạn nhập email chính xác để tư vấn tuyển sinh có thể liên hệ !!';
             $success = 0;
         }
 
