@@ -87,8 +87,8 @@ $(document).ready( function(){
                 <li role="presentation"> <a href="dich-vu-excel.html"><img style="width:40px;display: inline;margin-top: -30px;margin-right: -20px;" class="img-responsive" src="https://lakita.vn/styles/images/new-logo.png"> DỊCH VỤ EXCEL </a></li>
                 <li role="presentation" class="hidden-sm hidden-xs"> <a href="<?php echo base_url(); ?>"> <img alt="học excel cơ bản, excel cho kế toán, tự học excel" title="học excel cơ bản, excel cho kế toán, tự học excel" src="<?php echo base_url(); ?>styles/v2.0/img/logo2.png" /> </a></li>
                 <li role="presentation"> <a href="tro-thanh-giang-vien.html"> TRỞ THÀNH GIẢNG VIÊN </a></li>
-                <li role="presentation"> <a href="" id="menu_register"> ĐĂNG KÝ </a></li>
-                <li role="presentation"> <a href="" id="menu_login"> ĐĂNG NHẬP </a></li>
+                <li role="presentation"> <a href="<?php echo base_url(); ?>dang-nhap.html"> ĐĂNG KÝ </a></li>
+                <li role="presentation"> <a href="<?php echo base_url(); ?>dang-nhap.html"> ĐĂNG NHẬP </a></li>
                 <li role="presentation"> <a href="#footer_link"> LIÊN HỆ </a></li>
             </ul>
         </div><!-- /.navbar-collapse -->

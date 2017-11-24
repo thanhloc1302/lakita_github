@@ -120,4 +120,6 @@
 
 <!--    <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/bootstrap.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/media.css" /> 
+<link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/define.css" />
 </head>

@@ -9,6 +9,11 @@ class Home extends MY_Controller {
     }
     
     function login_page(){
+        $user_id = $this->session->userdata('user_id');
+        if(isset($user_id)){
+            $this->_check_exist_login($user_id, false);
+                redirect(base_url() . 'khoa-hoc/xem-tat-ca.html');
+        }
         $data = $this->data;
         $data['content'] = 'template/login_page';
         $data['title'] = 'Đăng nhập';

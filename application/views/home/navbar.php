@@ -228,8 +228,8 @@
                     <?php
                     if (!isset($user_id)) {
                         ?>
-                        <li role="presentation" class="icon-bar paddingleft56"> <a href="" id="menu_register"> ĐĂNG KÝ </a></li>
-                        <li role="presentation" class="icon-bar paddingleft53"> <a href="" id="menu_login"> ĐĂNG NHẬP </a></li>
+                        <li role="presentation" class="icon-bar paddingleft56"> <a href="<?php echo base_url(); ?>dang-nhap.html"> ĐĂNG KÝ </a></li>
+                        <li role="presentation" class="icon-bar paddingleft53"> <a href="<?php echo base_url(); ?>dang-nhap.html"> ĐĂNG NHẬP </a></li>
                         <?php
                     } else {
                         ?>

@@ -62,7 +62,5 @@ if (!$this->agent->is_mobile()) {
     });
 </script>
 <script src="https://use.fontawesome.com/0b216c5f11.js"></script>
-<link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/media.css" /> 
-<link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/define.css" />
 <script src="<?php echo base_url(); ?>plugin/boostrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script>
 <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>

@@ -29,9 +29,7 @@ $(function () {
     $('.dropdown').on('hide.bs.dropdown', function () {
         $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
     });
-    $('.dropdown_hover').hover(function () {
-        $('.dropdown-toggle', this).trigger('click');
-    });
+   
 
 });
 
