@@ -1,7 +1,7 @@
 <!--    <script src="<?php echo base_url(); ?>styles/v2.0/js/home.js"></script>-->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/view_all.css" />
-<script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/view_all.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/login.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/view_all.css?ver=<?php echo _VER_CACHED_ ?>" />
+<script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/view_all.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/login.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <?php if (!$this->agent->is_mobile()) { ?>
     <div class="header">
         <?php $this->load->view('home/navbar'); ?>
@@ -118,7 +118,7 @@ else {
 </div>
 </div>
 <?php if ($this->agent->is_mobile()) { ?>
-    <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/home.css" />
+    <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/home.css?ver=<?php echo _VER_CACHED_ ?>" />
     <div class="Testimonials">
         <div class="testimonial"> <strong>  CẢM NHẬN HỌC VIÊN </strong> </div>
         <p class="testimonial2"> Những nhận xét của các học viên khi tham gia khóa học lại Lakita </p>

@@ -1,6 +1,6 @@
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/style.bootstrap12.lakita.css" />
-<script type="text/javascript" src="<?php echo base_url(); ?>plugin/ckeditor/ckeditor.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/swfobject.js" ></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/style.bootstrap12.lakita.css?ver=<?php echo _VER_CACHED_ ?>" />
+<script type="text/javascript" src="<?php echo base_url(); ?>plugin/ckeditor/ckeditor.js?ver=<?php echo _VER_CACHED_ ?>"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/swfobject.js?ver=<?php echo _VER_CACHED_ ?>" ></script>
 <style>
     .float_video{
         position: fixed;
@@ -643,8 +643,8 @@
 
 
 
-<script src="<?php echo base_url(); ?>styles/v2.0/js/learn.js"></script>
-<script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer.min.js"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/learn.js?ver=<?php echo _VER_CACHED_ ?>"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <!--<script src="<?php echo base_url(); ?>styles/v2.0/js/scrt.js"></script>  -->
 <?php $this->load->view('student/action_comment'); ?>
 <?php

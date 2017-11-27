@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/footer.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/footer.css?ver=<?php echo _VER_CACHED_ ?>" />
 <div class="support" id="footer_link">
     <p class="support1">HỖ TRỢ</p>
     <p class="support2">Hãy liên lạc với chúng tôi.</p>
@@ -126,4 +126,4 @@
         </div>
     </div>
 </div>
-<script src="<?php echo base_url(); ?>styles/v2.0/js/footer.min.js"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/footer.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>

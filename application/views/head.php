@@ -69,7 +69,7 @@
     </script>
     <link rel="shortcut icon" href="<?php echo base_url() . $setting[0]['favicon'] ?>" type="image/x-icon" />
 
-    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>styles/v2.0/css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>styles/v2.0/css/reset.css?ver=<?php echo _VER_CACHED_ ?>" />
 
 <!--    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>styles/v2.0/css/bootstrap.min.css" />-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />
@@ -77,7 +77,7 @@
 <!--    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>styles/v2.0/css/bootstrap-theme.min.css" />-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-theme.min.css" />
 
-    <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/general.css" />
+    <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/general.css?ver=<?php echo _VER_CACHED_ ?>" />
 <!--    <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/fontawesome.js"></script>-->
     <link href="<?php echo base_url(); ?>plugin/boostrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" type="text/css"/>
     <!-- Facebook Pixel Code -->
@@ -120,6 +120,6 @@
 
 <!--    <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/bootstrap.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/media.css" /> 
-<link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/define.css" />
+<link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/media.css?ver=<?php echo _VER_CACHED_ ?>" /> 
+<link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/define.css?ver=<?php echo _VER_CACHED_ ?>" />
 </head>

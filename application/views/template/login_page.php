@@ -1,4 +1,4 @@
-<link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/login_page.css" />
+<link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/login_page.css?ver=<?php echo _VER_CACHED_ ?>" />
 
 <div class="header row">
     <div class="col-md-6 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
@@ -112,4 +112,4 @@
 
 </div>
 
-<script src="<?php echo base_url(); ?>styles/v2.0/js/login_page.js"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/login_page.js?ver=<?php echo _VER_CACHED_ ?>"></script>

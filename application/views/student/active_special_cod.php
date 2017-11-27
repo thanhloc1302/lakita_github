@@ -1,6 +1,6 @@
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/student.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/style.bootstrap11.lakita.css" />
-<script src="<?php echo base_url(); ?>styles/v2.0/js/student.min.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/student.css?ver=<?php echo _VER_CACHED_ ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/style.bootstrap11.lakita.css?ver=<?php echo _VER_CACHED_ ?>" />
+<script src="<?php echo base_url(); ?>styles/v2.0/js/student.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <?php
 if ($this->agent->is_mobile())
     $this->load->view('mobile/active_special_cod_mobile');
@@ -133,7 +133,7 @@ else {
         </div>
     </div>
 <?php } ?>
-<script src="<?php echo base_url(); ?>styles/v2.0/js/cod.min.js"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/cod.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 
 <!--*********************************************************DUNG TT (hết)***********************************************-->
 <style>

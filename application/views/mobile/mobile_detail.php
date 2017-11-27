@@ -1,6 +1,6 @@
 <?php $this->load->view('mobile/navbar');
 ?>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/course_detail_mobi.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/course_detail_mobi.css?ver=<?php echo _VER_CACHED_ ?>" />
 <div class="container" style="overflow: hidden;">
     <div class="row">
         <div class="col-xs-12 col-sm-6">
@@ -40,7 +40,7 @@
                 <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.js"></script>
                 <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.html5.js"></script>
                 <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ=="</script>
-                <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer.min.js"></script>
+                <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 course_detail_mobile">
@@ -233,7 +233,7 @@
             <p class="show_more"> Xem đầy đủ <i class="fa fa-sort-amount-desc" aria-hidden="true"></i></p> 
         </div>
     </div>
-    <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/home.css" />
+    <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/home.css?ver=<?php echo _VER_CACHED_ ?>" />
     <div class="Testimonials">
         <div class="testimonial"> <strong>  CẢM NHẬN HỌC VIÊN </strong> </div>
         <p class="testimonial2"> Những nhận xét của các học viên khi tham gia khóa học lại Lakita </p>

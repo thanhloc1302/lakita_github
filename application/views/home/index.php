@@ -1,8 +1,7 @@
-<link type="text/css" rel="stylesheet"  href="<?php echo base_url(); ?>styles/v2.0/css/home.css" />
-<script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/home.min.js"></script>
-<link type="text/css" rel="stylesheet"  href="<?php echo base_url(); ?>styles/v2.0/css/media.css" />
-<link type="text/css" rel="stylesheet"  href="<?php echo base_url(); ?>styles/v2.0/css/define.css" />
-<script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/login.js"></script>
+<link type="text/css" rel="stylesheet"  href="<?php echo base_url(); ?>styles/v2.0/css/home.css?ver=<?php echo _VER_CACHED_ ?>" />
+<script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/home.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
+<link type="text/css" rel="stylesheet"  href="<?php echo base_url(); ?>styles/v2.0/css/media.css?ver=<?php echo _VER_CACHED_ ?>" />
+<link type="text/css" rel="stylesheet"  href="<?php echo base_url(); ?>styles/v2.0/css/define.css?ver=<?php echo _VER_CACHED_ ?>" />
 
 <!--<script src="<?php echo base_url(); ?>styles/v2.0/js/jquery.snow.js"></script>
 <script>

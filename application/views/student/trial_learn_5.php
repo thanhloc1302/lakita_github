@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/style.bootstrap12.lakita.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/style.bootstrap12.lakita.css?ver=<?php echo _VER_CACHED_ ?>" />
 <?php if (!$this->agent->is_mobile()) { ?>
     <header>
         <div class="row header-row-1">
@@ -314,8 +314,8 @@
 <div>
     <?php //$this->load->view('course/detail/vote_modal'); ?>
 </div>
-<script src="<?php echo base_url(); ?>styles/v2.0/js/learn.min.js"></script>
-<script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer.min.js"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/learn.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <!--<script src="<?php echo base_url(); ?>styles/v2.0/js/scrt.js"></script>  -->
 <?php
 //if ($trial_learn == 1 && $curr_id == 269) {

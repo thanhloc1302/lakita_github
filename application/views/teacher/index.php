@@ -1,4 +1,4 @@
-<link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/teacher.css" />
+<link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/teacher.css?ver=<?php echo _VER_CACHED_ ?>" />
 <div id="main_to_nhat_bao_toan_bo_luon">
     <!--menu top-->
     <!--    <div id="menu_top">
