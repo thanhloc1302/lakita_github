@@ -31,7 +31,7 @@
 </div>
 <div class="row body">
     <div class="col-md-6 col-md-offset-1 hidden-sm hidden-xs padding0">
-        <img style="max-height: 510px" class="img img-responsive" src="<?php echo base_url()?>/styles/images/logo4.png">
+        <img style="max-height: 510px" class="img img-responsive" src="<?php echo base_url(); ?>styles/v2.0/img/logo5.png">
     </div>
     <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" >
         <div class="register">
@@ -42,7 +42,6 @@
             </div>
             <div class="col-md-10 padding0"> 
                 <h1>Tạo tài khoản mới</h1>
-                <p>Miễn phí và sẽ luôn như vậy</p>
                 <div class="form-register">
                     <div class="form-group">
                         <input type="text" class="form-control" name="name" id="signup_name" placeholder="Họ và tên">
