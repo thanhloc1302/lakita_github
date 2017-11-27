@@ -19,6 +19,10 @@ class Download extends CI_Controller {
                 $this->load->helper('download');
                 force_download(FCPATH . 'public/tai-lieu/file-dau-vao-dau-ra-tham-khao.xlsx', NULL);
                 break;
+            case 2:
+                $this->load->helper('download');
+                force_download(FCPATH . 'public/tai-lieu/bo-tai-lieu-ke-toan.rar', NULL);
+                break;
         }
     }
 

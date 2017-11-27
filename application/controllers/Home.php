@@ -7,19 +7,19 @@ class Home extends MY_Controller {
     public function __construct() {
         parent::__construct();
     }
-    
-    function login_page(){
+
+    function login_page() {
         $user_id = $this->session->userdata('user_id');
-        if(isset($user_id)){
+        if (isset($user_id)) {
             $this->_check_exist_login($user_id, false);
-                redirect(base_url() . 'khoa-hoc/xem-tat-ca.html');
+            redirect(base_url() . 'khoa-hoc/xem-tat-ca.html');
         }
         $data = $this->data;
         $data['content'] = 'template/login_page';
         $data['title'] = 'Đăng nhập';
         $this->load->view('template', $data);
     }
-    
+
     function index($page = '') {
         //==========================================================TRANG CHỦ =======================================================
         if (empty($page)) {
@@ -464,16 +464,24 @@ class Home extends MY_Controller {
                 $data['content'] = 'student/trial_learn_5';
                 $data['id_trial_learn'] = $id_trial_learn;
                 $this->load->view('template', $data);
-            }
-            /*             * ************************ TRANG THÔNG TIN KHÓA HỌC KHI NGƯỜI DÙNG ĐÃ MUA, ĐĂNG NHẬP ************************ */ else if ($sub_flag == 7) {
+            } else if ($sub_flag == 7) { // ============ TRANG THÔNG TIN KHÓA HỌC KHI NGƯỜI DÙNG ĐÃ MUA, ĐĂNG NHẬP ======================
                 $user_id = $this->session->userdata('user_id');
                 $data = $this->data;
                 $this->load->model('student_model');
                 $this->load->model('courses_model');
                 $this->load->model('comment_model');
-                $data['student'] = $this->student_model->load_all(array('where' => array('id' => $user_id)));
+
+                $inputStudent = [];
+                $inputStudent['select'] = 'id_fb, name, thumbnail';
+                $inputStudent['where'] = array('id' => $user_id);
+                $data['student'] = $this->student_model->load_all($inputStudent);
+                
                 $data['curr_learn'][0] = array('id' => 0, 'courses_id' => $id);
-                $course = $this->courses_model->load_all(array('where' => array('id' => $id)));
+
+                $inputCourse = [];
+                $inputCourse['select'] = 'slug';
+                $inputCourse['where'] = array('id' => $id);
+                $course = $this->courses_model->load_all($inputCourse);
                 $data['learn_slug'] = base_url() . $course[0]['slug'] . '-7' . $id . '.html';
 
                 $videoDemoArr = [
@@ -503,29 +511,19 @@ class Home extends MY_Controller {
                 } else {
                     $data['id_video_demo'] = 0;
                 }
-          
-
                 $this->session->set_tempdata('is_trial_view', 'yes', 3600);
-
                 $data['chapter'] = $this->lib_mod->load_all('chapter', '', array("courses_id" => $id, 'status' => 1), '', '', array("sort" => 'asc'));
                 foreach ($data['chapter'] as $key => $value) {
                     $data['all_learn'][$key] = $this->get_course_learn($value['id'], $user_id);
                 }
-
-
                 $input_comment['where'] = array('courses_id' => $id, 'parent' => '0');
                 $data['total_cmt'] = count($this->comment_model->load_all($input_comment));
                 $input_comment['limit'] = array(4, 0);
                 $input_comment['order'] = array('createdate' => 'desc');
                 $data['comment'] = $this->comment_model->load_all($input_comment);
-
                 $data['page'] = 1;
                 $data['pages'] = ceil($data['total_cmt'] / 4);
-                
-                $data['curr_learn'] = array(0=>array('id' => '0','courses_id' => $id));
-                
-
-                
+                $data['curr_learn'] = array(0 => array('id' => '0', 'courses_id' => $id));
                 $data['title'] = 'Tổng quan khóa học';
                 $data['content'] = 'course/detail/detail_bought';
                 $this->load->view('template', $data);
