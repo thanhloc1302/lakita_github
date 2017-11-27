@@ -31,7 +31,7 @@
 </div>
 <div class="row body">
     <div class="col-md-6 col-md-offset-1 hidden-sm hidden-xs padding0">
-        <img style="max-height: 510px" class="img img-responsive" src="<?php echo base_url()?>/styles/images/imgloginpage.jpg">
+        <img style="max-height: 510px" class="img img-responsive" src="<?php echo base_url()?>/styles/images/logo4.png">
     </div>
     <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" >
         <div class="register">
@@ -113,4 +113,4 @@
 
 </div>
 
-<script src="<?php echo base_url(); ?>styles/v2.0/js/login.js"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/login_page.js"></script>
