@@ -112,4 +112,4 @@
 
 </div>
 
-<script src="<?php echo base_url(); ?>styles/v2.0/js/login.js"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/login_page.js"></script>
