@@ -28,7 +28,6 @@ class Account_api extends REST_Controller {
         $post = $this->input->post();
         $course_id = $this->courses_model->find_course_id($post['course_code']);
         $result = array('success' => '1', 'message' => '');
-
         $input = array();
         $input['select'] = 'id';
         $input['where'] = array('email' => $post['email']);
@@ -49,17 +48,32 @@ class Account_api extends REST_Controller {
             $result['password'] = 'new';
         } else {
             $student_id = $studentExits[0]['id'];
-            $input2 = array();
-            $input2['select'] = 'id';
-            $input2['where'] = array('student_id' => $student_id, 'courses_id' => $course_id);
-            $studentCourseExist = $this->student_courses_model->load_all($input2);
-            if (empty($studentCourseExist)) {
+            $contactHasCourse = false;
+            if (is_array($course_id)) {
+                foreach ($course_id as $course) {
+                    $input2['select'] = 'id';
+                    $input2['where'] = array('student_id' => $student_id, 'courses_id' => $course);
+                    $studentCourseExist = $this->student_courses_model->load_all($input2);
+                    if (!empty($studentCourseExist)) {
+                        $contactHasCourse = true;
+                    }
+                }
+            } else {
+                $input2 = array();
+                $input2['select'] = 'id';
+                $input2['where'] = array('student_id' => $student_id, 'courses_id' => $course_id);
+                $studentCourseExist = $this->student_courses_model->load_all($input2);
+                if (!empty($studentCourseExist)) {
+                    $contactHasCourse = true;
+                }
+            }
+            if ($contactHasCourse) {
+                $result['success'] = '0';
+                $result['message'] = 'Tài khoản đã tồn tại, và đã có khóa học này rồi!';
+            } else {
                 $this->createStudentCourse($student_id, $course_id);
                 $result['message'] = 'Tài khoản của khách hàng đã tồn tại (mật khẩu như cũ), đã thêm khóa học cho khách hàng!';
                 $result['password'] = 'old';
-            } else {
-                $result['success'] = '0';
-                $result['message'] = 'Tài khoản đã tồn tại, và đã có khóa học này rồi!';
             }
         }
         $this->response($result, REST_Controller::HTTP_OK);

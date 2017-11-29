@@ -10,26 +10,38 @@ class Courses_model extends MY_Model {
 
     function find_course_id($course_code) {
         $courseId = 10;
-        if($course_code == 'CBKT210'){
-            $courseId = [78, 37, 65];
-        }
-        if($course_code == 'CBKT400'){
-            $courseId = [73, 37, 65];
-        }
-        if($course_code == 'CBKT800'){
-            $courseId = [77, 37, 65];
-        }
-        if($course_code == 'CBKT110'){
-            $courseId = [82, 37, 65];
-        }
-        if($course_code == 'CBKT130'){
-            $courseId = [81, 37, 65];
-        }
-        $input2 = array();
-        $input2['where'] = array('course_code' => $course_code);
-        $courses = $this->load_all($input2);
-        if (!empty($courses)) {
-            $courseId =  $courses[0]['id'];
+        if (is_array($course_code)) {
+            $courseId = [];
+            foreach ($course_code as $course) {
+                $input2 = array();
+                $input2['where'] = array('course_code' => $course);
+                $courses = $this->load_all($input2);
+                if (!empty($courses)) {
+                    $courseId[] = $courses[0]['id'];
+                }
+            }
+        } else {
+            if ($course_code == 'CBKT210') {
+                $courseId = [78, 37, 65];
+            }
+            if ($course_code == 'CBKT400') {
+                $courseId = [73, 37, 65];
+            }
+            if ($course_code == 'CBKT800') {
+                $courseId = [77, 37, 65];
+            }
+            if ($course_code == 'CBKT110') {
+                $courseId = [82, 37, 65];
+            }
+            if ($course_code == 'CBKT130') {
+                $courseId = [81, 37, 65];
+            }
+            $input2 = array();
+            $input2['where'] = array('course_code' => $course_code);
+            $courses = $this->load_all($input2);
+            if (!empty($courses)) {
+                $courseId = $courses[0]['id'];
+            }
         }
         return $courseId;
     }
