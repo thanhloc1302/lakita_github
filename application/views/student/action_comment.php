@@ -242,7 +242,6 @@
 
     $(document).on('click', '.load_more_cmt', function (e) {
         e.preventDefault();
-        alert($('#courses_id').val());
         var pagenumLast = parseInt($(".pagenum:last").val());
         var totalPage = parseInt($(".total-page:last").val());
         if (pagenumLast <= totalPage) {

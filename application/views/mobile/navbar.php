@@ -144,10 +144,10 @@
                 if (!isset($user_id)) {
                     ?>
                     <div class="btn-mobi">
-                        <a href="" class="login_link_mobile" data-toggle="modal" data-target="#myModal4"> <i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập </a>
+                        <a href="<?php echo base_url(); ?>dang-nhap.html"> <i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập </a>
                     </div>
                     <div class="btn-mobi">
-                        <a href="" class="register_link_mobile"> <i class="fa fa-user" aria-hidden="true">+</i> Đăng ký </a>
+                        <a href="<?php echo base_url(); ?>dang-nhap.html"> <i class="fa fa-user" aria-hidden="true">+</i> Đăng ký </a>
                     </div>
                 <?php } else { ?>
                     <div class="row margintop10 marginbottom10">

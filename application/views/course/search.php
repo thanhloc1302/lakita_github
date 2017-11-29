@@ -1,7 +1,7 @@
 <!--    <script src="<?php echo base_url(); ?>styles/v2.0/js/home.js"></script>-->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/view_all.css" />
-<script src="<?php echo base_url(); ?>styles/v2.0/js/view_all.min.js"></script>
-<script src="<?php echo base_url(); ?>styles/v2.0/js/login.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/view_all.css?ver=<?php echo _VER_CACHED_ ?>" />
+<script src="<?php echo base_url(); ?>styles/v2.0/js/view_all.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/login.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <?php
 if ($this->agent->is_mobile())
     $this->load->view('mobile/search_mobile');

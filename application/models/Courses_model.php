@@ -78,5 +78,8 @@ class Courses_model extends MY_Model {
         }
         return $result;
     }
-
+    
+    public function GetCourseSlug($id){
+        
+    }
 }

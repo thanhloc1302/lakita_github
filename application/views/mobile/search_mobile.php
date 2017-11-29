@@ -10,7 +10,7 @@
                     </div>
                 </div>
             </div>
-            <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/home.css" />
+            <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/home.css?ver=<?php echo _VER_CACHED_ ?>" />
             <div class="Testimonials">
                 <div class="testimonial"> <strong>  CẢM NHẬN HỌC VIÊN </strong> </div>
                 <p class="testimonial2"> Những nhận xét của các học viên khi tham gia khóa học lại Lakita </p>

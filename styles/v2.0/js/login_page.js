@@ -106,11 +106,7 @@ jQuery(function () {
                 alert('Bạn phải nhập mật khẩu xác nhận');
                 return;
             }
-            if (!$("#agree_term").is(':checked'))
-            {
-                alert('Bạn cần đồng ý với điều khoản và dịch vụ vủa Lakita!');
-                return;
-            }
+
             url = 'guest/action_register';
         } else
         {
@@ -142,7 +138,7 @@ jQuery(function () {
             },
             success: function (response)
             {
-
+                console.log(response);
                 if (response == 1)
                 {
                     if (!redirect)
@@ -158,25 +154,25 @@ jQuery(function () {
                     {
                         window.location.reload();
                     }
-                } else {
-                    if (response == 'Tài khoản của bạn đã được đăng nhập từ máy tính khác !! Hãy đăng xuất và đăng nhập lại.') {
-                        var notify = "";
-                        notify = new Notification(
-                                "Có lỗi xảy ra!",
-                                {
-                                    body: "Tài khoản của bạn đang được đăng nhập ở nơi khác. Hãy đăng xuất và đăng nhập lại!",
-                                    icon: "https://lakita.vn/styles/v2.0/img/logo2.png",
-                                    tag: "https://lakita.vn/",
-                                    sound: "https://lakita.vn/styles/wrong.mp3",
-                                    image: "https://openclipart.org/image/2400px/svg_to_png/200369/primary-logout.png"
-                                }
-                        );
-                        setTimeout(function () {
-                            alert(response);
-                        }, 500);
-                    } else
+                } else if (response == 'Tài khoản của bạn đã được đăng nhập từ máy tính khác !! Hãy đăng xuất và đăng nhập lại.') {
                         alert(response);
+
+                    var notify = "";
+                    notify = new Notification(
+                            "Có lỗi xảy ra!",
+                            {
+                                body: "Tài khoản của bạn đang được đăng nhập ở nơi khác. Hãy đăng xuất và đăng nhập lại!",
+                                icon: "https://lakita.vn/styles/v2.0/img/logo2.png",
+                                tag: "https://lakita.vn/",
+                                sound: "https://lakita.vn/styles/wrong.mp3",
+                                image: "https://openclipart.org/image/2400px/svg_to_png/200369/primary-logout.png"
+                            }
+                    );
+                 
+                } else {
+                    alert(response);
                 }
+
                 return false;
             },
             complete: function () {
@@ -184,4 +180,120 @@ jQuery(function () {
             }
         });
     }
+});
+
+/*************************** Quên mật khẩu ************************************/
+$(".forgetPass").hide();
+$("#fp").click(function(e){
+    e.preventDefault();
+    $(".forgetPass").show();
+    $(".register").hide();
+});
+$("#cancel").click(function(e){
+    e.preventDefault();
+    $(".forgetPass").hide();
+    $(".register").show();
+});
+
+$("#forgetPasswordHTML2").hide();
+$("#forgetPassBtn").click(
+        function () {
+
+            var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+            var forget_email = jQuery("#forgetPasswordEmail").val();
+            if (!filter.test(forget_email))
+            {
+                alert('Địa chỉ Email chưa đúng định dạng');
+                return;
+            } else {
+
+                $(".popup-wrapper").show();
+                jQuery.ajax({
+                    type: "POST",
+                    url: 'guest/forgetPassword',
+                    data: {
+                        forget_email: forget_email
+                    },
+                    dataType: "text",
+                    scriptCharset: "utf-8",
+                    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                    beforeSend: function (xhr)
+                    {
+                        xhr.setRequestHeader("Ajax-Request", "true");
+                    },
+                    success: function (response)
+                    {
+
+                        if (response == 0)
+                        {
+                            $(".popup-wrapper").hide();
+                            alert('Email không tồn tại trên hệ thống. Vui lòng kiểm tra lại!');
+                        } else
+                        {
+                            alert('Chúng tôi đã gửi 1 mã xác nhận việc quên mật khẩu vào email của bạn, vui lòng kiểm tra email để lấy mã xác nhận!');
+                            $("#forgetPasswordHTML1").hide();
+                            $("#forgetPasswordHTML2").show();
+                            $("#email_forget_send").text(forget_email);
+                            $(".popup-wrapper").hide();
+                        }
+                        return false;
+                    }
+                });
+            }
+        }
+);
+$("#CreatePassBtn").click(function () {
+    var code_forget = $("#code_forget").val();
+    if (code_forget.length == 0) {
+        alert("Vui lòng nhập mã xác nhận!");
+        return;
+    }
+    if (code_forget.length != 8) {
+        alert("Mã xác thực không đúng. Vui lòng kiểm tra lại!");
+        return;
+    }
+    var password_forget = $("#password_forget").val();
+    var re_password_forget = $("#re_password_forget").val();
+    if (password_forget.length == 0) {
+        alert("Vui lòng nhập mật khẩu!");
+        return;
+    }
+
+    if (password_forget != re_password_forget) {
+        alert("Mật khẩu xác nhận không khớp. Vui lòng kiểm tra lại!");
+        return;
+    }
+    if (password_forget.length < 6 || re_password_forget.length < 6)
+    {
+        alert("Mật khẩu phải nhiều hơn 5 kí tự. Vui lòng nhập lại!");
+        return;
+    }
+    jQuery.ajax({
+        type: "POST",
+        url: 'guest/sendCodeForget',
+        data: {
+            code_forget: code_forget,
+            password_forget: password_forget,
+            re_password_forget: re_password_forget
+        },
+        dataType: "text",
+        scriptCharset: "utf-8",
+        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+        beforeSend: function (xhr)
+        {
+            xhr.setRequestHeader("Ajax-Request", "true");
+        },
+        success: function (response)
+        {
+            var result = response.split("_");
+            if (result[0] == 0)
+            {
+                alert(result[1]);
+            } else
+            {
+                alert(result[1]);
+            }
+            return false;
+        }
+    });
 });

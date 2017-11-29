@@ -1,7 +1,6 @@
 <!--    <script src="<?php echo base_url(); ?>styles/v2.0/js/home.js"></script>-->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/course_detail.css" />
-<script src="<?php echo base_url(); ?>styles/v2.0/js/course_detail.js"></script>
-<script src="<?php echo base_url(); ?>styles/v2.0/js/login.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/course_detail.css?ver=<?php echo _VER_CACHED_ ?>" />
+<script src="<?php echo base_url(); ?>styles/v2.0/js/course_detail.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <?php
 if ($this->agent->is_mobile())
     $this->load->view('mobile/mobile_detail');
@@ -59,7 +58,7 @@ else {
                             <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.js"></script>
                             <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.html5.js"></script>
                             <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>
-                            <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer-trial.min.js"></script>
+                            <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer-trial.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
                             <?php } ?>
                         </div>
                     </div>

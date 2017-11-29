@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/footer.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/footer.css?ver=<?php echo _VER_CACHED_ ?>" />
 <div class="support" id="footer_link">
     <p class="support1">HỖ TRỢ</p>
     <p class="support2">Hãy liên lạc với chúng tôi.</p>
@@ -28,8 +28,8 @@
                 if (!$this->agent->is_mobile('iPad')) {
                     ?>
                     <div class="row receiveLetter">
-<!--                        <p> Đăng kí nhận thư từ Lakita </p>-->
-<!--                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>-->
+                        <p> Đăng kí nhận thư từ Lakita </p>
+                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>
                     </div>
                 <?php } ?>
             </div>
@@ -85,17 +85,17 @@
                         </div>
                     </div>
                     <div class="row receiveLetter hidden-xs">
-<!--                        <p> Đăng kí nhận thư từ Lakita </p>-->
-                        <!--                    <div class="col-md-9">
-                                                <div class="form-group">
-                                                    <label for="InputEmail1" class="sr-only">Email address</label>
-                                                    <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="Email">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <button class="btn btn-success btn-block btn-lg">ĐĂNG KÝ</button>
-                                            </div>-->
-<!--                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>-->
+                        <p> Đăng kí nhận thư từ Lakita </p>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <label for="InputEmail1" class="sr-only">Email address</label>
+                                <input type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-success btn-block btn-lg">ĐĂNG KÝ</button>
+                        </div>
+                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>
                     </div>
                 </div>
             <?php } ?>
@@ -126,4 +126,4 @@
         </div>
     </div>
 </div>
-<script src="<?php echo base_url(); ?>styles/v2.0/js/footer.min.js"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/footer.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
