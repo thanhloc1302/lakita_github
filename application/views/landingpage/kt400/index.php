@@ -615,12 +615,12 @@ $rs = json_decode($result);
             font-weight: bold;
         }
     </style>
-
-    <script>
+    <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
+<!--    <script>
         $(".e_btn_submit").click(function () {
             $(".popup-wrapper").show();
         });
-    </script>
+    </script>-->
     <!-- *************************************************************Popup (end)**********************************************************************-->
 
     <!-- html5 player (start) -->

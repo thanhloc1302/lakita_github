@@ -42,6 +42,9 @@ $(document).on("submit", ".e_form_submit", function (e) {
     var obj = $(this);
     if (check_lienhe(obj)) {
         $(".popup-wrapper").show();
+        setTimeout(function(){
+            $(".popup-wrapper").hide();
+        }, 3000);
     }
     else{
         e.preventDefault();
