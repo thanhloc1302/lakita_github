@@ -3,14 +3,46 @@ function activate() {
     var intive_code = jQuery("#invite_code").val();
     var filter = /^LKT+[0-9]{5}$/;
     if (cod_cod == '') {
-        alert("Bạn phải nhập mã kích hoạt!");
+        $.alert({
+            title: 'Bạn phải nhập mã kích hoạt!',
+            content: 'Mời bạn thử lại!',
+            type: 'red',
+            theme: 'material',
+            typeAnimated: true,
+            buttons: {
+                tryAgain: {
+                    text: 'Thử lại',
+                    btnClass: 'btn-red',
+                    action: function () {
+                    }
+                },
+                close: function () {
+                }
+            }
+        });
         return;
     }
 
     if (intive_code != '') {
         if (!filter.test(intive_code))
         {
-            alert('Mã giới thiệu chưa đúng định dạng');
+            $.alert({
+                title: 'Mã giới thiệu chưa đúng định dạng!',
+                content: 'Mời bạn thử lại!',
+                type: 'red',
+                theme: 'material',
+                typeAnimated: true,
+                buttons: {
+                    tryAgain: {
+                        text: 'Thử lại',
+                        btnClass: 'btn-red',
+                        action: function () {
+                        }
+                    },
+                    close: function () {
+                    }
+                }
+            });
             return;
         }
     }
@@ -31,18 +63,43 @@ function activate() {
         },
         success: function (response)
         {
-            console.log(response);
             var resultArr = response.split("_");
             if (resultArr[0] == 1)
             {
-                console.log(response);
-                alert("Chúc mừng bạn đã kích hoạt thành công khóa học \"" + resultArr[2] + "\", chúng tôi sẽ đưa bạn đến trang khóa học để học ngay!");
+                $.alert({
+                    title: "Chúc mừng bạn đã kích hoạt thành công khóa học \"" + resultArr[2] + "\"",
+                    content: 'Chúng tôi sẽ đưa bạn đến trang khóa học để học ngay!',
+                    columnClass: 'col-md-6 col-md-offset-3',
+                    type: 'green',
+                    theme: 'material',
+                    typeAnimated: true,
+                    buttons: {
+                        close: function () {
+                        }
+                    }
+                });
                 location.replace(resultArr[1]);
             } else if (resultArr[0] == 99) {
                 location.assign('nhan-qua-tang.html');
             } else
             {
-                alert(resultArr[1]);
+                $.alert({
+                    title: resultArr[1],
+                    content: 'Mời bạn thử lại!',
+                    type: 'red',
+                    theme: 'material',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
             }
             return false;
         }

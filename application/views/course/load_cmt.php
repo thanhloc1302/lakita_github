@@ -97,7 +97,7 @@ if (isset($comment[0]))
                         </div>
 
                         <span>&nbsp;</span>
-                        <b><a href="course/del_comment?cmtid=<?php echo $cmt1['id']; ?>&url=<?php echo $url = (!empty($_SERVER['HTTPS'])) ? "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] : "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" onclick="return confirm('Bạn có chắc chắn xóa không ?')"> Xóa </a></b>
+                        <b><a class="del_cmt" href="course/del_comment?cmtid=<?php echo $cmt1['id']; ?>&url=<?php echo $url = (!empty($_SERVER['HTTPS'])) ? "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] : "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" > Xóa </a></b>
 
                     <?php } ?>
                 </div>
@@ -160,7 +160,7 @@ if (isset($comment[0]))
                                 </div>
 
                                 <span>&nbsp;</span>
-                                <b><a href="course/del_comment?cmtid=<?php echo $cmt2['id']; ?>&url=<?php echo $url = (!empty($_SERVER['HTTPS'])) ? "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] : "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" onclick="return confirm('Bạn có chắc chắn xóa không ?')"> Xóa </a></b>
+                                <b><a class="del_cmt" href="course/del_comment?cmtid=<?php echo $cmt2['id']; ?>&url=<?php echo $url = (!empty($_SERVER['HTTPS'])) ? "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] : "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" > Xóa </a></b>
 
                             </div>
                         <?php } ?>

@@ -80,4 +80,4 @@
         </div>
     </div>
 </div>
-<script src="<?php echo base_url(); ?>styles/v2.0/js/vote.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/vote.js?ver=<?php echo _VER_CACHED_ ?>"></script>

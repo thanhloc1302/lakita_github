@@ -48,13 +48,45 @@ jQuery(function () {
                 is_remember = '0';
             if (login_email == '')
             {
-                alert('Bạn phải nhập địa chỉ Email');
+                $.alert({
+                    title: 'Bạn phải nhập địa chỉ Email',
+                    content: 'Mời bạn nhập lại',
+                    theme: 'material',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
                 return;
             }
 
             if (login_password == '')
             {
-                alert('Bạn phải nhập mật khẩu');
+                $.alert({
+                    title: 'Bạn phải nhập mật khẩu',
+                    content: 'Mời bạn nhập lại',
+                    theme: 'material',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
                 return;
             }
             url = 'guest/action_login';
@@ -68,42 +100,176 @@ jQuery(function () {
 
             if (signup_name == '')
             {
-                alert('Bạn phải nhập họ tên');
+                $.alert({
+                    title: 'Bạn phải nhập họ tên',
+                    content: 'Mời bạn nhập lại',
+                    theme: 'material',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
                 return;
             }
 
             if (signup_email == '')
             {
-                alert('Bạn phải nhập địa chỉ Email');
+                $.alert({
+                    title: 'Bạn phải nhập địa chỉ Email',
+                    content: 'Mời bạn nhập lại',
+                    theme: 'material',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
                 return;
             }
 
             if (!filter.test(signup_email))
             {
-                alert('Địa chỉ Email chưa đúng định dạng');
-                return;
-            }
-            if (!filter_phone.test(signup_phone))
-            {
-                alert('Số điện thoại chưa đúng định dạng');
+                $.alert({
+                    title: 'Địa chỉ email chưa đúng định dạng',
+                    content: 'Mời bạn nhập lại',
+                    theme: 'material',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
                 return;
             }
 
             if (signup_phone == '')
             {
-                alert('Bạn phải nhập số điện thoại');
+                $.alert({
+                    title: 'Bạn phải nhập số điện thoại',
+                    content: 'Mời bạn nhập lại',
+                    theme: 'material',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
+                return;
+            }
+
+            if (!filter_phone.test(signup_phone))
+            {
+                $.alert({
+                    title: 'Số điện thoại chưa đúng định dạng',
+                    content: 'Mời bạn nhập lại',
+                    theme: 'material',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
                 return;
             }
 
             if (signup_password == '')
             {
-                alert('Bạn phải nhập mật khẩu');
+                $.alert({
+                    title: 'Bạn phải nhập mật khẩu',
+                    content: 'Mời bạn nhập lại',
+                    theme: 'material',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
                 return;
             }
 
             if (signup_repassword == '')
             {
-                alert('Bạn phải nhập mật khẩu xác nhận');
+                $.alert({
+                    title: 'Bạn phải nhập mật khẩu xác nhận',
+                    content: 'Mời bạn nhập lại',
+                    theme: 'material',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
+                return;
+            }
+
+            if (signup_password != signup_repassword) {
+                $.alert({
+                    title: 'Mật khẩu xác nhận không khớp',
+                    content: 'Mời bạn nhập lại',
+                    theme: 'material',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
                 return;
             }
 
@@ -155,7 +321,24 @@ jQuery(function () {
                         window.location.reload();
                     }
                 } else if (response == 'Tài khoản của bạn đã được đăng nhập từ máy tính khác !! Hãy đăng xuất và đăng nhập lại.') {
-                        alert(response);
+                    $.alert({
+                        title: 'Tài khoản của bạn đang được đăng nhập từ máy tính khác',
+                        content: 'Hãy đăng xuất và đăng nhập lại.',
+                        columnClass: 'col-md-6 col-md-offset-3',
+                        theme: 'material',
+                        type: 'red',
+                        typeAnimated: true,
+                        buttons: {
+                            tryAgain: {
+                                text: 'Thử lại',
+                                btnClass: 'btn-red',
+                                action: function () {
+                                }
+                            },
+                            close: function () {
+                            }
+                        }
+                    });
 
                     var notify = "";
                     notify = new Notification(
@@ -168,9 +351,26 @@ jQuery(function () {
                                 image: "https://openclipart.org/image/2400px/svg_to_png/200369/primary-logout.png"
                             }
                     );
-                 
+
                 } else {
-                    alert(response);
+                    $.alert({
+                        title: response,
+                        content: 'Mời bạn nhập lại',
+                        theme: 'material',
+                        type: 'red',
+                        typeAnimated: true,
+                        buttons: {
+                            tryAgain: {
+                                text: 'Thử lại',
+                                btnClass: 'btn-red',
+                                action: function () {
+                                }
+                            },
+                            close: function () {
+                            }
+                        }
+                    });
+
                 }
 
                 return false;
@@ -184,12 +384,12 @@ jQuery(function () {
 
 /*************************** Quên mật khẩu ************************************/
 $(".forgetPass").hide();
-$("#fp").click(function(e){
+$("#fp").click(function (e) {
     e.preventDefault();
     $(".forgetPass").show();
     $(".register").hide();
 });
-$("#cancel").click(function(e){
+$("#cancel").click(function (e) {
     e.preventDefault();
     $(".forgetPass").hide();
     $(".register").show();
@@ -203,7 +403,23 @@ $("#forgetPassBtn").click(
             var forget_email = jQuery("#forgetPasswordEmail").val();
             if (!filter.test(forget_email))
             {
-                alert('Địa chỉ Email chưa đúng định dạng');
+                $.alert({
+                    title: 'Địa chỉ email chưa đúng định dạng',
+                    content: 'Mời bạn nhập lại',
+                    theme: 'material',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
                 return;
             } else {
 
@@ -227,10 +443,40 @@ $("#forgetPassBtn").click(
                         if (response == 0)
                         {
                             $(".popup-wrapper").hide();
-                            alert('Email không tồn tại trên hệ thống. Vui lòng kiểm tra lại!');
+                            $.alert({
+                                title: 'Email không tồn tại trên hệ thống.',
+                                content: 'Vui lòng kiểm tra lại',
+                                theme: 'material',
+                                type: 'red',
+                                typeAnimated: true,
+                                buttons: {
+                                    tryAgain: {
+                                        text: 'Thử lại',
+                                        btnClass: 'btn-red',
+                                        action: function () {
+                                        }
+                                    },
+                                    close: function () {
+                                    }
+                                }
+                            });
                         } else
                         {
-                            alert('Chúng tôi đã gửi 1 mã xác nhận việc quên mật khẩu vào email của bạn, vui lòng kiểm tra email để lấy mã xác nhận!');
+                            $.alert({
+                                title: 'Chúng tôi đã gửi 1 mã xác nhận việc quên mật khẩu vào email của bạn.',
+                                content: 'Vui lòng kiểm tra email để lấy mã xác nhận!',
+                                theme: 'material',
+                                type: 'green',
+                                typeAnimated: true,
+                                buttons: {
+                                    tryAgain: {
+                                        text: 'Đóng',
+                                        btnClass: 'btn-green',
+                                        action: function () {
+                                        }
+                                    },
+                                }
+                            });
                             $("#forgetPasswordHTML1").hide();
                             $("#forgetPasswordHTML2").show();
                             $("#email_forget_send").text(forget_email);
@@ -245,27 +491,107 @@ $("#forgetPassBtn").click(
 $("#CreatePassBtn").click(function () {
     var code_forget = $("#code_forget").val();
     if (code_forget.length == 0) {
-        alert("Vui lòng nhập mã xác nhận!");
+        $.alert({
+            title: 'Vui lòng nhập mã xác nhận!',
+            content: 'Mời bạn nhập lại',
+            theme: 'material',
+            type: 'red',
+            typeAnimated: true,
+            buttons: {
+                tryAgain: {
+                    text: 'Thử lại',
+                    btnClass: 'btn-red',
+                    action: function () {
+                    }
+                },
+                close: function () {
+                }
+            }
+        });
         return;
     }
     if (code_forget.length != 8) {
-        alert("Mã xác thực không đúng. Vui lòng kiểm tra lại!");
+        $.alert({
+            title: 'Mã xác thực không đúng. Vui lòng kiểm tra lại!',
+            content: 'Mời bạn nhập lại',
+            theme: 'material',
+            type: 'red',
+            typeAnimated: true,
+            buttons: {
+                tryAgain: {
+                    text: 'Thử lại',
+                    btnClass: 'btn-red',
+                    action: function () {
+                    }
+                },
+                close: function () {
+                }
+            }
+        });
         return;
     }
     var password_forget = $("#password_forget").val();
     var re_password_forget = $("#re_password_forget").val();
     if (password_forget.length == 0) {
-        alert("Vui lòng nhập mật khẩu!");
+        $.alert({
+            title: 'Vui lòng nhập mật khẩu!',
+            theme: 'material',
+            content: 'Mời bạn nhập lại',
+            type: 'red',
+            typeAnimated: true,
+            buttons: {
+                tryAgain: {
+                    text: 'Thử lại',
+                    btnClass: 'btn-red',
+                    action: function () {
+                    }
+                },
+                close: function () {
+                }
+            }
+        });
         return;
     }
 
     if (password_forget != re_password_forget) {
-        alert("Mật khẩu xác nhận không khớp. Vui lòng kiểm tra lại!");
+        $.alert({
+            title: 'Mật khẩu xác nhận không khớp.',
+            content: 'Mời bạn nhập lại',
+            theme: 'material',
+            type: 'red',
+            typeAnimated: true,
+            buttons: {
+                tryAgain: {
+                    text: 'Thử lại',
+                    btnClass: 'btn-red',
+                    action: function () {
+                    }
+                },
+                close: function () {
+                }
+            }
+        });
         return;
     }
     if (password_forget.length < 6 || re_password_forget.length < 6)
     {
-        alert("Mật khẩu phải nhiều hơn 5 kí tự. Vui lòng nhập lại!");
+        $.alert({
+            title: 'Mật khẩu phải nhiều hơn 5 kí tự.',
+            content: 'Mời bạn nhập lại',
+            theme: 'material',
+            type: 'red',
+            typeAnimated: true,
+            buttons: {
+                tryAgain: {
+                    text: 'Thử lại',
+                    btnClass: 'btn-red',
+                    action: function () {
+                    }
+                },
+                close: function () {
+                }
+            }
+        });
         return;
     }
     jQuery.ajax({
@@ -288,10 +614,40 @@ $("#CreatePassBtn").click(function () {
             var result = response.split("_");
             if (result[0] == 0)
             {
-                alert(result[1]);
+                $.alert({
+                    title: result[1],
+                    content: 'Mời bạn thử lại',
+                    theme: 'material',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
             } else
             {
-                alert(result[1]);
+                $.alert({
+                    title: result[1],
+                    content: 'Vui lòng đăng nhập bằng mật khẩu bạn vừa tạo.',
+                    theme: 'material',
+                    type: 'green',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Đóng',
+                            btnClass: 'btn-green',
+                            action: function () {
+                            }
+                        }
+                    }
+                });
             }
             return false;
         }

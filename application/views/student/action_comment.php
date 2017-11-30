@@ -18,7 +18,22 @@
         content += content2;
         if ((content1 == '' && content2 == '') || (content1 != '' && content2 == ''))
         {
-            alert('Bạn phải nhập nội dung bình luận');
+            $.alert({
+                title: 'Bạn phải nhập nội dung bình luận!',
+                content: 'Mời bạn thử lại',
+                type: 'red',
+                typeAnimated: true,
+                buttons: {
+                    tryAgain: {
+                        text: 'Thử lại',
+                        btnClass: 'btn-red',
+                        action: function () {
+                        }
+                    },
+                    close: function () {
+                    }
+                }
+            });
             return;
         }
         jQuery.ajax({
@@ -106,7 +121,23 @@
         var content = CKEDITOR.instances[editor_n].getData();
         if (content == '')
         {
-            alert('Bạn phải nhập nội dung bình luận' + content);
+
+            $.alert({
+                title: 'Bạn phải nhập nội dung bình luận!',
+                content: 'Mời bạn thử lại',
+                type: 'red',
+                typeAnimated: true,
+                buttons: {
+                    tryAgain: {
+                        text: 'Thử lại',
+                        btnClass: 'btn-red',
+                        action: function () {
+                        }
+                    },
+                    close: function () {
+                    }
+                }
+            });
             return;
         }
         jQuery.ajax({
@@ -188,7 +219,22 @@
         var content = CKEDITOR.instances[repair_editor_n].getData();
         if (content == '')
         {
-            alert('Bạn phải nhập nội dung cần sửa' + content);
+            $.alert({
+                title: 'Bạn phải nhập nội dung cần sửa!',
+                content: 'Mời bạn thử lại',
+                type: 'red',
+                typeAnimated: true,
+                buttons: {
+                    tryAgain: {
+                        text: 'Thử lại',
+                        btnClass: 'btn-red',
+                        action: function () {
+                        }
+                    },
+                    close: function () {
+                    }
+                }
+            });
             return;
         }
         jQuery.ajax({
@@ -233,6 +279,31 @@
         });
     });
 
+
+    /* xóa cmt */
+    $('.del_cmt').click(function (e) {
+        var link = $(this).attr('href');
+        e.preventDefault();
+        $.confirm({
+            title: 'Xóa bình luận!',
+            content: 'Bạn có chắc chắn xóa không ?',
+            theme: 'material',
+            type: 'red',
+            buttons: {
+                confirm: {
+                    text: 'Đồng ý',
+                    btnClass: 'btn-blue',
+                    action: function () {
+                        location.href = link;
+                    }},
+                cancel: {
+                    text: 'Hủy',
+                    action: function () {
+                        return
+                    }}
+            }
+        });
+    });
 
     /* load more comment */
 
