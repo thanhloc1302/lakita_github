@@ -38,10 +38,10 @@ $rs = json_decode($result);
         <script src="<?php echo base_url(); ?>public/kt400/lakita/js/lktclock.js" type="text/javascript"></script>
         <script src="<?php echo base_url(); ?>public/kt400/lakita/js/jquery.form.js"></script>
         <link href="<?php echo base_url(); ?>public/kt400/lakita/css/gg-font.css" rel="stylesheet" type="text/css" />
-        <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/style.index2.lakita.css" />
-        <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/styles.css" />
-        <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/media.css" />
-        <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/define.css" />
+        <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/style.index2.lakita.css?ver=<?php echo _VER_CACHED_ ?>" />
+        <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/styles.css?ver=<?php echo _VER_CACHED_ ?>" />
+        <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/media.css?ver=<?php echo _VER_CACHED_ ?>" />
+        <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/define.css?ver=<?php echo _VER_CACHED_ ?>" />
         <?php include_once("plugin/analyticstracking.php") ?>
         <!-- Facebook Pixel Code -->
         <script>
@@ -69,6 +69,17 @@ $rs = json_decode($result);
         </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1645549219061949&ev=PageView&noscript=1"/></noscript>
     <!-- End Facebook Pixel Code -->
+    <style>
+        header:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.65);
+        }
+    </style>
 </head>
 <script>
     fbq('track', 'CompleteRegistration');
@@ -110,27 +121,83 @@ $rs = json_decode($result);
                         <li><a href="#link_vechungtoi">Về lakita</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li> <a href="#register_now"><button class="btn btn-success" type="button">Đăng kí ngay</button></a></li>
+                        <!--                        <li> <a href="#register_now"><button class="btn btn-success" type="button">Đăng kí ngay</button></a></li>-->
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
         <div class="gr1">
-            <h3 style="    color: #fff;"><strong>TRỌN BỘ HƯỚNG DẪN LẬP BÁO CÁO TÀI CHÍNH NĂM 2017</strong>
+            <h3 style="color: #fff;"><strong>TRỌN BỘ HƯỚNG DẪN LẬP BÁO CÁO TÀI CHÍNH NĂM 2017</strong>
             </h3>
-            <p>Khóa học dành cho nhân viên hành chính văn phòng kiêm kế toán trong doanh nghiệp vừa, nhỏ</p>
+<!--            <p>Khóa học dành cho nhân viên hành chính văn phòng kiêm kế toán trong doanh nghiệp vừa, nhỏ</p>-->
         </div>
         <!--        <div class="trans"></div>-->
-        <div class="play_hidden hidden-sm hidden-xs">
-            <div id="play_demo_1" style="display: none;">
-                <video height="100%"  src="<?php echo base_url(); ?>public/kt400/trailer.mp4" type="video/mp4"
-                       id="player0"
-                       controls="controls">
-                </video>
+        <!--        <div class="play_hidden hidden-sm hidden-xs">
+                    <div id="play_demo_1" style="display: none;">
+                        <video height="100%"  src="<?php echo base_url(); ?>public/kt400/trailer.mp4" type="video/mp4"
+                               id="player0"
+                               controls="controls">
+                        </video>
+                    </div>
+        
+                </div>
+                <img src="<?php echo base_url(); ?>public/kt400/demo.png" class="play-btn hidden-sm hidden-xs"/>-->
+        <div class="row">
+            <div class="col-md-offset-1 col-md-6 hidden-xs hidden-sm">
+                <h3 style="color:#fff; margin-top: 198px; font-size: 20px"> Đăng ký ngay hôm nay để được nhận <span style="font-size:40px; color:red;"> ưu đãi </span> 44.6%. </h3>
+                <h3 style="color:#fff; font-size: 20px"> Tặng kèm khóa học 18 thủ thuật excel, giá không đổi <span style="font-size:25px;"> 495K </span> <span style="text-decoration: line-through; color:red;"> giá gốc 895K </span> </h3>
             </div>
+            <div class="col-xs-12 col-md-4" id="register">
+                <form class="LeadPanel_form promo-panel_action e_submit e_form_submit" action="<?php echo $code_ladingpage . '/'; ?>thank-you.html" method="post" name="fr_register">
+                    <div class="span7 curse-form-box  animated delay1 flipInX" style="margin: 20% auto !important;">
+                        <div class="cont2">
+                            <div class="row-fluid" style="margin-top: 0px;">
+                                <div class="span12 wrap-icon-fullname1">
+                                    <input class="input-large LeadPanel_form_name" type="text" required="" placeholder="Họ tên" name="name" id="name">
+                                </div>
 
+                            </div>	
+                            <div class="row-fluid" style="margin-top: -5px;">
+                                <div class="span12 wrap-icon-email1">
+                                    <input type="email" name="email" id="email" class="input-large LeadPanel_form_name" required="" placeholder="Email" >
+                                </div>
+                            </div>
+                            <div class="row-fluid" style="margin-top: -5px;">
+                                <div class="span12 wrap-icon-phone1">
+                                    <input class="input-large LeadPanel_form_name" required="" placeholder="Số điện thoại" type="tel" name="phone" id="phone">
+                                </div>
+                            </div>			  
+
+                            <div class="row-fluid hidden">
+                                <div class="span6 wrap-icon-province1">
+                                    <input class="input-large LeadPanel_form_company" id="tinh" type="text" name="tinh" required="" placeholder="Tỉnh thành" value="NO_PARAM">
+                                </div>
+                                <div class="span6 wrap-icon-district1">
+                                    <input class="input-large LeadPanel_form_company" id="quan" type="text" name="quan" required="" placeholder="Quận huyện" value="NO_PARAM">
+                                </div>
+
+                            </div>				  
+                            <div class="row-fluid" style="margin-top: -5px;">
+                                <div class="span12 wrap-icon-address1">
+                                    <input class="input-large LeadPanel_form_company" id="dia_chi" type="text" name="dia_chi" required="" placeholder="Địa chỉ nhận khóa học">
+                                </div>
+                            </div>
+                            <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
+                            <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
+                            <div class="row-fluid">
+                                <div class="span12 text-center">
+                                    <input style="background-color: #c31212; border-radius: 10px" class="btn btn-large LeadPanel_action button radius e_btn_submit reg_bt" type="submit" name="some_name" value="Đăng ký ngay" id="form-submit">
+                                </div>
+                            </div>  
+
+                            <input type="hidden" name="content" value="1">
+
+                        </div>
+                    </div>
+                    <input  type="hidden" name="content" value="1" />
+                </form>
+            </div>
         </div>
-        <img src="<?php echo base_url(); ?>public/kt400/demo.png" class="play-btn hidden-sm hidden-xs"/>
     </header>
     <div class="container" id="link_bondiemkhacbiet">
         <div class="group2 row">

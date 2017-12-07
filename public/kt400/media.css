@@ -5,8 +5,9 @@
 }
 @media (min-width:993px){
     header{
-        background-attachment: fixed;
         position: relative;
+        background-size: contain;
+        background-position: 0px 55px;
     }
     #carousel-example-generic{
         background-attachment: fixed;
@@ -15,7 +16,7 @@
         color: #31B051;
         margin-top: 10px;
         font-size: 16px;
-        width: 900px;
+/*        width: 900px;*/
     }
     .carousel-inner #cmt {
         font-weight: bold;
