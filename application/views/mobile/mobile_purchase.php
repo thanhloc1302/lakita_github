@@ -197,7 +197,7 @@
                                 </li>
                             </ul>
                             <p class="text-underline"><strong>Vui lòng chọn loại thẻ, sau đó nhập chính xác mã thẻ và số serial </strong></p>
-                            <form name="napthe" action="course/purchase_by_mobile_cash" method="post">
+                            <div id="form_mobi">
                                 <div class="form-group">
                                     <table style="margin: 0px auto;" class="tbl_cards">
                                         <tr>
@@ -229,11 +229,11 @@
                                         </div>
                                         <div class="form-group text-center">
                                             <input type="hidden" name="NLNapThe" value="NLNapThe" />
-                                            <button class="btn btn-success my-btn" type="submit"> NẠP THẺ <i class="fa fa-sign-in" aria-hidden="true"></i> </button>
+                                            <button class="btn btn-success my-btn btn-mobi"> NẠP THẺ <i class="fa fa-sign-in" aria-hidden="true"></i> </button>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                             <?php
                         }
                     }
@@ -255,7 +255,7 @@
                     } else {
                         ?>
                         <p class="marginbottom20"> Mời bạn chọn thẻ ngân hàng phát hàng thẻ ATM của bạn, sau đó ấn "Tiếp tục" </p>
-                        <form action="course/purchase_by_atm" method="post">
+                        <div id="form_atm">
                             <ul class="cardList clearfix">
                                 <li class="bank-online-methods ">
                                     <label for="vcb_ck_on">
@@ -420,10 +420,9 @@
                             </ul>
                             <div class="text-center">
                                 <input type="hidden" value="ATM_ONLINE" name="option_payment" />
-                                <input type="hidden" name="nlpayment" value="nlpayment" />
-                                <button class="btn btn-success my-btn" > TIẾP TỤC <i class="fa fa-sign-in" aria-hidden="true"></i> </button>
+                                <button class="btn btn-success my-btn btn-atm" > TIẾP TỤC <i class="fa fa-sign-in" aria-hidden="true"></i> </button>
                             </div>
-                        </form>
+                        </div>
                     <?php } ?>
                 </div>
             </div>
@@ -441,7 +440,7 @@
                         <?php
                     } else {
                         ?>
-                        <form action="course/purchase_by_atm" method="post" class="text-center">
+                        <div id="form_visa">
                             <p class="marginbottom20 text-center"> Mời bạn chọn loại thẻ, sau đó bấm "Tiếp tục" </p>
                             <ul class="cardList clearfix" style="display:inline-block">
                                 <li class="bank-online-methods ">
@@ -460,10 +459,9 @@
                             </ul>
                             <div class="text-center">
                                 <input type="hidden" value="VISA" name="option_payment" selected="true">
-                                <input type="hidden" name="nlpayment" value="nlpayment" />
-                                <button class="btn btn-success my-btn" > TIẾP TỤC <i class="fa fa-sign-in" aria-hidden="true"></i> </button>
+                                <button class="btn btn-success my-btn btn-visa" > TIẾP TỤC <i class="fa fa-sign-in" aria-hidden="true"></i> </button>
                             </div>
-                        </form>
+                        </div>
                     <?php } ?>
                 </div>
             </div>

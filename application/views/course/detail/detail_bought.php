@@ -3,6 +3,10 @@
 
 <script type="text/javascript" src="<?php echo base_url(); ?>plugin/ckeditor/ckeditor.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <style>
+    #list_cmt{
+        font-family: RobotoCondensed-Regular;
+        font-size: 14px;
+    }
     .category{
         background-color: #ccc;
         padding: 10px;

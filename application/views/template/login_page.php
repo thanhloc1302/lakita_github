@@ -6,27 +6,38 @@
         <img class="logo" src="<?php echo base_url() ?>styles/v2.0/img/mobi/logo-header.png">
         </a>
     </div>
-    <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+    <div class="col-md-3 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
         <div class="row">
             <div class="form-login" >
-                <div class="form-group col-md-4 col-sm-12 col-xs-12">
+                <div class="form-group col-md-6 col-sm-12 col-xs-12">
                     <label for="">Email</label>
                     <input type="text" class="form-control" id="login_email" name="email" placeholder="Nhập Email">
                 </div>
-                <div class="form-group col-md-4 col-sm-12 col-xs-12">
+                <div class="form-group col-md-6 col-sm-12 col-xs-12">
                     <label for="">Mật khẩu</label>
                     <input type="password" class="form-control" id="login_password" placeholder="Nhập mật khẩu">
                 </div>
-                <div class="col-md-2 col-sm-12 col-xs-12">
-                    <label for=""></label>
-                    <button class="btn btn-success btn-login click_login" value="login">Đăng nhập</button>
-                </div>   
+                  
 
             </div>
         </div>
-        <div class="col-md-4 col-md-offset-4">
+        <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12 remember">
+            <input type="checkbox" class="checkbox1" name="is_remember" id="is_remember" /><p> Ghi nhớ tài khoản</p>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
             <a href="#" id="fp">Quên mật khẩu ?</a>
         </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+            <div class="form-login" >
+                <div class="form-group padding0 col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                    <button class="btn btn-success btn-login click_login" value="login">Đăng nhập</button>
+                </div> 
+                 
+            </div>
+        
     </div>
 </div>
 <div class="row body">

@@ -1,4 +1,5 @@
 <?php
+
 /*
  * Created by ChuyenPN 09/2016
  *
@@ -346,221 +347,228 @@ class Course extends MY_Controller {
             die;
         }
         //echo $this->input->post('NLNapThe');
-        if ($this->input->post('NLNapThe') != '') {
-            require_once 'plugin/nganluong.php';
-            $sopin = $this->input->post('txtSoPin');
-            $soseri = $this->input->post('txtSoSeri');
-            $type_card = $this->input->post('select_method');
-            if ($soseri == "") {
-                echo '<script>alert("Vui lòng nhập Số Seri");</script>';
-                echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
-                exit();
-            }
-            if ($sopin == "") {
-                echo '<script>alert("Vui lòng nhập Mã Thẻ");</script>';
-                echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
-                exit();
-            }
 
-            $arytype = array(92 => 'VMS', 93 => 'VNP', 107 => 'VIETTEL', 121 => 'VCOIN', 120 => 'GATE');
-            //Tiến hành kết nối thanh toán Thẻ cào.
-            $call = new MobiCard();
-            $rs = new Result();
-            $coin1 = rand(10, 999);
-            $coin2 = rand(0, 999);
-            $coin3 = rand(0, 999);
-            $coin4 = rand(0, 999);
-            $ref_code = $coin4 + $coin3 * 1000 + $coin2 * 1000000 + $coin1 * 100000000;
+        require_once 'plugin/nganluong.php';
+        $sopin = $this->input->post('txtSoPin');
+        $soseri = $this->input->post('txtSoSeri');
+        $type_card = $this->input->post('select_method');
+        if ($soseri == "") {
+            echo '<script>alert("Vui lòng nhập Số Seri");</script>';
+            echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
+            exit();
+        }
+        if ($sopin == "") {
+            echo '<script>alert("Vui lòng nhập Mã Thẻ");</script>';
+            echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
+            exit();
+        }
 
-            $rs = $call->CardPay($sopin, $soseri, $type_card, $ref_code, "", "", "");
+        $arytype = array(92 => 'VMS', 93 => 'VNP', 107 => 'VIETTEL', 121 => 'VCOIN', 120 => 'GATE');
+        //Tiến hành kết nối thanh toán Thẻ cào.
+        $call = new MobiCard();
+        $rs = new Result();
+        $coin1 = rand(10, 999);
+        $coin2 = rand(0, 999);
+        $coin3 = rand(0, 999);
+        $coin4 = rand(0, 999);
+        $ref_code = $coin4 + $coin3 * 1000 + $coin2 * 1000000 + $coin1 * 100000000;
 
-            if ($rs->error_code == '00') {
-                $user_id = $this->session->userdata('user_id');
-                $data['user_id'] = $user_id;
-                $data['error_code'] = $rs->error_code;
-                $data['merchant_id'] = $rs->merchant_id;
-                $data['merchant_account'] = $rs->merchant_account;
-                $data['pin_card'] = $rs->pin_card;
-                $data['card_serial'] = $rs->card_serial;
-                $data['type_card'] = $rs->type_card;
-                $data['ref_code'] = $ref_code;
-                $data['client_fullname'] = $rs->client_fullname;
-                $data['client_email'] = $rs->client_email;
-                $data['client_mobile'] = $rs->client_mobile;
-                $data['card_amount'] = $rs->card_amount;
-                $data['transaction_amount'] = $rs->card_amount;
-                $data['transaction_id'] = $rs->transaction_id;
-                $data['ngaynap'] = time();
-                $student = $this->lib_mod->load_all('student', '', array('id' => $user_id), '', '', '');
-                $balance = $student[0]['balance'];
-                $courseID = $this->session->tempdata('curr_course_id');
-                $course_code = $this->lib_mod->load_all('courses', 'course_code', array('id' => $courseID), $limit = '', $offset = '', $order = '', $group_by = '');
+        $rs = $call->CardPay($sopin, $soseri, $type_card, $ref_code, "", "", "");
 
-                $pricefinal = $this->charged_price($courseID);
+        if ($rs->error_code == '00') {
+            $user_id = $this->session->userdata('user_id');
+            $data['user_id'] = $user_id;
+            $data['error_code'] = $rs->error_code;
+            $data['merchant_id'] = $rs->merchant_id;
+            $data['merchant_account'] = $rs->merchant_account;
+            $data['pin_card'] = $rs->pin_card;
+            $data['card_serial'] = $rs->card_serial;
+            $data['type_card'] = $rs->type_card;
+            $data['ref_code'] = $ref_code;
+            $data['client_fullname'] = $rs->client_fullname;
+            $data['client_email'] = $rs->client_email;
+            $data['client_mobile'] = $rs->client_mobile;
+            $data['card_amount'] = $rs->card_amount;
+            $data['transaction_amount'] = $rs->card_amount;
+            $data['transaction_id'] = $rs->transaction_id;
+            $data['ngaynap'] = time();
+            $student = $this->lib_mod->load_all('student', '', array('id' => $user_id), '', '', '');
+            $balance = $student[0]['balance'];
+            $courseID = $this->session->tempdata('curr_course_id');
+            $course_code = $this->lib_mod->load_all('courses', 'course_code', array('id' => $courseID), $limit = '', $offset = '', $order = '', $group_by = '');
 
-                $sodu = $rs->card_amount - $pricefinal;
-                if ($sodu < 0) {
-                    $data1['balance'] = $rs->card_amount + $balance;
-                } else {
-                    $voucherName = $this->session->tempdata('voucherName');
-                    if (isset($voucherName)) {
-                        $voucher = $this->lib_mod->load_all('coupon', 'merchantID', array('name' => $voucherName), '', '', '');
-                        if ($voucher[0]['merchantID'] != 0) {
-                            $param2 = array(
-                                'voucher' => $voucherName,
-                                'time' => time(),
-                                'courseID' => $courseID,
-                                'price' => $this->session->tempdata('priceVouched'),
-                                'merchantID' => $voucher[0]['merchantID'],
-                                'method' => 4,
-                                'userID' => $user_id
-                            );
-                            $this->lib_mod->insert('use_voucher', $param2);
-                        }
-                    }
-                    $data1['balance'] = $rs->card_amount - $pricefinal + $balance;
-                    $this->lib_mod->insert('student_courses', array('student_id' => $user_id, 'courses_id' => $courseID, 'status' => 1, 'create_date' => time(), 'thanhtien' => $pricefinal));
-                    $this->lib_mod->insert('lichsunapthe', $data);
-                    $this->lib_mod->update('student', array('id' => $user_id), $data1);
+            $pricefinal = $this->charged_price($courseID);
 
-                    /* gửi thông tin sang crm */
-                    $price_purchase = $pricefinal;
-                    $course_code = $course_code[0]['course_code'];
-                    $payment_method_rgt = 6; //3-ATM, 5-visa, 6-thẻ cào, 7-số dư
-                    $this->sent_to_crm($user_id, $courseID, $price_purchase, $course_code, $payment_method_rgt);
-                    /* hết gửi */
-
-                    $first_learn = $this->find_first_course('', $courseID);
-                    echo '<script> alert("Chúc mừng bạn đã mua khóa học thành công! '
-                    . 'Bạn sẽ được chuyển đến trang chi tiết khóa học để học ngay! ");'
-                    . 'location.replace("' . $first_learn . '")'
-                    . '</script>';
-                }
-                if ($sodu < 0) {
-                    $this->lib_mod->update('student', array('id' => $user_id), $data1);
-                    $this->lib_mod->insert('lichsunapthe', $data);
-                    echo '<script>alert("Bạn đã nạp thành công ' . $rs->card_amount . ' vào trong tài khoản. '
-                    . 'Số tiền bạn nạp không đủ để mua khóa học, vì vậy số tiền nạp sẽ được '
-                    . 'cộng vào số dư tài khoản lakita của bạn");</script>'; //$total_results;
-                }
+            $sodu = $rs->card_amount - $pricefinal;
+            if ($sodu < 0) {
+                $data1['balance'] = $rs->card_amount + $balance;
             } else {
-                $user_id = $this->session->userdata('user_id');
-                $data['user_id'] = $this->session->userdata('user_id');
-                $data['error_code'] = $rs->error_code;
-                $data['merchant_id'] = $rs->merchant_id;
-                $data['merchant_account'] = $rs->merchant_account;
-                $data['pin_card'] = $rs->pin_card;
-                $data['card_serial'] = $rs->card_serial;
-                $data['type_card'] = $rs->type_card;
-                $data['ref_code'] = $ref_code;
-                $data['client_fullname'] = $rs->client_fullname;
-                $data['client_email'] = $rs->client_email;
-                $data['client_mobile'] = $rs->client_mobile;
-                $data['card_amount'] = $rs->card_amount;
-                $data['transaction_amount'] = $rs->card_amount;
-                $data['transaction_id'] = $rs->transaction_id;
-                $data['ngaynap'] = time();
+                $voucherName = $this->session->tempdata('voucherName');
+                if (isset($voucherName)) {
+                    $voucher = $this->lib_mod->load_all('coupon', 'merchantID', array('name' => $voucherName), '', '', '');
+                    if ($voucher[0]['merchantID'] != 0) {
+                        $param2 = array(
+                            'voucher' => $voucherName,
+                            'time' => time(),
+                            'courseID' => $courseID,
+                            'price' => $this->session->tempdata('priceVouched'),
+                            'merchantID' => $voucher[0]['merchantID'],
+                            'method' => 4,
+                            'userID' => $user_id
+                        );
+                        $this->lib_mod->insert('use_voucher', $param2);
+                    }
+                }
+                $data1['balance'] = $rs->card_amount - $pricefinal + $balance;
+                $this->lib_mod->insert('student_courses', array('student_id' => $user_id, 'courses_id' => $courseID, 'status' => 1, 'create_date' => time(), 'thanhtien' => $pricefinal));
                 $this->lib_mod->insert('lichsunapthe', $data);
-                echo '<script>alert("Lỗi :' . $rs->error_message . '"); </script>';
-                echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
+                $this->lib_mod->update('student', array('id' => $user_id), $data1);
+
+                /* gửi thông tin sang crm */
+                $price_purchase = $pricefinal;
+                $course_code = $course_code[0]['course_code'];
+                $payment_method_rgt = 6; //3-ATM, 5-visa, 6-thẻ cào, 7-số dư
+                $this->sent_to_crm($user_id, $courseID, $price_purchase, $course_code, $payment_method_rgt);
+                /* hết gửi */
+
+                $first_learn = $this->find_first_course('', $courseID);
+                echo '2_' . $first_learn;
+//                    echo '<script> alert("Chúc mừng bạn đã mua khóa học thành công! '
+//                    . 'Bạn sẽ được chuyển đến trang chi tiết khóa học để học ngay! ");'
+//                    . 'location.replace("' . $first_learn . '")'
+//                    . '</script>';
             }
+            if ($sodu < 0) {
+                $this->lib_mod->update('student', array('id' => $user_id), $data1);
+                $this->lib_mod->insert('lichsunapthe', $data);
+
+                echo '0_' . $rs->card_amount;
+//                    echo '<script>alert("Bạn đã nạp thành công ' . $rs->card_amount . ' vào trong tài khoản. '
+//                    . 'Số tiền bạn nạp không đủ để mua khóa học, vì vậy số tiền nạp sẽ được '
+//                    . 'cộng vào số dư tài khoản lakita của bạn");</script>'; //$total_results;
+            }
+        } else {
+            $user_id = $this->session->userdata('user_id');
+            $data['user_id'] = $this->session->userdata('user_id');
+            $data['error_code'] = $rs->error_code;
+            $data['merchant_id'] = $rs->merchant_id;
+            $data['merchant_account'] = $rs->merchant_account;
+            $data['pin_card'] = $rs->pin_card;
+            $data['card_serial'] = $rs->card_serial;
+            $data['type_card'] = $rs->type_card;
+            $data['ref_code'] = $ref_code;
+            $data['client_fullname'] = $rs->client_fullname;
+            $data['client_email'] = $rs->client_email;
+            $data['client_mobile'] = $rs->client_mobile;
+            $data['card_amount'] = $rs->card_amount;
+            $data['transaction_amount'] = $rs->card_amount;
+            $data['transaction_id'] = $rs->transaction_id;
+            $data['ngaynap'] = time();
+            $this->lib_mod->insert('lichsunapthe', $data);
+            echo '1_' . $rs->error_message;
+//                echo '<script>alert("Lỗi :' . $rs->error_message . '"); </script>';
+//                echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
         }
     }
 
     function purchase_by_atm() {
-        $nlpayment = $this->input->post('nlpayment');
-        if ($nlpayment != '') {
-            $userID = $this->session->userdata('user_id');
-            if (!isset($userID)) {
-                echo 'Đã có lỗi xảy ra, vui lòng liên hệ với ban quản trị!';
-                die;
+
+        $userID = $this->session->userdata('user_id');
+        if (!isset($userID)) {
+            echo '3_Đã có lỗi xảy ra, vui lòng liên hệ với ban quản trị!';
+            die;
+        }
+        $result = array();
+        $course_ID = $this->session->tempdata('curr_course_id');
+        $courseID = $this->lib_mod->detail('courses', array('id' => $course_ID));
+
+        require_once 'plugin/nganluong.php';
+        $nlcheckout = new NL_CheckOutV3(MERCHANT_ID, MERCHANT_PASS, RECEIVER, URL_API);
+
+
+        $total_amount = $this->charged_price($course_ID);
+
+
+        $this->load->library('session');
+        if ($this->input->post('bankcode') != 'VISA' || $this->input->post('bankcode') != 'MASTER') {
+            $atm = array(
+                'payment_method_rgt' => 3, //3-ATM, 5-visa
+                'price' => $total_amount,
+                'course_code' => $courseID[0]['course_code']
+            );
+            $this->session->set_userdata($atm);
+        } else {
+            $atm = array(
+                'payment_method_rgt' => 5, //3-ATM, 5-visa
+                'price' => $total_amount,
+                'course_code' => $courseID[0]['course_code']
+            );
+            $this->session->set_userdata($atm);
+        }
+
+
+        $array_items[0] = array('item_name1' => 'Product name',
+            'item_quantity1' => 1,
+            'item_amount1' => $total_amount,
+            'item_url1' => 'http://nganluong.vn/');
+        $array_items = array();
+        $payment_method = $this->input->post('option_payment');
+        $bank_code = $this->input->post('bankcode');
+        $order_code = "macode_" . time();
+        $payment_type = '';
+        $discount_amount = 0;
+        $order_description = '';
+        $tax_amount = 0;
+        $fee_shipping = 0;
+        $return_url = base_url() . 'course/atm_success';
+        $cancel_url = urlencode(base_url());
+        $student = $this->lib_mod->detail('student', array('id' => $userID));
+        $buyer_fullname = $student[0]['name'];
+        $buyer_email = $student[0]['email'];
+        $buyer_mobile = $student[0]['phone'];
+        $buyer_address = 'lakita';
+        if ($payment_method != '' && $buyer_email != "" && $buyer_mobile != "" && $buyer_fullname != "" && filter_var($buyer_email, FILTER_VALIDATE_EMAIL)) {
+            if ($payment_method == "VISA") {
+                $nl_result = $nlcheckout->VisaCheckout($order_code, $total_amount, $payment_type, $order_description, $tax_amount, $fee_shipping, $discount_amount, $return_url, $cancel_url, $buyer_fullname, $buyer_email, $buyer_mobile, $buyer_address, $array_items, $bank_code);
+            } elseif ($payment_method == "NL") {
+                $nl_result = $nlcheckout->NLCheckout($order_code, $total_amount, $payment_type, $order_description, $tax_amount, $fee_shipping, $discount_amount, $return_url, $cancel_url, $buyer_fullname, $buyer_email, $buyer_mobile, $buyer_address, $array_items);
+            } elseif ($payment_method == "ATM_ONLINE" && $bank_code != '') {
+                $nl_result = $nlcheckout->BankCheckout($order_code, $total_amount, $bank_code, $payment_type, $order_description, $tax_amount, $fee_shipping, $discount_amount, $return_url, $cancel_url, $buyer_fullname, $buyer_email, $buyer_mobile, $buyer_address, $array_items);
+            } elseif ($payment_method == "NH_OFFLINE") {
+                $nl_result = $nlcheckout->officeBankCheckout($order_code, $total_amount, $bank_code, $payment_type, $order_description, $tax_amount, $fee_shipping, $discount_amount, $return_url, $cancel_url, $buyer_fullname, $buyer_email, $buyer_mobile, $buyer_address, $array_items);
+            } elseif ($payment_method == "ATM_OFFLINE") {
+                $nl_result = $nlcheckout->BankOfflineCheckout($order_code, $total_amount, $bank_code, $payment_type, $order_description, $tax_amount, $fee_shipping, $discount_amount, $return_url, $cancel_url, $buyer_fullname, $buyer_email, $buyer_mobile, $buyer_address, $array_items);
+            } elseif ($payment_method == "IB_ONLINE") {
+                $nl_result = $nlcheckout->IBCheckout($order_code, $total_amount, $bank_code, $payment_type, $order_description, $tax_amount, $fee_shipping, $discount_amount, $return_url, $cancel_url, $buyer_fullname, $buyer_email, $buyer_mobile, $buyer_address, $array_items);
             }
-            $course_ID = $this->session->tempdata('curr_course_id');
-            $courseID = $this->lib_mod->detail('courses', array('id' => $course_ID));
+            if ($bank_code == '') {
 
-            require_once 'plugin/nganluong.php';
-            $nlcheckout = new NL_CheckOutV3(MERCHANT_ID, MERCHANT_PASS, RECEIVER, URL_API);
-
-
-            $total_amount = $this->charged_price($course_ID);
-
-
-            $this->load->library('session');
-            if ($this->input->post('bankcode') != 'VISA' || $this->input->post('bankcode') != 'MASTER') {
-                $atm = array(
-                    'payment_method_rgt' => 3, //3-ATM, 5-visa
-                    'price' => $total_amount,
-                    'course_code' => $courseID[0]['course_code']
-                );
-                $this->session->set_userdata($atm);
-            } else {
-                $atm = array(
-                    'payment_method_rgt' => 5, //3-ATM, 5-visa
-                    'price' => $total_amount,
-                    'course_code' => $courseID[0]['course_code']
-                );
-                $this->session->set_userdata($atm);
-            }
-
-
-            $array_items[0] = array('item_name1' => 'Product name',
-                'item_quantity1' => 1,
-                'item_amount1' => $total_amount,
-                'item_url1' => 'http://nganluong.vn/');
-            $array_items = array();
-            $payment_method = $this->input->post('option_payment');
-            $bank_code = $this->input->post('bankcode');
-            $order_code = "macode_" . time();
-            $payment_type = '';
-            $discount_amount = 0;
-            $order_description = '';
-            $tax_amount = 0;
-            $fee_shipping = 0;
-            $return_url = base_url() . 'course/atm_success';
-            $cancel_url = urlencode(base_url());
-            $student = $this->lib_mod->detail('student', array('id' => $userID));
-            $buyer_fullname = $student[0]['name'];
-            $buyer_email = $student[0]['email'];
-            $buyer_mobile = $student[0]['phone'];
-            $buyer_address = 'lakita';
-            if ($payment_method != '' && $buyer_email != "" && $buyer_mobile != "" && $buyer_fullname != "" && filter_var($buyer_email, FILTER_VALIDATE_EMAIL)) {
-                if ($payment_method == "VISA") {
-                    $nl_result = $nlcheckout->VisaCheckout($order_code, $total_amount, $payment_type, $order_description, $tax_amount, $fee_shipping, $discount_amount, $return_url, $cancel_url, $buyer_fullname, $buyer_email, $buyer_mobile, $buyer_address, $array_items, $bank_code);
-                } elseif ($payment_method == "NL") {
-                    $nl_result = $nlcheckout->NLCheckout($order_code, $total_amount, $payment_type, $order_description, $tax_amount, $fee_shipping, $discount_amount, $return_url, $cancel_url, $buyer_fullname, $buyer_email, $buyer_mobile, $buyer_address, $array_items);
-                } elseif ($payment_method == "ATM_ONLINE" && $bank_code != '') {
-                    $nl_result = $nlcheckout->BankCheckout($order_code, $total_amount, $bank_code, $payment_type, $order_description, $tax_amount, $fee_shipping, $discount_amount, $return_url, $cancel_url, $buyer_fullname, $buyer_email, $buyer_mobile, $buyer_address, $array_items);
-                } elseif ($payment_method == "NH_OFFLINE") {
-                    $nl_result = $nlcheckout->officeBankCheckout($order_code, $total_amount, $bank_code, $payment_type, $order_description, $tax_amount, $fee_shipping, $discount_amount, $return_url, $cancel_url, $buyer_fullname, $buyer_email, $buyer_mobile, $buyer_address, $array_items);
-                } elseif ($payment_method == "ATM_OFFLINE") {
-                    $nl_result = $nlcheckout->BankOfflineCheckout($order_code, $total_amount, $bank_code, $payment_type, $order_description, $tax_amount, $fee_shipping, $discount_amount, $return_url, $cancel_url, $buyer_fullname, $buyer_email, $buyer_mobile, $buyer_address, $array_items);
-                } elseif ($payment_method == "IB_ONLINE") {
-                    $nl_result = $nlcheckout->IBCheckout($order_code, $total_amount, $bank_code, $payment_type, $order_description, $tax_amount, $fee_shipping, $discount_amount, $return_url, $cancel_url, $buyer_fullname, $buyer_email, $buyer_mobile, $buyer_address, $array_items);
+                $result['type'] = 0;
+                $result['mes'] = 'Mời bạn nhập đầy đủ thông tin!';
+                echo json_encode($result);
+                $student = $this->lib_mod->load_all('student', '', array('id' => $this->session->userdata('user_id')), '', '', '');
+                if ($student[0]['phone'] == '' || $student[0]['email'] == '' || $student[0]['name'] == '') {
+                    $this->lib_mod->update('student', array('id' => $this->session->userdata('user_id')), array('name' => $buyer_fullname, 'phone' => $buyer_mobile, 'email' => $buyer_email));
                 }
-                if ($bank_code == '') {
-                    echo '<script> alert("Mời bạn nhập đầy đủ thông tin!");  </script>';
-                    $student = $this->lib_mod->load_all('student', '', array('id' => $this->session->userdata('user_id')), '', '', '');
-                    if ($student[0]['phone'] == '' || $student[0]['email'] == '' || $student[0]['name'] == '') {
-                        $this->lib_mod->update('student', array('id' => $this->session->userdata('user_id')), array('name' => $buyer_fullname, 'phone' => $buyer_mobile, 'email' => $buyer_email));
-                    }
+            } else {
+                if ($nl_result->error_code == '00') {
+                    $this->session->set_userdata('courseID', $courseID[0]['id']);
+                    //Cập nhât order với token  $nl_result->token để sử dụng check hoàn thành sau này
+                    $result['type'] = 1;
+                    $result['mes'] = (string)$nl_result->checkout_url;
+                    echo json_encode($result);
+                    // echo '1_' . $nl_result->checkout_url;
                 } else {
-                    if ($nl_result->error_code == '00') {
-                        $this->session->set_userdata('courseID', $courseID[0]['id']);
-                        //Cập nhât order với token  $nl_result->token để sử dụng check hoàn thành sau này
-                        ?>
-                        <script type="text/javascript">
-                            window.location.replace("<?php echo(string) $nl_result->checkout_url; ?>");
-                        </script>
-                        <?php
-                    } else {
-                        echo $nl_result->error_message;
-                    }
+                    $result['type'] = 2;
+                    $result['mes'] = $nl_result->error_message;
+                    echo json_encode($result);
+                    //echo '2_' . $nl_result->error_message;
                 }
-            } else {
-                echo '<script> alert("Mời bạn nhập đầy đủ thông tin");  </script>';
             }
         } else {
-            echo "";
+            $result['type'] = 0;
+            $result['mes'] = 'Mời bạn nhập đầy đủ thông tin!';
+            echo json_encode($result);
         }
     }
 

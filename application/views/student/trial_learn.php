@@ -147,7 +147,7 @@
                         else
                             echo base_url() . 'styles/images/people/110/user.png';
                     }
-                    ?>" alt="" class="img-circle avatar" />
+                    ?>" alt="" class="img-circle avatar img-responsive" />
                 </div>
                 <div class="col-md-8">
                     <div class="form-group">

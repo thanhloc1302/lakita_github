@@ -29,7 +29,7 @@
     color: #FFF
 }
 .btn-login{
-    margin-top: 5px
+    margin-top: 25px
 }
 .body{
     background-color: #e9ebee;
@@ -74,4 +74,11 @@
 }
 .social-login > a:hover{
     color:#fff;
+}
+.remember{
+    display: inline-flex;
+    color: #FFF;
+}
+#is_remember{
+    margin-right: 5px;
 }

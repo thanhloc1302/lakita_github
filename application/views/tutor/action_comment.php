@@ -35,7 +35,21 @@
             d.setTime(d.getTime() + (360 * 24 * 60 * 60 * 1000));
             var expires = "expires=" + d.toUTCString();
             document.cookie = cmt_id + "=" + content + ";" + expires + ";path=/";
-            alert('Nội dung đã lưu vào bộ nhớ tạm của trình duyệt !');
+            $.alert({
+                    title: 'Nội dung đã lưu vào bộ nhớ tạm của trình duyệt !',
+                    content: ' ',
+                    theme: 'material',
+                    type: 'green',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Đóng',
+                            btnClass: 'btn-green',
+                            action: function () {
+                            }
+                        }
+                    }
+                });
         }
     });
 
@@ -158,6 +172,31 @@
         });
     });
 
+
+  /* xóa cmt */
+    $('.del_cmt').click(function (e) {
+        var link = $(this).attr('href');
+        e.preventDefault();
+        $.confirm({
+            title: 'Xóa bình luận!',
+            content: 'Bạn có chắc chắn xóa không ?',
+            theme: 'material',
+            type: 'red',
+            buttons: {
+                confirm: {
+                    text: 'Đồng ý',
+                    btnClass: 'btn-blue',
+                    action: function () {
+                        location.href = link;
+                    }},
+                cancel: {
+                    text: 'Hủy',
+                    action: function () {
+                        return
+                    }}
+            }
+        });
+    });
 </script>
 
 

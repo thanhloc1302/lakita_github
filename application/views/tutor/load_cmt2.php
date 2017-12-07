@@ -156,7 +156,7 @@
                                                         </div>
 
                                                         <span>&nbsp;</span>
-                                                        <b><a href="course/del_comment?cmtid=<?php echo $cmt2['id']; ?>&url=<?php echo $url = (!empty($_SERVER['HTTPS'])) ? "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] : "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" onclick="return confirm('Bạn có chắc chắn xóa không ?')"> Xóa </a></b>
+                                                        <b><a clas="del_cmt" href="course/del_comment?cmtid=<?php echo $cmt2['id']; ?>&url=<?php echo $url = (!empty($_SERVER['HTTPS'])) ? "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] : "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"> Xóa </a></b>
                                                     </div>
 
                                                 </div>
@@ -192,7 +192,7 @@
                         </div>
                     </div>
                     <span>&nbsp;</span>
-                    <a class="btn btn-warning" href="course/del_comment?cmtid=<?php echo $cmt1['id']; ?>&url=<?php echo $url = (!empty($_SERVER['HTTPS'])) ? "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] : "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" onclick="return confirm('Bạn có chắc chắn xóa không ?')"> &nbsp;&nbsp;Xóa&nbsp;&nbsp; </a>
+                    <a class="btn btn-warning del_cmt" href="course/del_comment?cmtid=<?php echo $cmt1['id']; ?>&url=<?php echo $url = (!empty($_SERVER['HTTPS'])) ? "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] : "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>"> &nbsp;&nbsp;Xóa&nbsp;&nbsp; </a>
                 </td>
                 <td>
                     <select class="type_cmt" <?php echo 'code="' . $cmt1['id'] . '"' ?> >

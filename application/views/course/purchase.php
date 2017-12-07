@@ -279,7 +279,7 @@ else {
                                 <p class="margintop45 text-center marginbottom15"> <strong> Bạn cần đăng nhập để mua khóa học bằng thẻ cào </strong></p>
                                 <div class="row">
                                     <div class="col-md-offset-3 col-md-6">
-                                        <a href="" class="btn btn-success btn-lg btn-block menu_login" redirect_type="mobile"> ĐĂNG NHẬP </a>
+                                        <a href="<?php echo base_url() ?>dang-nhap.html" class="btn btn-success btn-lg btn-block" redirect_type="mobile"> ĐĂNG NHẬP </a>
                                     </div>
                                 </div>
                                 <input type="hidden" class="redirect" value="<?php echo base_url(); ?>course/purchase" />
@@ -313,7 +313,7 @@ else {
                                             </li>
                                         </ul>
                                         <p class="text-underline"><strong>Vui lòng chọn loại thẻ, sau đó nhập chính xác mã thẻ và số serial </strong></p>
-                                        <form name="napthe" action="course/purchase_by_mobile_cash" method="post">
+                                        <div id="form_mobi">
                                             <div class="form-group">
                                                 <table style="margin: 0px auto;">
                                                     <tr>
@@ -345,11 +345,11 @@ else {
                                                     </div>
                                                     <div class="form-group text-center">
                                                         <input type="hidden" name="NLNapThe" value="NLNapThe" />
-                                                        <button class="btn btn-success my-btn" type="submit"> NẠP THẺ <i class="fa fa-sign-in" aria-hidden="true"></i> </button>
+                                                        <button class="btn btn-success my-btn btn-mobi" > NẠP THẺ <i class="fa fa-sign-in" aria-hidden="true"></i> </button>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </div>
                                         <?php
                                     }
                                 }
@@ -361,7 +361,7 @@ else {
                                 <p class="margintop45 text-center marginbottom15"> <strong> Bạn cần đăng nhập để mua khóa học bằng thẻ ATM </strong></p>
                                 <div class="row">
                                     <div class="col-md-offset-3 col-md-6">
-                                        <a href="" class="btn btn-success btn-lg btn-block menu_login" redirect_type="atm"> ĐĂNG NHẬP </a>
+                                        <a href="<?php echo base_url() ?>dang-nhap.html" class="btn btn-success btn-lg btn-block" redirect_type="atm"> ĐĂNG NHẬP </a>
                                     </div>
                                 </div>
                                 <?php
@@ -378,7 +378,7 @@ else {
 
                                     <p class="margintop20"> <strong> Thanh toán trực tiếp bằng thẻ ATM </strong></p>
                                     <p class="marginbottom20"> Mời bạn chọn thẻ ngân hàng phát hàng thẻ ATM của bạn, sau đó ấn "Tiếp tục" </p>
-                                    <form action="course/purchase_by_atm" method="post">
+                                    <div id="form_atm">
                                         <ul class="cardList clearfix">
                                             <li class="bank-online-methods ">
                                                 <label for="vcb_ck_on">
@@ -543,10 +543,9 @@ else {
                                         </ul>
                                         <div class="text-center">
                                             <input type="hidden" value="ATM_ONLINE" name="option_payment" />
-                                            <input type="hidden" name="nlpayment" value="nlpayment" />
-                                            <button class="btn btn-success my-btn" > TIẾP TỤC <i class="fa fa-sign-in" aria-hidden="true"></i> </button>
+                                            <button class="btn btn-success my-btn btn-atm" > TIẾP TỤC <i class="fa fa-sign-in" aria-hidden="true"></i> </button>
                                         </div>
-                                    </form>
+                                    </div>
                                     <?php
                                 }
                             }
@@ -557,7 +556,7 @@ else {
                                 <p class="margintop45 text-center marginbottom15"> <strong> Bạn cần đăng nhập để mua khóa học bằng thẻ VISA/MasterCard </strong></p>
                                 <div class="row">
                                     <div class="col-md-offset-3 col-md-6">
-                                        <a href="" class="btn btn-success btn-lg btn-block menu_login" redirect_type="visa"> ĐĂNG NHẬP </a>
+                                        <a href="<?php echo base_url() ?>dang-nhap.html" class="btn btn-success btn-lg btn-block" redirect_type="visa"> ĐĂNG NHẬP </a>
                                     </div>
                                 </div>
                                 <?php
@@ -572,7 +571,7 @@ else {
                                     </div>
                                 <?php } else { ?>
 
-                                    <form action="course/purchase_by_atm" method="post">
+                                <div id="form_visa">
                                         <div class="row">
                                             <div class="col-md-6 col-md-offset-3">
                                                 <p class="margintop20 text-center"> <strong> Thanh toán bằng thẻ VISA/MasterCard </strong></p>
@@ -594,12 +593,11 @@ else {
                                                 </ul>
                                                 <div class="text-center">
                                                     <input type="hidden" value="VISA" name="option_payment" selected="true">
-                                                    <input type="hidden" name="nlpayment" value="nlpayment" />
-                                                    <button class="btn btn-success my-btn" > TIẾP TỤC <i class="fa fa-sign-in" aria-hidden="true"></i> </button>
+                                                    <button class="btn btn-success my-btn btn-visa" > TIẾP TỤC <i class="fa fa-sign-in" aria-hidden="true"></i> </button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
                                     <?php
                                 }
                             }
@@ -610,7 +608,7 @@ else {
                                 <p class="margintop45 text-center marginbottom15"> <strong> Bạn cần đăng nhập để mua khóa học bằng số dư LAKITA </strong></p>
                                 <div class="row">
                                     <div class="col-md-offset-3 col-md-6">
-                                        <a href="" class="btn btn-success btn-lg btn-block menu_login" redirect_type="lakita"> ĐĂNG NHẬP </a>
+                                        <a href="<?php echo base_url() ?>dang-nhap.html" class="btn btn-success btn-lg btn-block" redirect_type="lakita"> ĐĂNG NHẬP </a>
                                     </div>
                                 </div>
                                 <?php

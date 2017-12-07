@@ -333,7 +333,7 @@ class Guest extends MY_Controller {
                 $data['password'] = md5(md5($password));
                 $data['forgetPassword'] = '';
                 $this->lib_mod->update('student', array("forgetPassword" => $code_forget), $data);
-                echo '1_Tạo mật khẩu mới thành công! Vui lòng đăng nhập bằng mật khẩu bạn vừa tạo.';
+                echo '1_Tạo mật khẩu mới thành công!';
             } else {
                 echo '0_Mật khẩu xác nhận không đúng!';
             }
