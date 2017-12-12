@@ -986,10 +986,13 @@ $rs = json_decode($result);
                         <div id="ITEM_FORM663" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
                             <input class="widget-content" type="tel" placeholder="Nhập Số điện thoại" name="phone" onblur="checkphone(this)" onkeydown="removecheckphone()" lp-label="Điện thoại" lp-name-id="phone" required="required">
                         </div>
+                        <div id="ITEM_FORM664" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
+                            <input class="widget-content" type="text" placeholder="Nhập địa chỉ" name="dia_chi" lp-label="Điện thoại" lp-name-id="phone" required="required">
+                        </div>
                         <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
                         <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
                         <div id="ITEM_FORM665" class="widget-element widget-snap widget-dragg widget-item-child" 
-                             lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block" style="top: 171.103px; left: 0px; width: 469px;">
+                             lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block" style="top: 226.103px; left: 0px; width: 469px;">
                             <button   id="form-submit-2" class="btn btn-large btn-primary LeadPanel_action button radius e_btn_submit reg_bt">HOÀN TẤT ĐĂNG KÝ</button>
                         </div>
                     </form>
