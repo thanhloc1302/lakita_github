@@ -52,20 +52,9 @@ class Studying extends MY_Controller {
     }
 
     function action_upload() {
+        var_dump($this->input->post());die;
         $user_id = $this->session->userdata('user_id');
-        if (!isset($user_id)) {
-            echo '<script>alert("Bạn phải đăng nhập để tiếp tục!"); </script>';
-            echo "<script>location.href='" . base_url() . "';</script>";
-            die;
-        } else if ($this->input->post('course_id_input') == 0) {
-            echo '<script>alert("Vui lòng chọn khóa học!"); </script>';
-            echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
-            die;
-        } else if ($this->input->post('learn_id_input') == 0) {
-            echo '<script>alert("Vui lòng chọn bài học!"); </script>';
-            echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
-            die;
-        } else if ($this->input->post("ok") == 'Upload') {
+       //  if ($this->input->post("ok") == 'Upload') {
             //$config['upload_path'] = '/home/lakita.com.vn/public_html/data/source/student/upload_exercise';
             //$dir = '/home/lakita.com.vn/public_html/data/source/student/upload_exercise/'. $user_id;
 
@@ -75,7 +64,7 @@ class Studying extends MY_Controller {
 
             //kiem tra folder co to tai khong
             if (!file_exists($dir) && !is_dir($dir)) {
-                mkdir($dir);
+                mkdir($dir, 0777, true);
             }
 
             $config['upload_path'] = $dir;
@@ -202,19 +191,19 @@ class Studying extends MY_Controller {
 
 
 
-                echo '<script>alert("Tải bài tập lên thành công. Trợ giảng sẽ chấm bài và nhận xét bài làm của bạn tại đây!"); </script>';
-                echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
+                echo 'Tải bài tập lên thành công. Trợ giảng sẽ chấm bài và nhận xét bài làm của bạn tại đây!';
+           //     echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
                 die;
             } else {
-                echo '<script>alert("' . $this->upload->display_errors() . '"); </script>';
-                echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
+                echo $this->upload->display_errors();
+             //   echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
                 die;
             }
-        } else {
-            echo '<script>alert("Có lõi xảy ra, vui lòng liên hệ ban quản trị!"); </script>';
-            echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
-            die;
-        }
+//        } else {
+//            echo 'Có lõi xảy ra, vui lòng liên hệ ban quản trị!';
+//       //     echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
+//            die;
+//        }
     }
 
     function load_learn() {
