@@ -110,7 +110,8 @@ class Home extends MY_Controller {
                     '78' => '953', //trọn bộ kế toán thuế từ a đến z
                     '80' => '1012', // giám đốc vè quản lý TrungHQ
                     '81' => '1086',
-                    '82' => '1087'
+                    '82' => '1087',
+                    '83' => '1189'
                 ];
                 if (array_key_exists($id, $videoDemoArr)) {
                     $data['id_video_demo'] = $videoDemoArr[$id];

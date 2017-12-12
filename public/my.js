@@ -7,9 +7,9 @@
 
 $(function () {
     //thời gian chuyển slide
-    $('.carousel').carousel({
+    /* $('.carousel').carousel({
         interval: 10000
-    });
+    }); */
     /*============ đặt chiều cao cho carousel ===========*/
     var max_height = 0;
     $(".student-content").each(function () {

@@ -20,8 +20,8 @@ $rs = json_decode($result);
         <title class="title-site" lp-id="59c484ed701897b41e8a9df4">Trọn bộ hướng dẫn lập báo cáo tài chính năm 2017</title>
         <meta http-equiv="Cache-control" content="no-cache">
         <meta http-equiv="Expires" content="-1">
-        <meta name="description" content="undefined">
-        <meta name="keywords" content="undefined">
+        <meta name="description" content="Trọn bộ hướng dẫn lập báo cáo tài chính năm 2017">
+        <meta name="keywords" content="báo cáo tài chính">
         <meta name="viewport" id="lp-viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">   
