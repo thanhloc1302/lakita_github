@@ -57,7 +57,7 @@ $rs = json_decode($result);
         <meta property="og:description" content="Hỗ trợ điều trị và phòng tránh những vấn đề về sức khỏe và tinh thần thường gặp cho người làm việc văn phòng." />
         <meta name="format-detection" content="telephone=no" />
         <?php $this->load->view('landingpage/y100/css'); ?>
-<?php include_once("plugin/analyticstracking.php") ?>
+        <?php include_once("plugin/analyticstracking.php") ?>
     </head>
     <body>
         <div id="fb-root"></div>
@@ -272,7 +272,7 @@ $rs = json_decode($result);
             <div id="SECTION484" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
                 <div class="container">
                     <div id="BOX485" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content"><a id="BUTTON487" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table"><span class="widget-content">ĐĂNG KÝ NGAY</span> </a>
+                        <div class="widget-content"><a href="#BOX447" id="BUTTON487" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table"><span class="widget-content">ĐĂNG KÝ NGAY</span> </a>
                             <div id="PARAGRAPH488" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
                                 <h4 class="widget-content" lp-node="h4">Với 50 tư thế đặc trị giúp lưu thông khí huyết, làm dẻo dai cột sống, xoa dịu những cơn đau nhức vùng vai, cổ, gáy.</h4> </div>
                             <div id="PARAGRAPH489" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
@@ -512,7 +512,7 @@ $rs = json_decode($result);
                                     </div>
                                 </div>
                             </div>
-                            <div id="COUNTDOWN445" class="widget-element widget-snap" lp-type="countdown" lp-lang="COUNTDOWN" lp-endtime="<?php echo  (strtotime('+1 day', strtotime(date('d-m-Y'))) - time())/60 ; ?>" lp-endtimetype="timedown" lp-display="block">
+                            <div id="COUNTDOWN445" class="widget-element widget-snap" lp-type="countdown" lp-lang="COUNTDOWN" lp-endtime="<?php echo (strtotime('+1 day', strtotime(date('d-m-Y'))) - time()) / 60; ?>" lp-endtimetype="timedown" lp-display="block">
                                 <div class="widget-content">
                                     <div><span>6</span></div>
                                     <div><span>13</span></div>
@@ -544,8 +544,8 @@ $rs = json_decode($result);
                                     <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
                                     <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
                                 </div>
-                                <button id="btn-458" class="btn btn-large btn-primary LeadPanel_action button radius e_btn_submit reg_bt" style="color:transparent"> MUA HÀNG </button>
-                                <a id="BUTTON458" class="widget-element widget-snap style-1 ladi-drop LeadPanel_action button radius e_btn_submit reg_bt"><span class="widget-content"> MUA HÀNG</span> </a>
+                                <button id="btn-457" class="btn btn-large btn-primary LeadPanel_action button radius e_btn_submit reg_bt" style="color:transparent"> MUA HÀNG </button>
+                                <a id="BUTTON457" class="widget-element widget-snap style-1 ladi-drop LeadPanel_action button radius e_btn_submit reg_bt"><span class="widget-content"> MUA HÀNG</span> </a>
                             </form>
                         </div>
                         <div class="ladi-widget-overlay"></div>
@@ -643,9 +643,9 @@ $rs = json_decode($result);
                                                 }, function () {
                                                     $(this).css('margin-left', left);
                                                 });
-                                                $("#BUTTON458").click(function (e) {
+                                                $("#BUTTON457").click(function (e) {
                                                     e.preventDefault();
-                                                    $("#btn-458").click();
+                                                    $("#btn-457").click();
                                                 });
                                             });
             </script>

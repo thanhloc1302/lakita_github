@@ -90,7 +90,7 @@ $rs = json_decode($result);
                     <div id="GROUP175" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
                         <div class="widget-content">
                             <div id="HEADLINE176" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP175" lp-display="block">
-                                <h1 class="widget-content" lp-node="h1">Khóa học: Yoga cho người làm văn phòng</h1> </div>
+                                <h1 class="widget-content" lp-node="h1">Khóa học trực tuyến: Yoga cho người làm văn phòng</h1> </div>
                             <div id="HEADLINE177" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP175" lp-display="block">
                                 <h3 class="widget-content" lp-node="h3">Liệu pháp thần kỳ "đánh bay" mọi chứng bệnh nơi công sở</h3> </div>
                             <div id="HEADLINE178" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP175" lp-display="block">

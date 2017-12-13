@@ -29,6 +29,7 @@ $route['excel-tu-a-den-z.html'] = 'landingpage/show/e400';
 $route['combo-ke-toan-excel-van-phong-2017.html'] = 'landingpage/show/cb110';
 $route['quan-tri-tai-chinh-ke-toan.html'] = 'landingpage/show/kt120';
 $route['yoga-danh-cho-nguoi-lam-van-phong.html'] = 'landingpage/show/y100';
+$route['yoga-danh-cho-nguoi-lam-van-phong-2.html'] = 'landingpage/show/y1002';
 $route['yoga-danh-cho-nguoi-lam-van-phong-6.html'] = 'landingpage/show/y1006';
 $route['yoga-danh-cho-nguoi-lam-van-phong-3.html'] = 'landingpage/show/y1003';
 $route['yoga-danh-cho-nguoi-lam-van-phong-4.html'] = 'landingpage/show/y1004';
