@@ -1154,9 +1154,9 @@
             }
             #HEADLINE343 {
                 top: 147px;
-                left: 618px;
+                left: 553px;
                 padding: 0px;
-                width: 237px;
+                width: 400px;
                 height: 33px;
             }
             #HEADLINE343 > .widget-content {

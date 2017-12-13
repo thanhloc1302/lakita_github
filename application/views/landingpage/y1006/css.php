@@ -1,4 +1,5 @@
- <script>
+
+    <script>
         function reveal() {
             for (var a = 0; a < view_elements.length; a++) {
                 var b = 0,
@@ -901,11 +902,11 @@
         
         ;
         .widget-element input,
-        
+        ;
         .widget-element textarea,
-        
+        ;
         body input,
-        
+        ;
         body textarea {
             font-family: "Open Sans", sans-serif!important
         }
@@ -1040,7 +1041,7 @@
         }
         
         body {
-            width: 100vw;
+            width: 100%;
             margin: 0 auto;
             overflow-x: hidden
         }
@@ -1141,25 +1142,25 @@
             #SECTION231 .container {}
             #SECTION231 {}
             #GROUP175 {
-                top: 159px;
+                top: 125px;
                 left: -9px;
                 width: 463px;
-                height: 247px;
+                height: 322px;
             }
             #HEADLINE176 {
                 top: 0px;
                 left: 10px;
                 padding: 0px;
                 width: 454px;
-                height: 102px;
+                height: 153px;
             }
             #HEADLINE176 > .widget-content {
                 font-size: 45px;
                 text-align: left;
             }
             #HEADLINE177 {
-                top: 112px;
-                left: 10px;
+                top: 174px;
+                left: 9px;
                 padding: 0px;
                 width: 449px;
                 height: 52px;
@@ -1169,7 +1170,7 @@
                 text-align: left;
             }
             #HEADLINE178 {
-                top: 207px;
+                top: 256px;
                 left: 1px;
                 padding: 0px;
                 width: 424px;
@@ -1180,7 +1181,7 @@
                 text-align: center;
             }
             #LINE179 {
-                top: 176px;
+                top: 227px;
                 left: 11px;
                 width: 406px;
                 height: 25px;
@@ -1190,35 +1191,13 @@
                 height: 100%;
                 background-position: center center;
                 background-size: cover;
-                background-image: url(https://static.ladipage.net/s500/5a28c4f8c3f6592b3acabec8/848A0512-1512985005.png);
+                background-image: url(https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/848A0512-1512985005.png);
             }
             #IMAGE365 {
                 top: 61px;
                 left: 462.012px;
                 width: 476.140625px;
                 height: 395px;
-            }
-            #HEADLINE133 {
-                top: 68px;
-                left: 172px;
-                padding: 0px;
-                width: 662px;
-                height: 26px;
-            }
-            #HEADLINE133 > .widget-content {
-                font-size: 20px;
-                text-align: center;
-            }
-            #PARAGRAPH134 {
-                top: 100px;
-                left: 202.516px;
-                padding: 0px;
-                width: 555px;
-                height: 18px;
-            }
-            #PARAGRAPH134 > .widget-content {
-                font-size: 14px;
-                text-align: center;
             }
             #LINE135 {
                 top: 137px;
@@ -1328,6 +1307,40 @@
                 font-size: 14px;
                 text-align: center;
             }
+            #GROUP337 {
+                top: 507.96875px;
+                left: 151px;
+                width: 631px;
+                height: 151px;
+            }
+            #HEADLINE338 {
+                top: 131px;
+                left: 1px;
+                padding: 0px;
+                width: 631px;
+                height: 20px;
+            }
+            #HEADLINE338 > .widget-content {
+                font-size: 16px;
+                text-align: center;
+            }
+            #BOX340 {
+                top: 0px;
+                left: 269px;
+                width: 121px;
+                height: 121px;
+            }
+            #HEADLINE341 {
+                top: 38px;
+                left: 251px;
+                padding: 0px;
+                width: 154px;
+                height: 42px;
+            }
+            #HEADLINE341 > .widget-content {
+                font-size: 36px;
+                text-align: center;
+            }
             #GROUP142 {
                 top: 162px;
                 left: 325px;
@@ -1379,38 +1392,26 @@
                 width: 111.9921875px;
                 height: 108.02734375px;
             }
-            #GROUP337 {
-                top: 507.96875px;
-                left: 151px;
-                width: 631px;
-                height: 151px;
-            }
-            #HEADLINE338 {
-                top: 131px;
-                left: 1px;
+            #HEADLINE133 {
+                top: 72.9688px;
+                left: 116px;
                 padding: 0px;
-                width: 631px;
-                height: 20px;
+                width: 713px;
+                height: 28px;
             }
-            #HEADLINE338 > .widget-content {
-                font-size: 16px;
+            #HEADLINE133 > .widget-content {
+                font-size: 22px;
                 text-align: center;
             }
-            #BOX340 {
-                top: 0px;
-                left: 269px;
-                width: 121px;
-                height: 121px;
-            }
-            #HEADLINE341 {
-                top: 38px;
-                left: 251px;
+            #PARAGRAPH134 {
+                top: 100px;
+                left: 202.516px;
                 padding: 0px;
-                width: 154px;
-                height: 42px;
+                width: 555px;
+                height: 18px;
             }
-            #HEADLINE341 > .widget-content {
-                font-size: 36px;
+            #PARAGRAPH134 > .widget-content {
+                font-size: 14px;
                 text-align: center;
             }
             #LINE43 {
@@ -1607,15 +1608,9 @@
                 font-size: 52px;
                 text-align: center;
             }
-            #GROUP20 {
-                top: 153.03125px;
-                left: 16px;
-                width: 600px;
-                height: 287px;
-            }
             #HEADLINE23 {
-                top: 146px;
-                left: 386px;
+                top: 299.031px;
+                left: 402px;
                 padding: 0px;
                 width: 154px;
                 height: 20px;
@@ -1625,8 +1620,8 @@
                 text-align: center;
             }
             #PARAGRAPH24 {
-                top: 179px;
-                left: 333px;
+                top: 332.031px;
+                left: 349px;
                 padding: 0px;
                 width: 268px;
                 height: 108px;
@@ -1636,14 +1631,14 @@
                 text-align: center;
             }
             #BOX21 {
-                top: 0px;
-                left: 403px;
+                top: 153.031px;
+                left: 419px;
                 width: 121px;
                 height: 121px;
             }
             #PARAGRAPH366 {
-                top: 180.953125px;
-                left: 1px;
+                top: 333.984px;
+                left: 17px;
                 padding: 0px;
                 width: 268px;
                 height: 90px;
@@ -1861,17 +1856,6 @@
                 font-size: 35px;
                 text-align: left;
             }
-            #HEADLINE364 {
-                top: 550.047px;
-                left: 507px;
-                padding: 0px;
-                width: 397.3333435058594px;
-                height: 42.66666793823242px;
-            }
-            #HEADLINE364 > .widget-content {
-                font-size: 14px;
-                text-align: center;
-            }
             #BOX346 {
                 top: 137.047px;
                 left: 69px;
@@ -2005,6 +1989,17 @@
             #HEADLINE369 > .widget-content {
                 font-size: 56px;
                 text-align: left;
+            }
+            #HEADLINE364 {
+                top: 550.047px;
+                left: 491px;
+                padding: 0px;
+                width: 397px;
+                height: 22px;
+            }
+            #HEADLINE364 > .widget-content {
+                font-size: 14px;
+                text-align: center;
             }
             #HEADLINE232 {
                 top: 53px;
@@ -2175,7 +2170,7 @@
         
         #SECTION172 {
             display: block;
-            background-image: url("https://static.ladipage.net/s1400/uploads/images/2a1ae041-4f89-4d94-b525-a965b6a0c55d.jpg");
+            background-image: url("https://static.ladipage.net/uploads/images/2a1ae041-4f89-4d94-b525-a965b6a0c55d.jpg");
             background-color: rgba(255, 255, 255, 0);
             background-origin: content-box;
             background-size: cover;
@@ -2317,36 +2312,6 @@
             background-color: rgba(255, 255, 255, 0)
         }
         
-        #HEADLINE133 {
-            display: block;
-        }
-        
-        #HEADLINE133 > .widget-content {
-            background-color: rgba(255, 255, 255, 0);
-            opacity: 1;
-            font-family: 'Open Sans';
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            color: rgba(255, 196, 0, 1);
-            font-weight: 700;
-            line-height: 26px;
-        }
-        
-        #PARAGRAPH134 {
-            display: block;
-        }
-        
-        #PARAGRAPH134 > .widget-content {
-            background-color: rgba(255, 255, 255, 0);
-            opacity: 1;
-            font-family: 'Open Sans';
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            color: rgba(97, 97, 97, 1);
-            font-weight: 300;
-            line-height: 18px;
-        }
-        
         #LINE135 {
             display: block;
         }
@@ -2418,7 +2383,7 @@
         }
         
         #BOX151 > .widget-content {
-            background-image: url("https://static.ladipage.net/s150/5a28c4f8c3f6592b3acabec8/trinh_tai-1512977625.jpg");
+            background-image: url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/trinh_tai-1512977625.jpg");
             background-origin: content-box;
             background-size: cover;
             background-attachment: scroll;
@@ -2530,7 +2495,7 @@
         }
         
         #BOX139 > .widget-content {
-            background-image: url("https://static.ladipage.net/s150/5a28c4f8c3f6592b3acabec8/truong_thuong_huyen-1512977569.jpg");
+            background-image: url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/truong_thuong_huyen-1512977569.jpg");
             background-origin: content-box;
             background-size: cover;
             background-attachment: scroll;
@@ -2595,6 +2560,76 @@
             -webkit-font-smoothing: antialiased;
             color: rgba(97, 97, 97, 1);
             line-height: 18px;
+        }
+        
+        #GROUP337 {
+            display: block;
+        }
+        
+        #GROUP337 > .widget-content {
+            background-color: rgba(255, 255, 255, 0);
+            font-family: 'Open Sans', sans-serif;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            color: rgba(0, 0, 0, 1);
+        }
+        
+        #HEADLINE338 {
+            display: block;
+        }
+        
+        #HEADLINE338 > .widget-content {
+            background-color: rgba(255, 255, 255, 0);
+            opacity: 1;
+            font-family: 'Open Sans';
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            color: rgba(0, 0, 0, 1);
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 20px;
+        }
+        
+        #BOX340 {
+            display: block;
+        }
+        
+        #BOX340 > .widget-content {
+            background-color: rgba(189, 189, 189, 0);
+            font-family: 'Open Sans', sans-serif;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            color: rgba(0, 0, 0, 1);
+        }
+        
+        #BOX340> .widget-content {
+            border-radius: 220px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgba(251, 192, 45, 1);
+        }
+        
+        #BOX340> .ladi-widget-overlay {
+            border-radius: 220px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgba(251, 192, 45, 1);
+        }
+        
+        #HEADLINE341 {
+            display: block;
+        }
+        
+        #HEADLINE341 > .widget-content {
+            background-color: rgba(255, 255, 255, 0);
+            opacity: 1;
+            font-family: 'Open Sans';
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            color: rgba(0, 0, 0, 1);
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 42px;
         }
         
         #GROUP142 {
@@ -2681,7 +2716,7 @@
         }
         
         #BOX145 > .widget-content {
-            background-image: url("https://static.ladipage.net/s150/5a28c4f8c3f6592b3acabec8/nguyen_thanh_huyen-1512977598.jpg");
+            background-image: url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/nguyen_thanh_huyen-1512977598.jpg");
             background-origin: content-box;
             background-size: cover;
             background-attachment: scroll;
@@ -2712,74 +2747,34 @@
             background-color: rgba(255, 255, 255, 0);
         }
         
-        #GROUP337 {
+        #HEADLINE133 {
             display: block;
         }
         
-        #GROUP337 > .widget-content {
-            background-color: rgba(255, 255, 255, 0);
-            font-family: 'Open Sans', sans-serif;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            color: rgba(0, 0, 0, 1);
-        }
-        
-        #HEADLINE338 {
-            display: block;
-        }
-        
-        #HEADLINE338 > .widget-content {
+        #HEADLINE133 > .widget-content {
             background-color: rgba(255, 255, 255, 0);
             opacity: 1;
             font-family: 'Open Sans';
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
-            color: rgba(0, 0, 0, 1);
-            text-transform: uppercase;
+            color: rgba(255, 196, 0, 1);
             font-weight: 700;
-            line-height: 20px;
+            line-height: 28px;
         }
         
-        #BOX340 {
+        #PARAGRAPH134 {
             display: block;
         }
         
-        #BOX340 > .widget-content {
-            background-color: rgba(189, 189, 189, 0);
-            font-family: 'Open Sans', sans-serif;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            color: rgba(0, 0, 0, 1);
-        }
-        
-        #BOX340> .widget-content {
-            border-radius: 220px;
-            border-width: 1px;
-            border-style: solid;
-            border-color: rgba(251, 192, 45, 1);
-        }
-        
-        #BOX340> .ladi-widget-overlay {
-            border-radius: 220px;
-            border-width: 1px;
-            border-style: solid;
-            border-color: rgba(251, 192, 45, 1);
-        }
-        
-        #HEADLINE341 {
-            display: block;
-        }
-        
-        #HEADLINE341 > .widget-content {
+        #PARAGRAPH134 > .widget-content {
             background-color: rgba(255, 255, 255, 0);
             opacity: 1;
             font-family: 'Open Sans';
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
-            color: rgba(0, 0, 0, 1);
-            text-transform: uppercase;
-            font-weight: 700;
-            line-height: 42px;
+            color: rgba(97, 97, 97, 1);
+            font-weight: 300;
+            line-height: 18px;
         }
         
         #LINE43 {
@@ -3170,18 +3165,6 @@
             text-transform: uppercase;
             font-weight: 700;
             line-height: 58px;
-        }
-        
-        #GROUP20 {
-            display: block;
-        }
-        
-        #GROUP20 > .widget-content {
-            background-color: rgba(255, 255, 255, 0);
-            font-family: 'Open Sans', sans-serif;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            color: rgba(0, 0, 0, 1);
         }
         
         #HEADLINE23 {
@@ -3648,20 +3631,6 @@
             border-style: solid;
         }
         
-        #HEADLINE364 {
-            display: block;
-        }
-        
-        #HEADLINE364 > .widget-content {
-            background-color: rgba(255, 255, 255, 0);
-            font-family: 'Open Sans';
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            color: rgba(181, 181, 181, 1);
-            font-weight: 400;
-            line-height: 22px;
-        }
-        
         #BOX346 {
             display: block;
         }
@@ -3988,6 +3957,20 @@
             color: rgba(255, 255, 255, 1);
             font-weight: 700;
             line-height: 62px;
+        }
+        
+        #HEADLINE364 {
+            display: block;
+        }
+        
+        #HEADLINE364 > .widget-content {
+            background-color: rgba(255, 255, 255, 0);
+            font-family: 'Open Sans';
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            color: rgba(181, 181, 181, 1);
+            font-weight: 400;
+            line-height: 22px;
         }
         
         #HEADLINE232 {
@@ -4368,11 +4351,11 @@
             }
             #SECTION172 {
                 width: 100%;
-                height: 714px;
+                height: 748.4375px;
             }
             #SECTION172 .container {}
             #SECTION172 {
-                background-image: url("https://static.ladipage.net/s400/uploads/images/2a1ae041-4f89-4d94-b525-a965b6a0c55d.jpg");
+                background-image: url("https://static.ladipage.net/uploads/images/2a1ae041-4f89-4d94-b525-a965b6a0c55d.jpg");
                 background-origin: content-box;
                 background-size: cover;
                 background-attachment: scroll;
@@ -4381,10 +4364,11 @@
             }
             #SECTION132 {
                 width: 100%;
-                height: 1258.359375px;
+                height: 1231.359375px;
             }
             #SECTION132 .container {}
             #SECTION132 {
+                display: none;
                 background-image: none;
             }
             #SECTION32 {
@@ -4397,7 +4381,7 @@
             }
             #SECTION12 {
                 width: 100%;
-                height: 869px;
+                height: 999.546875px;
             }
             #SECTION12 .container {}
             #SECTION12 {
@@ -4421,7 +4405,7 @@
             }
             #SECTION111 {
                 width: 100%;
-                height: 997px;
+                height: 1026px;
             }
             #SECTION111 .container {}
             #SECTION111 {
@@ -4429,24 +4413,24 @@
             }
             #SECTION231 {
                 width: 100%;
-                height: 593.90625px;
+                height: 459.171875px;
             }
             #SECTION231 .container {}
             #SECTION231 {
                 background-image: none;
             }
             #GROUP175 {
-                top: 28px;
-                left: 28.5px;
+                top: 19px;
+                left: 35.5px;
                 width: 303px;
-                height: 353px;
+                height: 369px;
             }
             #HEADLINE176 {
                 top: 0px;
                 left: 1px;
                 padding: 0px;
-                width: 302px;
-                height: 132px;
+                width: 303px;
+                height: 176px;
             }
             #HEADLINE176 > .widget-content {
                 font-size: 40px;
@@ -4454,8 +4438,8 @@
                 line-height: 44px;
             }
             #HEADLINE177 {
-                top: 187px;
-                left: 1px;
+                top: 186px;
+                left: 1.5px;
                 padding: 0px;
                 width: 302px;
                 height: 78px;
@@ -4465,8 +4449,8 @@
                 text-align: left;
             }
             #HEADLINE178 {
-                top: 293px;
-                left: 2px;
+                top: 309px;
+                left: 1.5px;
                 padding: 0px;
                 width: 302px;
                 height: 60px;
@@ -4476,8 +4460,8 @@
                 text-align: center;
             }
             #LINE179 {
-                top: 258px;
-                left: 3px;
+                top: 274px;
+                left: 2.5px;
                 width: 300px;
                 height: 25px;
             }
@@ -4486,45 +4470,22 @@
                 height: 100%;
                 background-position: center center;
                 background-size: cover;
-                background-image: url(https://static.ladipage.net/s400/5a28c4f8c3f6592b3acabec8/848A0512-1512985005.png);
+                background-image: url(https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/848A0512-1512985005.png);
             }
             #IMAGE365 {
-                top: 393.453px;
-                left: 12px;
+                top: 414.453px;
+                left: 7.5px;
                 width: 355px;
                 height: 302px;
             }
-            #HEADLINE133 {
-                top: 20px;
-                left: 10.5px;
-                padding: 0px;
-                width: 355px;
-                height: 48px;
-            }
-            #HEADLINE133 > .widget-content {
-                font-size: 20px;
-                text-align: center;
-                line-height: 24px;
-            }
-            #PARAGRAPH134 {
-                top: 79px;
-                left: 11px;
-                padding: 0px;
-                width: 355px;
-                height: 36px;
-            }
-            #PARAGRAPH134 > .widget-content {
-                font-size: 16px;
-                text-align: center;
-            }
             #LINE135 {
-                top: 115px;
+                top: 88px;
                 left: 128.5px;
                 width: 119px;
                 height: 25px;
             }
             #GROUP148 {
-                top: 741.297px;
+                top: 714.297px;
                 left: 33.5px;
                 width: 304px;
                 height: 230.6875px;
@@ -4558,11 +4519,11 @@
                 height: 73px;
             }
             #BOX151 > .widget-content {
-                background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/trinh_tai-1512977625.jpg");
-                background-image: -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/trinh_tai-1512977625.jpg");
-                background-image: -ms-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/trinh_tai-1512977625.jpg");
-                background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/trinh_tai-1512977625.jpg");
-                background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/trinh_tai-1512977625.jpg");
+                background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/trinh_tai-1512977625.jpg");
+                background-image: -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/trinh_tai-1512977625.jpg");
+                background-image: -ms-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/trinh_tai-1512977625.jpg");
+                background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/trinh_tai-1512977625.jpg");
+                background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/trinh_tai-1512977625.jpg");
                 background-origin: content-box;
                 background-size: cover;
                 background-attachment: scroll;
@@ -4587,7 +4548,7 @@
                 text-align: center;
             }
             #GROUP199 {
-                top: 437.422px;
+                top: 410.422px;
                 left: 33.5px;
                 width: 304px;
                 height: 270.96875px;
@@ -4607,7 +4568,7 @@
                 top: 113.75px;
                 left: 41.4844px;
                 padding: 0px;
-                width: 217.90625px;
+                width: 217.890625px;
                 height: 20px;
             }
             #HEADLINE138 > .widget-content {
@@ -4621,11 +4582,11 @@
                 height: 73px;
             }
             #BOX139 > .widget-content {
-                background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/truong_thuong_huyen-1512977569.jpg");
-                background-image: -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/truong_thuong_huyen-1512977569.jpg");
-                background-image: -ms-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/truong_thuong_huyen-1512977569.jpg");
-                background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/truong_thuong_huyen-1512977569.jpg");
-                background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/truong_thuong_huyen-1512977569.jpg");
+                background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/truong_thuong_huyen-1512977569.jpg");
+                background-image: -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/truong_thuong_huyen-1512977569.jpg");
+                background-image: -ms-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/truong_thuong_huyen-1512977569.jpg");
+                background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/truong_thuong_huyen-1512977569.jpg");
+                background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/truong_thuong_huyen-1512977569.jpg");
                 background-origin: content-box;
                 background-size: cover;
                 background-attachment: scroll;
@@ -4649,8 +4610,42 @@
                 font-size: 14px;
                 text-align: center;
             }
+            #GROUP337 {
+                top: -207px;
+                left: 138px;
+                width: 623.5px;
+                height: 121px;
+            }
+            #HEADLINE338 {
+                top: 40.3438px;
+                left: 1px;
+                padding: 0px;
+                width: 355px;
+                height: 40px;
+            }
+            #HEADLINE338 > .widget-content {
+                font-size: 14px;
+                text-align: center;
+            }
+            #BOX340 {
+                top: 0px;
+                left: 487px;
+                width: 121px;
+                height: 121px;
+            }
+            #HEADLINE341 {
+                top: 43px;
+                left: 470.5px;
+                padding: 0px;
+                width: 154px;
+                height: 42px;
+            }
+            #HEADLINE341 > .widget-content {
+                font-size: 36px;
+                text-align: center;
+            }
             #GROUP142 {
-                top: 145px;
+                top: 118px;
                 left: 35.5px;
                 width: 304px;
                 height: 259.421875px;
@@ -4701,49 +4696,38 @@
                 height: 73px;
             }
             #BOX145 > .widget-content {
-                background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/nguyen_thanh_huyen-1512977598.jpg");
-                background-image: -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/nguyen_thanh_huyen-1512977598.jpg");
-                background-image: -ms-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/nguyen_thanh_huyen-1512977598.jpg");
-                background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/nguyen_thanh_huyen-1512977598.jpg");
-                background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/s100/5a28c4f8c3f6592b3acabec8/nguyen_thanh_huyen-1512977598.jpg");
+                background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/nguyen_thanh_huyen-1512977598.jpg");
+                background-image: -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/nguyen_thanh_huyen-1512977598.jpg");
+                background-image: -ms-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/nguyen_thanh_huyen-1512977598.jpg");
+                background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/nguyen_thanh_huyen-1512977598.jpg");
+                background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/nguyen_thanh_huyen-1512977598.jpg");
                 background-origin: content-box;
                 background-size: cover;
                 background-attachment: scroll;
                 background-position: top center;
                 background-repeat: no-repeat;
             }
-            #GROUP337 {
-                top: -591px;
+            #HEADLINE133 {
+                top: 72.9688px;
                 left: 10px;
-                width: 623.5px;
-                height: 121px;
-            }
-            #HEADLINE338 {
-                top: 40.3438px;
-                left: 1px;
                 padding: 0px;
                 width: 355px;
-                height: 40px;
+                height: 72px;
             }
-            #HEADLINE338 > .widget-content {
-                font-size: 14px;
+            #HEADLINE133 > .widget-content {
+                font-size: 22px;
                 text-align: center;
+                line-height: 24px;
             }
-            #BOX340 {
-                top: 0px;
-                left: 487px;
-                width: 121px;
-                height: 121px;
-            }
-            #HEADLINE341 {
-                top: 43px;
-                left: 470.5px;
+            #PARAGRAPH134 {
+                top: 52px;
+                left: 11px;
                 padding: 0px;
-                width: 154px;
-                height: 42px;
+                width: 355px;
+                height: 36px;
             }
-            #HEADLINE341 > .widget-content {
-                font-size: 36px;
+            #PARAGRAPH134 > .widget-content {
+                font-size: 16px;
                 text-align: center;
             }
             #LINE43 {
@@ -4876,20 +4860,20 @@
                 text-align: center;
             }
             #GROUP15 {
-                top: 128.063px;
-                left: 109.5px;
-                width: 521px;
-                height: 688.53125px;
+                top: 124px;
+                left: 49.5px;
+                width: 274px;
+                height: 650px;
             }
             #BOX16 {
-                top: 238.578px;
-                left: 17px;
+                top: 240.438px;
+                left: 78px;
                 width: 121px;
-                height: 62px;
+                height: 119px;
             }
             #HEADLINE18 {
-                top: 85.5625px;
-                left: 3px;
+                top: 103px;
+                left: 60px;
                 padding: 0px;
                 width: 154px;
                 height: 20px;
@@ -4899,8 +4883,8 @@
                 text-align: center;
             }
             #PARAGRAPH19 {
-                top: 670.531px;
-                left: 248px;
+                top: 427px;
+                left: 1px;
                 padding: 0px;
                 width: 274px;
                 height: 18px;
@@ -4911,7 +4895,7 @@
             }
             #HEADLINE326 {
                 top: 0px;
-                left: 3px;
+                left: 62px;
                 padding: 0px;
                 width: 154px;
                 height: 58px;
@@ -4921,8 +4905,8 @@
                 text-align: center;
             }
             #HEADLINE332 {
-                top: 242.578px;
-                left: 2px;
+                top: 271.438px;
+                left: 61px;
                 padding: 0px;
                 width: 154px;
                 height: 58px;
@@ -4932,8 +4916,8 @@
                 text-align: center;
             }
             #HEADLINE336 {
-                top: 495.578px;
-                left: 1px;
+                top: 592px;
+                left: 53px;
                 padding: 0px;
                 width: 154px;
                 height: 58px;
@@ -4942,15 +4926,9 @@
                 font-size: 52px;
                 text-align: center;
             }
-            #GROUP20 {
-                top: 123.063px;
-                left: 49.5px;
-                width: 278px;
-                height: 467px;
-            }
             #HEADLINE23 {
-                top: 329px;
-                left: 58px;
+                top: 513.55px;
+                left: 111.5px;
                 padding: 0px;
                 width: 154px;
                 height: 20px;
@@ -4960,8 +4938,8 @@
                 text-align: center;
             }
             #PARAGRAPH24 {
-                top: 359px;
-                left: 1px;
+                top: 551px;
+                left: 56px;
                 padding: 0px;
                 width: 268px;
                 height: 108px;
@@ -4971,36 +4949,36 @@
                 text-align: center;
             }
             #BOX21 {
-                top: 0px;
-                left: 78px;
+                top: 94px;
+                left: 127px;
                 width: 121px;
-                height: 70px;
+                height: 121px;
             }
             #PARAGRAPH366 {
-                top: 134px;
-                left: 11px;
+                top: 261.563px;
+                left: 56px;
                 padding: 0px;
-                width: 268px;
-                height: 90px;
+                width: 276px;
+                height: 72px;
             }
             #PARAGRAPH366 > .widget-content {
                 font-size: 13px;
                 text-align: center;
             }
             #GROUP25 {
-                top: 615.641px;
-                left: 52px;
+                top: 684.563px;
+                left: 34px;
                 width: 277px;
-                height: 208.34375px;
+                height: 252.984375px;
             }
             #BOX26 {
                 top: 0px;
-                left: 76.5px;
+                left: 85px;
                 width: 121px;
-                height: 72px;
+                height: 121px;
             }
             #PARAGRAPH29 {
-                top: 136.344px;
+                top: 180.984px;
                 left: 1px;
                 padding: 0px;
                 width: 277px;
@@ -5011,19 +4989,19 @@
                 text-align: center;
             }
             #HEADLINE28 {
-                top: 95px;
-                left: 57.5px;
+                top: 148.984px;
+                left: 67px;
                 padding: 0px;
                 width: 154px;
-                height: 4.609375px;
+                height: 20px;
             }
             #HEADLINE28 > .widget-content {
                 font-size: 14px;
                 text-align: center;
             }
             #HEADLINE41 {
-                top: 31px;
-                left: 18px;
+                top: 20px;
+                left: 15px;
                 padding: 0px;
                 width: 345px;
                 height: 29px;
@@ -5033,8 +5011,8 @@
                 text-align: center;
             }
             #LINE42 {
-                top: 76px;
-                left: 141.5px;
+                top: 59px;
+                left: 138.5px;
                 width: 98px;
                 height: 25px;
             }
@@ -5051,8 +5029,8 @@
                 line-height: 24px;
             }
             #PARAGRAPH91 {
-                top: 105.031px;
-                left: 10px;
+                top: 300px;
+                left: 10.5px;
                 padding: 0px;
                 width: 355px;
                 height: 440px;
@@ -5160,10 +5138,10 @@
                 line-height: 24px;
             }
             #PARAGRAPH265 {
-                top: 620px;
+                top: 623.719px;
                 left: 42px;
                 padding: 0px;
-                width: 326px;
+                width: 337px;
                 height: 120px;
             }
             #PARAGRAPH265 > .widget-content {
@@ -5189,8 +5167,8 @@
                 height: 27px;
             }
             #BUTTON356 {
-                top: 322.953px;
-                left: 30px;
+                top: 763.953px;
+                left: 26px;
                 padding: 0px;
                 width: 315px;
                 height: 90px;
@@ -5199,20 +5177,9 @@
                 font-size: 35px;
                 text-align: left;
             }
-            #HEADLINE364 {
-                top: 912px;
-                left: 10.5px;
-                padding: 0px;
-                width: 355px;
-                height: 44px;
-            }
-            #HEADLINE364 > .widget-content {
-                font-size: 14px;
-                text-align: center;
-            }
             #BOX346 {
-                top: 113px;
-                left: 26px;
+                top: 122px;
+                left: 21.5px;
                 width: 323px;
                 height: 469px;
             }
@@ -5229,31 +5196,31 @@
                 line-height: 33px;
             }
             #FORM348 {
-                top: 80px;
-                left: 27.9883px;
+                top: 100px;
+                left: 27.9844px;
                 width: 261.984375px;
-                height: 305.453125px;
+                height: 275.453125px;
             }
             #ITEM_FORM349 {
-                top: 70.6875px;
+                top: 50.6875px;
                 left: 0px;
                 width: 261.984375px;
                 height: 40.6875px;
             }
             #ITEM_FORM350 {
-                top: 121.375px;
+                top: 101.375px;
                 left: 0px;
                 width: 261.984375px;
                 height: 40.6875px;
             }
             #ITEM_FORM351 {
-                top: 172.063px;
+                top: 152.063px;
                 left: 0px;
                 width: 261.984375px;
                 height: 123.390625px;
             }
             #ITEM_FORM352 {
-                top: 20px;
+                top: 0px;
                 left: 0px;
                 width: 261.984375px;
                 height: 40.6875px;
@@ -5270,8 +5237,8 @@
                 text-align: center;
             }
             #BOX357 {
-                top: 805px;
-                left: 36.0625px;
+                top: 887px;
+                left: 33.3125px;
                 width: 312.28125px;
                 height: 101px;
             }
@@ -5335,8 +5302,8 @@
                 font-size: 36px;
             }
             #HEADLINE369 {
-                top: 749.719px;
-                left: 128.5px;
+                top: 786.063px;
+                left: 206.5px;
                 padding: 0px;
                 width: 288px;
                 height: 36px;
@@ -5345,6 +5312,18 @@
                 font-size: 56px;
                 text-align: left;
                 line-height: 33px;
+            }
+            #HEADLINE364 {
+                display: none!important;
+                top: 994px;
+                left: 10px;
+                padding: 0px;
+                width: 355px;
+                height: 22px;
+            }
+            #HEADLINE364 > .widget-content {
+                font-size: 14px;
+                text-align: center;
             }
             #HEADLINE232 {
                 top: 20px;
@@ -5358,7 +5337,7 @@
                 text-align: center;
             }
             #HEADLINE234 {
-                top: 374px;
+                top: 239px;
                 left: 32.5px;
                 padding: 0px;
                 width: 248px;
@@ -5449,7 +5428,7 @@
                 text-align: left;
             }
             #BUTTON257 {
-                top: 447.469px;
+                top: 316.36px;
                 left: 106.5px;
                 padding: 0px;
                 width: 102px;
@@ -5460,7 +5439,7 @@
                 text-align: center;
             }
             #FORM258 {
-                top: 410.281px;
+                top: 279.156px;
                 left: 23.5px;
                 width: 267px;
                 height: 132.90625px;
@@ -5496,7 +5475,8 @@
                 text-align: left;
             }
             #HEADLINE272 {
-                top: 234px;
+                display: none!important;
+                top: 234.625px;
                 left: 30.5px;
                 padding: 0px;
                 width: 288px;

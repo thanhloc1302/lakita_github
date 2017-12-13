@@ -106,7 +106,7 @@ $rs = json_decode($result);
                     <div id="HEADLINE492" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                         <h5 class="widget-content" lp-node="h5">&nbsp;<br>YOGA CHO DÂN VĂN PHÒNG</h5> </div>
                     <div id="HEADLINE493" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h3 class="widget-content" lp-node="h3">KHÓA HỌC:</h3> </div>
+                        <h3 class="widget-content" lp-node="h3">KHÓA HỌC TRỰC TUYẾN:</h3> </div>
                     <div id="HEADLINE495" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                         <h2 class="widget-content" lp-node="h2">&nbsp; &nbsp;50%</h2> </div><a id="BUTTON686" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table"><span class="widget-content">&nbsp;<span style="color: rgb(10, 13, 45);">CHỈ CÒN</span>&nbsp;<div id="HEADLINE692" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" href="" lp-direction="" style="top: 8px; left: 158px; width: 136.734px; text-align: left; padding: 0px; display: block; height: 59px;"><h2 class="widget-content" lp-node="h2" href="" style="width: 136.734px; font-size: 53px; line-height: 59px; background-color: rgba(255, 255, 255, 0); font-family: Open Sans, sans-serif; color: rgb(10, 13, 45); font-weight: 700; background-size: cover; background-origin: content-box; background-position: center top; background-repeat: no-repeat; object-fit: cover; height: 59px; display: table-cell; vertical-align: middle;">295k</h2> </div></span> </a></div>
                 <div class="ladi-widget-overlay"></div>
@@ -660,7 +660,7 @@ $rs = json_decode($result);
             <div id="SECTION624" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
                 <div class="container">
                     <div id="HEADLINE625" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <p class="widget-content" lp-node="p">Chỉ còn 6 ngày nữa là chương trình ưu đãi dành cho khách hàng kết thúc. Nhanh tay lên!</p>
+                        <p class="widget-content" lp-node="p">Chỉ còn 1 ngày nữa là chương trình ưu đãi dành cho khách hàng kết thúc. Nhanh tay lên!</p>
                     </div><a id="BUTTON626" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table"><span class="widget-content">&nbsp; CHỈ CÒN&nbsp;</span> </a>
                     <div id="PARAGRAPH627" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
                         <h6 class="widget-content" lp-node="h6">- Ưu đãi ĐẶC BIỆT (dành cho 100 khách hàng đăng ký đầu tiên)<br>- TẶNG NGAY ebook "2100 asanas" trọn bộ đầy đủ nhất những tư thế yoga cũng như các biến thể.</h6> </div>

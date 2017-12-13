@@ -445,7 +445,7 @@ $rs = json_decode($result);
                                     </div>
                                 </div>
                             </div>
-                            <div id="COUNTDOWN363" class="widget-element widget-snap" lp-type="countdown" lp-lang="COUNTDOWN" lp-endtime="<?php echo (strtotime('+1 day', strtotime(date('d-m-Y'))) - time()) / 60; ?>" lp-endtimetype="timedown" lp-display="block">
+                            <div id="COUNTDOWN363" class="widget-element widget-snap" lp-type="countdown" lp-lang="COUNTDOWN" lp-endtime="1446" lp-endtimetype="timedown" lp-display="block">
                                 <div class="widget-content">
                                     <div><span>1</span></div>
                                     <div><span>0</span></div>
