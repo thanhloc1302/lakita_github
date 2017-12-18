@@ -87,7 +87,7 @@ $rs = json_decode($result);
                         <div class="ladi-widget-overlay"></div>
                     </div>
                     <div id="HEADLINE343" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h4 class="widget-content" lp-node="h4">KHÓA HỌC&nbsp;</h4> </div>
+                        <h4 class="widget-content" lp-node="h4">KHÓA HỌC TRỰC TUYẾN&nbsp;</h4> </div>
                     <div id="BOX344" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
                         <div class="widget-content">
                             <div id="HEADLINE345" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">

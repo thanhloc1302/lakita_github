@@ -14,7 +14,7 @@ and open the template in the editor.
         <meta property="og:type"   content="website" /> 
         <meta property="og:url" content="https://lakita.vn/quyet-toan-thue-tu-a-den-z.html" />
         <meta property="og:title" content="KHÓA HỌC QUYẾT TOÁN THUẾ TỪ A-Z - lakita.vn" />
-        <meta property="og:image" content="http://lakita.vn/data/source/courses/360x260/untitled-2-1493008878.png" />
+        <meta property="og:image" content="https://lakita.vn/data/source/courses/360x260/ketoanthue-1495425175.png" />
         <meta property="og:description" content="Dành cho kế toán ra trường nhiều năm nhưng chưa được kê khai thuế - quyết toán thuế" />
         <meta name="description" content="Hệ thống đào tạo trực tuyến lakita – Cùng bạn vươn xa Học Online qua Video bài giảng - Học Online thỏa thích mọi lúc, mọi nơi - Học trên mọi thiết bị - Học với giảng viên, chuyên gia hàng đầu trong lĩnh vực - Hóa đơn chứng từ - Làm chủ hóa đơn chứng từ" />
         <link rel="icon" href="https://lakita.vn/data/source/setting/favicon.png" />

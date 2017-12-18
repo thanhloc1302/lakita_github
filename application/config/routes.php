@@ -23,6 +23,9 @@ $route['thue-thu-nhap-doanh-nghiep-co-ban-den-nang-cao.html'] = 'landingpage/sho
 $route['thue-thu-nhap-ca-nhan-co-ban-den-nang-cao.html'] = 'landingpage/show/kt360';
 $route['thuc-hanh-ke-toan-tren-excel.html'] = 'landingpage/show/kt510';
 $route['tron-bo-quyet-toan-thue-tu-a-den-z.html'] = 'landingpage/show/kt2102';
+$route['tron-bo-quyet-toan-thue-tu-a-den-z-dangph.html'] = 'landingpage/show/kt210dangph';
+$route['tron-bo-quyet-toan-thue-tu-a-den-z-candh1.html'] = 'landingpage/show/kt210candh1';
+$route['tron-bo-quyet-toan-thue-tu-a-den-z-candh2.html'] = 'landingpage/show/kt210candh2';
 $route['ke-toan-danh-cho-giam-doc.html'] = 'landingpage/show/kt1202';
 $route['bi-quyet-lam-chu-excel-2017.html'] = 'landingpage/show/e100';
 $route['excel-tu-a-den-z.html'] = 'landingpage/show/e400';
@@ -41,6 +44,7 @@ $route['(:any)/thank-you.html'] = 'landingpage/save_c3';
 
 $route['tai-lieu-ke-toan/bang-can-doi.html'] = 'download/index/1';
 $route['tai-lieu/bo-tai-lieu-ke-toan.html'] = 'download/index/2';
+$route['tai-lieu/theo-doi-dinh-muc-xang-xe-chi-tiet.html'] = 'download/index/3';
 
 
 

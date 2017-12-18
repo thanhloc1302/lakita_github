@@ -19,8 +19,8 @@
         if (($time_start_sale - 12 * 3600 < time()) && ($time_end_sale > time())) {
             $this->load->view('home/event');
         } else {
-            $this->load->view('home/combo300');
-            $this->load->view('home/bannerExcel');
+           // $this->load->view('home/combo300');
+           // $this->load->view('home/bannerExcel');
         }
         ?>
         <?php $this->load->view('home/try_learn'); ?>

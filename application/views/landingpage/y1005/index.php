@@ -241,7 +241,7 @@ $rs = json_decode($result);
                         <h5 class="widget-content" lp-node="h5">Chỉ cần dành ra 5 phút cho mỗi lần nghỉ giải lao, bạn sẽ</h5> </div>
                     <div id="SHAPE21" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
                         <div class="widget-content">
-                            <svg [removed]="" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 32 32" fill="rgba(255,87,34,1)">
+                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 32 32" fill="rgba(255,87,34,1)">
                             <path d="M4 4v20h7v-2H6V6h12v1h2V4H4zm8 4v20h16V8H12zm2 2h12v16H14V10z"></path>
                             </svg>
                         </div>
