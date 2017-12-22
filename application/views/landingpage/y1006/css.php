@@ -902,11 +902,11 @@
         
         ;
         .widget-element input,
-        
+        ;
         .widget-element textarea,
-        
+        ;
         body input,
-        
+        ;
         body textarea {
             font-family: "Open Sans", sans-serif!important
         }
