@@ -28,7 +28,7 @@ $rs = json_decode($result);
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>public/cb110/css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>public/my.js?ver=<?php echo _VER_CACHED_ ?>" type="text/javascript"></script>
         <?php include_once("plugin/analyticstracking.php") ?>
     </head>
     <body>

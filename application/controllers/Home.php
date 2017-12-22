@@ -221,11 +221,18 @@ class Home extends MY_Controller {
 
                 // $course_slug = $this->lib_mod->load_all('courses', 'slug', array("id" => $curr_learn[0]['courses_id']), '1', '', array("sort" => 'asc'));
                 //kiểm tra xem học viên đã mua khóa học chưa
-                $student_courses = $this->lib_mod->detail('student_courses', array('courses_id' => $curr_learn[0]['courses_id'], 'student_id' => $user_id, 'status' => 1));
-                if (!isset($student_courses[0])) {
-                    echo '<script> alert("Xin lỗi, bạn chưa mua khóa học này!");</script>';
-                    die;
-                    exit;
+                /*
+                 * quà tặng khóa yoga
+                 */
+                if ($curr_learn[0]['courses_id'] == 83 && time() < 1516501814) {
+                    
+                } else {
+                    $student_courses = $this->lib_mod->detail('student_courses', array('courses_id' => $curr_learn[0]['courses_id'], 'student_id' => $user_id, 'status' => 1));
+                    if (!isset($student_courses[0])) {
+                        echo '<script> alert("Xin lỗi, bạn chưa mua khóa học này!");</script>';
+                        die;
+                        exit;
+                    }
                 }
 
                 $trial_learn_view = $this->session->tempdata('is_trial_view');
@@ -476,7 +483,7 @@ class Home extends MY_Controller {
                 $inputStudent['select'] = 'id_fb, name, thumbnail';
                 $inputStudent['where'] = array('id' => $user_id);
                 $data['student'] = $this->student_model->load_all($inputStudent);
-                
+
                 $data['curr_learn'][0] = array('id' => 0, 'courses_id' => $id);
 
                 $inputCourse = [];

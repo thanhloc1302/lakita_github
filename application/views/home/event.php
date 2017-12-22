@@ -13,7 +13,7 @@
     <div class="clock" style="bottom: 0px; position: fixed; z-index: 999999999;width: 46%; right: -10%"></div>
 </a>
 <script type="text/javascript">
-    var end = <?php echo $time_end_sale; ?>;
+   /* var end = <?php echo $time_end_sale; ?>;
     var now = <?php echo time(); ?>;
     var distance = end - now;
     if (distance <= 0) {
@@ -22,7 +22,7 @@
     var clock = $('.clock').FlipClock(distance, {
         clockFace: 'DailyCounter',
         countdown: true
-    });
+    }); */
 </script>
 
 <input type="hidden" id="base_url" value="<?php echo base_url(); ?>">

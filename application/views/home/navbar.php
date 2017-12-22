@@ -163,10 +163,10 @@
                                     } else {
                                         ?>
                                         <li> 
-                                            <a href="<?php echo $value1['url']; ?>"> 
+                                            <a href="<?php echo $value1['url']; ?>" style="width: 490px; height: auto; line-height: 22px; white-space: normal;"> 
                                                 <i class="fa fa-newspaper-o fa-5x" aria-hidden="true"></i>
                                                 <?php
-                                                echo '&nbsp;&nbsp;&nbsp; [LAKITA.VN] đã đăng 1 tin mới vào ngày ';
+                                                echo '&nbsp;&nbsp;&nbsp; [LAKITA.VN] Chương trình Tri ân khách hàng, Lakita gửi Tặng Miễn Phí 1 tháng học Yoga Online tại Lakita.vn (20/12-20/1).';
                                                 echo date('H:i:s d/m/Y', $value1['time']);
                                                 ?>
                                             </a>

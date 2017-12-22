@@ -27,15 +27,36 @@ class Student extends MY_Controller {
 //            $data['banner_1'] = $this->lib_mod->load_all('banner', '', array('status' => 1, 'type_id' => 1), 1, '', array('sort' => 'desc'));
 //            $data['banner_2'] = $this->lib_mod->load_all('banner', '', array('status' => 1, 'type_id' => 2), 2, '', array('sort' => 'desc'));
             $courses_id = $this->lib_mod->detail('student_courses', array('student_id' => $user_id, 'status' => 1));
+            //quà tặng noel khóa yoga văn phòng
+            $courses_id[] = array(
+                'courses_id' => 83,
+                'create_date' => 1513759010,
+                'status' => 1,
+                'cod' => '',
+                'trial_learn' => 0,
+                'gift' => 'yes'
+            );
             if (count($courses_id)) {
+                
                 foreach ($courses_id as $key => $value) {
                     $mycourses[$key] = $this->lib_mod->detail('courses', array('id' => $value['courses_id']));
                     $mycourses[$key]['cod'] = $value['cod'];
                     $mycourses[$key]['date_join_course'] = $value['create_date'];
                     $mycourses[$key]['trial_learn'] = $value['trial_learn'];
+                    if(isset($value['gift'])){
+                        $mycourses[$key]['gift'] = 'yes';
+                    }
                 }
+//                if($user_id == 2626) {
+//                                echo '<pre>';
+//                                print_r($mycourses);
+//                                die;
+//                            }
                 foreach ($mycourses as $key => $value) {
                     $mycourses[$key] = $value[0];
+                    if(isset($value['gift'])){
+                        $mycourses[$key]['gift'] = 'yes';
+                    }
 
                     //tống số bài học
                     $mycourses[$key]['total_video'] = count($this->lib_mod->detail('learn', array('courses_id' => $value[0]['id'], 'status' => 1)));
@@ -599,7 +620,7 @@ class Student extends MY_Controller {
     /* ==================================== video đầu tiên của khóa học ===================================== */
 
     private function find_first_course($cod_input, $courseID) {
-        
+
         if ($cod_input != '') {
             $cod = $this->lib_mod->detail('cod_course', array('cod' => $cod_input));
             //học thử
@@ -624,7 +645,7 @@ class Student extends MY_Controller {
             $chapter_id = $this->lib_mod->load_all('chapter', 'id', array("courses_id" => $courseID, 'status' => 1), 1, 0, array("sort" => 'asc'));
             //print_r($chapter_id);
             $learn_first = $this->lib_mod->load_all('learn', 'id, slug', array("chapter_id" => $chapter_id[0]['id'], 'status' => 1), 1, 0, array("sort" => 'asc'));
-           // print_r($learn_first);
+            // print_r($learn_first);
             return isset($learn_first[0]) ? (base_url() . $learn_first[0]['slug'] . '-4' . $learn_first[0]['id'] . '.html') : '';
         }
     }
@@ -730,20 +751,20 @@ class Student extends MY_Controller {
             $this->lib_mod->update('student', array('id' => $user), array('balance' => $user_balance + $price * 5 / 100));
         }
         if (isset($invite_code) && !empty($invite_code)) {
-            $user_invite = substr($invite_code, 4, strlen($invite_code)-4);
-            if($user_id != $user_invite){
-            $user_invite_balance = $this->lib_mod->load_all('student', 'balance', array('id' => $user_invite), '', '', '', '');
-            $user_invite_balance = (int) $user_invite_balance[0]['balance'];
-            $this->lib_mod->update('student', array('id' => $user_invite), array('balance' => ($user_invite_balance + $price * 10 / 100)));
+            $user_invite = substr($invite_code, 4, strlen($invite_code) - 4);
+            if ($user_id != $user_invite) {
+                $user_invite_balance = $this->lib_mod->load_all('student', 'balance', array('id' => $user_invite), '', '', '', '');
+                $user_invite_balance = (int) $user_invite_balance[0]['balance'];
+                $this->lib_mod->update('student', array('id' => $user_invite), array('balance' => ($user_invite_balance + $price * 10 / 100)));
 
-            //thông báo khi có người dùng mã kích hoạt của bạn
-            $information['student_id'] = $user_invite;
-            $information['type'] = 'invite';
-            $information['url'] = base_url() . 'thong-tin-tai-khoan.html';
-            $information['time'] = time();
-            $information['creator'] = $user_id;
-            $information['value'] = $price * 10 / 100;
-            $this->lib_mod->insert('notification', $information);
+                //thông báo khi có người dùng mã kích hoạt của bạn
+                $information['student_id'] = $user_invite;
+                $information['type'] = 'invite';
+                $information['url'] = base_url() . 'thong-tin-tai-khoan.html';
+                $information['time'] = time();
+                $information['creator'] = $user_id;
+                $information['value'] = $price * 10 / 100;
+                $this->lib_mod->insert('notification', $information);
             }
         }
     }

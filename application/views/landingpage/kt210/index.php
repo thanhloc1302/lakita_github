@@ -24,7 +24,7 @@ and open the template in the editor.
         <link href="<?php echo base_url(); ?>public/kt210/main.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt210/newstyle.css">
         <script src="https://use.fontawesome.com/0b216c5f11.js"></script>
-        <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>public/my.js?ver=<?php echo _VER_CACHED_ ?>" type="text/javascript"></script>
         <script>
             (function (i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;

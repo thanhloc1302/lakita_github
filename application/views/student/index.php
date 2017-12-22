@@ -13,15 +13,15 @@ else {
                 <div class="row">
                     <div class="col-md-1 col-md-offset-3 margintop22">
                         <img src="<?php
-        if (!empty($student[0]['id_fb']))
-            echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
-        else {
-            if (!empty($student[0]['thumbnail']))
-                echo 'https://lakita.vn/' . $student[0]['thumbnail'];
-            else
-                echo base_url() . 'styles/images/people/110/user.png';
-        }
-        ?>" alt="lakita" class="img-circle avatar" />
+                        if (!empty($student[0]['id_fb']))
+                            echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
+                        else {
+                            if (!empty($student[0]['thumbnail']))
+                                echo 'https://lakita.vn/' . $student[0]['thumbnail'];
+                            else
+                                echo base_url() . 'styles/images/people/110/user.png';
+                        }
+                        ?>" alt="lakita" class="img-circle avatar" />
                     </div>
                     <div class="col-md-6 marginleft15">
                         <h1> <strong> <?php echo $student[0]['name']; ?> </strong></h1>
@@ -96,6 +96,13 @@ else {
                 </aside>
             </div>
             <div class="col-md-9">
+                <div class="alert alert-info" role="alert" style="font-family: roboto; font-size: 18px;"> 
+                    <a href="https://lakita.vn/khoa-hoc-yoga-danh-cho-nguoi-lam-van-phong-783.html">
+                        [LAKITA.VN] Chương trình Tri ân khách hàng, Lakita gửi Tặng Miễn Phí 1 tháng học Yoga Online tại Lakita.vn (20/12-20/1).
+                    </a>
+                </div>
+
+
                 <section class="group1">
                     <p><a >Trang chủ</a> / <a > Quản lý giao dịch</a> / <a > Khóa học của tôi</a></p>
                     <h3 class="lakita"><i class="fa fa-leanpub" aria-hidden="true"></i> Khóa học của tôi (<?php echo count($courses); ?>)</h3>
@@ -112,6 +119,12 @@ else {
                         </thead>
                         <tbody>
                             <?php
+//                            $user_id = $this->session->userdata('user_id');
+//                            if($user_id == 2626) {
+//                                echo '<pre>';
+//                                print_r($courses);
+//                                die;
+//                            }
                             foreach ($courses as $key => $value) {
                                 if (isset($value['speaker'][0])) {
                                     ?>
@@ -130,7 +143,14 @@ else {
                                                         <a 
                                                             href="<?php echo base_url() . $value['slug'] . '-7' . $value['id'] . '.html'; ?>" 
                                                             title="<?php echo $value['name']; ?>">
-                                                            <strong><?php echo ($value['is_trial_learn'] == true) ? '[Học thử] ' . $value['name'] : (($value['trial_learn'] == 1) ? '[Trial] ' . $value['name'] : $value['name']); ?> </strong>
+                                                            <strong>
+                                                                <?php echo ($value['is_trial_learn'] == true) ? '[Học thử] ' . $value['name'] : (($value['trial_learn'] == 1) ? '[Trial] ' . $value['name'] : $value['name']); ?> 
+                                                                <?php
+                                                                if (isset($value['gift'])) {
+                                                                    echo '<span style="color:red"> (quà tặng) </span>';
+                                                                }
+                                                                ?>
+                                                            </strong>
                                                         </a>
                                                     </p>
                                                     <p>Giảng viên: <?php echo $value['speaker'][0]['name']; ?></p>
@@ -181,14 +201,14 @@ else {
                 $i = 1;
                 foreach ($other_courses as $key => $value) {
                     ?>
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                    <a href="<?php echo base_url() . $value['slug'] . '-2' . $value['id']; ?>.html" title="<?php echo $value['name']; ?>">
-                                        <div> <img src="<?php echo 'https://lakita.vn/' . $value['image']; ?>" alt="<?php echo $value['name']; ?>" class="img-responsive"> </div>
-                                        <p class="courseName"><?php echo $value['name']; ?></p>
-                                    </a>
-                                    <p class="teacher"><?php echo $value['speaker_name']; ?></p>
-                                    <p class="price"> <?php echo number_format(str_replace('.', '', $value['price_root']), 0, ',', '.') . " VNĐ"; ?></p>
-                                </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                            <a href="<?php echo base_url() . $value['slug'] . '-2' . $value['id']; ?>.html" title="<?php echo $value['name']; ?>">
+                                                <div> <img src="<?php echo 'https://lakita.vn/' . $value['image']; ?>" alt="<?php echo $value['name']; ?>" class="img-responsive"> </div>
+                                                <p class="courseName"><?php echo $value['name']; ?></p>
+                                            </a>
+                                            <p class="teacher"><?php echo $value['speaker_name']; ?></p>
+                                            <p class="price"> <?php echo number_format(str_replace('.', '', $value['price_root']), 0, ',', '.') . " VNĐ"; ?></p>
+                                        </div>
                     <?php
                     if ($i % 3 == 0)
                         echo '<div class="clearfix visible-md-block visible-lg-block"></div>';

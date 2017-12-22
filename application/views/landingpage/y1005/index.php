@@ -500,7 +500,7 @@ $rs = json_decode($result);
         <!-- Latest compiled and minified JavaScript -->
         <script type="text/javascript" src="https://static.ladipage.net/source/jquery.3-0-1.js"></script>
         <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>public/my.js?ver=<?php echo _VER_CACHED_ ?>" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 var left = $('#img-contact').css('margin-left');

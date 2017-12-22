@@ -816,7 +816,7 @@ $rs = json_decode($result);
     <script src="<?php echo base_url() ?>public/e100/lakita/js/jquery.form.js" type="text/javascript"></script>
     <script type="text/javascript"  src="<?php echo base_url() ?>public/e100/js/tracking.js"></script>
     <script type="text/javascript"  src="<?php echo base_url() ?>public/e100/js/main.js"></script>
-    <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>public/my.js?ver=<?php echo _VER_CACHED_ ?>" type="text/javascript"></script>
     <script>(function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id))
