@@ -142,7 +142,7 @@ $rs = json_decode($result);
             <div class="row-fluid">            		
                 <div class="curse-form-box  animated delay1 flipInX">
                     <div class="gr1">
-                        <h3 id="intro" style="color: #fff;text-align: center;line-height: 35px;font-size: 35px;"><strong>BÍ QUYẾT LÀM CHỦ EXCEL NĂM 2017</strong>
+                        <h3 id="intro" style="color: #fff;text-align: center;line-height: 35px;font-size: 35px;"><strong>BÍ QUYẾT LÀM CHỦ EXCEL NĂM 2018</strong>
                         </h3>
                         <p style="text-align: center;line-height: 35px;">Khóa học dành cho nhân viên hành chính văn phòng, kế toán, tài chính, ngân hàng</p>
                         <p style="text-align: center;line-height: 35px;">Hơn 2000 học viên tham gia, 78% hài lòng về sự hỗ trợ</p>
@@ -188,7 +188,7 @@ $rs = json_decode($result);
     <section class="container steps generic-section">
         <div class="row-fluid">
             <div class="span12">
-                <h2><span>Bí quyết <em>Làm chủ Excel</em> năm 2017</span></h2>
+                <h2><span>Bí quyết <em>Làm chủ Excel</em> năm 2018</span></h2>
             </div>
         </div>
         <div class="row-fluid">

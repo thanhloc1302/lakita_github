@@ -289,14 +289,16 @@ if ($this->agent->is_mobile()) {
         } else {
             $('#modal2_9').modal('show');
             var close = false;
-            $(".close").click(function () {
+            $(".close-btn").click(function () {
                 close = true;
             });
             $('#popup_29').click(function () {
-                $('#modal2_9').modal('hide');
+                $("#event-ladi")[0].click();
+                
+               /* $('#modal2_9').modal('hide');
                 if (!close) {
                     $('#modal_event').modal('show');
-                }
+                } */
             });
         }
     });

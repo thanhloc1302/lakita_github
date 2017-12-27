@@ -1724,12 +1724,6 @@
                 font-size: 17px;
                 text-align: center;
             }
-             #GROUP1010 {
-                top: 203.5833396911621px;
-                left: 151.5px;
-                width: 321.9583435058594px;
-                height: 191.7916717529297px;
-            }
             #GROUP929 {
                 top: 87.98611450195312px;
                 left: 30.736114501953125px;
@@ -5054,14 +5048,6 @@
         
         #BUTTON638> .ladi-widget-overlay {
             border-radius: 10px;
-        }
-          #GROUP1010 {
-            display: block;
-        }
-        
-        #GROUP1010 > .widget-content {
-            background-color: rgba(255, 255, 255, 0);
-            color: rgba(0, 0, 0, 1);
         }
         
         #GROUP929 {
@@ -9205,12 +9191,6 @@
             #BUTTON638 > .widget-content {
                 font-size: 17px;
                 text-align: center;
-            }
-              #GROUP1010 {
-                top: 177.333px;
-                left: 26.5px;
-                width: 321.953125px;
-                height: 191.78125px;
             }
             #GROUP929 {
                 top: 87.9861px;

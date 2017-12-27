@@ -174,7 +174,7 @@ function validatePhone(tel) {
 	- To clear -
 	$('#element').snowfall('clear');
 */
-
+/*
 (function($){
 	$.snowfall = function(element, options){
 		var	defaults = {
@@ -431,3 +431,4 @@ $(document).ready(function(){
 
 });
 
+*/

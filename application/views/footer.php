@@ -70,11 +70,7 @@ if (!$this->agent->is_mobile()) {
 <script src="<?php echo base_url();?>public/js/snowfall.jquery.js"></script>
 <script type='text/javascript'> 
 	
-$(document).ready(function(){
-			
-$(document).snowfall({deviceorientation : true, round : true, minSize: 1, maxSize:8,  flakeCount : 250});
 
-});
 
  </script>
 

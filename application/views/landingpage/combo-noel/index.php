@@ -14,16 +14,16 @@ $rs = json_decode($result);
 <!DOCTYPE html>
 <html>
     <head lang="en">
-        <title>COMBO QUÀ KHỦNG DỊP GIÁNG SINH</title>
+        <title>COMBO QUÀ KHỦNG DỊP TẾT DƯƠNG</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="fb:admins" content="100001432238036"/>
         <meta property="fb:app_id" content="315347858825221" />
         <meta property="og:type"   content="website" />
         <meta property="og:url" content="https://lakita.vn/combo-qua-khung-dip-giang-sinh.html" />
-        <meta property="og:title" content="COMBO QUÀ KHỦNG DỊP GIÁNG SINH" />
-        <meta property="og:image" content="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/mau-ong-gia-noel-dep-an-tuong-34-1513854103.png" />
-        <meta property="og:description" content="Giáng sinh về - Tết gần kề. Đăng ký liền tay, nhận ngay combo quà khủng!" />
+        <meta property="og:title" content="COMBO QUÀ KHỦNG DỊP TẾT DƯƠNG" />
+        <meta property="og:image" content="http://c0.img.chungta.vn/2012/12/27/phao-400jpg-781208-1412991592.jpg" />
+        <meta property="og:description" content="Tết Dương về - Tết gần kề. Đăng ký liền tay, nhận ngay combo quà khủng!" />
         <meta name="description" content="Hệ thống đào tạo trực tuyến lakita – Cùng bạn vươn xa Học Online qua Video bài giảng - Học Online thỏa thích mọi lúc, mọi nơi - Học trên mọi thiết bị - Học với giảng viên, chuyên gia hàng đầu trong lĩnh vực - Hóa đơn chứng từ - Làm chủ hóa đơn chứng từ" />
         <link rel="icon" href="https://lakita.vn/data/source/setting/favicon.png" />
         <meta name="viewport" id="lp-viewport" content="width=device-width, initial-scale=1.0">
@@ -73,7 +73,7 @@ $rs = json_decode($result);
             <div id="SECTION2" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
                 <div class="container">
                     <div id="PARAGRAPH4" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                        <p class="widget-content" lp-node="p">** Đợt khuyến mại và giảm giá đặc biệt lớn nhất từ trước đến nay &nbsp;nhân dịp Giáng sinh 2017 và Tết dương 2018</p>
+                        <p class="widget-content" lp-node="p">** Đợt khuyến mại và giảm giá đặc biệt lớn nhất từ trước đến nay &nbsp;nhân dịp Tết Dương 2017 và Tết dương 2018</p>
                     </div>
                     <div id="HEADLINE6" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                         <h1 class="widget-content" lp-node="h1">Đăng kí liền tay</h1> </div>
@@ -109,7 +109,7 @@ $rs = json_decode($result);
                             <div id="HEADLINE289" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP337" lp-display="block">
                                 <h2 class="widget-content" lp-node="h2">Tết gần kề</h2> </div>
                             <div id="HEADLINE5" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP337" lp-display="block">
-                                <h2 class="widget-content" lp-node="h2">Giáng sinh về &nbsp;-</h2> </div>
+                                <h2 class="widget-content" lp-node="h2">Tết Dương về &nbsp;-</h2> </div>
                         </div>
                     </div>
                     <div id="GROUP350" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
@@ -242,7 +242,7 @@ $rs = json_decode($result);
                                     <div id="HEADLINE334" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP338" lp-display="block">
                                         <h6 class="widget-content" lp-node="h6">Giảm giá khủng<span style="color: rgb(213, 0, 0);"> tất cả các khóa học</span> <span style="color: rgb(213, 0, 0);">KẾ TOÁN</span>&nbsp;và còn nhiều ưu đãi hơn khi mua theo combo bất kì!</h6> </div>
                                     <div id="HEADLINE295" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP338" lp-display="block">
-                                        <h2 class="widget-content" lp-node="h2">Giáng sinh này có gì đặc biệt?&nbsp;</h2> </div>
+                                        <h2 class="widget-content" lp-node="h2">Tết Dương này có gì đặc biệt?&nbsp;</h2> </div>
                                     <div id="HEADLINE294" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP338" lp-display="block">
                                         <h6 class="widget-content" lp-node="h6">Nhân dịp chào đón GIÁNG SINH và TẾT DƯƠNG năm 2017, nhận ngay <span style="color: rgb(213, 0, 0);">QUÀ KHỦNG</span> từ Lakita.<br><br></h6> </div>
                                 </div>

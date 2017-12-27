@@ -173,8 +173,8 @@ else {
                                 <a class="btn btn-success btn-purchase" href="<?php echo base_url() . $curr_courses[0]['slug'] . '-3' . $curr_courses[0]['id']; ?>.html" 
                                    title="<?php echo $curr_courses[0]['name']; ?>">  MUA KHÓA HỌC </a> 
                                    <?php //if (in_array($curr_id, array(67, 78, 81, 82, 77, 73))) { ?>
-                                    <a class="btn btn-success btn-trial-learn" href="<?php echo $first_lesson_trial_learn; ?>" 
-                                       title="<?php echo $curr_courses[0]['name']; ?>">  HỌC THỬ </a> 
+<!--                                    <a class="btn btn-success btn-trial-learn" href="<?php echo $first_lesson_trial_learn; ?>" 
+                                       title="<?php echo $curr_courses[0]['name']; ?>">  HỌC THỬ </a> -->
                                    <?php //} ?>
                             </div>
                         </div>
@@ -186,8 +186,8 @@ else {
                             <div class="marginbottom10 text-center"> 
                                 <a class="btn btn-success btn-purchase" href="<?php echo $first_lesson; ?>">  HỌC NGAY </a> 
                                 <?php //if (in_array($curr_id, array(67, 78, 81, 82, 77, 73)) || ($user_id == 2626)) { ?>
-                                    <a class="btn btn-success btn-trial-learn" href="<?php echo $first_lesson_trial_learn; ?>" 
-                                       title="<?php echo $curr_courses[0]['name']; ?>">  HỌC THỬ </a> 
+<!--                                    <a class="btn btn-success btn-trial-learn" href="<?php echo $first_lesson_trial_learn; ?>" 
+                                       title="<?php echo $curr_courses[0]['name']; ?>">  HỌC THỬ </a> -->
                                    <?php //} ?>
                             </div>
                         </div>

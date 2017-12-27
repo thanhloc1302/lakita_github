@@ -11,7 +11,7 @@
                     <input type="checkbox" />
                     <?php echo 'Bài ' . $lvalue['sort'] . ': ' . $lvalue['name']; ?>
                     <?php if($lvalue['trial_learn'] == 1) {?>
-                    <a class="btn btn-success" href="<?php echo base_url() . $lvalue['slug'] . '-5' . $lvalue['id']; ?>.html" target="_blank"> Học thử </a>
+                    <a class="btn btn-warning" href="<?php echo base_url() . $lvalue['slug'] . '-5' . $lvalue['id']; ?>.html" target="_blank"> Học thử </a>
                     <?php }?>
                 </span>
                 </li>

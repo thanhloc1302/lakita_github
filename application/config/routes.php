@@ -29,6 +29,7 @@ $route['tron-bo-quyet-toan-thue-tu-a-den-z-dangph.html'] = 'landingpage/show/kt2
 $route['tron-bo-quyet-toan-thue-tu-a-den-z-candh1.html'] = 'landingpage/show/kt210candh1';
 $route['tron-bo-quyet-toan-thue-tu-a-den-z-candh2.html'] = 'landingpage/show/kt210candh2';
 $route['ke-toan-cho-nguoi-moi-bat-dau.html'] = 'landingpage/show/kt220';
+$route['ke-toan-cho-nguoi-moi-bat-dau-hanhnm.html'] = 'landingpage/show/kt220hanhnm';
 $route['ke-toan-danh-cho-giam-doc.html'] = 'landingpage/show/kt1202';
 $route['bi-quyet-lam-chu-excel-2017.html'] = 'landingpage/show/e100';
 $route['excel-tu-a-den-z.html'] = 'landingpage/show/e400';
