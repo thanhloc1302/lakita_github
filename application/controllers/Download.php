@@ -18,7 +18,7 @@ class Download extends MY_Controller {
         if (empty($post)) {
             $data = $this->data;
             $data['content'] = 'download/download_page';
-            $data['title'] = 'Tải tài liệu';
+            $data['title'] = 'Tải tài liệu kế toán lakita.vn';
             $data['id'] = $id;
             $this->load->view('template', $data);
         } else {
@@ -35,6 +35,14 @@ class Download extends MY_Controller {
                 case 3:
                     $this->load->helper('download');
                     force_download(FCPATH . 'public/tai-lieu/theo-doi-dinh-muc-xang-xe-chi-tiet.xlsx', NULL);
+                    break;
+                 case 4:
+                    $this->load->helper('download');
+                    force_download(FCPATH . 'public/tai-lieu/slide-cach-xac-dinh-chi-phi-hop-ly.rar', NULL);
+                    break;
+                 case 5:
+                    $this->load->helper('download');
+                    force_download(FCPATH . 'public/tai-lieu/tinh-huong-ke-toan-thuc-te.rar', NULL);
                     break;
             }
             redirect('https://lakita.vn');

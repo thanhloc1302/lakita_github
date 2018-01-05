@@ -25,7 +25,7 @@ $(document).ready( function(){
                         </ol>-->
             <div class="carousel-inner" role="listbox" id="banner-slide">
                 <div class="item active">
-                    <img alt="học excel cơ bản, excel cho kế toán, tự học excel" title="học excel cơ bản, excel cho kế toán, tự học excel" src="<?php echo base_url(); ?>styles/v2.0/img/hoc-excel-co-ban.jpg" data-holder-rendered="true" class="img-responsive" />
+                    <img alt="học excel cơ bản, excel cho kế toán, tự học excel" title="học excel cơ bản, excel cho kế toán, tự học excel" src="<?php echo base_url(); ?>styles/v2.0/img/lap-bao-cao-tai-chinh.jpg" data-holder-rendered="true" class="img-responsive" />
                 </div>
                 <div class="item"> 
                     <img alt="học excel cơ bản, excel cho kế toán, tự học excel" title="học excel cơ bản, excel cho kế toán, tự học excel" src="<?php echo base_url(); ?>styles/v2.0/img/excel-cho-ke-toan.jpg" data-holder-rendered="true" class="img-responsive" />  
@@ -34,7 +34,7 @@ $(document).ready( function(){
                     <img  alt="học excel cơ bản, excel cho kế toán, tự học excel" title="học excel cơ bản, excel cho kế toán, tự học excel" src="<?php echo base_url(); ?>styles/v2.0/img/lam-chu-hoa-don-chung-tu.jpg" data-holder-rendered="true" class="img-responsive" /> 
                 </div>
                 <div class="item"> 
-                    <img  alt="học excel cơ bản, excel cho kế toán, tự học excel" title="học excel cơ bản, excel cho kế toán, tự học excel" class="img-responsive" src="<?php echo base_url(); ?>styles/v2.0/img/lap-bao-cao-tai-chinh.jpg" data-holder-rendered="true"> 
+                    <img  alt="học excel cơ bản, excel cho kế toán, tự học excel" title="học excel cơ bản, excel cho kế toán, tự học excel" class="img-responsive" src="<?php echo base_url(); ?>styles/v2.0/img/hoc-excel-co-ban.jpg" data-holder-rendered="true"> 
                 </div>
                 <div class="item"> 
                     <img  alt="học excel cơ bản, excel cho kế toán, tự học excel" title="học excel cơ bản, excel cho kế toán, tự học excel" class="img-responsive" src="<?php echo base_url(); ?>styles/v2.0/img/thu-thuat-van-phong.jpg" data-holder-rendered="true"> 

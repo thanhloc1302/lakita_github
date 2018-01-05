@@ -12,7 +12,7 @@
     </div>
     <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" >
             <h2 style="font-family: Roboto;"> Tải tài liệu </h2>
-            <a target="_blank" href="<?php echo current_url();?>?id=<?php echo $id;?>" class="btn btn-success" style="font-family: Roboto;"> Mời bạn click vào đây để tải tài liệu </a>
+            <a target="_blank" href="<?php echo current_url();?>?id=<?php echo $id;?>" class="btn btn-danger" style="font-family: Roboto;"> Mời bạn click vào đây để tải tài liệu </a>
     </div>
 </div>
 <script src="<?php echo base_url(); ?>styles/v2.0/js/login_page.js?ver=<?php echo _VER_CACHED_ ?>"></script>
