@@ -7,7 +7,7 @@ class Landingpage extends CI_Controller {
     public function __construct() {
         parent::__construct();
         require_once APPPATH . "../public/lakita/Rest_client/Rest_Client.php";
-         $this->load->helper('cookie');
+        $this->load->helper('cookie');
     }
 
     function index($id = 0) {
@@ -32,8 +32,8 @@ class Landingpage extends CI_Controller {
 
     function show($id = 0) {
         if (filter_has_var(INPUT_GET, 'link')) {
-             set_cookie('link_id', filter_input(INPUT_GET, 'link'), 3600 * 2);
-           // $this->session->set_tempdata('link_id', filter_input(INPUT_GET, 'link'));
+            set_cookie('link_id', filter_input(INPUT_GET, 'link'), 3600 * 2);
+            // $this->session->set_tempdata('link_id', filter_input(INPUT_GET, 'link'));
             $this->save_c2();
         }
         $this->load->view('landingpage/' . $id . '/index');
@@ -51,34 +51,75 @@ class Landingpage extends CI_Controller {
         );
         $restClient0 = new Rest_Client($config0);
         $uri0 = "landingpage_api/price/" . $post['code_landingpage'];
-        $result0 = $restClient0->get($uri0);
-        $rs = json_decode($result0);
-        $post['course_code'] = $rs->course_code;
-        $post['price_purchase'] = $rs->price;
-        $config = array(
-            'server' => 'https://crm2.lakita.vn/',
-            //'server' => 'http://chuyenpn.com/CRM2/',
-            'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
-            'api_name' => 'lakita-key'
-        );
-        $restClient = new Rest_Client($config);
-        $uri = "contact_api/add_contact";
-
         /*
-         * Nếu người dùng xóa param thì kiểm tra xem có trong session ko
-         * nếu có thì lưu lại link_id
+         * Landing page combo
          */
-        if ($post['link_id'] == 0) {
-            $link_id = get_cookie('link_id');
-           // $link_id = $this->session->tempdata('link_id');
-            if ($link_id) {
-                $post['link_id'] = $link_id;
-            }
-        }
+        if (in_array($post['code_landingpage'], array(
+                    'KT210-KT400','KT800-KT400', 'KT210-KT800'
+                ))) {
+            
+            $priceCombo = array(
+              'KT210-KT400' => 645000  ,
+                'KT800-KT400' =>  645000,
+                
+                'KT210-KT800' => 545000
+            );
+            $post['course_code'] = $post['code_landingpage'];
+            $post['price_purchase'] =$priceCombo[$post['code_landingpage']];
+            $config = array(
+                'server' => 'https://crm2.lakita.vn/',
+                //'server' => 'http://chuyenpn.com/CRM2/',
+                'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
+                'api_name' => 'lakita-key'
+            );
+            $restClient = new Rest_Client($config);
+            $uri = "contact_api/add_contact";
 
-        $restClient->post($uri, $post);
-        $this->postToMol($post);
-        $this->load->view('landingpage/' . strtolower($rs->course_code) . '/popup_dangky');
+            /*
+             * Nếu người dùng xóa param thì kiểm tra xem có trong session ko
+             * nếu có thì lưu lại link_id
+             */
+            if ($post['link_id'] == 0) {
+                $link_id = get_cookie('link_id');
+                // $link_id = $this->session->tempdata('link_id');
+                if ($link_id) {
+                    $post['link_id'] = $link_id;
+                }
+            }
+
+            $restClient->post($uri, $post);
+            $this->postToMol($post);
+            $this->load->view('landingpage/combogiangsinh/popup_dangky');
+        } else {
+            $result0 = $restClient0->get($uri0);
+            $rs = json_decode($result0);
+            $post['course_code'] = $rs->course_code;
+            $post['price_purchase'] = $rs->price;
+            $config = array(
+                'server' => 'https://crm2.lakita.vn/',
+                //'server' => 'http://chuyenpn.com/CRM2/',
+                'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
+                'api_name' => 'lakita-key'
+            );
+            $restClient = new Rest_Client($config);
+            $uri = "contact_api/add_contact";
+
+            /*
+             * Nếu người dùng xóa param thì kiểm tra xem có trong session ko
+             * nếu có thì lưu lại link_id
+             */
+            if ($post['link_id'] == 0) {
+                $link_id = get_cookie('link_id');
+                // $link_id = $this->session->tempdata('link_id');
+                if ($link_id) {
+                    $post['link_id'] = $link_id;
+                }
+            }
+
+            $restClient->post($uri, $post);
+            $this->postToMol($post);
+            $this->load->view('landingpage/' . strtolower($rs->course_code) . '/popup_dangky');
+        }
     }
 
     private function postToMol($post) {
