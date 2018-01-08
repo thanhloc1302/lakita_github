@@ -1435,13 +1435,13 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
     }
 
     function sendToCRM($method, $post, $courseID, $price) {
-         require_once APPPATH . "../public/lakita/Rest_client/Rest_Client.php";
+        require_once APPPATH . "../public/lakita/Rest_client/Rest_Client.php";
         $course = $this->lib_mod->detail('courses', array('id' => $courseID));
         $infor = $post;
         $course_cod = $this->find_course_code($course[0]['id']);
         $post = [];
 
-        $post['matrix'] = 'lakita.vn';
+       
         $post['course_code'] = $course_cod;
         $post['price_purchase'] = $price;
         $post['name'] = $infor['name'];
@@ -1468,6 +1468,8 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
         $link_id = get_cookie('link_id');
         if ($link_id) {
             $post['link_id'] = $link_id;
+        }else{
+             $post['matrix'] = 'lakita.vn';
         }
         $restClient->post($uri, $post);
     }
