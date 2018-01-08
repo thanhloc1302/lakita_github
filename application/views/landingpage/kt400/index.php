@@ -270,31 +270,31 @@ $rs = json_decode($result);
             <div class="col-xs-12 col-sm-6" id="kinhnghiem">
                 <ul>
                     <li> 
-                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <img src="https://lakita.vn/styles/images/bul-list.png"> 
                         <span>Kế toán trưởng tại chi nhánh công ty TNHH thực phẩm và giải khát "Cánh diều xanh", thuộc tập đoàn IPP liên Thái Bình Dương </span>
                     </li>
                     <li> 
-                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <img src="https://lakita.vn/styles/images/bul-list.png"> 
                         <span>Chứng chỉ kế toán quốc tế CAT/ACCA do Hiệp hội kế toán công chứng Anh Quốc Cấp bằng.	Kế toán tổng hợp tại chi nhánh công ty TNHH thực phẩm và giải khát "Cánh diều xanh",	thuộc tập đoàn IPP liên Thái Bình Dương </span>
                     </li>
                     <li> 
-                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <img src="https://lakita.vn/styles/images/bul-list.png"> 
                         <span>4 năm ở vị trí kế toán tổng hợp kiêm phụ trách toàn bộ mảng thuế. </span>
                     </li>
                     <li> 
-                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <img src="https://lakita.vn/styles/images/bul-list.png"> 
                         <span>Kế toán trưởng công ty TNHH Emotive 100% vốn của Mỹ</span>
                     </li>
                     <li> 
-                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <img src="https://lakita.vn/styles/images/bul-list.png"> 
                         <span>Tư vấn kế toán, thuế cho nhiều doanh nghiệp trong nước và doanh nghiệp có vốn đầu tư nước ngoài FDI</span>
                     </li>
                     <li> 
-                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <img src="https://lakita.vn/styles/images/bul-list.png"> 
                         <span>04 năm kế toán tổng hợp và thuế Chuỗi nhà hàng ăn nhanh (BurgerKing, Pizza Domino,	Gà Popeys, Dunkin Donut) thuôc tập đoàn Liên Thái Bình Dương (IPP group)</span>
                     </li>
                     <li> 
-                        <img src="https://biquyetlamchuexcel5.lakita.vn/img/bul-list.png"> 
+                        <img src="https://lakita.vn/styles/images/bul-list.png"> 
                         <span>Tham gia nhiều kỳ quyết toán, hoàn thuế giá trị gia tăng</span>
                     </li>
                 </ul>
@@ -682,7 +682,7 @@ $rs = json_decode($result);
             font-weight: bold;
         }
     </style>
-    <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>public/my.js?ver=<?php echo _VER_CACHED_ ?>" type="text/javascript"></script>
 <!--    <script>
         $(".e_btn_submit").click(function () {
             $(".popup-wrapper").show();

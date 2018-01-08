@@ -32,7 +32,7 @@ $rs = json_decode($result);
         <script src="https://use.fontawesome.com/d826c84253.js"></script>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt2102/css/bootstrap-theme.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt2102/css/style.css">
-        <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>public/my.js?ver=<?php echo _VER_CACHED_ ?>" type="text/javascript"></script>
       <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)

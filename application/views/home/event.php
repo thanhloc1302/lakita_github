@@ -1,7 +1,19 @@
 <link href="<?php echo base_url() ?>plugin/flipclock/compiled/flipclock.css" rel="stylesheet" type="text/css"/>
 <script src="<?php echo base_url() ?>plugin/flipclock/compiled/flipclock.min.js" type="text/javascript"></script>
-<a data-toggle="modal" data-target="#modal_event" style="cursor: pointer" class="event2011 hidden-xs hidden-sm">
-    <img class="event2011 img-responsive" style="position: fixed; bottom: 0; z-index: 100000000; width: 100%;" alt="học excel cơ bản" title="học excel cơ bản" src="https://lakita.vn/styles/v2.0/img/event/banner.png?ver=<?php echo time();?>" />
+<!--<a data-toggle="modal" data-target="#modal_event" style="cursor: pointer" class="event2011 hidden-xs hidden-sm">
+    <img class="event2011 img-responsive" style="position: fixed; bottom: 0; z-index: 100000000; width: 100%;" alt="học excel cơ bản" title="học excel cơ bản" src="https://lakita.vn/styles/v2.0/img/event/banner.png?ver=<?php echo time(); ?>" />
+    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 40.2%; font-size: 62px;" class="num-day"> 0 <br></span>
+    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 41.3%; font-size: 10px;"> NGÀY <br></span>
+    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 32.9%; font-size: 62px;" class="num-hour"> 200 <br></span>
+    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 34.9%; font-size: 10px;"> GIỜ <br></span>
+    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 26.0%; font-size: 62px;" class="num-minute"> 300 <br></span>
+    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 27.5%; font-size: 10px;"> PHÚT <br></span>
+    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 19.4%; font-size: 62px;" class="num-second"> 400 <br></span>
+    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 21.0%; font-size: 10px;"> GIÂY <br></span>
+    <div class="clock" style="bottom: 0px; position: fixed; z-index: 999999999;width: 46%; right: -10%"></div>
+</a>-->
+<a target="_blank" href="https://lakita.vn/combo-qua-khung-dip-giang-sinh.html" id="event-ladi" class="event2011 hidden-xs hidden-sm">
+    <img class="event2011 img-responsive" style="position: fixed; bottom: 0; z-index: 100000000; width: 100%;" alt="học excel cơ bản" title="học excel cơ bản" src="https://lakita.vn/styles/v2.0/img/event/banner.png?ver=<?php echo time(); ?>" />
 <!--    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 40.2%; font-size: 62px;" class="num-day"> 0 <br></span>
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 41.3%; font-size: 10px;"> NGÀY <br></span>
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 32.9%; font-size: 62px;" class="num-hour"> 200 <br></span>
@@ -13,16 +25,16 @@
     <div class="clock" style="bottom: 0px; position: fixed; z-index: 999999999;width: 46%; right: -10%"></div>
 </a>
 <script type="text/javascript">
-    var end = <?php echo $time_end_sale; ?>;
-    var now = <?php echo time(); ?>;
-    var distance = end - now;
-    if (distance <= 0) {
-        distance = 0;
-    }
-    var clock = $('.clock').FlipClock(distance, {
-        clockFace: 'DailyCounter',
-        countdown: true
-    });
+    /* var end = <?php echo $time_end_sale; ?>;
+     var now = <?php echo time(); ?>;
+     var distance = end - now;
+     if (distance <= 0) {
+     distance = 0;
+     }
+     var clock = $('.clock').FlipClock(distance, {
+     clockFace: 'DailyCounter',
+     countdown: true
+     }); */
 </script>
 
 <input type="hidden" id="base_url" value="<?php echo base_url(); ?>">
@@ -70,7 +82,7 @@
                         <select class="form-control selectpicker course_code" name="course_code[]" multiple title="Chọn khóa học">
                     <?php foreach ($courses_sale as $key => $cour) {
                         ?>
-                                                            <option value="<?php echo $cour['course_code']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $cour['name']; ?></option>
+                                                                    <option value="<?php echo $cour['course_code']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $cour['name']; ?></option>
                         <?php
                     }
                     ?>
@@ -82,7 +94,7 @@
                     <?php
                     foreach ($courses_sale as $key => $cour) {
                         ?>
-                                                            <option value="<?php echo $cour['course_code'] . "_free"; ?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $cour['name']; ?></option>
+                                                                    <option value="<?php echo $cour['course_code'] . "_free"; ?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $cour['name']; ?></option>
                         <?php
                     }
                     ?>
@@ -101,7 +113,7 @@
 //                            );
                     foreach ($courses_sale as $key => $cour) {
                         ?>
-                                                            <option value="<?php echo $cour['course_code']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $cour['name']; ?></option>
+                                                                    <option value="<?php echo $cour['course_code']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $cour['name']; ?></option>
                         <?php
                     }
                     ?>
@@ -233,12 +245,16 @@
     <div class="modal-dialog">
         <div id="popup_29" data-toggle="modal" data-target="#myModal" class="modal-content" 
              style="cursor: pointer; background-size: contain; width: 506px;">
-            <button type="button" class="close" data-dismiss="modal" style="background-color: #fff;position: absolute; right: 0;">
-                <span aria-hidden="true">&times;</span>
-                <span class="sr-only">Close</span>
-            </button>
-            <img style="width: 100%" src="https://lakita.vn/styles/v2.0/img/event/popup.png?ver=<?php echo time();?>">
+            <button onclick="close_modal();" type="button" style="position: absolute;right: 0;padding: 0px;"> 
+                <img src="https://cdn3.iconfinder.com/data/icons/line/36/cancel-512.png" style="width: 20px;"> </button>
+            <img style="width: 100%" src="https://lakita.vn/styles/v2.0/img/event/popup.png?ver=<?php echo time(); ?>">
         </div>
     </div>
 </div>
 
+<script>
+    function close_modal() {
+            $('#modal2_9').modal('hide');
+            $('#popup_29').unbind("click");
+    }
+</script>

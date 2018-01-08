@@ -28,11 +28,13 @@ $route['tron-bo-quyet-toan-thue-tu-a-den-z.html'] = 'landingpage/show/kt2102';
 $route['tron-bo-quyet-toan-thue-tu-a-den-z-dangph.html'] = 'landingpage/show/kt210dangph';
 $route['tron-bo-quyet-toan-thue-tu-a-den-z-candh1.html'] = 'landingpage/show/kt210candh1';
 $route['tron-bo-quyet-toan-thue-tu-a-den-z-candh2.html'] = 'landingpage/show/kt210candh2';
+$route['ke-toan-cho-nguoi-moi-bat-dau.html'] = 'landingpage/show/kt220';
+$route['ke-toan-cho-nguoi-moi-bat-dau-hanhnm.html'] = 'landingpage/show/kt220hanhnm';
 $route['ke-toan-danh-cho-giam-doc.html'] = 'landingpage/show/kt1202';
 $route['bi-quyet-lam-chu-excel-2017.html'] = 'landingpage/show/e100';
 $route['excel-tu-a-den-z.html'] = 'landingpage/show/e400';
 $route['combo-ke-toan-excel-van-phong-2017.html'] = 'landingpage/show/cb110';
-$route['combo-qua-khung-dip-giang-sinh.html'] = 'landingpage/show/combogiangsinh';
+$route['combo-qua-khung-dip-giang-sinh.html'] = 'landingpage/show/combo-noel';
 $route['quan-tri-tai-chinh-ke-toan.html'] = 'landingpage/show/kt120';
 $route['yoga-danh-cho-nguoi-lam-van-phong.html'] = 'landingpage/show/y100';
 $route['yoga-danh-cho-nguoi-lam-van-phong-2.html'] = 'landingpage/show/y1002';
@@ -48,7 +50,8 @@ $route['(:any)/thank-you.html'] = 'landingpage/save_c3';
 $route['tai-lieu-ke-toan/bang-can-doi.html'] = 'download/index/1';
 $route['tai-lieu/bo-tai-lieu-ke-toan.html'] = 'download/index/2';
 $route['tai-lieu/theo-doi-dinh-muc-xang-xe-chi-tiet.html'] = 'download/index/3';
-
+$route['tai-lieu/slide-cach-xac-dinh-chi-phi-hop-ly.html'] = 'download/index/4';
+$route['tai-lieu/tinh-huong-ke-toan-thuc-te.html'] = 'download/index/5';
 
 
 

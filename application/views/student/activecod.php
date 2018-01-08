@@ -107,7 +107,7 @@ else {
                         </div>
                         <div class="form-group4">
                             <p style="margin: 3px 48px; position: absolute; color: #ccc;font-size: 20px;"><i class="fa fa-stack-exchange" aria-hidden="true"></i></i><p>
-                                <label style="margin-left: -88px; margin-top: 14px;">Nhập mã giới thiệu</label>
+                                <label style="margin-left: -88px; margin-top: 14px;">Mã giới thiệu (nếu có)</label>
                                 <input type="text" class="form-control" placeholder="Nhập mã giới thiệu tại đây" id="invite_code"/>
                         </div>
                         <div class="form-group4 text-center">

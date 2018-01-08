@@ -46,11 +46,11 @@ class Home extends MY_Controller {
             $input2['select_max'] = 'time_end_sale';
             $time_end_sale = $this->courses_model->load_all($input2);
 
-            if (($time_start_sale[0]['time_start_sale'] - 12 * 3600 < time()) && ($time_end_sale[0]['time_end_sale'] > time())) {
-                $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 12, '', array('price_sale' => 'asc'));
-            } else {
+//            if (($time_start_sale[0]['time_start_sale'] - 12 * 3600 < time()) && ($time_end_sale[0]['time_end_sale'] > time())) {
+//                $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 12, '', array('price_sale' => 'asc'));
+//            } else {
                 $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 12, '', array('sort' => 'desc'));
-            }
+            //}
 
             $data['rates'] = $this->lib_mod->load_all('rate', '', array('status' => 1), 12, '', array('create_date' => 'desc'), 'name');
             $data['title'] = 'Hệ thống học trực tuyến lakita, cùng bạn vươn xa - lakita.vn';
@@ -111,7 +111,8 @@ class Home extends MY_Controller {
                     '80' => '1012', // giám đốc vè quản lý TrungHQ
                     '81' => '1086',
                     '82' => '1087',
-                    '83' => '1189'
+                    '83' => '1189',
+                    '84' => '1190'
                 ];
                 if (array_key_exists($id, $videoDemoArr)) {
                     $data['id_video_demo'] = $videoDemoArr[$id];
@@ -221,11 +222,18 @@ class Home extends MY_Controller {
 
                 // $course_slug = $this->lib_mod->load_all('courses', 'slug', array("id" => $curr_learn[0]['courses_id']), '1', '', array("sort" => 'asc'));
                 //kiểm tra xem học viên đã mua khóa học chưa
-                $student_courses = $this->lib_mod->detail('student_courses', array('courses_id' => $curr_learn[0]['courses_id'], 'student_id' => $user_id, 'status' => 1));
-                if (!isset($student_courses[0])) {
-                    echo '<script> alert("Xin lỗi, bạn chưa mua khóa học này!");</script>';
-                    die;
-                    exit;
+                /*
+                 * quà tặng khóa yoga
+                 */
+                if ($curr_learn[0]['courses_id'] == 83 && time() < 1516501814) {
+                    
+                } else {
+                    $student_courses = $this->lib_mod->detail('student_courses', array('courses_id' => $curr_learn[0]['courses_id'], 'student_id' => $user_id, 'status' => 1));
+                    if (!isset($student_courses[0])) {
+                        echo '<script> alert("Xin lỗi, bạn chưa mua khóa học này!");</script>';
+                        die;
+                        exit;
+                    }
                 }
 
                 $trial_learn_view = $this->session->tempdata('is_trial_view');
@@ -476,7 +484,7 @@ class Home extends MY_Controller {
                 $inputStudent['select'] = 'id_fb, name, thumbnail';
                 $inputStudent['where'] = array('id' => $user_id);
                 $data['student'] = $this->student_model->load_all($inputStudent);
-                
+
                 $data['curr_learn'][0] = array('id' => 0, 'courses_id' => $id);
 
                 $inputCourse = [];

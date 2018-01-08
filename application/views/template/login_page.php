@@ -1,12 +1,12 @@
 <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/login_page.css?ver=<?php echo _VER_CACHED_ ?>" />
 
-<div class="header row">
-    <div class="col-md-6 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+<div class="header row" style="font-family: roboto;">
+    <div class="col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
         <a href="<?php echo base_url();?>">
-        <img class="logo" src="<?php echo base_url() ?>styles/v2.0/img/mobi/logo-header.png">
+        <img class="logo" src="https://crm2.lakita.vn/style/img/logo5.png">
         </a>
     </div>
-    <div class="col-md-3 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+    <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
         <div class="row">
             <div class="form-login" >
                 <div class="form-group col-md-6 col-sm-12 col-xs-12">
@@ -40,8 +40,8 @@
         
     </div>
 </div>
-<div class="row body">
-    <div class="col-md-6 col-md-offset-1 hidden-sm hidden-xs padding0">
+<div class="row body" style="font-family: roboto;">
+    <div class="col-md-5 col-md-offset-1 hidden-sm hidden-xs padding0">
         <img style="max-height: 510px" class="img img-responsive" src="<?php echo base_url(); ?>styles/v2.0/img/logo5.png">
     </div>
     <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" >

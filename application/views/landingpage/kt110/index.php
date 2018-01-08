@@ -22,7 +22,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="<?php echo base_url(); ?>public/kt110/main.css" rel="stylesheet" type="text/css"/>
         <script src="https://use.fontawesome.com/0b216c5f11.js"></script>
-        <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>public/my.js?ver=<?php echo _VER_CACHED_ ?>" type="text/javascript"></script>
         <link href="<?php echo base_url(); ?>public/kt110/newcss.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt110/newstyle.css">
        <!-- Facebook Pixel Code -->

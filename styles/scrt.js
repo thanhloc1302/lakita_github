@@ -2,7 +2,7 @@
     document.onkeypress = function (event) {
         event = (event || window.event);
         if (event.keyCode == 123) {
-           //alert('No F-12');
+           alert('No F-12');
             return false;
         }
     }

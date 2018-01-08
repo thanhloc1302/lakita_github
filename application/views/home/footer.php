@@ -27,10 +27,10 @@
                 <?php
                 if (!$this->agent->is_mobile('iPad')) {
                     ?>
-                    <div class="row receiveLetter">
+<!--                    <div class="row receiveLetter">
                         <p> Đăng kí nhận thư từ Lakita </p>
                         <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>
-                    </div>
+                    </div>-->
                 <?php } ?>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 paddingleft47 fontRoboto fontsize15">
@@ -95,7 +95,7 @@
                         <div class="col-md-3">
                             <button class="btn btn-success btn-block btn-lg">ĐĂNG KÝ</button>
                         </div>
-                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>
+<!--                        <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=B0Ivo&webforms_id=7707104"></script>-->
                     </div>
                 </div>
             <?php } ?>

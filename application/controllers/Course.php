@@ -147,7 +147,7 @@ class Course extends MY_Controller {
 //                }
                 //call to mol
                 $method = 'cod';
-                $this->sent_to_mol($method, $this->input->post(), $courseID, $param['price']);
+                $this->sendToCRM($method, $this->input->post(), $courseID, $param['price']);
                 $this->lib_mod->insert('purchase', $param);
                 /*                 * ***************************xóa session tránh ddos************************* */
                 //unset($_SESSION['curr_course_purchase']);
@@ -208,7 +208,7 @@ class Course extends MY_Controller {
 
                 //call to mol
                 $method = 'direct';
-                $this->sent_to_mol($method, $this->input->post(), $courseID, $param['price']);
+                $this->sendToCRM($method, $this->input->post(), $courseID, $param['price']);
 
                 $this->lib_mod->insert('purchase', $param);
                 /* =============================== xóa session tránh ddos************************* */
@@ -279,7 +279,7 @@ class Course extends MY_Controller {
                 //call to mol
 
                 $method = 'transfer';
-                $this->sent_to_mol($method, $this->input->post(), $courseID, $param['price']);
+                $this->sendToCRM($method, $this->input->post(), $courseID, $param['price']);
 
                 require_once 'plugin/Rest_Client.php';
                 //save c3
@@ -555,7 +555,7 @@ class Course extends MY_Controller {
                     $this->session->set_userdata('courseID', $courseID[0]['id']);
                     //Cập nhât order với token  $nl_result->token để sử dụng check hoàn thành sau này
                     $result['type'] = 1;
-                    $result['mes'] = (string)$nl_result->checkout_url;
+                    $result['mes'] = (string) $nl_result->checkout_url;
                     echo json_encode($result);
                     // echo '1_' . $nl_result->checkout_url;
                 } else {
@@ -1432,6 +1432,46 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
             $param1['link_id'] = $this->session->tempdata('link_id');
         }
         $restClient->post($uri, $param1);
+    }
+
+    function sendToCRM($method, $post, $courseID, $price) {
+        require_once APPPATH . "../public/lakita/Rest_client/Rest_Client.php";
+        $course = $this->lib_mod->detail('courses', array('id' => $courseID));
+        $infor = $post;
+        $course_cod = $this->find_course_code($course[0]['id']);
+        $post = [];
+
+       
+        $post['course_code'] = $course_cod;
+        $post['price_purchase'] = $price;
+        $post['name'] = $infor['name'];
+        $post['phone'] = $infor['phone'];
+        $post['email'] = htmlspecialchars($infor['tinh']);
+        $post['dia_chi'] = htmlspecialchars($infor['dia_chi']);
+        $post['payment_method_rgt'] = '1';
+
+        if ($method == 'transfer') {
+            $post['payment_method_rgt'] = '2';
+        }
+        if ($method == 'direct') {
+            $post['payment_method_rgt'] = '4';
+        }
+        $config = array(
+            'server' => 'https://crm2.lakita.vn/',
+            //'server' => 'http://chuyenpn.com/CRM2/',
+            'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
+            'api_name' => 'lakita-key'
+        );
+        $restClient = new Rest_Client($config);
+        $uri = "contact_api/add_contact";
+
+        $link_id = get_cookie('link_id');
+        if ($link_id) {
+            $post['link_id'] = $link_id;
+        }else{
+             $post['matrix'] = 'lakita.vn';
+        }
+        $restClient->post($uri, $post);
     }
 
     function charged_price($course) {

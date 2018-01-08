@@ -55,6 +55,7 @@ class Landingpage extends CI_Controller {
          * Landing page combo
          */
         if (in_array($post['code_landingpage'], array(
+<<<<<<< HEAD
                     'KT210-KT400','KT800-KT400', 'KT210-KT800'
                 ))) {
             
@@ -66,6 +67,21 @@ class Landingpage extends CI_Controller {
             );
             $post['course_code'] = $post['code_landingpage'];
             $post['price_purchase'] =$priceCombo[$post['code_landingpage']];
+=======
+                'KT220-KT400',   'KT220-KT210',  'KT210-KT400', 'KT800-KT400', 'KT210-KT800', "custom"
+                ))) {
+
+            $priceCombo = array(
+                'KT220-KT400' => 695000,
+                 'KT220-KT210' => 645000,
+                'KT210-KT400' => 645000,
+                'KT800-KT400' => 645000,
+                'KT210-KT800' => 545000,
+                "custom" => 1000000
+            );
+            $post['course_code'] = ($post['code_landingpage'] == "custom") ? "COMBO-NOEL" : $post['code_landingpage'];
+            $post['price_purchase'] = $priceCombo[$post['code_landingpage']];
+>>>>>>> c684e8936ec3ab31c38547e38113637b103a126e
             $config = array(
                 'server' => 'https://crm2.lakita.vn/',
                 //'server' => 'http://chuyenpn.com/CRM2/',

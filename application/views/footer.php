@@ -64,3 +64,5 @@ if (!$this->agent->is_mobile()) {
 <script src="https://use.fontawesome.com/0b216c5f11.js"></script>
 <script src="<?php echo base_url(); ?>plugin/boostrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script>
 <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+
+

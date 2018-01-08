@@ -80,6 +80,7 @@
     <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/general.css?ver=<?php echo _VER_CACHED_ ?>" />
 <!--    <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/fontawesome.js"></script>-->
     <link href="<?php echo base_url(); ?>plugin/boostrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!-- Facebook Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s)

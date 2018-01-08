@@ -23,7 +23,7 @@ $rs = json_decode($result);
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&amp;subset=vietnamese" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>public/kt1202/css/style.css" rel="stylesheet" />
-        <script src="<?php echo base_url(); ?>public/my.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>public/my.js?ver=<?php echo _VER_CACHED_ ?>" type="text/javascript"></script>
      <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
