@@ -17,6 +17,7 @@ class Download extends MY_Controller {
         $post = $this->input->get();
         if (empty($post)) {
             $data = $this->data;
+            $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 36, '', array('sort' => 'desc'));
             $data['content'] = 'download/download_page';
             $data['title'] = 'Tải tài liệu kế toán lakita.vn';
             $data['id'] = $id;
