@@ -112,7 +112,8 @@ class Home extends MY_Controller {
                     '81' => '1086',
                     '82' => '1087',
                     '83' => '1189',
-                    '84' => '1190'
+                    '84' => '1190',
+                    '85' => '1273'
                 ];
                 if (array_key_exists($id, $videoDemoArr)) {
                     $data['id_video_demo'] = $videoDemoArr[$id];

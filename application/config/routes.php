@@ -17,6 +17,7 @@ $route['tron-bo-lap-bao-cao-tai-chinh-2017-trinhbtk2.html'] = 'landingpage/show/
 $route['cach-xac-dinh-chi-phi-hop-ly.html'] = 'landingpage/show/kt110';
 $route['cach-xac-dinh-chi-phi-hop-ly-candh.html'] = 'landingpage/show/kt110candh';
 $route['quan-tri-ke-toan.html'] = 'landingpage/show/kt120';
+$route['quan-tri-ke-toan-candh.html'] = 'landingpage/show/kt120candh';
 $route['bao-cao-tai-chinh-nang-cao.html'] = 'landingpage/show/kt130';
 $route['bao-cao-tai-chinh-nang-cao-candh.html'] = 'landingpage/show/kt130candh';
 $route['nghiep-vu-ke-toan-doanh-nghiep-thuong-mai.html'] = 'landingpage/show/kt310';

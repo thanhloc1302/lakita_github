@@ -5,12 +5,12 @@
 <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/general.css?ver=<?php echo _VER_CACHED_ ?>" />
 <div class="header row">
     <div class="col-md-6 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-        <a href="<?php echo base_url(); ?>?link=297">
+        <a href="<?php echo base_url(); ?>?link=321">
             <img class="logo" style="margin-bottom: 20px;" src="https://crm2.lakita.vn/style/img/logo5.png">
         </a>
     </div>
-    <div class="col-md-5" style="padding-top: 60px; color: #fff; font-size: 16px">
-        Hotline: 1900 636 195
+    <div class="col-md-5 text-right" style="padding-top: 60px; color: #fff; font-size: 16px; padding-right: 35px;">
+        Hotline: 1900 636 195 - 024 7306 2468 - 0971 571 532
     </div>
 </div>
 <div class="row body">
@@ -30,7 +30,7 @@
     <div class="container">
         <div class="row body" style="background-color: #fff">
             <h2 style="margin-bottom: 50px;"> Mời bạn tham khảo các khóa học ưu đãi trên 50% của Lakita tại đây </h2>
-            <?php $this->load->view('template/list_course'); ?>
+            <?php $this->load->view('template/list_course_2'); ?>
         </div>
     </div>
 </div>
