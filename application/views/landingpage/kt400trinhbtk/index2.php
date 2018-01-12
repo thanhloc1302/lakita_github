@@ -1,77 +1,49 @@
-<?php
-$code_ladingpage = str_replace('.html', '', str_replace('https://lakita.vn/', '', current_url()));
-$config = array(
-    'server' => 'https://crm2.lakita.vn/',
-    'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
-    'api_name' => 'lakita-key',
-);
-$restClient = new Rest_Client($config);
-$uri = "landingpage_api/price/" . $code_ladingpage;
-$result = $restClient->get($uri);
-$rs = json_decode($result);
-?>
 <!DOCTYPE html>
 <html>
-    <head lang="en">
-        <meta charset="UTF-8">
-        <title class="title-site" lp-id="59c484ed701897b41e8a9df4">Trọn bộ hướng dẫn lập báo cáo tài chính năm 2017</title>
-        <meta http-equiv="Cache-control" content="no-cache">
-        <meta http-equiv="Expires" content="-1">
-        <meta name="description" content="Trọn bộ hướng dẫn lập báo cáo tài chính năm 2017">
-        <meta name="keywords" content="báo cáo tài chính">
-        <meta name="viewport" id="lp-viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
-             <link rel="icon" href="https://lakita.vn/data/source/setting/favicon.png" />
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-        <script>
-            function ladiViewport() {
-                var width = (window.outerWidth > 0) ? window.outerWidth : screen.width;
-                if (width > 3000) {
-                    width = width / 10;
-                }
-                var content = "width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0";
-                var zoom = 1;
-                if (width < 768) {
-                    zoom = width / 375;
-                    content = "width=375, initial-scale=" + zoom + ", maximum-scale=" + zoom + ",minimum-scale=" + zoom;
-                } else {
-                    if (width < 960) {
-                        zoom = width / 960;
-                        content = "width=960, initial-scale=" + zoom + ", maximum-scale=" + zoom + ",minimum-scale=" + zoom;
-                    }
-                }
-                var meta = document.getElementsByTagName("meta");
-                for (var i = 0; i < meta.length; i++) {
-                    if (meta[i].name.toLowerCase() == "viewport") {
-                        meta[i].content = content;
-                    }
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title class="title-site" lp-id="5a37c7385fcf4937a19affb4">Đặt tiêu đề trang</title>
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta name="description" content="undefined">
+    <meta name="keywords" content="undefined">
+    <meta name="viewport" id="lp-viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function ladiViewport() {
+            var width = (window.outerWidth > 0) ? window.outerWidth : screen.width;
+            if (width > 3000) {
+                width = width / 10;
+            }
+            var content = "width=device-width, initial-scale=1.0";
+            var zoom = 1;
+            if (width < 768) {
+                zoom = width / 375;
+                content = "width=375, initial-scale=" + zoom
+            } else {
+                if (width < 960) {
+                    zoom = width / 960;
+                    content = "width=960, initial-scale=" + zoom
                 }
             }
-            ;
-            ladiViewport();
-        </script>
-        <meta property="fb:admins" content="100001432238036"/>
-        <meta property="fb:app_id" content="315347858825221" />
-        <meta property="og:type"   content="website" />
-        <meta property="og:url" content="https://lakita.vn/tron-bo-lap-bao-cao-tai-chinh-2017-trinhbtk.html" />
-        <meta property="og:title" content="Trọn bộ hướng dẫn lập báo cáo tài chính năm 2017" />
-        <meta property="og:image" content="https://lakita.vn/data/source/courses/268x150/tron-bo-huong-dan-lap-bao-cao-tai-chinh-nam-2016.png" />
-        <meta property="og:description" content="Khóa học được thiết kế dành cho kế toán đi làm và máy tính có kết nối internet" />
-        <?php $this->load->view('landingpage/kt400trinhbtk/css'); ?>
-        <?php include_once("plugin/analyticstracking.php") ?>
-    </head>
-    <body>
-          <div id="fb-root"></div>
-        <script>(function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
-                    return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=315347858825221";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
-        <div class="ladi-wraper-page">
+            var meta = document.getElementsByTagName("meta");
+            for (var i = 0; i < meta.length; i++) {
+                if (meta[i].name.toLowerCase() == "viewport") {
+                    meta[i].content = content;
+                }
+            }
+        };
+        ladiViewport();
+    </script>
+    <meta property="og:title" content="Đặt tiêu đề trang" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://demo.ladipage.me/5a37c7385fcf4937a19affb4" />
+    <meta property="og:image" content="https://static.ladipage.net//57b167c9ca57d39c18a1c57c/untitled-1-664120.jpg">
+    <meta property="og:description" content="undefined" />
+    <meta name="format-detection" content="telephone=no" /></head>
+
+<body>
+    <div class="ladi-wraper-page">
         <div id="SECTION212" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
             <div class="container">
                 <div id="BOX493" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
@@ -789,92 +761,6 @@ $rs = json_decode($result);
         </div>
         <script type="text/javascript" async="" defer="" src="https://static.ladipage.net/source/ladipage.lib.1.js?v=1515744576286"></script>
     </div>
-        
-         <!-- ******************** comment fb ********************************** -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-xs-12">
-                    <div class="fb-comments" data-href="https://lakita.vn/tron-bo-lap-bao-cao-tai-chinh-2017-trinhbtk.html" 
-                         data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Latest compiled and minified JavaScript -->
-        <script type="text/javascript" src="https://static.ladipage.net/source/jquery.3-0-1.js"></script>
-        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <script src="<?php echo base_url(); ?>public/my.js?ver=<?php echo _VER_CACHED_ ?>" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                var left = $('#img-contact').css('margin-left');
-                $('#img-contact').hover(function () {
-                    $(this).css('margin-left', '0');
-                }, function () {
-                    $(this).css('margin-left', left);
-                });
-                $("#BUTTON431").click(function (e) {
-                    e.preventDefault();
-                    $("#btn-431").click();
-                });
-                $("#BUTTON752").click(function (e) {
-                    e.preventDefault();
-                    $("#btn-752").click();
-                });
-            });
-        </script>
-    </div>
-
-    <!-- *************************************************************Popup*************************************************************************-->
-    <div id="Popup" class="popup-wrapper" style="display: none;">
-        <div class="popup-loading">
-            <div class="loading-container">
-                <span>
-                    Hệ thống đang xử lý, vui lòng đợi trong giây lát...
-                </span>
-            </div>
-        </div>
-    </div>
-    <style>
-        .popup-wrapper {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-            z-index: 999999;
-            background: url(https://lakita.vn/styles/v2.0/img/modal_overlay.png);
-        }
-        .popup-wrapper .popup-loading{
-            background-color: white;
-            opacity: 0.7;
-            filter:alpha(opacity=70);
-            height: 100%;
-            width: 100%;
-            z-index: 21;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-
-        }
-        .popup-wrapper .popup-loading .loading-container{
-            position: relative;
-            height: 100%;
-            background: url(https://lakita.vn/styles/images/loading.gif) center center no-repeat;
-        }
-        .popup-wrapper .popup-loading .loading-container span{
-            position: absolute;
-            top: 58%;
-            left: 30%;
-            opacity: 1;
-            z-index: 1000000000000;
-            font-size: 28px;
-            font-weight: bold;
-        }
-    </style>
-    <!-- *************************************************************Popup (end)**********************************************************************-->
-
-    </body>
+</body>
 
 </html>

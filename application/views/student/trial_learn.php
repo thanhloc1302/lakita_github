@@ -139,14 +139,15 @@
             <div class="row gr1-row4-2">
                 <div class="col-md-2">
                     <img src="<?php
-                    if (!empty($student[0]['id_fb']))
-                        echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
-                    else {
-                        if (!empty($student[0]['thumbnail']))
-                            echo 'https://lakita.vn/' . $student[0]['thumbnail'];
-                        else
-                            echo base_url() . 'styles/images/people/110/user.png';
-                    }
+                     if (!empty($student[0]['thumbnail'])) {
+                                    echo 'https://lakita.vn/' . $student[0]['thumbnail'];
+                                } else {
+                                    if (!empty($student[0]['id_fb'])) {
+                                        echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
+                                    } else {
+                                        echo base_url() . 'styles/images/people/110/user.png';
+                                    }
+                                }
                     ?>" alt="" class="img-circle avatar img-responsive" />
                 </div>
                 <div class="col-md-8">
