@@ -13,14 +13,15 @@ else {
                 <div class="row">
                     <div class="col-md-1 col-md-offset-3 margintop22">
                         <img src="<?php
-                        if (!empty($student[0]['id_fb']))
-                            echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
-                        else {
-                            if (!empty($student[0]['thumbnail']))
-                                echo 'https://lakita.vn/' . $student[0]['thumbnail'];
-                            else
-                                echo base_url() . 'styles/images/people/110/user.png';
-                        }
+                         if (!empty($student[0]['thumbnail'])) {
+                                    echo 'https://lakita.vn/' . $student[0]['thumbnail'];
+                                } else {
+                                    if (!empty($student[0]['id_fb'])) {
+                                        echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
+                                    } else {
+                                        echo base_url() . 'styles/images/people/110/user.png';
+                                    }
+                                }
                         ?>" alt="" class="img-circle avatar" />
                     </div>
                     <div class="col-md-6 marginleft15">

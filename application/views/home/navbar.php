@@ -199,9 +199,9 @@
                                 $courses_love = $this->lib_mod->detail('love', array('user_id' => $user_id));
                                 if (count($courses_love)) {
                                     ?>
-                                                        <!--                                    <span class="badge">
+                                                                <!--                                    <span class="badge">
                                     <?php echo count($courses_love); ?>
-                                                                                            </span>-->
+                                                                                                    </span>-->
 
                                     <?php
                                     $courses_detail = [];
@@ -233,17 +233,18 @@
                         <li class="dropdown login-bar avatar-li dropdown_hover">
                             <a id="drop1" href="#" role="button" class="dropdown-toggle avatar" data-toggle="dropdown">
                                 <img src="<?php
-                                if (!empty($student[0]['id_fb']))
-                                    echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
-                                else {
-                                    if (!empty($student[0]['thumbnail']))
-                                        echo 'https://lakita.vn/' . $student[0]['thumbnail'];
-                                    else
+                                if (!empty($student[0]['thumbnail'])) {
+                                    echo 'https://lakita.vn/' . $student[0]['thumbnail'];
+                                } else {
+                                    if (!empty($student[0]['id_fb'])) {
+                                        echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
+                                    } else {
                                         echo base_url() . 'styles/images/people/110/user.png';
+                                    }
                                 }
                                 ?>" alt="" class="img-circle avatar" />
                                 &nbsp;&nbsp;&nbsp;
-                                <?php echo $student[0]['name']; ?> 
+                                     <?php echo $student[0]['name']; ?> 
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-header-1" role="menu" aria-labelledby="drop1">
@@ -255,7 +256,7 @@
                                 <li> <a href="student/logout"> <i class="fa fa-sign-out" aria-hidden="true"></i> &nbsp; Đăng xuất </a> </li>
                             </ul>
                         </li>
-                    <?php } ?>
+<?php } ?>
                 </ul>
             </div>
         </div>
