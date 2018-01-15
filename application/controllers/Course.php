@@ -69,7 +69,7 @@ class Course extends MY_Controller {
             $data['student'] = $this->lib_mod->load_all('student', '', array('id' => $user_id), '', '', '');
         }
         $data['group_courses'] = $this->lib_mod->load_all('group_courses', 'id,name,slug', array('status' => 1), 5, '', array('sort' => 'asc'));
-        $key_word = $this->lib_mod->make_url(trim($this->input->post('key_word')));
+        $key_word = $this->lib_mod->make_url(trim($this->input->get('key_word')));
         $data['courses'] = $this->lib_mod->load_courses($key_word);
         $data['rates'] = $this->lib_mod->load_all('rate', '', '', '', '', array('name' => 'desc'), 'name');
         $data['title'] = 'Tìm các khóa học bạn quan tâm - lakita.vn';

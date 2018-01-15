@@ -37,13 +37,13 @@ class Student extends MY_Controller {
                 'gift' => 'yes'
             );
             if (count($courses_id)) {
-                
+
                 foreach ($courses_id as $key => $value) {
                     $mycourses[$key] = $this->lib_mod->detail('courses', array('id' => $value['courses_id']));
                     $mycourses[$key]['cod'] = $value['cod'];
                     $mycourses[$key]['date_join_course'] = $value['create_date'];
                     $mycourses[$key]['trial_learn'] = $value['trial_learn'];
-                    if(isset($value['gift'])){
+                    if (isset($value['gift'])) {
                         $mycourses[$key]['gift'] = 'yes';
                     }
                 }
@@ -53,52 +53,54 @@ class Student extends MY_Controller {
 //                                die;
 //                            }
                 foreach ($mycourses as $key => $value) {
-                    $mycourses[$key] = $value[0];
-                    if(isset($value['gift'])){
-                        $mycourses[$key]['gift'] = 'yes';
+                    if (isset($value[0])) {
+                        $mycourses[$key] = $value[0];
+                        if (isset($value['gift'])) {
+                            $mycourses[$key]['gift'] = 'yes';
+                        }
+
+                        //tống số bài học
+                        $mycourses[$key]['total_video'] = count($this->lib_mod->detail('learn', array('courses_id' => $value[0]['id'], 'status' => 1)));
+
+                        //học thử hay học thật
+                        $cod_special = $this->lib_mod->detail('special_cod', array('cod' => $value['cod']));
+                        if (count($cod_special)) {
+                            $mycourses[$key]['is_trial_learn'] = 0;
+                            $mycourses[$key]['trial_learn'] = 0;
+                        } else {
+                            $mycourses[$key]['is_trial_learn'] = $this->is_trial_learn($value['cod']);
+                            $mycourses[$key]['trial_learn'] = $value['trial_learn'];
+                        }
+                        //ngày tham gia
+                        $mycourses[$key]['date_join_course'] = $value['date_join_course'];
+
+                        //nhóm khóa học
+                        $group_courses = $this->lib_mod->detail('group_courses', array("id" => $value[0]['group_courses_id']));
+                        $mycourses[$key]['group_course_name'] = $group_courses[0]['name'];
+
+                        //video đầu tiên của khóa học
+                        if (count($cod_special)) {
+                            $mycourses[$key]['first_course'] = $this->find_first_course('', $value[0]['id']);
+                        } else {
+                            $mycourses[$key]['first_course'] = $this->find_first_course($value['cod'], $value[0]['id']);
+                        }
+                        //thông tin giảng viên
+                        $firs_courses = array_filter(explode(',', $value[0]['speaker_id']));
+                        if (isset($firs_courses[0])) {
+                            $firs_courses = str_replace('-', '', $firs_courses[0]);
+                            $mycourses[$key]['speaker'] = $this->lib_mod->detail('speaker', array('id' => $firs_courses));
+                        }
+
+                        //tổng số bài đã học
+                        $mycourses[$key]['count_all_learn'] = count($this->lib_mod->detail('student_learn', array('student_id' => $user_id, 'courseID' => $value[0]['id'])));
+
+                        //tổng số bình luận
+                        $mycourses[$key]['total_cmt'] = count($this->lib_mod->detail('comment', array('courses_id' => $value[0]['id'])));
                     }
-
-                    //tống số bài học
-                    $mycourses[$key]['total_video'] = count($this->lib_mod->detail('learn', array('courses_id' => $value[0]['id'], 'status' => 1)));
-
-                    //học thử hay học thật
-                    $cod_special = $this->lib_mod->detail('special_cod', array('cod' => $value['cod']));
-                    if (count($cod_special)) {
-                        $mycourses[$key]['is_trial_learn'] = 0;
-                        $mycourses[$key]['trial_learn'] = 0;
-                    } else {
-                        $mycourses[$key]['is_trial_learn'] = $this->is_trial_learn($value['cod']);
-                        $mycourses[$key]['trial_learn'] = $value['trial_learn'];
-                    }
-                    //ngày tham gia
-                    $mycourses[$key]['date_join_course'] = $value['date_join_course'];
-
-                    //nhóm khóa học
-                    $group_courses = $this->lib_mod->detail('group_courses', array("id" => $value[0]['group_courses_id']));
-                    $mycourses[$key]['group_course_name'] = $group_courses[0]['name'];
-
-                    //video đầu tiên của khóa học
-                    if (count($cod_special)) {
-                        $mycourses[$key]['first_course'] = $this->find_first_course('', $value[0]['id']);
-                    } else {
-                        $mycourses[$key]['first_course'] = $this->find_first_course($value['cod'], $value[0]['id']);
-                    }
-                    //thông tin giảng viên
-                    $firs_courses = array_filter(explode(',', $value[0]['speaker_id']));
-                    if (isset($firs_courses[0])) {
-                        $firs_courses = str_replace('-', '', $firs_courses[0]);
-                        $mycourses[$key]['speaker'] = $this->lib_mod->detail('speaker', array('id' => $firs_courses));
-                    }
-
-                    //tổng số bài đã học
-                    $mycourses[$key]['count_all_learn'] = count($this->lib_mod->detail('student_learn', array('student_id' => $user_id, 'courseID' => $value[0]['id'])));
-
-                    //tổng số bình luận
-                    $mycourses[$key]['total_cmt'] = count($this->lib_mod->detail('comment', array('courses_id' => $value[0]['id'])));
                 }
                 $data['courses'] = $mycourses;
                 foreach ($mycourses as $value) {
-                    $ids[] = $value['id'];
+                    $ids[] = isset($value['id']) ? $value['id'] : 0;
                 }
             } else {
                 $data['courses'] = [];
@@ -136,7 +138,8 @@ class Student extends MY_Controller {
     function activecod() {
         $user_id = $this->session->userdata('user_id');
         if (!isset($user_id)) {
-            redirect(base_url());
+            $this->session->set_userdata('last_page', base_url('kich-hoat-khoa-hoc.html'));
+            redirect(base_url('dang-nhap.html'));
         } else {
             $wrong_input_cod = $this->lib_mod->detail('student', array('id' => $user_id));
             $wrong_input_cod = $wrong_input_cod[0]['wrong_input_cod'];

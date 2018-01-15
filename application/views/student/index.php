@@ -2,46 +2,46 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/style.bootstrap11.lakita.css?ver=<?php echo _VER_CACHED_ ?>" />
 <script src="<?php echo base_url(); ?>styles/v2.0/js/student.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <?php
-if ($this->agent->is_mobile())
+if ($this->agent->is_mobile()) {
     $this->load->view('mobile/my_courses');
-else {
+} else {
     ?>
     <div class="header">
         <?php $this->load->view('home/navbar'); ?>
-        <div class="row">
-            <div class="col-md-6  my-row-1">
-                <div class="row">
-                    <div class="col-md-1 col-md-offset-3 margintop22">
-                        <img src="<?php
-                         if (!empty($student[0]['thumbnail'])) {
-                                    echo 'https://lakita.vn/' . $student[0]['thumbnail'];
-                                } else {
-                                    if (!empty($student[0]['id_fb'])) {
-                                        echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
-                                    } else {
-                                        echo base_url() . 'styles/images/people/110/user.png';
-                                    }
-                                }
-                        ?>" alt="lakita" class="img-circle avatar" />
+        <!--        <div class="row">
+                    <div class="col-md-6  my-row-1">
+                        <div class="row">
+                            <div class="col-md-1 col-md-offset-3 margintop22">
+                                <img src="<?php
+        if (!empty($student[0]['thumbnail'])) {
+            echo 'https://lakita.vn/' . $student[0]['thumbnail'];
+        } else {
+            if (!empty($student[0]['id_fb'])) {
+                echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
+            } else {
+                echo base_url() . 'styles/images/people/110/user.png';
+            }
+        }
+        ?>" alt="lakita" class="img-circle avatar" />
+                            </div>
+                            <div class="col-md-6 marginleft15">
+                                <h1> <strong> <?php echo $student[0]['name']; ?> </strong></h1>
+                                <p> Khóa học của tôi </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 marginleft15">
-                        <h1> <strong> <?php echo $student[0]['name']; ?> </strong></h1>
-                        <p> Khóa học của tôi </p>
+                    <div class="col-md-6 searchBox">
+                        <div class="row">
+                            <div class="col-md-offset-2 col-md-8">
+                                <form action="<?php echo base_url(); ?>tim-kiem.html" method="post" id="searchForm">
+                                    <label for="exampleInputEmail1" class="sr-only">Search</label>
+                                    <input type="text" class="form-control" id="key_word" name="key_word" value="Tìm các khóa học bạn quan tâm...">
+                                    <img class="searchIcon"src="<?php echo base_url(); ?>styles/v2.0/img/icon_seach.png" />
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6 searchBox">
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-8">
-                        <form action="<?php echo base_url(); ?>tim-kiem.html" method="post" id="searchForm">
-                            <label for="exampleInputEmail1" class="sr-only">Search</label>
-                            <input type="text" class="form-control" id="key_word" name="key_word" value="Tìm các khóa học bạn quan tâm...">
-                            <img class="searchIcon"src="<?php echo base_url(); ?>styles/v2.0/img/icon_seach.png" />
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+                </div>-->
     </div>
     <div class="clearfix"></div>
     <!--*********************************************************DUNG TT***********************************************-->
@@ -202,14 +202,14 @@ else {
                 $i = 1;
                 foreach ($other_courses as $key => $value) {
                     ?>
-                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                            <a href="<?php echo base_url() . $value['slug'] . '-2' . $value['id']; ?>.html" title="<?php echo $value['name']; ?>">
-                                                <div> <img src="<?php echo 'https://lakita.vn/' . $value['image']; ?>" alt="<?php echo $value['name']; ?>" class="img-responsive"> </div>
-                                                <p class="courseName"><?php echo $value['name']; ?></p>
-                                            </a>
-                                            <p class="teacher"><?php echo $value['speaker_name']; ?></p>
-                                            <p class="price"> <?php echo number_format(str_replace('.', '', $value['price_root']), 0, ',', '.') . " VNĐ"; ?></p>
-                                        </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                                    <a href="<?php echo base_url() . $value['slug'] . '-2' . $value['id']; ?>.html" title="<?php echo $value['name']; ?>">
+                                                        <div> <img src="<?php echo 'https://lakita.vn/' . $value['image']; ?>" alt="<?php echo $value['name']; ?>" class="img-responsive"> </div>
+                                                        <p class="courseName"><?php echo $value['name']; ?></p>
+                                                    </a>
+                                                    <p class="teacher"><?php echo $value['speaker_name']; ?></p>
+                                                    <p class="price"> <?php echo number_format(str_replace('.', '', $value['price_root']), 0, ',', '.') . " VNĐ"; ?></p>
+                                                </div>
                     <?php
                     if ($i % 3 == 0)
                         echo '<div class="clearfix visible-md-block visible-lg-block"></div>';

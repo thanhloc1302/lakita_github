@@ -56,13 +56,64 @@ if (!$this->agent->is_mobile()) {
                 appId: '315347858825221',
                 version: 'v2.7'
             });
-          /* $('#loginbutton,#feedbutton').removeAttr('disabled');
-            FB.getLoginStatus(updateStatusCallback); */
+            /* $('#loginbutton,#feedbutton').removeAttr('disabled');
+             FB.getLoginStatus(updateStatusCallback); */
         });
     });
 </script>
 <script src="https://use.fontawesome.com/0b216c5f11.js"></script>
 <script src="<?php echo base_url(); ?>plugin/boostrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script>
 <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+<!--Import  owl-carousel-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">  
+<style>
+    owl-prev, .owl-next {
+        background: #d6d6d600;;
+        position: absolute;
+        top: 40%;
+        margin-top: -1px;
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            center: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            nav: true,
+
+            navText: ["<img src='styles/v2.0/img/navbar/back.png'>", "<img src='styles/v2.0/img/navbar/next.png'>"],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 1,
+                    nav: false
+                },
+                1000: {
+                    items: 1,
+                    nav: true,
+                    loop: true
+                }
+            }
+        });
+
+        $('.play').on('click', function () {
+            owl.trigger('play.owl.autoplay', [5000]);
+        });
+        $('.stop').on('click', function () {
+            owl.trigger('stop.owl.autoplay');
+        });
+    });
+</script>
 
 

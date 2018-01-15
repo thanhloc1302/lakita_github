@@ -214,7 +214,7 @@
             <hr style="margin-top: 0px; width: 93%;">
             <div class="row gr1-row-3">
                 <div class="col-md-3">
-                    <img src="<?php echo 'https://lakita.vn/' . $speaker[0]['image']; ?>" class="avatar">
+                    <img src="<?php echo 'https://lakita.vn/' . $speaker[0]['image']; ?>" class="avatar img-responsive" style="width: 50px;">
                     <strong> <?php echo $speaker[0]['name']; ?> </strong>
                 </div>
                 <div class="col-md-3">

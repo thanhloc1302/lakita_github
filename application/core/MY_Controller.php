@@ -16,8 +16,14 @@ class MY_Controller extends CI_Controller {
         if (!isset($user_id)) {
             $this->load->model('facebook_model');
             $this->data['facebook_login_url'] = $this->facebook_model->loginUrl();
+            $user_id = $this->session->userdata('user_id');            
         }
         if (isset($user_id)) {
+            $last_page = $this->session->userdata('last_page');
+            if (isset($last_page)) {
+                $this->session->unset_userdata('last_page');
+                redirect($last_page);
+            }
             $this->_check_exist_login($user_id);
             //$table, $select, $where, $limit, $offset, $order, $group_by=''
             $student_ids1 = $this->lib_mod->load_all('student_courses', 'student_id', array('courses_id' => 37, 'trial_learn' => 0));

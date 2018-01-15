@@ -23,7 +23,7 @@
     .content ol li p{
         margin-left: 40px;
     }
-    .btn{
+    .btn-rgt{
         display: table;
         margin: auto;
         padding: 10px 15px;
@@ -33,7 +33,7 @@
 </style>
 <div class="header">
     <?php $this->load->view('home/navbar'); ?>
-    <div class="row">
+<!--    <div class="row">
         <div class="col-md-6  my-row-1">
             <h2 style="font-family: OpenSans-Bold"> <strong> <?php echo $title ?> </h2> </strong>
         </div>
@@ -48,7 +48,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div>-->
 </div>
 
 <div class="course-summary paddingbottom30" style="background-color:#FFF">
@@ -105,7 +105,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="btn btn-success" href="https://goo.gl/forms/yiZDYnIzzy2pg6Ep1" target="blank">ĐĂNG KÝ NGAY</a>
+                    <a class="btn btn-success btn-rgt" href="https://goo.gl/forms/yiZDYnIzzy2pg6Ep1" target="blank">ĐĂNG KÝ NGAY</a>
                 </li>
                 <li><b>2. XÂY DỰNG HỆ THỐNG</b>
                     <ul>
@@ -144,7 +144,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="btn btn-success" href="https://goo.gl/forms/yiZDYnIzzy2pg6Ep1" target="blank">ĐĂNG KÝ NGAY</a>
+                    <a class="btn btn-success btn-rgt" href="https://goo.gl/forms/yiZDYnIzzy2pg6Ep1" target="blank">ĐĂNG KÝ NGAY</a>
                 </li>
                 <li>
                     <b>3. XỬ LÝ DỮ LIỆU</b>
@@ -179,7 +179,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="btn btn-success" href="https://goo.gl/forms/yiZDYnIzzy2pg6Ep1" target="blank">ĐĂNG KÝ NGAY</a>
+                    <a class="btn btn-success btn-rgt" href="https://goo.gl/forms/yiZDYnIzzy2pg6Ep1" target="blank">ĐĂNG KÝ NGAY</a>
                 </li>
                 <li>
                     <b>4. CAM KẾT TỪ LAKITA.VN</b>

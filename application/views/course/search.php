@@ -9,7 +9,7 @@ else {
     ?>
     <div class="header">
         <?php $this->load->view('home/navbar'); ?>
-        <div class="row">
+<!--        <div class="row">
             <div class="col-md-6  my-row-1">
                 <h1> <strong>KẾT QUẢ TÌM KIẾM </strong></h1>
                 <p> với từ khóa "<?php echo $keyword;?>" </p>
@@ -25,7 +25,7 @@ else {
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
     <div class="allCourses hidden-sm hidden-xs">
         <ul class="nav nav-pills">

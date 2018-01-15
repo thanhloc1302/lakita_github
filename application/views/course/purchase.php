@@ -21,14 +21,14 @@ else {
     ?>
     <div class="header">
         <?php $this->load->view('home/navbar'); ?>
-        <div class="row">
+<!--        <div class="row">
             <div class="col-md-6  my-row-1">
                 <p class="choose_method"> CHỌN PHƯƠNG THỨC THANH TOÁN </p>
                 <h1><strong><?php echo $curr_courses[0]['name']; ?></strong></h1>
             </div>
             <div class="col-md-6 searchBox">
             </div>
-        </div>
+        </div>-->
     </div>
     <div class="container method margintop10">
         <div class="row">

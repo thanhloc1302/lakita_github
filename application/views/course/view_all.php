@@ -5,7 +5,7 @@
 <?php if (!$this->agent->is_mobile()) { ?>
     <div class="header">
         <?php $this->load->view('home/navbar'); ?>
-        <div class="row">
+<!--        <div class="row">
             <div class="col-md-6  my-row-1">
                 <h1> <strong>CÁC KHÓA HỌC HÀNG ĐẦU CỦA LAKITA </strong></h1>
                 <h1> <?php echo $group_course_name; ?> </h1>
@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
     <div class="allCourses">
         <ul class="nav nav-pills">
@@ -40,17 +40,7 @@
 else {
     ?>
     <?php $this->load->view('mobile/navbar'); ?>
-    <div class="container" style="margin-top: -22px; overflow: hidden">
-        <div class="row searchBox" style="background: url(http://lakita.com.vn/styles/v2.0/img/banner-1.jpg); padding-top: 9px; height: 70px">
-            <div class="col-md-12">
-                <label for="exampleInputEmail1" class="sr-only">Search</label>
-                <form action="<?php echo base_url(); ?>tim-kiem.html" method="post" id="searchForm">
-                    <input type="text" class="form-control" id="key_word" name="key_word" value="Tìm các khóa học bạn quan tâm...">
-                    <img alt="học excel cơ bản, excel cho kế toán, tự học excel" class="searchIcon"src="<?php echo base_url(); ?>styles/v2.0/img/icon_seach.png" style="width:25px; top:10px"/>
-                </form>
-            </div>
-        </div>
-    </div>
+   
 <?php } ?>
 <div class="listCourse">
     <div class="container">

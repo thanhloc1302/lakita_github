@@ -8,7 +8,7 @@ else {
     ?>
     <div class="header">
         <?php $this->load->view('home/navbar'); ?>
-        <div class="row">
+<!--        <div class="row">
             <div class="col-md-6  my-row-1">
                 <p class="group_course"> <?php echo $group_courses[0]['name']; ?> </p>
                 <h2 style="font-size: 18px; font-family: OpenSans-Bold; line-height: 26px;"> <strong> <?php echo $curr_courses[0]['name']; ?> </h2> </strong>
@@ -24,7 +24,7 @@ else {
                     </div>
                 </form>
             </div>
-        </div>
+        </div>-->
     </div>
     <div class="course-summary paddingbottom30">
         <div class="container">

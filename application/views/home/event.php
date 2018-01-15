@@ -12,18 +12,18 @@
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 21.0%; font-size: 10px;"> GIÂY <br></span>
     <div class="clock" style="bottom: 0px; position: fixed; z-index: 999999999;width: 46%; right: -10%"></div>
 </a>-->
-<a target="_blank" href="https://lakita.vn/combo-qua-khung-dip-giang-sinh.html" id="event-ladi" class="event2011 hidden-xs hidden-sm">
+<!--<a target="_blank" href="https://lakita.vn/combo-qua-khung-dip-giang-sinh.html" id="event-ladi" class="event2011 hidden-xs hidden-sm">
     <img class="event2011 img-responsive" style="position: fixed; bottom: 0; z-index: 100000000; width: 100%;" alt="học excel cơ bản" title="học excel cơ bản" src="https://lakita.vn/styles/v2.0/img/event/banner.png?ver=<?php echo time(); ?>" />
-<!--    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 40.2%; font-size: 62px;" class="num-day"> 0 <br></span>
+    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 40.2%; font-size: 62px;" class="num-day"> 0 <br></span>
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 41.3%; font-size: 10px;"> NGÀY <br></span>
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 32.9%; font-size: 62px;" class="num-hour"> 200 <br></span>
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 34.9%; font-size: 10px;"> GIỜ <br></span>
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 26.0%; font-size: 62px;" class="num-minute"> 300 <br></span>
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 27.5%; font-size: 10px;"> PHÚT <br></span>
     <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 19.4%; font-size: 62px;" class="num-second"> 400 <br></span>
-    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 21.0%; font-size: 10px;"> GIÂY <br></span>-->
+    <span style="position: fixed; color: #fff; z-index: 1000000000000000; bottom: 13px; right: 21.0%; font-size: 10px;"> GIÂY <br></span>
     <div class="clock" style="bottom: 0px; position: fixed; z-index: 999999999;width: 46%; right: -10%"></div>
-</a>
+</a>-->
 <script type="text/javascript">
     /* var end = <?php echo $time_end_sale; ?>;
      var now = <?php echo time(); ?>;

@@ -29,7 +29,7 @@
 </style>
 <div class="header">
     <?php $this->load->view('home/navbar'); ?>
-    <div class="row">
+<!--    <div class="row">
         <div class="col-md-6  my-row-1">
             <div class="row">
                 <div class="col-md-1 col-md-offset-3 margintop22">
@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 </div>
 <div class="clearfix"></div>
 <div class="row" style="margin-top:20px">

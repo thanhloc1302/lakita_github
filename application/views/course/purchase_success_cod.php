@@ -10,14 +10,14 @@ else {
     ?>
     <div class="header">
         <?php $this->load->view('home/navbar'); ?>
-        <div class="row">
+<!--        <div class="row">
             <div class="col-md-6  my-row-1">
                 <h1> <strong> ĐẶT MUA KHÓA HỌC THÀNH CÔNG </strong></h1>
                 <p> Cảm ơn bạn đã mua khóa học trên Lakita </p>
             </div>
             <div class="col-md-6 searchBox">
             </div>
-        </div>
+        </div>-->
     </div>
     <div class="row method margintop10">
         <div class="col-md-offset-1 col-md-10 purchase-info">
