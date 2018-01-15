@@ -19,7 +19,7 @@ class Download extends MY_Controller {
             $data = $this->data;
             $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 36, '', array('sort' => 'desc'));
             $data['content'] = 'download/download_page';
-            $data['title'] = 'Tải tài liệu kế toán lakita.vn';
+            $data['title'] = 'Tải tài liệu quà tặng lakita.vn';
             $data['id'] = $id;
             $this->load->view('template', $data);
         } else {
@@ -44,6 +44,10 @@ class Download extends MY_Controller {
                  case 5:
                     $this->load->helper('download');
                     force_download(FCPATH . 'public/tai-lieu/tinh-huong-ke-toan-thuc-te.rar', NULL);
+                    break;
+                case 6:
+                    $this->load->helper('download');
+                    force_download(FCPATH . 'public/tai-lieu/bo-tai-lieu-yoga.rar', NULL);
                     break;
             }
             redirect('https://lakita.vn');

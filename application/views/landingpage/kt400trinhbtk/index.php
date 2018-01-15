@@ -125,7 +125,7 @@ $rs = json_decode($result);
                             <div id="HEADLINE254" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                                 <h3 class="widget-content" lp-node="h3">Hotline:</h3> </div><a id="BUTTON256" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table" lp-action-link="SECTION416" lp-action-type="page" lp-target="" href=""><span class="widget-content">ĐĂNG KÝ NGAY!</span> </a>
                             <div id="HEADLINE255" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">1900 636 195 - 043 9366 366</h3> </div>
+                                <h3 class="widget-content" lp-node="h3">1900 636 195 - 024 7306 2468</h3> </div>
                             <div id="IMAGE492" class="widget-element widget-snap ladi-drop" lp-type="image" lp-lang="IMAGE" lp-display="block">
                                 <div class="widget-content">
                                     <div class="lp-show-image" alt="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/logo-1515731920.png"></div>
@@ -670,9 +670,9 @@ $rs = json_decode($result);
                                 </div>
                             </div>
                             <div id="HEADLINE438" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h2 class="widget-content" lp-node="h2">ĐĂNG KÝ MUA NGAY ĐỂ NHẬN ƯU ĐÃI LỚN LÊN TỚI 50%</h2> </div>
+                                <h2 class="widget-content" lp-node="h2">ĐĂNG KÝ MUA NGAY ĐỂ NHẬN ƯU ĐÃI LỚN LÊN TỚI 56%</h2> </div>
                             <div id="HEADLINE447" class="widget-element widget-snap wow wobble animated" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h2 class="widget-content" lp-node="h2">CHỈ CÒN 495.000</h2> </div>
+                                <h2 class="widget-content" lp-node="h2">CHỈ CÒN 395.000</h2> </div>
                             <div id="HEADLINE446" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                                 <h2 class="widget-content" lp-node="h2">895.000</h2> </div>
                             <div id="BOX440" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
@@ -789,7 +789,7 @@ $rs = json_decode($result);
                     </div>
                     <div id="HEADLINE452" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                         <p class="widget-content" lp-node="p">Địa chỉ: Tầng 7, tòa CT1 Skylight, 125D Minh Khai, HBT, Hà Nội
-                            <br>Điện thoại: 043 9366 366</p>
+                            <br>Điện thoại: 024 7306 2468</p>
                     </div>
                 </div>
                 <div class="ladi-widget-overlay"></div>

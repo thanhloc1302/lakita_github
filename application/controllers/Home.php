@@ -49,7 +49,7 @@ class Home extends MY_Controller {
 //            if (($time_start_sale[0]['time_start_sale'] - 12 * 3600 < time()) && ($time_end_sale[0]['time_end_sale'] > time())) {
 //                $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 12, '', array('price_sale' => 'asc'));
 //            } else {
-                $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 12, '', array('sort' => 'desc'));
+                $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 24, '', array('sort' => 'desc'));
             //}
 
             $data['rates'] = $this->lib_mod->load_all('rate', '', array('status' => 1), 12, '', array('create_date' => 'desc'), 'name');

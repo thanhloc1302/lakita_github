@@ -55,6 +55,7 @@ $route['tai-lieu/bo-tai-lieu-ke-toan.html'] = 'download/index/2';
 $route['tai-lieu/theo-doi-dinh-muc-xang-xe-chi-tiet.html'] = 'download/index/3';
 $route['tai-lieu/slide-cach-xac-dinh-chi-phi-hop-ly.html'] = 'download/index/4';
 $route['tai-lieu/tinh-huong-ke-toan-thuc-te.html'] = 'download/index/5';
+$route['tai-lieu/bo-tai-lieu-yoga.html'] = 'download/index/6';
 
 
 

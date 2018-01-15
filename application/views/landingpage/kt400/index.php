@@ -145,7 +145,7 @@ $rs = json_decode($result);
         <div class="row">
             <div class="col-md-offset-1 col-md-6 hidden-xs hidden-sm">
                 <h3 style="color:#fff; margin-top: 198px; font-size: 20px"> Đăng ký ngay hôm nay để được nhận <span style="font-size:40px; color:red;"> ưu đãi </span> 44.6%. </h3>
-                <h3 style="color:#fff; font-size: 20px"> Tặng kèm khóa học 18 thủ thuật excel, giá không đổi <span style="font-size:25px;"> 495K </span> <span style="text-decoration: line-through; color:red;"> giá gốc 895K </span> </h3>
+                <h3 style="color:#fff; font-size: 20px"> Tặng kèm khóa học 18 thủ thuật excel, giá không đổi <span style="font-size:25px;"> 395K </span> <span style="text-decoration: line-through; color:red;"> giá gốc 895K </span> </h3>
             </div>
             <div class="col-xs-12 col-md-4" id="register">
                 <form class="LeadPanel_form promo-panel_action e_submit e_form_submit" action="<?php echo $code_ladingpage . '/'; ?>thank-you.html" method="post" name="fr_register">

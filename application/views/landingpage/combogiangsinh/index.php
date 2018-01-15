@@ -56,6 +56,7 @@ $rs = json_decode($result);
         </script>
         <?php $this->load->view('landingpage/combogiangsinh/css'); ?>
         <?php include_once("plugin/analyticstracking.php") ?>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
     </head>
     <body>
         <div id="fb-root"></div>
@@ -263,7 +264,7 @@ $rs = json_decode($result);
                 </div>
                 <div class="ladi-widget-overlay"></div>
             </div>
-            <div id="SECTION631" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
+            <div id="SECTION631" style="z-index: 9" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
                 <div class="container">
                     <div id="HEADLINE632" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                         <h2 class="widget-content" lp-node="h2">6 COMBO HỮU ÍCH NHẤT<br>&nbsp;CHO CHUYÊN NGÀNH KẾ TOÁN</h2> </div>
@@ -309,21 +310,42 @@ $rs = json_decode($result);
                         <h3 class="widget-content" lp-node="h3">Combo tự chọn độc đáo&nbsp;<br>dành riêng cho bạn!&nbsp;</h3> </div>
                     <div id="GROUP917" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
                         <div class="widget-content">
-                            <div id="GROUP915" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block" lp-group="GROUP917">
-                                <div class="widget-content">
-                                    <div id="BOX913" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP915" lp-display="block">
-                                        <div class="widget-content"></div>
-                                        <div class="ladi-widget-overlay"></div>
-                                    </div>
-                                    <div id="HEADLINE914" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP915" lp-display="block">
-                                        <h3 class="widget-content" lp-node="h3">Tổng tiền:</h3> </div>
-                                </div>
-                            </div><a id="BUTTON910" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-parent="FORM905" lp-group="GROUP917" lp-display="table"><span class="widget-content">ĐỒNG Ý</span> </a>
-                            <div id="FORM905" class="widget-element widget-snap" lp-type="contact_form" lp-lang="FORM" lp-type-form="google-sheet" lp-message-form="Cám ơn bạn đã quan tâm" lp-ss-f="[{&quot;name&quot;:&quot;select1&quot;,&quot;value&quot;:&quot;select1&quot;,&quot;$$hashKey&quot;:&quot;object:9125&quot;}]" lp-group="GROUP917" lp-display="block">
+                            <!--                            <div id="GROUP915" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block" lp-group="GROUP917">
+                                                            <div class="widget-content">
+                                                                <div id="BOX913" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP915" lp-display="block">
+                                                                    <div class="widget-content"></div>
+                                                                    <div class="ladi-widget-overlay"></div>
+                                                                </div>
+                                                                <div id="HEADLINE914" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP915" lp-display="block">
+                                                                    <h3 class="widget-content" lp-node="h3">Tổng tiền:</h3> </div>
+                                                            </div>
+                                                        </div>-->
+                            <a id="BUTTON910" href="#FORM761" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-parent="FORM905" lp-group="GROUP917" lp-display="table"><span class="widget-content">ĐỒNG Ý</span> </a>
+                            <div id="FORM905" class="widget-element widget-snap" lp-lang="FORM" lp-type-form="google-sheet" lp-message-form="Cám ơn bạn đã quan tâm" lp-ss-f="[{&quot;name&quot;:&quot;select1&quot;,&quot;value&quot;:&quot;select1&quot;,&quot;$$hashKey&quot;:&quot;object:9125&quot;}]" lp-group="GROUP917" lp-display="block">
                                 <form class="widget-content">
                                     <div id="ITEM_FORM912" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
-                                        <select class="widget-content" name="select1" placeholder="Vui lòng chọn" lp-label="Menu thả xuống 1" lp-name-id="select1" required="required">
-                                            <option value="">Vui lòng chọn</option>
+                                        <select id="course_code" multiple="multiple" class="widget-content" name="course_code[]" placeholder="Vui lòng chọn" lp-label="Menu thả xuống 1" lp-name-id="select1" required="required">
+                                            <option value="" selected="selected">Vui lòng chọn</option>
+                                            <option value="E130">Thủ thuật Excel - 199K</option>
+                                            <option value="E110">Bí quyết làm chủ Excel 2007 - 199K</option>
+                                            <option value="E300">Excel từ cơ bản tới chuyên sâu dành riêng cho kế toán - 199K</option>
+                                            <option value="E100">Bí quyết làm chủ Excel năm 2017 - 199K</option>
+                                            <option value="E120">18 thủ thuật Excel - 199K</option>
+                                            <option value="E200">99 tuyệt chiêu Excel dành cho người đi làm - 199K</option>
+                                            <option value="TC100">99 thủ thuật văn phòng - 199K</option>
+                                            <option value="KT100">Làm chủ hóa đơn chứng từ trong 4h - 199K</option>
+                                            <option value="E400">Excel từ A-Z - 199K</option>
+                                            <option value="EM100">Bí quyết làm chủ môn Excel cho người đi làm năm 2017 - 199K</option>
+                                            <option value="Y100">Khóa học Yoga dành cho người làm văn phòng - 199K</option>
+                                            <option value="KT200">Làm chủ kiến thức và xử lý tình huống về hóa đơn - 295K</option>
+                                            <option value="KT600">Hướng Dẫn Kê Khai và Quyết Toán Thuế Thu Nhập Cá Nhân &amp; Thuế Thu Nhập Doanh Nghiệp Năm 2017 - 395K</option>
+                                            <option value="KT800">Đào tạo Kỹ Thuật Quyết Toán Thuế. Công tác chuẩn bị cho Thanh Tra Thuế. Tối ưu thuế - 395K</option>
+                                            <option value="KT210">Trọn Bộ Kế Toán Thuế Từ A-Z - 395K</option>
+                                            <option value="KT130">Hướng Dẫn Lập Báo Cáo Tài Chính Hợp Lý Và Phân Tích Các Chỉ Số Hỗ Trợ Dự Thầu, Vay Vốn Ngân Hàng - 395K</option>
+                                            <option value="KT110">Cách Xác Định Chi Phí Hợp Lý, Công Cụ Bảo Vệ Tại Các Kỳ Thanh Tra, Quyết Toán Thuế - 395K</option>
+                                            <option value="KT220">Trọn bộ Kế toán cho người bắt đầu - 445K</option>
+                                            <option value="KT400">Trọn bộ hướng dẫn lập Báo Cáo Tài Chính năm 2017 - 495K</option>
+                                            <option value="KT120">Trọn Bộ Quản Trị Tài Chính Kế Toán Dành Cho Các Nhà Quản Lý - 695K</option>
                                         </select>
                                     </div>
                                 </form>
@@ -436,8 +458,8 @@ $rs = json_decode($result);
                                         <h3 class="widget-content" lp-node="h3">Combo 4</h3> </div>
                                     <div id="HEADLINE668" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                                         <h3 class="widget-content" lp-node="h3">Kỹ thuật Quyết toán thuế, công tác chuẩn bị cho Thanh Tra Thuế, Tối ưu thuế và Trọn bộ lập BCTC</h3> </div><a id="BUTTON666" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table" lp-action-link="POPUP729" lp-action-type="popup" lp-target="" href=""><span class="widget-content">Chi tiết</span> </a>
-                                        <a id="BUTTON790" href="#FORM761" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table">
-                                            <span class="widget-content">Đăng kí ngay</span> </a>
+                                    <a id="BUTTON790" href="#FORM761" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table">
+                                        <span class="widget-content">Đăng kí ngay</span> </a>
                                 </div>
                                 <div class="ladi-widget-overlay"></div>
                             </div>
@@ -465,7 +487,8 @@ $rs = json_decode($result);
                                     <div id="HEADLINE662" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                                         <h3 class="widget-content" lp-node="h3">Combo 5</h3> </div>
                                     <div id="HEADLINE663" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                        <h3 class="widget-content" lp-node="h3">Hướng dẫn kê khai và quyết toán thuế thu nhập cá nhân và Trọn bộ lập BCTC</h3> </div><a id="BUTTON661" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table" lp-action-link="POPUP719" lp-action-type="popup" lp-target="" href=""><span class="widget-content">Chi tiết</span> </a><a id="BUTTON789" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table"><span class="widget-content">Đăng kí ngay</span> </a></div>
+                                        <h3 class="widget-content" lp-node="h3">Hướng dẫn kê khai và quyết toán thuế thu nhập cá nhân và Trọn bộ lập BCTC</h3> </div><a id="BUTTON661" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table" lp-action-link="POPUP719" lp-action-type="popup" lp-target="" href=""><span class="widget-content">Chi tiết</span> </a>
+                                        <a id="BUTTON789" href="#FORM761" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table"><span class="widget-content">Đăng kí ngay</span> </a></div>
                                 <div class="ladi-widget-overlay"></div>
                             </div>
                         </div>
@@ -493,7 +516,7 @@ $rs = json_decode($result);
                                         <h3 class="widget-content" lp-node="h3">Combo 6</h3> </div>
                                     <div id="HEADLINE673" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                                         <h3 class="widget-content" lp-node="h3">Quyết toán thuế từ A đến Z và Đào tạo kỹ thuật Quyết toán thuế, công tác chuẩn bị cho Thanh Tra Thuế, Tối ưu thuế&nbsp;</h3> </div>
-                                        <a id="BUTTON793" href="#FORM761" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table"><span class="widget-content">Đăng kí ngay</span> </a><a id="BUTTON671" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table" lp-action-link="POPUP740" lp-action-type="popup" lp-target="" href=""><span class="widget-content">Chi tiết</span> </a></div>
+                                    <a id="BUTTON793" href="#FORM761" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table"><span class="widget-content">Đăng kí ngay</span> </a><a id="BUTTON671" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table" lp-action-link="POPUP740" lp-action-type="popup" lp-target="" href=""><span class="widget-content">Chi tiết</span> </a></div>
                                 <div class="ladi-widget-overlay"></div>
                             </div>
                         </div>
@@ -1049,9 +1072,10 @@ $rs = json_decode($result);
                                     <option value="KT800-KT400"> "Kỹ thuật Quyết toán thuế, công tác chuẩn bị cho Thanh Tra Thuế, Tối ưu thuế" và "Trọn bộ hướng dẫn lập BCTC 2017" </option>
                                     <option value="KT800-KT400"> "Kỹ thuật Quyết toán thuế, công tác chuẩn bị cho Thanh Tra Thuế, Tối ưu thuế" và "Trọn bộ hướng dẫn lập BCTC 2017" </option>
                                     <option value="KT210-KT800"> "Quyết toán thuế từ A đến Z" và "Đào tạo kỹ thuật Quyết toán thuế, công tác chuẩn bị cho Thanh Tra Thuế, Tối ưu thuế " </option>
+                                    <option value="custom"> Combo tự chọn </option>
                                 </select>
                             </div>
-
+                             <input type="hidden" id="dia_chi" placeholder="Lĩnh vực kế toán bạn quan tâm" name="dia_chi" lp-label="Ô nhập tùy chọn 1" lp-name-id="lpinput1" required="required">
                             <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
                             <input type="hidden" id="code-landingpage" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
                             <button id="btn-765" class="btn btn-large btn-primary LeadPanel_action button radius e_btn_submit reg_bt" style="color:transparent; background-color: transparent"> MUA HÀNG </button>
@@ -1092,7 +1116,7 @@ $rs = json_decode($result);
                                     </div>
                                 </div>
                             </div>
-                            <div id="COUNTDOWN776" class="widget-element widget-snap" lp-type="countdown" lp-lang="COUNTDOWN" lp-endtime="34564" lp-endtimetype="timedown" lp-group="GROUP766" lp-display="block">
+                            <div id="COUNTDOWN776" class="widget-element widget-snap" lp-type="countdown" lp-lang="COUNTDOWN" lp-endtime="<?php echo (strtotime('+1 day', strtotime(date('d-m-Y'))) - time()) / 60; ?>" lp-endtimetype="timedown" lp-group="GROUP766" lp-display="block">
                                 <div class="widget-content">
                                     <div><span>24</span></div>
                                     <div><span>0</span></div>
@@ -1127,7 +1151,7 @@ $rs = json_decode($result);
                                     <div id="HEADLINE804" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP808" lp-display="block">
                                         <h1 class="widget-content" lp-node="h1">58% - 72%&nbsp;</h1> </div>
                                     <div id="PARAGRAPH757" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-group="GROUP808" lp-display="block">
-                                        <h5 class="widget-content" lp-node="h5">Chương trình chỉ áp dụng với hóa học đăng ký trước ngày&nbsp;<br>.../.../....</h5> </div>
+                                        <h5 class="widget-content" lp-node="h5">Chương trình chỉ áp dụng với hóa học đăng ký trước ngày&nbsp;<br><?php echo date('d/m/Y'); ?></h5> </div>
                                 </div>
                             </div>
                         </div>
@@ -1149,7 +1173,7 @@ $rs = json_decode($result);
                             <div id="GROUP857" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block" lp-group="GROUP858">
                                 <div class="widget-content">
                                     <div id="HEADLINE849" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP857" lp-display="block">
-                                        <p class="widget-content" lp-node="p">Hotline: 1900 636 195 - 04 7306 2468</p>
+                                        <p class="widget-content" lp-node="p">Hotline: 1900 636 195 - 024 7306 2468</p>
                                     </div>
                                     <div id="SHAPE848" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-group="GROUP857" lp-display="block">
                                         <div class="widget-content">
@@ -1242,8 +1266,10 @@ $rs = json_decode($result);
 
         <!-- Latest compiled and minified JavaScript -->
         <script type="text/javascript" src="https://static.ladipage.net/source/jquery.3-0-1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
         <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url(); ?>public/my.js?ver=<?php echo _VER_CACHED_ ?>" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>public/combogiangsinh/multiple-select.js?ver=<?php echo _VER_CACHED_ ?>" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 var left = $('#img-contact').css('margin-left');
@@ -1265,22 +1291,40 @@ $rs = json_decode($result);
                     $("#combo-select-2").val('KT210-KT400');
                     $("#code-landingpage").val('KT210-KT400');
                 });
-                   $("#BUTTON790").click(function () {
+                $("#BUTTON790").click(function () {
                     /*  $('[value="KT210-KT400"]').prop("selected", true);*/
                     $("#combo-select-2").val('KT800-KT400');
                     $("#code-landingpage").val('KT800-KT400');
                 });
-                   $("#BUTTON788").click(function () {
+                $("#BUTTON789").click(function () {
                     /*  $('[value="KT210-KT400"]').prop("selected", true);*/
-                    $("#combo-select-2").val('KT210-KT400');
-                    $("#code-landingpage").val('KT210-KT400');
+                    $("#combo-select-2").val('KT800-KT400');
+                    $("#code-landingpage").val('KT800-KT400');
                 });
-                   $("#BUTTON793").click(function () {
+                $("#BUTTON793").click(function () {
                     /*  $('[value="KT210-KT400"]').prop("selected", true);*/
                     $("#combo-select-2").val('KT210-KT800');
                     $("#code-landingpage").val('KT210-KT800');
                 });
+                $("#BUTTON910").click(function () {
+                    /*  $('[value="KT210-KT400"]').prop("selected", true);*/
+                    $("#combo-select-2").val('custom');
+                   $("#dia_chi").val("Combo tự chọn: " + $("#course_code").val().toString());
+                });
+
+                $("#combo-select-2").change(function () {
+                    $("#code-landingpage").val($(this).val());
+                });
+                $('.selectpicker').selectpicker({
+                    style: 'btn-info',
+                    size: 4
+                });
             });
+
+            $("select#course_code").multipleSelect({
+                selectAll: false
+            });
+
         </script>
     </div>
 
