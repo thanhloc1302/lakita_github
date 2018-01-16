@@ -116,7 +116,7 @@
                     ?>
                     <button type="button" class="btn navbar-btn button-login button-right">
                         <a href="<?php echo base_url('dang-nhap.html'); ?>">
-                            <i aria-hidden="true"></i>Đăng nhâp
+                            <i aria-hidden="true"></i>Đăng nhâp / Đăng ký
                         </a>
                     </button>
                     <?php

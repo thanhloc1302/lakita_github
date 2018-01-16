@@ -33,6 +33,7 @@ a, a:hover, a:visited {
   border: none;
   border-radius: 0px;
   min-height: 60px;
+  font-family: roboto;
   .navbar-brand {
     padding: 0px;
     padding-left: 35px;
@@ -86,14 +87,11 @@ a, a:hover, a:visited {
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
-  user-select: none;
-  font-size: 12px;
   line-height: 1.71429;
   border-radius: 5px;
   background: #ffffff;
   margin-left: 15px;
-  width: 96px;
-  padding: 2px;
+  padding: 2px 7px;
 
 }
 
@@ -285,6 +283,10 @@ a, a:hover, a:visited {
     width: 100%;
     padding-right: 5px;
     margin-right: 5px;
+  }
+  .dropdown .dropdown-content{
+      min-width: 330px;
+      position: inherit;
   }
 
 }

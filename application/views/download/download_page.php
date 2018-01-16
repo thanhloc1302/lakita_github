@@ -19,7 +19,9 @@
     </div>
     <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" >
         <h2 style="font-family: Roboto;"> Tải tài liệu </h2>
-        <a target="_blank" href="<?php echo current_url(); ?>?id=<?php echo $id; ?>" class="btn btn-danger" style="font-family: Roboto;"> Mời bạn click vào đây để tải tài liệu </a>
+        <a target="_blank" href="<?php echo current_url(); ?>?id=<?php echo $id; ?>" class="btn btn-danger" style="font-family: Roboto; color: #fff"> 
+            Mời bạn click vào đây để tải tài liệu 
+        </a>
         <br> 
 <!--        <a href="<?php echo base_url(); ?>?link=297" class="btn btn-success" style="margin-top: 20px; font-family: Roboto;"> 
             Mời bạn tham khảo các khóa học ưu đãi của Lakita tại đây </a>-->
