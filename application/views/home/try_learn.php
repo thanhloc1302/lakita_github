@@ -1,4 +1,4 @@
-<style>
+<!--<style>
     @media (max-width: 767px) {
         #img-contact {
             width: 40%;
@@ -25,9 +25,9 @@
 </style>
 
 <div id="try_learn" style="position: fixed; bottom: 0; width: 100%; z-index: 100000000;">
-    <!--	<a href="#register_area" title="Đăng ký ngay!">
+    	<a href="#register_area" title="Đăng ký ngay!">
                     <img src="https://lakita.vn/styles/images/email/rgt-now.png" alt="Đăng ký ngay!" id="img-rgt" style="float: right;">
-            </a>-->
+            </a>
     <a href="#" data-toggle="modal" data-target="#modal_try_learn" title="Đăng ký ngay!">
         <img src="https://lakita.vn/styles/images/hoc_thu.png" alt="Đăng ký ngay!" 
              id="img-contact" style="float: left; transition: all 0.3s ease-in-out;">
@@ -67,4 +67,4 @@
             $(this).css('margin-left', left);
         });
     });
-</script>
+</script>-->

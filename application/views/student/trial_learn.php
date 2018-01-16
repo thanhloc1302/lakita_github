@@ -77,9 +77,10 @@
                                     ?>
                                     <input type="hidden" id="lakitaid" value="<?php echo md5(time()) . '$&((_GNSDADFHGD@!$^&%#' . time() . ')*&^%$@' . time() . '#' . 612 . '#' . time() . '_+1357$*^())!%*$$&' . md5('lakita.vn') . '+135+1357$*^())!%*$$7$*^())!%*$$+1+1357$*^())!%*$$357$*^())!%*$$'; ?>" /><div id="mediaspace"></div>
                                 <?php } ?>
-                                <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.js"></script>
+<!--                                <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.js"></script>
                                 <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.html5.js"></script>
-                                <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>
+                                <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>-->
+                                         <script type="text/javascript" src="https://content.jwplatform.com/libraries/BhGRfCt5.js"></script>
                                 <?php $this->session->set_tempdata('is_playable', $curr_id, 3600*24);?>
                             </div>
                         </div>
@@ -118,7 +119,7 @@
         <hr style="margin-top: 0px; width: 93%;">
         <div class="row gr1-row-3">
             <div class="col-md-3">
-                <img src="<?php echo 'https://lakita.vn/' . $speaker[0]['image']; ?>" class="avatar">
+                <img src="<?php echo 'https://lakita.vn/' . $speaker[0]['image']; ?>" class="avatar img-responsive" style="width: 50px;">
                 <strong> <?php echo $speaker[0]['name']; ?> </strong>
             </div>
             <div class="col-md-3">
