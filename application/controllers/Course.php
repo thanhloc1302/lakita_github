@@ -22,7 +22,7 @@ class Course extends MY_Controller {
         die;
     }
 
-    public function view_all($id = 11) {
+    public function view_all($id = 21) {
         $data = $this->data;
         $user_id = $this->session->userdata('user_id');
         if (isset($user_id)) {

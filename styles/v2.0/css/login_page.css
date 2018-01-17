@@ -57,7 +57,6 @@
     line-height: 1.42857143;
     border-radius: 4px;
     -webkit-user-select: none;
-    width: 40%;
     display: inline
 }
 .bgfb{
@@ -68,7 +67,7 @@
 }
 .social-login a{
     display: inline-block;
-    width: 40%;
+    width: 100%;
     margin-bottom: 10px;
     text-decoration: none;
 }

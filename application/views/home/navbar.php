@@ -3,29 +3,28 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="<?php echo base_url(); ?>"> <img src="https://crm2.lakita.vn/style/img/logo5.png"
-                                                                           class="logo-navbar img-responsive"> </a>
+            <a class="navbar-brand text-center" href="<?php echo base_url(); ?>"> <img
+                    src="https://crm2.lakita.vn/style/img/logo5.png"
+                    class="logo-navbar img-responsive"> </a>
+
+            <!--Button đóng mở slide menu-->
+            <button id="btn-menu-silde"><span></span><span></span><span></span></button>
         </div>
+
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <form action="<?php echo base_url('tim-kiem.html');?>" method="GET" class="navbar-form navbar-left">
+            <form action="<?php echo base_url('tim-kiem.html'); ?>" method="GET" class="navbar-form navbar-left">
                 <div class="input-group search">
                     <input type="text" class="form-control" name="key_word" placeholder="Tìm kiếm các khóa học bạn quan tâm..."
-                           <?php echo isset($_GET['key_word']) ? 'value="' . $_GET['key_word'] . '"' : '' ?>
+                    <?php echo isset($_GET['key_word']) ? 'value="' . $_GET['key_word'] . '"' : '' ?>
                            />
                     <span class="input-group-btn">
-                       <input class="btn btn-default" type="submit" value="Tìm kiếm"/> 
+                        <input class="btn btn-default" type="submit" value="Tìm kiếm"/> 
                     </span>
                 </div>
             </form>
             <ul class="nav navbar-nav navbar-right">
+
                 <li class="li-active dropdown-notification">
                     <span class="notification btn">
                         &nbsp;&nbsp;&nbsp;          
@@ -110,32 +109,22 @@
                         ?> 
                     </div>
                 </li>
-                <!--<li>-->
-                <?php
-                if (!isset($user_id)) {
-                    ?>
-                    <button type="button" class="btn navbar-btn button-login button-right">
-                        <a href="<?php echo base_url('dang-nhap.html'); ?>">
-                            <i aria-hidden="true"></i>Đăng nhâp / Đăng ký
-                        </a>
-                    </button>
+                <li>
                     <?php
-                } else {
-                    ?>
+                    if (!isset($user_id)) {
+                        ?>
+                        <button type="button" class="btn navbar-btn button-login button-right">
+                            <a href="<?php echo base_url('dang-nhap.html'); ?>">
+                                <i aria-hidden="true"></i>Đăng nhâp / Đăng ký
+                            </a>
+                        </button>
+                        <?php
+                    } else {
+                        ?>
                     <li>
-                        <div class="dropdown">
+                        <div class="dropdown" style="height: 69px;">
                             <img class="img-avatar img-circle navbar-btn"
-                                 src="<?php
-                                 if (!empty($student[0]['thumbnail'])) {
-                                     echo 'https://lakita.vn/' . $student[0]['thumbnail'];
-                                 } else {
-                                     if (!empty($student[0]['id_fb'])) {
-                                         echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
-                                     } else {
-                                         echo base_url() . 'styles/images/people/110/user.png';
-                                     }
-                                 }
-                                 ?>"
+                                 src="<?php echo getUserPictureSrc($student); ?>"
                                  alt="">
                             <div class="navbar-text navbar-right" style="display: inline-block">
                                 <span class="name">  <?php echo $student[0]['name']; ?>  </span>
@@ -167,23 +156,113 @@
                         </div>
                     </li>
                 <?php } ?>
-                <!--</li>-->
+                </li>
+
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+
+
+<!--Các menu trên mobie-->
+<div id="mySidenav" class="sidenav">
+    <?php
+    if (!isset($user_id)) {
+        ?>
+        <form action="<?php echo base_url('tim-kiem.html'); ?>" method="GET" class="navbar-form navbar-left">
+            <div class="input-group search">
+                <input type="text" class="form-control" name="key_word" placeholder="Tìm kiếm các khóa học bạn quan tâm..."
+                <?php echo isset($_GET['key_word']) ? 'value="' . $_GET['key_word'] . '"' : '' ?>
+                       />
+                <span class="input-group-btn">
+                    <input class="btn btn-default" type="submit" value="Tìm kiếm"/> 
+                </span>
+            </div>
+        </form>   
+        <hr>
+        <a href="<?php echo base_url('dang-nhap.html'); ?>">
+            <i class="fa fa-sign-in fa-fw" aria-hidden="true"></i>  &nbsp;&nbsp; Đăng nhâp
+        </a>
+        <hr>
+        <a href="<?php echo base_url('dang-nhap.html'); ?>">
+            <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>  &nbsp;&nbsp; Đăng ký
+        </a>
+        <hr>
+        <a href="<?php echo base_url(); ?>kich-hoat-khoa-hoc.html">
+            <i class="fa fa-compress fa-fw" aria-hidden="true"></i>
+            &nbsp;&nbsp; Kích hoạt khóa học 
+        </a>
+        <?php
+    } else {
+        ?>
+        <div class="text-center">
+            <img class="avatar-mobie img-circle text-center"
+                 src="<?php echo getUserPictureSrc($student); ?>"
+                 alt="">
+            <p class="name-mobie"> <?php echo $student[0]['name']; ?> </p>
+            <form action="<?php echo base_url('tim-kiem.html'); ?>" method="GET" class="navbar-form navbar-left">
+                <div class="input-group search">
+                    <input type="text" class="form-control" name="key_word" placeholder="Tìm kiếm các khóa học bạn quan tâm..."
+                    <?php echo isset($_GET['key_word']) ? 'value="' . $_GET['key_word'] . '"' : '' ?>
+                           />
+                    <span class="input-group-btn">
+                        <input class="btn btn-default" type="submit" value="Tìm kiếm"/> 
+                    </span>
+                </div>
+            </form>      
+        </div>
+        <hr>
+        <a href="<?php echo base_url(); ?>khoa-hoc-cua-toi.html">
+            <i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i> &nbsp;&nbsp;
+            Khóa học của tôi
+        </a>
+        <hr>
+        <a href="<?php echo base_url(); ?>kich-hoat-khoa-hoc.html">
+            <i class="fa fa-compress fa-fw" aria-hidden="true"></i>
+            &nbsp;&nbsp; Kích hoạt khóa học 
+        </a>
+        <hr>
+        <a href="<?php echo base_url(); ?>nap-tien-vao-tai-khoan.html">
+            <i class="fa fa-usd fa-fw" aria-hidden="true"></i>
+            &nbsp;&nbsp; Nạp tiền vào tài khoản 
+        </a>
+        <hr>
+        <a href="<?php echo base_url(); ?>thong-tin-tai-khoan.html">
+            <i class="fa fa-user fa-fw" aria-hidden="true"></i>
+            &nbsp;&nbsp;Tài khoản
+        </a>
+        <hr>
+        <a href="student/logout">
+            <i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>
+            &nbsp;&nbsp;Đăng xuất
+        </a>
+    <?php } ?>
+</div><!--Kết thúc menu trên mobie-->
+
+
 <div class="container-fluid"> <!--Body Content-->
     <!-- Set up your HTML -->
     <div>
         <div class="owl-carousel owl-theme slider">
             <div class="img-slider">
                 <a href="https://lakita.vn/combo-qua-khung-dip-giang-sinh.html" target="_blank">
-                    <img class="img-rounded" src="styles/v2.0/img/banner/banner-tet.png"/>
+                    <picture>
+                        <source srcset="styles/v2.0/img/banner/banner-tet-ipad.png" media="(max-width: 700px)">
+                        <source srcset="styles/v2.0/img/banner/banner-tet-mobile.png" media="(max-width: 450px)">
+                        <img srcset="styles/v2.0/img/banner/banner-tet.png">
+                    </picture>
+<!--                    <img class="img-rounded" src="styles/v2.0/img/banner/banner-tet.png"/>-->
                 </a> 
             </div>
             <div class="img-slider">
-                <a href="<?php echo base_url('dich-vu-excel.html');?>" target="_blank">
-                    <img class="img-rounded" src="styles/v2.0/img/banner/dich-vu-excel.png"/>
+                <a href="<?php echo base_url('dich-vu-excel.html'); ?>" target="_blank">
+                    <picture>
+                        <source srcset="styles/v2.0/img/banner/dich-vu-excel-ipad.png" media="(max-width: 700px)">
+                        <source srcset="styles/v2.0/img/banner/dich-vu-excel-mobile.png" media="(max-width: 450px)">
+                        <img srcset="styles/v2.0/img/banner/dich-vu-excel.png">
+                    </picture>
+<!--                    <img class="img-rounded" src="styles/v2.0/img/banner/dich-vu-excel.png"/>-->
                 </a>
             </div>
         </div>

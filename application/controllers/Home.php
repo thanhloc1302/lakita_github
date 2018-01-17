@@ -37,21 +37,13 @@ class Home extends MY_Controller {
             $data['banner_main'] = $this->lib_mod->load_all('banner', '', array('status' => 1, 'type_id' => 0), 1, '', array('sort' => 'desc'));
             $data['banner_1'] = $this->lib_mod->load_all('banner', '', array('status' => 1, 'type_id' => 1), 1, '', array('sort' => 'desc'));
             $data['banner_2'] = $this->lib_mod->load_all('banner', '', array('status' => 1, 'type_id' => 2), 2, '', array('sort' => 'desc'));
-
             $this->load->model('courses_model');
             $input = array();
-            $input1['select_max'] = 'time_start_sale';
-            $time_start_sale = $this->courses_model->load_all($input1);
-
-            $input2['select_max'] = 'time_end_sale';
-            $time_end_sale = $this->courses_model->load_all($input2);
-
 //            if (($time_start_sale[0]['time_start_sale'] - 12 * 3600 < time()) && ($time_end_sale[0]['time_end_sale'] > time())) {
 //                $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 12, '', array('price_sale' => 'asc'));
 //            } else {
                 $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 24, '', array('sort' => 'desc'));
             //}
-
             $data['rates'] = $this->lib_mod->load_all('rate', '', array('status' => 1), 12, '', array('create_date' => 'desc'), 'name');
             $data['title'] = 'Hệ thống học trực tuyến lakita, cùng bạn vươn xa - lakita.vn';
             $user_id = $this->session->userdata('user_id');
@@ -90,7 +82,6 @@ class Home extends MY_Controller {
                     $data['love_course'] = $this->lib_mod->detail('love', array('user_id' => $user_id, 'course_id' => $id));
                 }
                 $data['first_lesson_trial_learn'] = $this->find_first_lesson_trial_learn($id);
-
                 $videoDemoArr = [
                     '37' => '784', //excel 2010
                     '41' => '435', // 99 tuyet chieu
@@ -117,9 +108,10 @@ class Home extends MY_Controller {
                 ];
                 if (array_key_exists($id, $videoDemoArr)) {
                     $data['id_video_demo'] = $videoDemoArr[$id];
-                } else
+                } else {
                     $data['id_video_demo'] = 0;
-                $this->session->set_tempdata('is_trial_view', 'yes', 3600);
+                }
+                //$this->session->set_tempdata('is_trial_view', 'yes', 3600);
                 $data['group_courses'] = $this->lib_mod->detail('group_courses', array('id' => $curr_courses[0]['group_courses_id']));
                 $data['chapter'] = $this->lib_mod->load_all('chapter', '', array("courses_id" => $id, 'status' => 1), '', '', array("sort" => 'asc'));
                 $data['rates'] = $this->lib_mod->load_all('rate', '', array("course_id" => $id), '', '', '');
@@ -155,8 +147,9 @@ class Home extends MY_Controller {
 
                 $this->session->set_tempdata('curr_course_id', $id, 3600 * 12);
                 //$this->session->set_tempdata('curr_course_purchase', 'yes', 1800);
-                if (array_key_exists($id, $videoDemoArr))
+                if (array_key_exists($id, $videoDemoArr)) {
                     $this->session->set_tempdata('is_playable', $videoDemoArr[$id], 3600);
+                }
 
                 //xóa voucher khóa học cũ
                 $courseVouched = $this->session->tempdata('courseVouched');
@@ -206,6 +199,11 @@ class Home extends MY_Controller {
 
             //==============================================TRANG HỌC ============================================
             else if ($sub_flag == 4) {
+                $curr = current_url();
+                $uri = substr($curr, 18);
+                redirect('http://video.lakita.vn/'. $uri);
+                echo $uri; die;
+                
                 $user_id = $this->session->userdata('user_id');
                 if (!isset($user_id)) {
                     echo '<script> alert("Bạn không có quyền truy cập vào trang này!");</script>';
@@ -235,11 +233,6 @@ class Home extends MY_Controller {
                         die;
                         exit;
                     }
-                }
-
-                $trial_learn_view = $this->session->tempdata('is_trial_view');
-                if (isset($trial_learn_view)) {
-                    $this->session->unset_tempdata('is_trial_view');
                 }
 
                 /* =====================================HỌC THỬ===================================== */
@@ -328,6 +321,10 @@ class Home extends MY_Controller {
                 $data['is_learing'] = 1;
                 $this->load->view('template', $data);
             } elseif ($sub_flag == 5) {
+                $curr = current_url();
+                $uri = substr($curr, 18);
+                redirect('http://video.lakita.vn/'. $uri);
+                echo $uri; die;
 
                 //thông tin bài học hiện tại
                 $curr_learn = $this->lib_mod->detail('learn', array('id' => $id));
@@ -371,7 +368,7 @@ class Home extends MY_Controller {
                 $data['meta_description'] = $curr_learn[0]['description'];
                 $data['content'] = 'student/trial_learn';
 
-                $this->session->set_tempdata('is_trial_view', 'yes', 3600 * 24);
+                //$this->session->set_tempdata('is_trial_view', 'yes', 3600 * 24);
                 $this->load->view('template', $data);
             } elseif ($sub_flag == 6) {
                 $user_id = $this->session->userdata('user_id');
@@ -521,13 +518,16 @@ class Home extends MY_Controller {
                 } else {
                     $data['id_video_demo'] = 0;
                 }
-                $this->session->set_tempdata('is_trial_view', 'yes', 3600);
+               // $this->session->set_tempdata('is_trial_view', 'yes', 3600);
                 $data['chapter'] = $this->lib_mod->load_all('chapter', '', array("courses_id" => $id, 'status' => 1), '', '', array("sort" => 'asc'));
                 foreach ($data['chapter'] as $key => $value) {
                     $data['all_learn'][$key] = $this->get_course_learn($value['id'], $user_id);
                 }
+                $input_comment_count = [];
+                $input_comment_count['select'] = 'id';
+                $input_comment_count['where'] = array('courses_id' => $id, 'parent' => '0');
+                $data['total_cmt'] = count($this->comment_model->load_all($input_comment_count));
                 $input_comment['where'] = array('courses_id' => $id, 'parent' => '0');
-                $data['total_cmt'] = count($this->comment_model->load_all($input_comment));
                 $input_comment['limit'] = array(4, 0);
                 $input_comment['order'] = array('createdate' => 'desc');
                 $data['comment'] = $this->comment_model->load_all($input_comment);

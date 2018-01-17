@@ -21,7 +21,6 @@
     }
 </style>
 <?php if (!$this->agent->is_mobile()) { ?>
-
     <header>
         <div class="row header-row-1">
             <div class="col-md-5">

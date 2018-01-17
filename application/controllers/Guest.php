@@ -92,7 +92,7 @@ class Guest extends MY_Controller {
     // hết kiểm tra
 
     function action_login() {
-      //  $this->load->helper('form');
+        //  $this->load->helper('form');
         $email = trim($this->input->post('login_email'));
         $login_redirect = trim($this->input->post('login_redirect'));
         $password = md5(md5($this->input->post('login_password')));
@@ -108,10 +108,11 @@ class Guest extends MY_Controller {
 
                 $this->_check_exist_login($member[0]['id']);
 
-                $this->session->set_tempdata('UserIDTemp', $member[0]['id'], 60);
-                $this->session->set_userdata('id_fb', $member[0]['id_fb']);
-                $this->session->set_userdata('user_id', $member[0]['id']);
-                $this->session->set_userdata('user_name', $member[0]['name']);
+                $this->_setSessionUserId($member);
+//                $this->session->set_tempdata('UserIDTemp', $member[0]['id'], 60);
+//                $this->session->set_userdata('id_fb', $member[0]['id_fb']);
+//                $this->session->set_userdata('user_id', $member[0]['id']);
+//                $this->session->set_userdata('user_name', $member[0]['name']);
                 $this->session->set_userdata('login_redirect', $login_redirect);
                 $student = $this->lib_mod->load_all('student', '', array('id' => $this->session->userdata('user_id')), '', '', '');
                 if ($this->input->post('is_remember') == '1') {
@@ -197,8 +198,14 @@ class Guest extends MY_Controller {
         if ($success == 1) {
             $student_id = $this->lib_mod->insert_return_id('student', $student, 'id');
 //            $this->lib_mod->insert('student_courses', array('student_id' => $student_id, 'courses_id' => 37, 'create_date' => time(), 'status' => 1, 'trial_learn' => 1));
-            $this->session->set_userdata('user_id', $student_id);
-            $this->session->set_userdata('user_name', $student['name']);
+            $studentNew = [];
+            $studentNew[0]['id'] = $student_id;
+            $studentNew[0]['name'] = $student['name'];
+            $studentNew[0]['id_fb'] = 0;
+            $this->_setSessionUserId($studentNew);
+
+//            $this->session->set_userdata('user_id', $student_id);
+//            $this->session->set_userdata('user_name', $student['name']);
 
             $this->_call_to_mol(0, $student_id, $username, $email, $phone);
         }
@@ -366,10 +373,14 @@ class Guest extends MY_Controller {
                 $this->session->set_tempdata('temp_id_fb', $student[0]['id_fb'], 1800);
                 echo 'fbrequire';
             } else {
+
                 $this->_check_exist_login($student[0]['id'], false);
-                $this->session->set_userdata('user_id', $student[0]['id']);
-                $this->session->set_userdata('user_name', $student[0]['name']);
-                $this->session->set_userdata('id_fb', $student[0]['id_fb']);
+
+                $this->_setSessionUserId($student);
+
+//                $this->session->set_userdata('user_id', $student[0]['id']);
+//                $this->session->set_userdata('user_name', $student[0]['name']);
+//                $this->session->set_userdata('id_fb', $student[0]['id_fb']);
                 echo 'success';
             }
         } else {
@@ -407,10 +418,10 @@ class Guest extends MY_Controller {
             } else {
 
                 $this->_check_exist_login($student[0]['id'], false);
-
-                $this->session->set_userdata('user_id', $student[0]['id']);
-                $this->session->set_userdata('user_name', $student[0]['name']);
-                $this->session->set_userdata('id_fb', $student[0]['id_fb']);
+                $this->_setSessionUserId($student);
+//                $this->session->set_userdata('user_id', $student[0]['id']);
+//                $this->session->set_userdata('user_name', $student[0]['name']);
+//                $this->session->set_userdata('id_fb', $student[0]['id_fb']);
                 redirect(base_url() . 'khoa-hoc-cua-toi.html');
             }
         } else {
@@ -444,9 +455,15 @@ class Guest extends MY_Controller {
         $student_id = $this->lib_mod->insert_return_id('student', $student, 'id');
 //        $this->lib_mod->insert('student_courses', array('student_id' => $student_id, 'courses_id' => 37, 'create_date' => time(), 'status' => 1, 'trial_learn' => 1));
         // $this->lib_mod->insert('student_courses', array('student_id' => $student_id, 'courses_id' => 39, 'create_date' => time(), 'status' => 1));
-        $this->session->set_userdata('user_id', $student_id);
-        $this->session->set_userdata('user_name', $this->session->tempdata('temp_name'));
-        $this->session->set_userdata('id_fb', $this->session->tempdata('temp_id_fb'));
+        $studentNew = [];
+        $studentNew[0]['id'] = $student_id;
+        $studentNew[0]['id_fb'] = $this->session->tempdata('temp_id_fb');
+        $studentNew[0]['name'] = $this->session->tempdata('temp_name');
+        $this->_setSessionUserId($studentNew);
+
+//        $this->session->set_userdata('user_id', $student_id);
+//        $this->session->set_userdata('user_name', $this->session->tempdata('temp_name'));
+//        $this->session->set_userdata('id_fb', $this->session->tempdata('temp_id_fb'));
 
         $this->_call_to_mol(0, $student_id, $this->session->tempdata('temp_name'), $this->session->tempdata('temp_email'), $this->session->tempdata('phone_number'));
 
@@ -472,9 +489,15 @@ class Guest extends MY_Controller {
 
         $this->_check_exist_login($user_id, false);
 
-        $this->session->set_userdata('user_id', $user_id);
-        $this->session->set_userdata('user_name', $user_name);
-        $this->session->set_userdata('id_fb', $this->session->tempdata('temp_id_fb'));
+        $studentNew = [];
+        $studentNew[0]['id'] = $user_id;
+        $studentNew[0]['id_fb'] = $this->session->tempdata('temp_id_fb');
+        $studentNew[0]['name'] = $user_name;
+        $this->_setSessionUserId($studentNew);
+
+//        $this->session->set_userdata('user_id', $user_id);
+//        $this->session->set_userdata('user_name', $user_name);
+//        $this->session->set_userdata('id_fb', $this->session->tempdata('temp_id_fb'));
         $this->session->unset_tempdata('temp_user_id');
         $this->session->unset_tempdata('temp_id_fb');
         $this->session->unset_tempdata('temp_user_name');
@@ -510,6 +533,37 @@ class Guest extends MY_Controller {
             }
         }
         /*         * ********************************* bắn contact sang MOL (hết) ************************************** */
+    }
+
+    private function _setSessionUserId($student) {
+        $this->session->set_tempdata('UserIDTemp', $student[0]['id'], 60);
+        $this->session->set_userdata('id_fb', $student[0]['id_fb']);
+        $this->session->set_userdata('user_id', $student[0]['id']);
+        $this->session->set_userdata('user_name', $student[0]['name']);
+        /*
+         * Set token to uid
+         */
+//        $tokenStr = '';
+//        $token = $this->session->userdata('token');
+//        if (!isset($token)) {
+//            $tokenStr = md5(uniqid() . microtime() . rand()) . sha1('lakita');
+//        } else {
+//            $tokenStr = $token;
+//        }
+        $tokenStr = md5(uniqid() . microtime() . rand());
+        $this->session->set_userdata('token_video', $tokenStr);
+        $this->load->model('uid_model');
+        $input = [];
+        $input['select'] = 'uid';
+        $input['where'] = array('uid' => $student[0]['id']);
+        $uid = $this->uid_model->load_all($input);
+        if (empty($uid)) {
+            $this->uid_model->insert(['token' => $tokenStr, 'uid' => $student[0]['id'], 'time' => time()]);
+        } else {
+            $where = array('uid' => $student[0]['id']);
+            $data = array('token' => $tokenStr);
+            $this->uid_model->update($where, $data);
+        }
     }
 
 }

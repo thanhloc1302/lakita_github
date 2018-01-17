@@ -66,14 +66,10 @@
 <div class="clearfix"></div>
 <div class="row" style="margin-top:20px">
     <div class="col-md-6 col-sm-12-sol-xs-12">
-
         <div class="col-md-11 col-md-offset-1 col-sm-12 col-sx-12">
             <div class="js-video widescreen">
-
                 <input type="hidden" id="lakitaid" value="<?php echo md5(time()) . '$&((_GNSDADFHGD@!$^&%#' . time() . ')*&^%$@' . time() . '#' . $id_video_demo . '#' . time() . '_+1357$*^())!%*$$&' . md5('lakita.vn') . '+135+1357$*^())!%*$$7$*^())!%*$$+1+1357$*^())!%*$$357$*^())!%*$$'; ?>" /><div id="mediaspace"></div>
                 <script type="text/javascript" src="https://content.jwplatform.com/libraries/BhGRfCt5.js"></script>
-                    
-                    
 <!--                <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.js"></script>
                 <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.html5.js"></script>
                 <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>-->
@@ -92,7 +88,7 @@
                             foreach ($all_learn[$key] as $key2 => $lvalue) {
                                 ?>
                                 <li id = "scroll<?php echo $lvalue['sort']; ?>" class="list-group-item">
-                                    <a href="<?php echo base_url() . $lvalue['slug'] . '-4' . $lvalue['id']; ?>.html" 
+                                    <a href="<?php echo 'http://video.lakita.vn/' . $lvalue['slug'] . '-4' . $lvalue['id']; ?>.html" 
                                        title="<?php echo $lvalue['name']; ?>"><?php
                                            if (!isset($lvalue['learn_status']))
                                                echo "<i class='fa fa-circle-o'></i>";
@@ -117,15 +113,12 @@
                 </div>
             </div>
         </div>
-
     </div>
     <div class="col-md-5 col-sm-12-sol-xs-12">
         <div class="row gr1-row4-2">
-
             <div class="col-md-12">
                 <div class="form-group">
                     <label for=""><h3><?php echo $total_cmt; ?> Bình luận</h3></label>
-
                     <input type="text" class="form-control" id="content_cmt" style="padding: 23px 12px;" placeholder="Nhập nội dung tiêu đề cần thảo luận">
                 </div>
                 <textarea style="width:100%" name="editor1" class="form-control" rows="5" cols="120" required placeholder="Thảo luận về những thắc mắc, khó khăn khi bạn xem video bài giảng. Không đăng thảo luận không liên quan đến chủ đề học. Cảm ơn bạn!"></textarea>
@@ -135,7 +128,6 @@
                 </script>
                 <div class="input-group-btn1 text-center margintop10">
                     <button class="btn btn-primary my-btn" id="save_cmt">Đăng thảo luận</button>
-
                 </div>
             </div>
         </div>

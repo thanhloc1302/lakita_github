@@ -113,6 +113,27 @@ if (!$this->agent->is_mobile()) {
         $('.stop').on('click', function () {
             owl.trigger('stop.owl.autoplay');
         });
+        
+        function openNav() {
+            $('#mySidenav').css('width', '100%');
+        }
+
+        function closeNav() {
+            $('#mySidenav').css('width', '0');
+        }
+
+        var e = document.getElementById('btn-menu-silde');
+        e.addEventListener('click', function () {
+            if (this.className == 'on') {
+                this.classList.remove('on');
+                closeNav();
+
+            } else {
+                this.classList.add('on');
+                openNav();
+
+            }
+        });
     });
 </script>
 
