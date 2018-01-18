@@ -29,55 +29,17 @@
 </style>
 <div class="header">
     <?php $this->load->view('home/navbar'); ?>
-    <!--    <div class="row">
-            <div class="col-md-6  my-row-1">
-                <div class="row">
-                    <div class="col-md-1 col-md-offset-3 margintop22">
-                        <img src="<?php
-    if (!empty($student[0]['id_fb']))
-        echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
-    else {
-        if (!empty($student[0]['thumbnail']))
-            echo 'https://lakita.vn/' . $student[0]['thumbnail'];
-        else
-            echo base_url() . 'styles/images/people/110/user.png';
-    }
-    ?>" alt="lakita" class="img-circle avatar" />
-                    </div>
-                    <div class="col-md-6 marginleft15">
-                        <h1> <strong> <?php echo $student[0]['name']; ?> </strong></h1>
-                        <p> Khóa học của tôi </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 searchBox">
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-8">
-                        <form action="<?php echo base_url(); ?>tim-kiem.html" method="post" id="searchForm">
-                            <label for="exampleInputEmail1" class="sr-only">Search</label>
-                            <input type="text" class="form-control" id="key_word" name="key_word" value="Tìm các khóa học bạn quan tâm...">
-                            <img class="searchIcon"src="<?php echo base_url(); ?>styles/v2.0/img/icon_seach.png" />
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>-->
 </div>
 <div class="clearfix"></div>
 <div class="row" style="margin-top:20px">
     <div class="col-md-6 col-sm-12-sol-xs-12">
         <div class="col-md-11 col-md-offset-1 col-sm-12 col-sx-12">
             <div class="js-video widescreen">
-                <input type="hidden" id="lakitaid" value="<?php echo md5(time()) . '$&((_GNSDADFHGD@!$^&%#' . time() . ')*&^%$@' . time() . '#' . $id_video_demo . '#' . time() . '_+1357$*^())!%*$$&' . md5('lakita.vn') . '+135+1357$*^())!%*$$7$*^())!%*$$+1+1357$*^())!%*$$357$*^())!%*$$'; ?>" /><div id="mediaspace"></div>
+                <input type="hidden" id="lakitaid" value="<?php echo $current_course_id ?>" /><div id="mediaspace"></div>
                 <script type="text/javascript" src="https://content.jwplatform.com/libraries/BhGRfCt5.js"></script>
-<!--                <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.js"></script>
-                <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.html5.js"></script>
-                <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>-->
-                <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer-trial.min.js"></script>
+                <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer-trial.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
             </div>
         </div>
-
-
         <div class="col-md-11 col-md-offset-1 col-sm-12 col-sx-12" id="dsbaihoc">
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="dsbaihoc">
@@ -90,9 +52,9 @@
                                 <li id = "scroll<?php echo $lvalue['sort']; ?>" class="list-group-item">
                                     <a href="<?php echo 'http://video.lakita.vn/' . $lvalue['slug'] . '-4' . $lvalue['id']; ?>.html" 
                                        title="<?php echo $lvalue['name']; ?>"><?php
-                                           if (!isset($lvalue['learn_status']))
+                                           if (!isset($lvalue['learn_status'])) {
                                                echo "<i class='fa fa-circle-o'></i>";
-                                           else {
+                                           } else {
                                                switch ($lvalue['learn_status']) {
                                                    case 0:
                                                        echo "<i class='fa fa-check-circle lakita'></i>";

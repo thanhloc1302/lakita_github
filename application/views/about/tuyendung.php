@@ -1,13 +1,13 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/course_detail.css?ver=<?php echo _VER_CACHED_ ?>" />
 <script src="<?php echo base_url(); ?>styles/v2.0/js/login.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <?php
-if ($this->agent->is_mobile())
+if ($this->agent->is_mobile()) {
     $this->load->view('mobile/navbar');
-else {
+} else {
     ?>
     <div class="header">
         <?php $this->load->view('home/navbar'); ?>
-        <div class="row">
+<!--        <div class="row">
             <div class="col-md-6  my-row-1">
                 <p class="group_course"> Thông tin tuyển dụng </p>
                 <h2 style="font-size: 18px; font-family: OpenSans-Bold; line-height: 26px;"> <strong>  </h2> </strong>
@@ -23,7 +23,7 @@ else {
                     </div>
                 </form>
             </div>
-        </div>
+        </div>-->
     </div>
 <?php }
 ?>

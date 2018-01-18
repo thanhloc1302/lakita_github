@@ -60,7 +60,7 @@ a, a:hover, a:visited {
   padding-top: 0px;
 }
 .navbar .navbar-btn {
-  height: 41px;
+  /*        height: 41px;*/
 }
 .navbar .notification {
   color: #fff;
@@ -71,6 +71,10 @@ a, a:hover, a:visited {
 }
 .navbar .navbar-text a {
   color: #fff;
+}
+.navbar .nav > li > a {
+  display: inline-block;
+  padding: 10px;
 }
 
 .my-class {
@@ -214,11 +218,21 @@ a, a:hover, a:visited {
   background: #d9d9d9;
   color: #da3414;
 }
+.dropdown-notification .active-khoa-hoc {
+  background-color: #fff;
+  color: #000 !important;
+}
+.dropdown-notification .active-khoa-hoc:hover {
+  background-color: #fff !important;
+}
 .dropdown-notification .active-khoa-hoc:hover a {
   color: #25a8ba;
 }
 .dropdown-notification .active-khoa-hoc:hover + .content-notification {
   display: none;
+}
+.dropdown-notification .active-khoa-hoc:focus, .dropdown-notification .active-khoa-hoc:visited {
+  background-color: #fff;
 }
 .dropdown-notification:hover .content-notification {
   position: fixed;

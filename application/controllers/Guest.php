@@ -96,33 +96,38 @@ class Guest extends MY_Controller {
         $email = trim($this->input->post('login_email'));
         $login_redirect = trim($this->input->post('login_redirect'));
         $password = md5(md5($this->input->post('login_password')));
-
+        
         //ghi nhớ khi người dùng mua khóa học đăng nhập
         $redirect_type = $this->input->post('redirect_type');
-        if (isset($redirect_type))
+        if (isset($redirect_type)) {
             $this->session->set_tempdata('redirect_type', $redirect_type, 300);
-        $error = 1;
+        }
         if (!empty($email) && !empty($password)) {
-            $member = $this->lib_mod->detail('student', array('email' => $email, 'password' => $password));
+            $input = [];
+            $input['select'] = 'id, name, email, id_fb';
+            $input['where'] = array('email' => $email, 'password' => $password);
+            $member = $this->student_model->load_all($input);
             if (count($member)) {
-
                 $this->_check_exist_login($member[0]['id']);
-
                 $this->_setSessionUserId($member);
 //                $this->session->set_tempdata('UserIDTemp', $member[0]['id'], 60);
 //                $this->session->set_userdata('id_fb', $member[0]['id_fb']);
 //                $this->session->set_userdata('user_id', $member[0]['id']);
 //                $this->session->set_userdata('user_name', $member[0]['name']);
                 $this->session->set_userdata('login_redirect', $login_redirect);
-                $student = $this->lib_mod->load_all('student', '', array('id' => $this->session->userdata('user_id')), '', '', '');
                 if ($this->input->post('is_remember') == '1') {
                     $this->load->helper('cookie');
-                    $randStr = sha1(md5($student[0]['id_fb'] . $student[0]['password'] . $this->session->userdata('user_id') . $this->session->userdata('user_name') . '6f12d7e322d7e0424952150ab~!@#`>?:"<'));
+                    $randStr = sha1(md5(time(). $this->session->userdata('user_name') . '6f12d7e322d7e0424952150ab~!@#`>?:"<'));
                     $year = 92536000;
                     set_cookie('357a466f0c8940e87378a641479e9ff8d9770318', $randStr, $year);
-                    $this->lib_mod->update('student', array('email' => $email), array('temp_pass' => $randStr));
+                    $this->load->model('remember_login_model');
+                    $insert = array(
+                        'uid' => $member[0]['id'],
+                        'token' => $randStr,
+                        'time' => time()
+                    );
+                    $this->remember_login_model->insert($insert);
                 }
-
                 $tutor = array('2626', '5844', '4909', '3073', '7252', '7346', '7949', '7950', '7951');
                 if (in_array($member[0]['id'], $tutor)) {
                     echo 'tutor';
@@ -550,20 +555,7 @@ class Guest extends MY_Controller {
 //        } else {
 //            $tokenStr = $token;
 //        }
-        $tokenStr = md5(uniqid() . microtime() . rand());
-        $this->session->set_userdata('token_video', $tokenStr);
-        $this->load->model('uid_model');
-        $input = [];
-        $input['select'] = 'uid';
-        $input['where'] = array('uid' => $student[0]['id']);
-        $uid = $this->uid_model->load_all($input);
-        if (empty($uid)) {
-            $this->uid_model->insert(['token' => $tokenStr, 'uid' => $student[0]['id'], 'time' => time()]);
-        } else {
-            $where = array('uid' => $student[0]['id']);
-            $data = array('token' => $tokenStr);
-            $this->uid_model->update($where, $data);
-        }
+       
     }
 
 }

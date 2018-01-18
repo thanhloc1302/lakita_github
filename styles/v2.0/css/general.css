@@ -66,4 +66,7 @@
 #key_word{
     font-family: OpenSans-Regular !important;
 }
+span.jconfirm-title{
+    line-height: 30px;
+}
 

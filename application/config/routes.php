@@ -14,6 +14,7 @@ $route['lap-bao-cao-tai-chinh-2017.html'] = 'landingpage/show/kt400trinhbtk_1';
 $route['tron-bo-lap-bao-cao-tai-chinh-2017.html'] = 'landingpage/show/kt4002';
 $route['tron-bo-lap-bao-cao-tai-chinh-2017-trinhbtk.html'] = 'landingpage/show/kt400trinhbtk';
 $route['tron-bo-lap-bao-cao-tai-chinh-2017-trinhbtk2.html'] = 'landingpage/show/kt400trinhbtk2';
+$route['tron-bo-lap-bao-cao-tai-chinh-2017-345k.html'] = 'landingpage/show/kt400345k';
 $route['cach-xac-dinh-chi-phi-hop-ly.html'] = 'landingpage/show/kt110';
 $route['cach-xac-dinh-chi-phi-hop-ly-candh.html'] = 'landingpage/show/kt110candh';
 $route['quan-tri-ke-toan.html'] = 'landingpage/show/kt120';

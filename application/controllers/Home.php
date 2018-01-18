@@ -25,25 +25,32 @@ class Home extends MY_Controller {
         if (empty($page)) {
             $this->load->helper('cookie');
             if (get_cookie('357a466f0c8940e87378a641479e9ff8d9770318') != '') {
-                $temp_pass = get_cookie('357a466f0c8940e87378a641479e9ff8d9770318');
-                $member = $this->lib_mod->load_all('student', '', array('temp_pass' => $temp_pass), '', '', '');
-                if (count($member)) {
-                    $this->session->set_userdata('user_id', $member[0]['id']);
-                    $this->session->set_userdata('user_name', $member[0]['name']);
+                $this->load->model('remember_login_model');
+                $token = get_cookie('357a466f0c8940e87378a641479e9ff8d9770318');
+                $input = [];
+                $input['where'] = ['token' => $token, 'time <' => time() - 30 * 24 * 3600];
+                $uid = $this->remember_login_model->load_all($input);
+                if (!empty($uid)) {
+                    $member = $this->student_model->getUserInfo($uid[0]['uid']);
+                    if (count($member)) {
+                        $this->session->set_userdata('user_id', $member[0]['id']);
+                        $this->session->set_userdata('user_name', $member[0]['name']);
+                    }
                 }
             }
             $data = $this->data;
             $data['group_courses'] = $this->lib_mod->load_all('group_courses', 'id,name,slug', array('status' => 1), 5, '', array('sort' => 'asc'));
-            $data['banner_main'] = $this->lib_mod->load_all('banner', '', array('status' => 1, 'type_id' => 0), 1, '', array('sort' => 'desc'));
-            $data['banner_1'] = $this->lib_mod->load_all('banner', '', array('status' => 1, 'type_id' => 1), 1, '', array('sort' => 'desc'));
-            $data['banner_2'] = $this->lib_mod->load_all('banner', '', array('status' => 1, 'type_id' => 2), 2, '', array('sort' => 'desc'));
             $this->load->model('courses_model');
             $input = array();
 //            if (($time_start_sale[0]['time_start_sale'] - 12 * 3600 < time()) && ($time_end_sale[0]['time_end_sale'] > time())) {
 //                $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 12, '', array('price_sale' => 'asc'));
 //            } else {
-                $data['courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1), 24, '', array('sort' => 'desc'));
-            //}
+            $this->load->model('courses_model');
+            $input = [];
+            $input['select'] = 'id, name, image, speaker_id, slug, price_sale, price_root2, price_root, time_start_sale, time_end_sale';
+            $input['where'] = ['status' => 1];
+            $input['order'] = ['sort' => 'desc'];
+            $data['courses'] = $this->courses_model->load_all($input);
             $data['rates'] = $this->lib_mod->load_all('rate', '', array('status' => 1), 12, '', array('create_date' => 'desc'), 'name');
             $data['title'] = 'Hệ thống học trực tuyến lakita, cùng bạn vươn xa - lakita.vn';
             $user_id = $this->session->userdata('user_id');
@@ -82,35 +89,6 @@ class Home extends MY_Controller {
                     $data['love_course'] = $this->lib_mod->detail('love', array('user_id' => $user_id, 'course_id' => $id));
                 }
                 $data['first_lesson_trial_learn'] = $this->find_first_lesson_trial_learn($id);
-                $videoDemoArr = [
-                    '37' => '784', //excel 2010
-                    '41' => '435', // 99 tuyet chieu
-                    '65' => '497', // 99 thu thuat van phong
-                    '67' => '591', // excel a-z
-                    '39' => '366', // 18 thu thuat
-                    '16' => '175', //excel ke toan
-                    '69' => '647', //thu thuat excel
-                    '68' => '635', //ke toan (Nhung)
-                    '66' => '513', //ke toan Elink
-                    '10' => '160', //excel 2007
-                    '71' => '696', //báo cáo tài chính elink
-                    '72' => '724', //xác định chi phí
-                    '73' => '726', //báo cáo tài chính nhungpt
-                    '74' => '788', //quyết toán thuế
-                    '77' => '872', //quyết toán thuế ThơĐT
-                    '78' => '953', //trọn bộ kế toán thuế từ a đến z
-                    '80' => '1012', // giám đốc vè quản lý TrungHQ
-                    '81' => '1086',
-                    '82' => '1087',
-                    '83' => '1189',
-                    '84' => '1190',
-                    '85' => '1273'
-                ];
-                if (array_key_exists($id, $videoDemoArr)) {
-                    $data['id_video_demo'] = $videoDemoArr[$id];
-                } else {
-                    $data['id_video_demo'] = 0;
-                }
                 //$this->session->set_tempdata('is_trial_view', 'yes', 3600);
                 $data['group_courses'] = $this->lib_mod->detail('group_courses', array('id' => $curr_courses[0]['group_courses_id']));
                 $data['chapter'] = $this->lib_mod->load_all('chapter', '', array("courses_id" => $id, 'status' => 1), '', '', array("sort" => 'asc'));
@@ -129,7 +107,7 @@ class Home extends MY_Controller {
                 if (!empty($curr_courses[0]['image_share'])) {
                     $data['image'] = base_url() . $curr_courses[0]['image_share'];
                 } else {
-                    $data['image'] = \base_url() . $curr_courses[0]['image'];
+                    $data['image'] = base_url() . $curr_courses[0]['image'];
                 }
                 $data['title'] = $curr_courses[0]['name'];
                 $data['meta_title'] = $curr_courses[0]['name'];
@@ -144,12 +122,8 @@ class Home extends MY_Controller {
                 $data['vote_5'] = count($this->lib_mod->detail('vote', array('courseID' => $id, 'vote_star_number' => 5)));
 
                 $data['rates'] = $this->lib_mod->load_all('rate', '', array('course_id' => $id), '', '', array('name' => 'desc'), 'name');
-
+                $data['current_course_id'] = $id;
                 $this->session->set_tempdata('curr_course_id', $id, 3600 * 12);
-                //$this->session->set_tempdata('curr_course_purchase', 'yes', 1800);
-                if (array_key_exists($id, $videoDemoArr)) {
-                    $this->session->set_tempdata('is_playable', $videoDemoArr[$id], 3600);
-                }
 
                 //xóa voucher khóa học cũ
                 $courseVouched = $this->session->tempdata('courseVouched');
@@ -199,11 +173,13 @@ class Home extends MY_Controller {
 
             //==============================================TRANG HỌC ============================================
             else if ($sub_flag == 4) {
-                $curr = current_url();
-                $uri = substr($curr, 18);
-                redirect('http://video.lakita.vn/'. $uri);
-                echo $uri; die;
-                
+//                $curr = current_url();
+//                $uri = substr($curr, 18);
+//                redirect('http://video.lakita.vn/' . $uri);
+//                echo $uri;
+//                die;
+
+                $this->output->enable_profiler(TRUE);
                 $user_id = $this->session->userdata('user_id');
                 if (!isset($user_id)) {
                     echo '<script> alert("Bạn không có quyền truy cập vào trang này!");</script>';
@@ -211,61 +187,55 @@ class Home extends MY_Controller {
                     exit;
                 }
 
+                $this->load->model('learn_model');
+                $this->load->model('student_courses_model');
+                $this->load->model('courses_model');
+                $this->load->model('speaker_model');
+                $this->load->model('student_learn_model');
+                $this->load->model('comment_model');
+                $this->load->model('chapter_model');
                 //thông tin bài học hiện tại
-                $curr_learn = $this->lib_mod->detail('learn', array('id' => $id));
-                if (count($curr_learn) == 0) {
+                $input = [];
+                $input['select'] = 'id, courses_id, title, slug';
+                $input['where'] = ['id' => $id];
+                $curr_learn = $this->learn_model->load_all();
+                // $curr_learn = $this->lib_mod->detail('learn', array('id' => $id));
+                if (empty($curr_learn)) {
                     echo '<script> alert("Video không tồn tại");</script>';
                     die;
                     exit;
                 }
 
-                // $course_slug = $this->lib_mod->load_all('courses', 'slug', array("id" => $curr_learn[0]['courses_id']), '1', '', array("sort" => 'asc'));
                 //kiểm tra xem học viên đã mua khóa học chưa
                 /*
                  * quà tặng khóa yoga
                  */
-                if ($curr_learn[0]['courses_id'] == 83 && time() < 1516501814) {
+                if ($curr_learn[0]['courses_id'] == 83) {
                     
                 } else {
-                    $student_courses = $this->lib_mod->detail('student_courses', array('courses_id' => $curr_learn[0]['courses_id'], 'student_id' => $user_id, 'status' => 1));
-                    if (!isset($student_courses[0])) {
+                    $input = [];
+                    $input['select'] = 'id, trial_learn';
+                    $input['where'] = ['courses_id' => $curr_learn[0]['courses_id'], 'student_id' => $user_id, 'status' => 1];
+                    $student_courses = $this->student_courses_model->load_all($input);
+                    if (empty($student_courses)) {
                         echo '<script> alert("Xin lỗi, bạn chưa mua khóa học này!");</script>';
                         die;
                         exit;
                     }
                 }
-
-                /* =====================================HỌC THỬ===================================== */
-//                if ($student_courses[0]['cod'] != '') {
-//                    $cod = $this->lib_mod->detail('cod_course', array('cod' => $student_courses[0]['cod']));
-//                    if (count($cod) && $cod[0]['trial_learn'] == 1) {
-//                        if ((time() - $cod[0]['time']) > (7 * 3600 * 24)) {
-//                            echo '<script> alert("Bạn đã hết quyền học thử!"); </script>';
-//                            echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
-//                            die;
-//                        } else {
-//                            if ($curr_learn[0]['trial_learn'] == 0) {
-//                                echo '<script>alert("Bạn không có quyền học thử bài này"); </script>';
-//                                echo "<script>location.href='" . $_SERVER['HTTP_REFERER'] . "';</script>";
-//                                die;
-//                            }
-//                        }
-//                    }
-//                }
-                /* =====================================HỌC THỬ (HẾT)===================================== */
                 $data = $this->data;
-                $course = $this->lib_mod->detail('courses', array('id' => $curr_learn[0]['courses_id']));
+
+                $input = [];
+                $input['select'] = 'id, name, speaker_id';
+                $input['where'] = ['id' => $curr_learn[0]['courses_id']];
+                $course = $this->courses_model->load_all($input);
                 //học thử contact cc
-                if ($student_courses[0]['trial_learn'] == 1 && !in_array($id, [269, 270, 271, 272, 273, 274, 275])) {
-                    $this->session->set_tempdata('curr_course_id', $course[0]['id'], 3600 * 12);
-                    echo '<script> alert("Xin lỗi, bạn cần mua khóa học để học được bài này!"); location.href="https://lakita.vn/mua-khoa-hoc.html"; </script>';
-                    die;
-                    exit;
-                }
-                if ($student_courses[0]['trial_learn'] == 1)
+
+                if ($student_courses[0]['trial_learn'] == 1) {
                     $data['trial_learn'] = 1;
-                else
+                } else {
                     $data['trial_learn'] = 0;
+                }
 
                 //tên khóa học
                 $data['curr_course'] = $course;
@@ -273,58 +243,100 @@ class Home extends MY_Controller {
                 $data['course_id'] = $course[0]['id'];
 
                 //tổng số bài học
-                $data['total_video'] = count($this->lib_mod->detail('learn', array('courses_id' => $course[0]['id'], 'status' => 1)));
+                $input = [];
+                $input['select'] = 'id';
+                $input['where'] = ['courses_id' => $course[0]['id'], 'status' => 1];
+                $data['total_video'] = count($this->learn_model->load_all($input));
 
                 //thông tin giảng viên
                 $firs_courses = array_filter(explode(',', $course[0]['speaker_id']));
                 $firs_courses = str_replace('-', '', $firs_courses[0]);
-                $data['speaker'] = $this->lib_mod->detail('speaker', array('id' => $firs_courses));
 
+                $input = [];
+                $input['select'] = 'id, name, image';
+                $input['where'] = ['id' => $firs_courses];
+                $data['speaker'] = $this->speaker_model->load_all($input);
+                // $data['speaker'] = $this->lib_mod->detail('speaker', array());
                 //tổng số bài đã học
-                $data['count_all_learn'] = count($this->lib_mod->detail('student_learn', array('student_id' => $user_id, 'courseID' => $course[0]['id'])));
+                $input = [];
+                $input['select'] = 'id';
+                $input['where'] = ['student_id' => $user_id, 'courseID' => $course[0]['id']];
+                $data['count_all_learn'] = count($this->student_learn_model->load_all($input));
 
                 $data['learn_note'] = $this->lib_mod->detail('learn_note', array('student_id' => $user_id, 'learn_id' => $id));
-                $data['comment'] = $this->lib_mod->load_all('comment', '', array('courses_id' => $curr_learn[0]['courses_id'], 'learn_id' => $id, 'parent' => ''), 4, '', array('createdate' => 'desc'));
-                $data['page'] = 1;
-                $total_cmt = count($this->lib_mod->load_all('comment', '', array('courses_id' => $curr_learn[0]['courses_id'], 'learn_id' => $id, 'parent' => ''), '', '', array('createdate' => 'desc')));
+
+
+                $input = [];
+                $input['select'] = 'id, student_id, createdate, content';
+                $input['where'] = ['courses_id' => $curr_learn[0]['courses_id'], 'learn_id' => $id, 'parent' => '0'];
+                $input['limit'] = array(4, 0);
+                $input['order'] = array('createdate' => 'desc');
+                $data['comment'] = $this->comment_model->load_all($input);
+
+
+                $input = [];
+                $input['select'] = 'id';
+                $input['where'] = ['courses_id' => $curr_learn[0]['courses_id'], 'learn_id' => $id, 'parent' => '0'];
+                $total_cmt = count($this->comment_model->load_all($input));
                 $data['pages'] = ceil($total_cmt / 4);
+
                 //danh sách bài học
-                $data['chapter'] = $this->lib_mod->load_all('chapter', '', array("courses_id" => $curr_learn[0]['courses_id'], 'status' => 1), '', '', array("sort" => 'asc'));
+
+                $input = [];
+                $input['select'] = 'id, name';
+                $input['where'] = ["courses_id" => $curr_learn[0]['courses_id'], 'status' => 1];
+                $input['order'] = array("sort" => 'asc');
+                $data['chapter'] = $this->chapter_model->load_all($input);
+
                 foreach ($data['chapter'] as $key => $value) {
-                    $data['all_learn'][$key] = $this->get_course_learn($value['id'], $user_id);
+                    //danh sách các bài học của chương đó
+                    $input = [];
+                    $input['select'] = 'id, name, sort,  length, slug';
+                    $input['where'] = ['chapter_id' => $value['id']];
+                    $learnDetail = $this->learn_model->load_all($input);
+
+                    //và kèm theo trạng thái đã học hay chưa các bài đó
+                    foreach ($learnDetail as $leanId => $learnValue) {
+                        $input = [];
+                        $input['select'] = 'id';
+                        $input['where'] = ['student_id' => $user_id, 'learn_id' => $learnValue['id']];
+                        $learnStatus = $this->student_learn_model->load_all($input);
+                        $learnDetail[$leanId]['learn_status'] = (empty($learnStatus)) ? 0 : 1;
+                    }
+                    $data['all_learn'][$key] = $learnDetail;
                 }
+
                 $data['curr_learn'] = $curr_learn;
 
                 $data['curr_id'] = $id;
-                if (!empty($curr_learn[0]['image_share'])) {
-                    $data['image'] = 'https://lakita.vn/' . $curr_learn[0]['image_share'];
-                } else {
-                    $data['image'] = 'https://lakita.vn/' . $curr_learn[0]['thumbnail'];
-                }
                 $data['title'] = $curr_learn[0]['name'] . ' - lakita.vn';
-                $data['meta_title'] = $curr_learn[0]['title'];
-                $data['meta_description'] = $curr_learn[0]['description'];
-                //$data['meta_keyword'] = $curr_learn[0]['keyword'];
                 $data['learn'] = 1;
 
-                $data['learn_slug'] = base_url() . $curr_learn[0]['slug'] . '-4' . $curr_learn[0]['id'] . '.html';
-
                 //cập nhật bài đã học
-                $learned = $this->lib_mod->count('student_learn', array('student_id' => $user_id, 'learn_id' => $curr_learn[0]['id']));
-                if ($learned == 0) {
-                    $this->lib_mod->insert('student_learn', array('student_id' => $user_id, 'learn_id' => $curr_learn[0]['id'], 'status' => 0, 'courseID' => $course[0]['id'], 'time' => time()));
+
+                $input = [];
+                $input['select'] = 'id';
+                $input['where'] = ['student_id' => $user_id, 'learn_id' => $curr_learn[0]['id']];
+                $learned = $this->student_learn_model->load_all($input);
+                if (empty($learned)) {
+                    $insert = array('student_id' => $user_id, 
+                        'learn_id' => $curr_learn[0]['id'], 
+                        'status' => 0, 
+                        'courseID' => $course[0]['id'], 
+                        'time' => time());
+                    $this->student_learn_model->insert();
                 }
                 $data['love_course'] = $this->lib_mod->detail('love', array('user_id' => $user_id, 'course_id' => $course[0]['id']));
                 $data['student'] = $this->lib_mod->detail('student', array('id' => $user_id));
                 $data['content'] = 'student/learn';
-
                 $data['is_learing'] = 1;
                 $this->load->view('template', $data);
             } elseif ($sub_flag == 5) {
                 $curr = current_url();
                 $uri = substr($curr, 18);
-                redirect('http://video.lakita.vn/'. $uri);
-                echo $uri; die;
+                redirect('http://video.lakita.vn/' . $uri);
+                echo $uri;
+                die;
 
                 //thông tin bài học hiện tại
                 $curr_learn = $this->lib_mod->detail('learn', array('id' => $id));
@@ -473,10 +485,16 @@ class Home extends MY_Controller {
                 $this->load->view('template', $data);
             } else if ($sub_flag == 7) { // ============ TRANG THÔNG TIN KHÓA HỌC KHI NGƯỜI DÙNG ĐÃ MUA, ĐĂNG NHẬP ======================
                 $user_id = $this->session->userdata('user_id');
+                if (!isset($user_id)) {
+                    redirect(base_url());
+                }
                 $data = $this->data;
                 $this->load->model('student_model');
                 $this->load->model('courses_model');
                 $this->load->model('comment_model');
+                $this->load->model('chapter_model');
+                $this->load->model('learn_model');
+                $this->load->model('student_learn_model');
 
                 $inputStudent = [];
                 $inputStudent['select'] = 'id_fb, name, thumbnail';
@@ -485,52 +503,53 @@ class Home extends MY_Controller {
 
                 $data['curr_learn'][0] = array('id' => 0, 'courses_id' => $id);
 
-                $inputCourse = [];
-                $inputCourse['select'] = 'slug';
-                $inputCourse['where'] = array('id' => $id);
-                $course = $this->courses_model->load_all($inputCourse);
-                $data['learn_slug'] = base_url() . $course[0]['slug'] . '-7' . $id . '.html';
 
-                $videoDemoArr = [
-                    '37' => '784', //excel 2010
-                    '41' => '435', // 99 tuyet chieu
-                    '65' => '497', // 99 thu thuat van phong
-                    '67' => '591', // excel a-z
-                    '39' => '366', // 18 thu thuat
-                    '16' => '175', //excel ke toan
-                    '69' => '647', //thu thuat excel
-                    '68' => '635', //ke toan (Nhung)
-                    '66' => '513', //ke toan Elink
-                    '10' => '160', //excel 2007
-                    '71' => '696', //báo cáo tài chính elink
-                    '72' => '724', //xác định chi phí
-                    '73' => '726', //báo cáo tài chính nhungpt
-                    '74' => '788', //quyết toán thuế
-                    '77' => '872', //quyết toán thuế ThơĐT
-                    '78' => '953', //trọn bộ kế toán thuế từ a đến z
-                    '80' => '1012', // giám đốc vè quản lý TrungHQ
-                    '81' => '1086',
-                    '82' => '1087'
-                ];
-                if (array_key_exists($id, $videoDemoArr)) {
-                    $data['id_video_demo'] = $videoDemoArr[$id];
-                    $this->session->set_tempdata('is_playable', $videoDemoArr[$id], 3600);
-                } else {
-                    $data['id_video_demo'] = 0;
-                }
-               // $this->session->set_tempdata('is_trial_view', 'yes', 3600);
-                $data['chapter'] = $this->lib_mod->load_all('chapter', '', array("courses_id" => $id, 'status' => 1), '', '', array("sort" => 'asc'));
+                // $this->session->set_tempdata('is_trial_view', 'yes', 3600);
+                /*
+                 * Lấy các id chapter (chương)
+                 */
+                $input = [];
+                $input['select'] = 'id, name';
+                $input['where'] = ["courses_id" => $id, 'status' => 1];
+                $input['oder'] = ["sort" => 'asc'];
+                $data['chapter'] = $this->chapter_model->load_all($input);
+                //$data['chapter'] = $this->lib_mod->load_all('chapter', '', array("courses_id" => $id, 'status' => 1), '', '', array("sort" => 'asc'));
+
                 foreach ($data['chapter'] as $key => $value) {
-                    $data['all_learn'][$key] = $this->get_course_learn($value['id'], $user_id);
+                    //danh sách các bài học của chương đó
+                    $input = [];
+                    $input['select'] = 'id, name, sort,  length, slug';
+                    $input['where'] = ['chapter_id' => $value['id']];
+                    $learnDetail = $this->learn_model->load_all($input);
+
+                    //và kèm theo trạng thái đã học hay chưa các bài đó
+                    foreach ($learnDetail as $leanId => $learnValue) {
+                        $input = [];
+                        $input['select'] = 'id';
+                        $input['where'] = ['student_id' => $user_id, 'learn_id' => $learnValue['id']];
+                        $learnStatus = $this->student_learn_model->load_all($input);
+                        $learnDetail[$leanId]['learn_status'] = (empty($learnStatus)) ? 0 : 1;
+                    }
+                    $data['all_learn'][$key] = $learnDetail;
                 }
+                /*
+                 * Lấy tổng số comment
+                 */
                 $input_comment_count = [];
                 $input_comment_count['select'] = 'id';
-                $input_comment_count['where'] = array('courses_id' => $id, 'parent' => '0');
+                $input_comment_count['where'] = array('courses_id' => $id);
                 $data['total_cmt'] = count($this->comment_model->load_all($input_comment_count));
+
+                /*
+                 * Lấy 4 comment mới nhất để hiển thị
+                 */
+                $input_comment = [];
                 $input_comment['where'] = array('courses_id' => $id, 'parent' => '0');
                 $input_comment['limit'] = array(4, 0);
                 $input_comment['order'] = array('createdate' => 'desc');
                 $data['comment'] = $this->comment_model->load_all($input_comment);
+
+                $data['current_course_id'] = $id;
                 $data['page'] = 1;
                 $data['pages'] = ceil($data['total_cmt'] / 4);
                 $data['curr_learn'] = array(0 => array('id' => '0', 'courses_id' => $id));

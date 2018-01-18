@@ -21,7 +21,8 @@ class Userid extends CI_Controller {
             $tokenStr = '';
             $token = $this->session->userdata('token_video');
             $tokenStr = isset($token) ? $token : 0;
-            redirect('http://video.lakita.vn/login?token=' . $tokenStr . '&access_token=' . md5('lakita2017'));
+            $token_login = $this->session->userdata('token');
+            redirect('http://video.lakita.vn/login?token=' . $tokenStr . '&access_token=' . md5('lakita2017') . '&token_login=' . $token_login);
         }
     }
 

@@ -50,10 +50,10 @@
                 <p> Hoặc đăng nhập bằng tài khoản sau: </p>
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
-                        <a href="<?php echo $facebook_login_url; ?>" class="my-btn bgfb"> <i class="fa fa-facebook" aria-hidden="true"></i> &nbsp; Facebook </a>
+                        <a href="<?php echo $facebook_login_url; ?>" class="my-btn bgfb white"> <i class="fa fa-facebook" aria-hidden="true"></i> &nbsp; Facebook </a>
                     </div>
                     <div class="col-xs-12 col-sm-6">
-                        <a id="customBtn2" class="my-btn bggg" 
+                        <a id="customBtn2" class="my-btn bggg white" 
                            href="https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=125422840079-ars8uilref93d7jaic148nkqm41vao9u.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flakita.vn%2Fplugin%2Fgg.php&state&scope=email%20profile&approval_prompt=auto"> 
                             <i class="fa fa-google-plus" aria-hidden="true"></i> &nbsp; Google+ 
                         </a>

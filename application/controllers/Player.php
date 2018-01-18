@@ -54,6 +54,22 @@ class Player extends MY_Controller {
 //            die;
 //        }
     }
+    
+     function PlayDemo() {
+        $input = $this->input->post('video_id');
+        if (empty($input)) {
+            die;
+        }
+        $id = $this->input->post('video_id');
+        if ($id == 0) {
+            echo 'https://lakita.vn/data/source/video/intro.mp4';
+            die;
+        }
+        $this->load->model('courses_model');
+        $courseCode = $this->courses_model->GetCourseCode($id);
+        echo 'https://lakita.vn/public/video-demo/' . $courseCode . '.mp4';
+        die;
+    }
 
     function next_learn() {
         $user_id = $this->session->userdata('user_id');

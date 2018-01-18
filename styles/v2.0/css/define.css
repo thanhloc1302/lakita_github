@@ -158,9 +158,10 @@ font-size: 15px;
 .fontOpenSans{
      font-family: OpenSans-Regular;
 }
-.white{
+.white, a.white:hover, a.white:focus, a.white:visited{
     color:white !important;
 }
+
 .bgwhite{
     background-color: #fff !important;
 }

@@ -76,7 +76,7 @@ if (!$this->agent->is_mobile()) {
     }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-</body>
+
 
 <script>
     $(document).ready(function () {
@@ -136,5 +136,6 @@ if (!$this->agent->is_mobile()) {
         });
     });
 </script>
+</body>
 
 

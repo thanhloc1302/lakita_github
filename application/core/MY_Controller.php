@@ -14,43 +14,34 @@ class MY_Controller extends CI_Controller {
             $this->session->set_userdata('token', $token_str);
         }
         if (!isset($user_id)) {
-            $this->load->model('facebook_model');
-            $this->data['facebook_login_url'] = $this->facebook_model->loginUrl();
-            $user_id = $this->session->userdata('user_id');            
+          //  $this->load->model('facebook_model');
+          //  $this->data['facebook_login_url'] = $this->facebook_model->loginUrl();
+            $this->data['facebook_login_url'] = 'https://www.facebook.com/v2.11/dialog/oauth?client_id=315347858825221&response_type=code&sdk=php-sdk-5.4.4&redirect_uri=https%3A%2F%2Flakita.vn%2Fguest%2Flogin_via_fb2&scope=email%2Cuser_friends';
+            //$user_id = $this->session->userdata('user_id');
         }
         if (isset($user_id)) {
+            $tokenStr = md5(uniqid() . microtime() . rand());
+            $this->session->set_userdata('token_video', $tokenStr);
+            $this->load->model('uid_model');
+            $input = [];
+            $input['select'] = 'uid';
+            $input['where'] = array('uid' => $user_id);
+            $uid = $this->uid_model->load_all($input);
+            if (empty($uid)) {
+                $this->uid_model->insert(['token' => $tokenStr, 'uid' => $user_id, 'time' => time()]);
+            } else {
+                $where = array('uid' => $user_id);
+                $data = array('token' => $tokenStr);
+                $this->uid_model->update($where, $data);
+            }
+
             $last_page = $this->session->userdata('last_page');
             if (isset($last_page)) {
                 $this->session->unset_userdata('last_page');
                 redirect($last_page);
             }
             $this->_check_exist_login($user_id);
-            //$table, $select, $where, $limit, $offset, $order, $group_by=''
-            $student_ids1 = $this->lib_mod->load_all('student_courses', 'student_id', array('courses_id' => 37, 'trial_learn' => 0));
-            $flag1 = false;
-            foreach ($student_ids1 as $value) {
-                if ($value['student_id'] == $user_id) {
-                    $flag1 = true;
-                }
-            }
-            if ($flag1) {
-                $this->data['have_news2'] = '2';
-            }
-
-            //$table, $select, $where, $where_in, $where_not_in, $limit, $offset, $order
-            $student_ids2 = $this->lib_mod->load_all_wheres('student_courses', 'student_id', array('trial_learn' => 0), array('courses_id' => array(37, 10, 41, 16)), '', '', '', '');
-            // print_r($student_ids2);
-
-            $flag2 = false;
-            foreach ($student_ids2 as $value) {
-                if ($value['student_id'] == $user_id) {
-                    $flag2 = true;
-                }
-            }
-            if ($flag2) {
-                $this->data['have_news3'] = '3';
-            }
-
+           
 
             //locnt 
             set_cookie('first_time_login', time(), 92536000);
@@ -86,11 +77,7 @@ class MY_Controller extends CI_Controller {
             }
             //hết locnt
         }
-        $this->data['setting'] = $this->lib_mod->detail('setting', array('id' => 1));
-        $this->data['category_news'] = $this->lib_mod->load_all('category_3s', '', array('status' => 1, 'type_id' => 4, 'parent' => 0), '', '', array('sort' => 'desc'));
-        $this->data['courses_right'] = $this->lib_mod->load_all('courses', '', array('status' => 1, 'hot' => 1), 8, '', array('sort' => 'desc'));
-        $this->data['courses_top'] = $this->lib_mod->load_all('courses', '', array('status' => 1), '', '', array('sort' => 'desc'));
-
+       
         /*
          * Campaign giờ vàng giá sốc
          */
@@ -123,7 +110,7 @@ class MY_Controller extends CI_Controller {
 
     private function _get_time_sale() {
         $this->load->model('courses_model');
-        $input = array();
+        $input1 = array();
         $input1['select_max'] = 'time_start_sale';
         $time_start_sale = $this->courses_model->load_all($input1);
 

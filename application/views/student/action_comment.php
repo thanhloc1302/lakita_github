@@ -1,7 +1,7 @@
 <input type="hidden" id="learn_id" value="<?php echo $curr_learn[0]['id']; ?>">
 <input type="hidden" id="courses_id" value="<?php echo $curr_learn[0]['courses_id']; ?>" >
 <input type="hidden" id="parent" value="0">
-<input type="hidden" id="curr_url" value="<?php echo $learn_slug; ?>" >
+<input type="hidden" id="curr_url" value="<?php echo current_url(); ?>" >
 
 <script>
 

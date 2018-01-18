@@ -4,7 +4,7 @@
 <?php if (!$this->agent->is_mobile()) { ?>
     <div class="header">
         <?php $this->load->view('home/navbar'); ?>
-        <div class="row">
+<!--        <div class="row">
             <div class="col-md-6  my-row-1">
                 <h1> <strong>TRI ÂN HỌC VIÊN 2016 </strong></h1>
             </div>
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 
     <?php

@@ -877,29 +877,14 @@ class Course extends MY_Controller {
         if (!isset($user_id)) {
             die('Xin lỗi, bạn không có quyền truy cập vào khu vực này!');
         }
-        echo $file = base64_decode($filename);
+        $file = base64_decode($filename);
         $file_path = '/home/lakita.com.vn/public_html/' . $file;
+
         if (!is_file($file_path)) {
             die('Không tìm thấy file');
         }
-        $is_downloadable = $this->session->tempdata('is_downloadable');
-        if (isset($is_downloadable)) {
-            $learn_id = $this->lib_mod->load_all_like('learn', 'id', array('attach_file' => $file), '', '', '');
-            if (isset($learn_id[0])) {
-                foreach ($learn_id as $key => $value) {
-                    if ($value['id'] == $is_downloadable) {
-                        $this->load->helper('download');
-                        force_download($file_path, NULL);
-                        die;
-                    }
-                }
-            } else {
-                echo 3;
-                die;
-            }
-        } else {
-            die('Xin lỗi, bạn không có quyền truy cập vào khu vực này!');
-        }
+        $this->load->helper('download');
+        force_download($file_path, NULL);
     }
 
     function save_note() {
@@ -1441,7 +1426,7 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
         $course_cod = $this->find_course_code($course[0]['id']);
         $post = [];
 
-       
+
         $post['course_code'] = $course_cod;
         $post['price_purchase'] = $price;
         $post['name'] = $infor['name'];
@@ -1468,8 +1453,8 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
         $link_id = get_cookie('link_id');
         if ($link_id) {
             $post['link_id'] = $link_id;
-        }else{
-             $post['matrix'] = 'lakita.vn';
+        } else {
+            $post['matrix'] = 'lakita.vn';
         }
         $restClient->post($uri, $post);
     }

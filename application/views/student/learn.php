@@ -56,67 +56,6 @@
     <?php $this->load->view('mobile/navbar'); ?>
 <?php } ?>
 
-<!---->
-
-<div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div  style="background-color: #2c944a; color: #FFF;text-align: center; font-size: 30px;" class="modal-header">
-                <p>Chúng tôi nhận thấy trình duyệt của bạn chưa<strong> Bật Flash</strong> có thể dẫn đến <b style="color: #ffff66">KHÔNG XEM ĐƯỢC VIDEO</b>. Vì vậy mời bạn làm theo hướng dẫn dưới đây để<strong> Bật Flash</strong> nhé!</p>
-            </div>
-            <div class="modal-body" id="noti">
-                <p style="font-size: 20px; color: #5d92ff"><strong>I. Cách bật Flash trên trình duyệt chorme:</strong></p>
-                <p><strong>1. Cách 1: Bật Flash trên thanh địa chỉ của trình duyệt: </strong></p>
-                <p>Kích chuột trái vào chữ (i) (hoặc <b>Bảo mật</b> hoặc <b>Secure</b>) trên thanh địa chỉ</p>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <img class="img img-responsive" src="https://lakita.vn/styles/images/flash-tutor-1.png">
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <img class="img img-responsive" src="https://lakita.vn/styles/images/flash-tutor-8.png">
-                </div>
-                <div class="clearfix"></div>
-                <p></p><br>
-                <p>Ta thấy ô màu đỏ Flash, tại chọn mũi tên Cho phép và chọn : <b>"Luôn cho phép trên trang web này"</b> hoặc<b>"Always allow on this site".</b> Và sau đó tải lại trình duyệt </p>
-
-                <img style="margin-left: auto; margin-right: auto; display: block" class="img img-reponsive" src="https://lakita.vn/styles/images/flash-tutor-2.png">
-                <p></p>
-                <p><strong>2. Cách 2: Truy cập địa chỉ: <span style="color: red">chrome://settings/content</span> </strong></p>
-                <p>Ta copy địa chỉ vào thanh địa chỉ của trình duyệt.</p>
-
-                <img class="img img-reponsive" src="https://lakita.vn/styles/images/flash-tutor-3.png">
-                <p></p>
-                <p>Tại giao diện của web ta nhìn thấy ô đỏ; kích vào mũi tên của ô đỏ, ta được giao diện như hình sau. </p>
-                <img class="img img-reponsive" src="https://lakita.vn/styles/images/flash-tutor-4.png">
-                <p></p>
-                <p>Tại mục cho phép, kích vào chữ <strong>“Thêm”</strong>, rồi điền tên trang web như sau: </p>
-                <img class="img img-reponsive" src="https://lakita.vn/styles/images/flash-tutor-5.png">
-                <p></p>
-                <p>Tuy nhiên cách này không phải lúc nào cũng bật đối với mọi trình duyệt, nên mình khuyên lên sử dụng cách 1. </p>
-                <p>Vậy là hoàn thành. Chúc bạn thành công. </p>
-
-                <p style="font-size: 20px; color: #5d92ff">II. Bật Flash trên trình duyệt Cốc cốc: </p>
-                <p><strong>1. Bật Flash trên thanh địa chỉ: </strong></p>
-                <img class="img img-reponsive" src="https://lakita.vn/styles/images/flash-tutor-6.png">
-                <p></p>
-                <p>Tại thanh địa chỉ, kích chuột vào chữ (i)(hoặc <b>Bảo mật</b> hoặc <b>Secure</b>) , tại ô flash, kích vào ô mặc định, và làm tương tự như Chorme. </p>
-                <p><strong>2. Cài đặt trình duyệt: </strong></p>
-                <p>Bạn copy đường link: <strong><span style="color:red">coccoc://settings/content</span></strong> vào thanh địa chỉ, ta được hình sau: </p>
-                <img class="img img-reponsive" src="https://lakita.vn/styles/images/flash-tutor-7.png">
-                <p></p>
-                <p>Ta chọn vào ô:” Phát hiện và chạy nội dung Flash quan trọng” </p>
-                <p>Vậy là hoàn thành. </p>
-                <p>Theo mình lên áp dụng cách 1, dễ sử dụng, còn cách 2 do Flash không tự bật cho tất cả các web. </p>
-                <p>Chúc bạn thành công!!! </p>
-                <p>Trân trọng,</p>
-                <p><b>Lakita Team.</b></p>
-            </div> 
-        </div>
-    </div>
-</div>
-
-
-<!---->
-
 <div class="row" <?php if ($this->agent->is_mobile()) echo 'style="margin-top: -20px;"'; ?>>
     <div class="col-md-8 col-xs-12 col-sm-12" style="font-size: 16px">
         <div class="row gr1-row-1">
@@ -130,13 +69,10 @@
                                 <?php
                                 if (!empty($curr_learn[0]['video_file'])) {
                                     $value = $curr_learn[0]['id'];
-//Detect special conditions devices
                                     $iPod = stripos($_SERVER['HTTP_USER_AGENT'], "iPod");
                                     $iPhone = stripos($_SERVER['HTTP_USER_AGENT'], "iPhone");
                                     $iPad = stripos($_SERVER['HTTP_USER_AGENT'], "iPad");
                                     $Android = stripos($_SERVER['HTTP_USER_AGENT'], "Android");
-                                    // $webOS = stripos($_SERVER['HTTP_USER_AGENT'], "webOS");
-//do something with this information
                                     if ($iPod || $iPhone || $iPad) {
                                         ?>
                                         <input type="hidden" id="lakitaid" value="<?php echo md5(time()) . '$&((_GNSDADFHGD@!$^&%#' . time() . ')*&^%$@' . time() . '#' . $value . '#' . time() . '_+1357$*^())!%*$$&' . md5('lakita.vn') . '+135+1357$*^())!%*$$7$*^())!%*$$+1+1357$*^())!%*$$357$*^())!%*$$'; ?>" /><div id="mediaspace"></div>
@@ -163,9 +99,7 @@
                                     ?>
                                     <input type="hidden" id="lakitaid" value="<?php echo md5(time()) . '$&((_GNSDADFHGD@!$^&%#' . time() . ')*&^%$@' . time() . '#' . 612 . '#' . time() . '_+1357$*^())!%*$$&' . md5('lakita.vn') . '+135+1357$*^())!%*$$7$*^())!%*$$+1+1357$*^())!%*$$357$*^())!%*$$'; ?>" /><div id="mediaspace"></div>
                                 <?php } ?>
-<!--                                <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.js"></script>
-                            <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.html5.js"></script>
-                            <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>-->
+
                                 <script type="text/javascript" src="https://content.jwplatform.com/libraries/kTgFQviI.js"></script>
                                 <input type="hidden" id="auto_next" value="1" />
                                 <input type="hidden" id="curr_learn_id" value="<?php echo $curr_id; ?>" />

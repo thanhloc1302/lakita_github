@@ -288,11 +288,14 @@ class Student extends MY_Controller {
     }
 
     function logout() {
-        $this->lib_mod->update('student', array('id' => $this->session->userdata('user_id')), array('temp_pass' => 0));
         $this->lib_mod->update('watching_time', array('student_id' => $this->session->userdata('user_id')), array('time' => 0));
         $this->load->helper('cookie');
-        if (get_cookie('357a466f0c8940e87378a641479e9ff8d9770318') != NULL)
+        if (get_cookie('357a466f0c8940e87378a641479e9ff8d9770318') != NULL) {
+            $this->load->model('remember_login_model');
+            $token = get_cookie('357a466f0c8940e87378a641479e9ff8d9770318');
+            $this->remember_login_model->delete(['token' => $token]);
             delete_cookie('357a466f0c8940e87378a641479e9ff8d9770318');
+        }
         $this->session->unset_userdata('user_name');
         $this->session->unset_userdata('user_id');
         $this->session->unset_userdata('courses');
@@ -776,6 +779,7 @@ class Student extends MY_Controller {
         $student_current_id = $this->input->post('student_current_id');
         $browerInfo = $this->input->post('info');
         $token = $this->session->userdata('token');
+        // var_dump($token);
         $date = time();
         $check_student_id = $this->lib_mod->load_all('watching_time', 'student_id', array('student_id' => $student_current_id), '', '', '');
         if (!empty($check_student_id)) {

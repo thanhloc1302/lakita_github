@@ -5,15 +5,7 @@ class Teacher extends MY_Controller {
     public function __construct() {
         parent::__construct();
     }
-
-    function load_data() {
-        $data['setting'] = $this->lib_mod->detail('setting', array('id' => 1));
-        $data['category_news'] = $this->lib_mod->load_all('category_3s', '', array('status' => 1, 'type_id' => 4, 'parent' => 0), '', '', array('sort' => 'desc'));
-        $data['courses_right'] = $this->lib_mod->load_all('courses', '', array('status' => 1, 'hot' => 1), 8, '', array('sort' => 'desc'));
-        $data['courses_top'] = $this->lib_mod->load_all('courses', '', array('status' => 1), '', '', array('sort' => 'desc'));
-        return $data;
-    }
-
+   
     public function index() {
         $data = $this->data;
         $data['title'] = 'Trở thành giảng viên - lakita.vn';

@@ -19,7 +19,7 @@
                     <?php echo isset($_GET['key_word']) ? 'value="' . $_GET['key_word'] . '"' : '' ?>
                            />
                     <span class="input-group-btn">
-                        <input class="btn btn-default" type="submit" value="Tìm kiếm"/> 
+                        <input class="btn btn-default" type="submit" value="Tìm kiếm"/>
                     </span>
                 </div>
             </form>
@@ -27,20 +27,18 @@
 
                 <li class="li-active dropdown-notification">
                     <span class="notification btn">
-                        &nbsp;&nbsp;&nbsp;          
+                        &nbsp;&nbsp;&nbsp;
                         <i class="fa fa-bell" aria-hidden="true"></i>
                         <?php if (isset($have_news)) { ?>
-                            <input id="csrf_test_name_noti" type="hidden" 
-                                   name="<?php echo $this->security->get_csrf_token_name(); ?>" 
+                            <input id="csrf_test_name_noti" type="hidden"
+                                   name="<?php echo $this->security->get_csrf_token_name(); ?>"
                                    value="<?php echo $this->security->get_csrf_hash(); ?>">
                             <sup><span class="badge"> <?php echo $have_news; ?></span></sup>
                         <?php } ?>
                     </span>
-                    <button type="button" class="btn btn-default navbar-btn active-khoa-hoc">
-                        <a href="<?php echo base_url(); ?>kich-hoat-khoa-hoc.html">
-                            <i class="fa fa-unlock-alt" aria-hidden="true"></i> &nbsp; Kích hoạt khóa học 
-                        </a>
-                    </button>
+                    <a href="<?php echo base_url(); ?>kich-hoat-khoa-hoc.html" class="navbar-btn btn active-khoa-hoc">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i> &nbsp; Kích hoạt khóa học
+                    </a>
                     <div class="content-notification">
                         <?php
                         if (isset($noti)) {
@@ -48,7 +46,7 @@
                                 if ($value1['type'] == 'comment') {
                                     ?>
 
-                                    <a href="<?php echo $value1['url']; ?>"> 
+                                    <a href="<?php echo $value1['url']; ?>">
                                         <i class="fa fa-comments fa-5x" aria-hidden="true"></i>
                                         <?php
                                         foreach ($creator_infor as $key2 => $value2) {
@@ -64,7 +62,7 @@
                                 } elseif ($value1['type'] == 'exercise') {
                                     ?>
 
-                                    <a href="<?php echo $value1['url']; ?>"> 
+                                    <a href="<?php echo $value1['url']; ?>">
                                         <i class="fa fa-book fa-5x" aria-hidden="true"></i>
                                         <?php
                                         echo '&nbsp;&nbsp;&nbsp; Giảng viên Lakita đã chữa bài tập của bạn ';
@@ -75,7 +73,7 @@
                                 } elseif ($value1['type'] == 'invite') {
                                     ?>
 
-                                    <a href="<?php echo $value1['url']; ?>"> 
+                                    <a href="<?php echo $value1['url']; ?>">
                                         <i class="fa fa-gift fa-5x" aria-hidden="true"></i>
                                         <?php
                                         foreach ($creator_infor1 as $key2 => $value2) {
@@ -91,7 +89,7 @@
                                     <?php
                                 } else {
                                     ?>
-                                    <a href="<?php echo $value1['url']; ?>" style="width: 490px; height: auto; line-height: 22px; white-space: normal;"> 
+                                    <a href="<?php echo $value1['url']; ?>" style="width: 490px; height: auto; line-height: 22px; white-space: normal;">
                                         <i class="fa fa-newspaper-o fa-5x" aria-hidden="true"></i>
                                         <?php
                                         echo '&nbsp;&nbsp;&nbsp; [LAKITA.VN] Chương trình Tri ân khách hàng, Lakita gửi Tặng Miễn Phí 1 tháng học Yoga Online tại Lakita.vn (20/12-20/1).';
@@ -106,18 +104,16 @@
                             <a>Hiện tại không có thông báo mới để hiển thị</a>
                             <?php
                         }
-                        ?> 
+                        ?>
                     </div>
                 </li>
                 <li>
                     <?php
                     if (!isset($user_id)) {
                         ?>
-                        <button type="button" class="btn navbar-btn button-login button-right">
-                            <a href="<?php echo base_url('dang-nhap.html'); ?>">
-                                <i aria-hidden="true"></i>Đăng nhâp / Đăng ký
-                            </a>
-                        </button>
+                        <a href="<?php echo base_url('dang-nhap.html'); ?>" class="btn navbar-btn button-login button-right white">
+                            <i aria-hidden="true"></i>Đăng nhâp / Đăng ký
+                        </a>
                         <?php
                     } else {
                         ?>
@@ -138,11 +134,11 @@
                                 </a>
                                 <a href="<?php echo base_url(); ?>kich-hoat-khoa-hoc.html">
                                     <i class="fa fa-compress fa-fw" aria-hidden="true"></i>
-                                    &nbsp;&nbsp; Kích hoạt khóa học 
+                                    &nbsp;&nbsp; Kích hoạt khóa học
                                 </a>
                                 <a href="<?php echo base_url(); ?>nap-tien-vao-tai-khoan.html">
                                     <i class="fa fa-usd fa-fw" aria-hidden="true"></i>
-                                    &nbsp;&nbsp; Nạp tiền vào tài khoản 
+                                    &nbsp;&nbsp; Nạp tiền vào tài khoản
                                 </a>
                                 <a href="<?php echo base_url(); ?>thong-tin-tai-khoan.html">
                                     <i class="fa fa-user fa-fw" aria-hidden="true"></i>
@@ -176,10 +172,10 @@
                 <?php echo isset($_GET['key_word']) ? 'value="' . $_GET['key_word'] . '"' : '' ?>
                        />
                 <span class="input-group-btn">
-                    <input class="btn btn-default" type="submit" value="Tìm kiếm"/> 
+                    <input class="btn btn-default" type="submit" value="Tìm kiếm"/>
                 </span>
             </div>
-        </form>   
+        </form>
         <hr>
         <a href="<?php echo base_url('dang-nhap.html'); ?>">
             <i class="fa fa-sign-in fa-fw" aria-hidden="true"></i>  &nbsp;&nbsp; Đăng nhâp
@@ -191,7 +187,7 @@
         <hr>
         <a href="<?php echo base_url(); ?>kich-hoat-khoa-hoc.html">
             <i class="fa fa-compress fa-fw" aria-hidden="true"></i>
-            &nbsp;&nbsp; Kích hoạt khóa học 
+            &nbsp;&nbsp; Kích hoạt khóa học
         </a>
         <?php
     } else {
@@ -207,10 +203,10 @@
                     <?php echo isset($_GET['key_word']) ? 'value="' . $_GET['key_word'] . '"' : '' ?>
                            />
                     <span class="input-group-btn">
-                        <input class="btn btn-default" type="submit" value="Tìm kiếm"/> 
+                        <input class="btn btn-default" type="submit" value="Tìm kiếm"/>
                     </span>
                 </div>
-            </form>      
+            </form>
         </div>
         <hr>
         <a href="<?php echo base_url(); ?>khoa-hoc-cua-toi.html">
@@ -220,12 +216,12 @@
         <hr>
         <a href="<?php echo base_url(); ?>kich-hoat-khoa-hoc.html">
             <i class="fa fa-compress fa-fw" aria-hidden="true"></i>
-            &nbsp;&nbsp; Kích hoạt khóa học 
+            &nbsp;&nbsp; Kích hoạt khóa học
         </a>
         <hr>
         <a href="<?php echo base_url(); ?>nap-tien-vao-tai-khoan.html">
             <i class="fa fa-usd fa-fw" aria-hidden="true"></i>
-            &nbsp;&nbsp; Nạp tiền vào tài khoản 
+            &nbsp;&nbsp; Nạp tiền vào tài khoản
         </a>
         <hr>
         <a href="<?php echo base_url(); ?>thong-tin-tai-khoan.html">
@@ -253,7 +249,7 @@
                         <img srcset="styles/v2.0/img/banner/banner-tet.png">
                     </picture>
 <!--                    <img class="img-rounded" src="styles/v2.0/img/banner/banner-tet.png"/>-->
-                </a> 
+                </a>
             </div>
             <div class="img-slider">
                 <a href="<?php echo base_url('dich-vu-excel.html'); ?>" target="_blank">
