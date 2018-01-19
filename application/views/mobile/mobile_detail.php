@@ -5,42 +5,9 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="js-video widescreen">
-                <?php
-                $value = $id_video_demo;
-//Detect special conditions devices
-                $iPod = stripos($_SERVER['HTTP_USER_AGENT'], "iPod");
-                $iPhone = stripos($_SERVER['HTTP_USER_AGENT'], "iPhone");
-                $iPad = stripos($_SERVER['HTTP_USER_AGENT'], "iPad");
-                $Android = stripos($_SERVER['HTTP_USER_AGENT'], "Android");
-                // $webOS = stripos($_SERVER['HTTP_USER_AGENT'], "webOS");
-//do something with this information
-                if ($iPod || $iPhone || $iPad) {
-                    ?>
-                    <input type="hidden" id="lakitaid" value="<?php echo md5(time()) . '$&((_GNSDADFHGD@!$^&%#' . time() . ')*&^%$@' . time() . '#' . $value . '#' . time() . '_+1357$*^())!%*$$&' . md5('lakita.vn') . '+135+1357$*^())!%*$$7$*^())!%*$$+1+1357$*^())!%*$$357$*^())!%*$$'; ?>" /><div id="mediaspace"></div>
-                    <?php
-                } else if ($Android && $value != 0) {
-                    ?>
-                    <div class="text-center">
-                        <a href="
-                        <?php
-                        $primary_video = $this->lib_mod->detail('learn', array('id' => $value), '');
-                        echo "rtsp://lakita.vn:1935/vod/mp4://" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
-                        ?>
-                           ">
-                            <img src="<?php echo base_url(); ?>styles/v2.0/img/mobi/player.png" style="max-width: 100%"/>
-                        </a>
-                    </div>
-                    <?php
-                } else {
-                    ?>
-                    <input type="hidden" id="lakitaid" value="<?php echo md5(time()) . '$&((_GNSDADFHGD@!$^&%#' . time() . ')*&^%$@' . time() . '#' . $value . '#' . time() . '_+1357$*^())!%*$$&' . md5('lakita.vn') . '+135+1357$*^())!%*$$7$*^())!%*$$+1+1357$*^())!%*$$357$*^())!%*$$'; ?>" /><div id="mediaspace"></div>
-                    <?php
-                }
-                ?>
-                <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.js"></script>
-                <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.html5.js"></script>
-                <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ=="</script>
-                <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
+                <input type="hidden" id="lakitaid" value="<?php echo $current_course_id ?>" /><div id="mediaspace"></div>
+                <script type="text/javascript" src="https://content.jwplatform.com/libraries/BhGRfCt5.js"></script>
+                <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer-trial.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 course_detail_mobile">
@@ -244,20 +211,19 @@
 </div>
 
 <script>
-                    var show_more = true;
-                    $(".show_more").click(function () {
-                        if (show_more) {
-                            $(".course_outline_mobile").css({"height": "inherit"});
-                            $(this).html('Thu gọn <i class="fa fa-arrow-up" aria-hidden="true"></i>');
-                            show_more = false;
-                        } else {
-                            $(".course_outline_mobile").css({"height": "500px"});
-                            $('html,body').animate({
-                                scrollTop: $(this).offset().top - 700
-                            }, 1000);
-                            $(this).html('Xem đầy đủ <i class="fa fa-sort-amount-desc" aria-hidden="true"></i>');
-                            show_more = true;
-                        }
-                        //$(this)();
-                    });
+    var show_more = true;
+    $(".show_more").click(function () {
+        if (show_more) {
+            $(".course_outline_mobile").css({"height": "inherit"});
+            $(this).html('Thu gọn <i class="fa fa-arrow-up" aria-hidden="true"></i>');
+            show_more = false;
+        } else {
+            $(".course_outline_mobile").css({"height": "500px"});
+            $('html,body').animate({
+                scrollTop: $(this).offset().top - 700
+            }, 1000);
+            $(this).html('Xem đầy đủ <i class="fa fa-sort-amount-desc" aria-hidden="true"></i>');
+            show_more = true;
+        }
+    });
 </script>

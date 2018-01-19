@@ -208,7 +208,7 @@
                 </div>
             </form>
         </div>
-        <hr>
+
         <a href="<?php echo base_url(); ?>khoa-hoc-cua-toi.html">
             <i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i> &nbsp;&nbsp;
             Khóa học của tôi

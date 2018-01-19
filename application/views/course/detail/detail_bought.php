@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/student.css?ver=<?php echo _VER_CACHED_ ?>" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/style.bootstrap12.lakita.css?ver=<?php echo _VER_CACHED_ ?>" />
 
@@ -11,6 +12,9 @@
         background-color: #ccc;
         padding: 10px;
     }
+    .list-group-item {
+        padding: 0px;
+    }
 
     .list-group-item:hover {
         background-color: #2c944a;
@@ -21,7 +25,9 @@
     }
     .list-group-item a{
         color: #2c944a;
-        font-weight: bold
+        font-weight: bold;
+        display: block;
+        padding: 10px 15px;
     }
     .sidebar-block li.active:hover a {
         color: #fff;
@@ -31,6 +37,12 @@
     <?php $this->load->view('home/navbar'); ?>
 </div>
 <div class="clearfix"></div>
+<div class="dir" style="padding-left: 5%; font-size: 15px;"> 
+    <img alt="học excel, hoc excel, học excel cơ bản, tự học excel" title="học excel, hoc excel, học excel cơ bản, tự học excel" src="<?php echo base_url(); ?>styles/v2.0/img/course-detail/excel.png">
+    <a href="https://lakita.vn"> Trang chủ </a> / 
+    <a href="<?php echo base_url(); ?>khoa-hoc-cua-toi.html"> Khóa học của tôi </a> / 
+    <a href="<?php echo substr($_SERVER['REQUEST_URI'], 1); ?>"> <?php echo $course_name; ?> </a>
+</div>
 <div class="row" style="margin-top:20px">
     <div class="col-md-6 col-sm-12-sol-xs-12">
         <div class="col-md-11 col-md-offset-1 col-sm-12 col-sx-12">
@@ -49,8 +61,8 @@
                             <?php
                             foreach ($all_learn[$key] as $key2 => $lvalue) {
                                 ?>
-                                <li id = "scroll<?php echo $lvalue['sort']; ?>" class="list-group-item">
-                                    <a href="<?php echo 'http://video.lakita.vn/' . $lvalue['slug'] . '-4' . $lvalue['id']; ?>.html" 
+                                <li id="scroll<?php echo $lvalue['sort']; ?>" class="list-group-item">
+                                    <a href="<?php echo  base_url() . $lvalue['slug'] . '-4' . $lvalue['id']; ?>.html" 
                                        title="<?php echo $lvalue['name']; ?>"><?php
                                            if (!isset($lvalue['learn_status'])) {
                                                echo "<i class='fa fa-circle-o'></i>";

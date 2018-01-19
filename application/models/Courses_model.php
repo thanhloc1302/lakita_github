@@ -93,5 +93,15 @@ class Courses_model extends MY_Model {
         }
         return '';
     }
+    public function GetCourseName($id) {
+        $input2 = array();
+        $input2['where'] = array('id' => $id);
+        $input2['select'] = 'name';
+        $courses = $this->load_all($input2);
+        if (!empty($courses)) {
+            return  $courses[0]['name'];
+        }
+        return '';
+    }
 
 }

@@ -74,18 +74,25 @@ class Home extends MY_Controller {
 
             //================================= CHI TIẾT KHÓA HỌC ============================================
             if ($sub_flag == 2) {
+                
+        $this->output->enable_profiler(TRUE);
                 $curr_courses = $this->lib_mod->detail('courses', array('id' => $id));
-                if (count($curr_courses) == 0) {
+                if (empty($curr_courses)) {
                     redirect(site_url());
                 }
+
+                $this->load->model('learn_model');
+                $this->load->model('student_courses_model');
+                $this->load->model('courses_model');
+                $this->load->model('speaker_model');
+                $this->load->model('comment_model');
+                $this->load->model('chapter_model');
 
                 $data = $this->data;
                 $user_id = $this->session->userdata('user_id');
                 if (isset($user_id)) {
                     $data['student'] = $this->lib_mod->detail('student', array('id' => $user_id));
-                    if (count($this->lib_mod->detail('student_courses', array('student_id' => $user_id, 'courses_id' => $id, 'trial_learn' => 0)))) {
-                        $data['first_lesson'] = $this->find_first_lesson($id);
-                    }
+                    $data['first_lesson'] = base_url() . $curr_courses[0]['slug'] . '-7' . $curr_courses[0]['id'] . '.html';
                     $data['love_course'] = $this->lib_mod->detail('love', array('user_id' => $user_id, 'course_id' => $id));
                 }
                 $data['first_lesson_trial_learn'] = $this->find_first_lesson_trial_learn($id);
@@ -98,11 +105,29 @@ class Home extends MY_Controller {
                 $data['curr_courses'] = $curr_courses;
                 $data['curr_page'] = 'courses';
                 $data['curr_id'] = $id;
-                $data['other_courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1, 'id !=' => $id), 12, '', array('sort' => 'desc'));
-                $data['chapter'] = $this->lib_mod->load_all('chapter', '', array("courses_id" => $id, 'status' => 1), '', '', array("sort" => 'asc'));
+                //  $data['other_courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1, 'id !=' => $id), 12, '', array('sort' => 'desc'));
+                
+                //danh sách bài học
+                $input = [];
+                $input['select'] = 'id, name';
+                $input['where'] = ["courses_id" => $id, 'status' => 1];
+                $input['order'] = array("sort" => 'asc');
+                $data['chapter'] = $this->chapter_model->load_all($input);
                 foreach ($data['chapter'] as $key => $value) {
-                    $data['all_learn'][$key] = $this->lib_mod->load_all('learn', '', array("chapter_id" => $value['id'], 'status' => 1), '', '', array("sort" => 'asc'));
+                    //danh sách các bài học của chương đó
+                    $input = [];
+                    $input['select'] = 'id, name, sort,  length, slug, trial_learn';
+                    $input['where'] = ['chapter_id' => $value['id']];
+                    $learnDetail = $this->learn_model->load_all($input);
+                    $data['all_learn'][$key] = $learnDetail;
                 }
+
+                //tổng số bài học
+                $input = [];
+                $input['select'] = 'id';
+                $input['where'] = ['courses_id' => $id, 'status' => 1];
+                $data['total_video'] = count($this->learn_model->load_all($input));
+
                 $data['content'] = 'course/detail/index.php';
                 if (!empty($curr_courses[0]['image_share'])) {
                     $data['image'] = base_url() . $curr_courses[0]['image_share'];
@@ -115,11 +140,11 @@ class Home extends MY_Controller {
                 $data['meta_keyword'] = $curr_courses[0]['keyword'];
 
                 $data['vote'] = $this->lib_mod->load_all('vote', '', array('courseID' => $id), '', '', array('time' => 'desc'));
-                $data['vote_1'] = count($this->lib_mod->detail('vote', array('courseID' => $id, 'vote_star_number' => 1)));
-                $data['vote_2'] = count($this->lib_mod->detail('vote', array('courseID' => $id, 'vote_star_number' => 2)));
-                $data['vote_3'] = count($this->lib_mod->detail('vote', array('courseID' => $id, 'vote_star_number' => 3)));
-                $data['vote_4'] = count($this->lib_mod->detail('vote', array('courseID' => $id, 'vote_star_number' => 4)));
-                $data['vote_5'] = count($this->lib_mod->detail('vote', array('courseID' => $id, 'vote_star_number' => 5)));
+                $data['vote_1'] = count($this->lib_mod->load_all('vote', 'id', array('courseID' => $id, 'vote_star_number' => 1)));
+                $data['vote_2'] = count($this->lib_mod->load_all('vote', 'id', array('courseID' => $id, 'vote_star_number' => 2)));
+                $data['vote_3'] = count($this->lib_mod->load_all('vote', 'id', array('courseID' => $id, 'vote_star_number' => 3)));
+                $data['vote_4'] = count($this->lib_mod->load_all('vote', 'id', array('courseID' => $id, 'vote_star_number' => 4)));
+                $data['vote_5'] = count($this->lib_mod->load_all('vote', 'id', array('courseID' => $id, 'vote_star_number' => 5)));
 
                 $data['rates'] = $this->lib_mod->load_all('rate', '', array('course_id' => $id), '', '', array('name' => 'desc'), 'name');
                 $data['current_course_id'] = $id;
@@ -173,13 +198,14 @@ class Home extends MY_Controller {
 
             //==============================================TRANG HỌC ============================================
             else if ($sub_flag == 4) {
-//                $curr = current_url();
-//                $uri = substr($curr, 18);
-//                redirect('http://video.lakita.vn/' . $uri);
-//                echo $uri;
-//                die;
+                $curr = current_url();
+                $uri = substr($curr, 18);
+                $token = $this->session->userdata('token');
+                redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
+                echo $uri;
+                die;
 
-                $this->output->enable_profiler(TRUE);
+
                 $user_id = $this->session->userdata('user_id');
                 if (!isset($user_id)) {
                     echo '<script> alert("Bạn không có quyền truy cập vào trang này!");</script>';
@@ -319,10 +345,10 @@ class Home extends MY_Controller {
                 $input['where'] = ['student_id' => $user_id, 'learn_id' => $curr_learn[0]['id']];
                 $learned = $this->student_learn_model->load_all($input);
                 if (empty($learned)) {
-                    $insert = array('student_id' => $user_id, 
-                        'learn_id' => $curr_learn[0]['id'], 
-                        'status' => 0, 
-                        'courseID' => $course[0]['id'], 
+                    $insert = array('student_id' => $user_id,
+                        'learn_id' => $curr_learn[0]['id'],
+                        'status' => 0,
+                        'courseID' => $course[0]['id'],
                         'time' => time());
                     $this->student_learn_model->insert();
                 }
@@ -550,6 +576,7 @@ class Home extends MY_Controller {
                 $data['comment'] = $this->comment_model->load_all($input_comment);
 
                 $data['current_course_id'] = $id;
+                $data['course_name'] = $this->courses_model->GetCourseName($id);
                 $data['page'] = 1;
                 $data['pages'] = ceil($data['total_cmt'] / 4);
                 $data['curr_learn'] = array(0 => array('id' => '0', 'courses_id' => $id));

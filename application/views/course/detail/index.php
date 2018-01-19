@@ -2,33 +2,17 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/course_detail.css?ver=<?php echo _VER_CACHED_ ?>" />
 <script src="<?php echo base_url(); ?>styles/v2.0/js/course_detail.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <?php
-if ($this->agent->is_mobile())
+if ($this->agent->is_mobile()) {
     $this->load->view('mobile/mobile_detail');
-else {
+} else {
     ?>
     <div class="header">
         <?php $this->load->view('home/navbar'); ?>
-<!--        <div class="row">
-            <div class="col-md-6  my-row-1">
-                <p class="group_course"> <?php echo $group_courses[0]['name']; ?> </p>
-                <h2 style="font-size: 18px; font-family: OpenSans-Bold; line-height: 26px;"> <strong> <?php echo $curr_courses[0]['name']; ?> </h2> </strong>
-            </div>
-            <div class="col-md-6 searchBox">
-                <form action="<?php echo base_url(); ?>tim-kiem.html" method="post" id="searchForm">
-                    <div class="row">
-                        <div class="col-md-offset-2 col-md-8">
-                            <label for="exampleInputEmail1" class="sr-only">Search</label>
-                            <input type="text" class="form-control" id="key_word" name="key_word" value="Tìm các khóa học bạn quan tâm...">
-                            <img alt="học excel, hoc excel, học excel cơ bản, tự học excel" title="học excel, hoc excel, học excel cơ bản, tự học excel" class="searchIcon"src="<?php echo base_url(); ?>styles/v2.0/img/icon_seach.png" />
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>-->
     </div>
     <div class="course-summary paddingbottom30">
         <div class="container">
-            <div class="dir"> <img alt="học excel, hoc excel, học excel cơ bản, tự học excel" title="học excel, hoc excel, học excel cơ bản, tự học excel" src="<?php echo base_url(); ?>styles/v2.0/img/course-detail/excel.png">
+            <div class="dir"> 
+                <img alt="học excel, hoc excel, học excel cơ bản, tự học excel" title="học excel, hoc excel, học excel cơ bản, tự học excel" src="<?php echo base_url(); ?>styles/v2.0/img/course-detail/excel.png">
                 <a href="https://lakita.vn"> Trang chủ </a> / 
                 <a href="<?php echo base_url(); ?>khoa-hoc/xem-tat-ca.html"> Các khóa học </a> / 
                 <a href="<?php echo base_url() . 'nhom-khoa-hoc/' . $group_courses[0]['slug'] . '-' . $group_courses[0]['id'] . '.html'; ?>"> <?php echo $group_courses[0]['name']; ?> </a> / 
@@ -51,23 +35,15 @@ else {
                     </p>
                     <div style="width:615px; height:350px">
                         <div class="js-video widescreen">
-                            <?php if($curr_courses[0]['id'] == '80'){ ?>
-                            <iframe width="615" height="350" src="https://www.youtube.com/embed/uGDn7b3smK4" frameborder="0" allowfullscreen></iframe>
-                            <?php } else { ?>
                             <input type="hidden" id="lakitaid" value="<?php echo $current_course_id ?>" /><div id="mediaspace"></div>
-<!--                            <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.js"></script>
-                            <script type="text/javascript" src="<?php echo base_url(); ?>plugin/jwplayer/jwplayer.html5.js"></script>
-                            <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>-->
                             <script type="text/javascript" src="https://content.jwplatform.com/libraries/BhGRfCt5.js"></script>
                             <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer-trial.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
-                            <?php } ?>
                         </div>
                     </div>
                     <div class="row require">
                         <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
                             <p class="lakita textunderline">Yêu cầu khóa học </p>
                             <p class="marginbottom5"> <i class="fa fa-check" aria-hidden="true" class="lakita"></i> <strong>Máy tính hoặc điện thoại có kết nối internet </strong></p>
-
                         </div>
                         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
                             <?php if (isset($love_course)) {
@@ -84,9 +60,7 @@ else {
                                 ?>
                                 <p class="love_link_no_login"> <i class="fa fa-heart-o red" aria-hidden="true"></i> Tôi thích khóa học này </p>
                             <?php } ?>
-
                             <?php echo $curr_courses[0]['shareFB']; ?>
-
                         </div>
                     </div>
                 </div>
@@ -116,18 +90,7 @@ else {
                         <div class="col-md-9">
                             <i class="fa fa-list-alt lakita" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;
                             <strong> 
-                                <?php
-                                /* =============================================tổng số bài học (càn sửa lại sau)============================================= */
-                                $total_lesson = 0;
-                                foreach ($chapter as $key => $value) {
-                                    $learn = $this->lib_mod->load_all('learn', '', array('status' => 1, 'chapter_id' => $value['id']), '', '', array('sort' => 'asc'));
-                                    if (isset($learn) && count($learn)) {
-                                        $total_lesson += count($learn);
-                                    }
-                                }
-                                echo $total_lesson;
-                                /* =============================================tổng số bài học (càn sửa lại sau - hết)============================================= */
-                                ?> bài học </strong>
+                                <?php echo $total_video ?> bài học </strong>
                         </div>
                     </div>
                     <div class="row course-detail">
@@ -173,23 +136,23 @@ else {
                             <div> 
                                 <a class="btn btn-success btn-purchase" href="<?php echo base_url() . $curr_courses[0]['slug'] . '-3' . $curr_courses[0]['id']; ?>.html" 
                                    title="<?php echo $curr_courses[0]['name']; ?>">  MUA KHÓA HỌC </a> 
-                                   <?php //if (in_array($curr_id, array(67, 78, 81, 82, 77, 73))) { ?>
-<!--                                    <a class="btn btn-success btn-trial-learn" href="<?php echo $first_lesson_trial_learn; ?>" 
+                                   <?php //if (in_array($curr_id, array(67, 78, 81, 82, 77, 73))) {  ?>
+        <!--                                    <a class="btn btn-success btn-trial-learn" href="<?php echo $first_lesson_trial_learn; ?>" 
                                        title="<?php echo $curr_courses[0]['name']; ?>">  HỌC THỬ </a> -->
-                                   <?php //} ?>
+                                <?php //}  ?>
                             </div>
                         </div>
-                        <?php //$this->load->view('course/detail/purchase_modal');  ?>
+                        <?php //$this->load->view('course/detail/purchase_modal');   ?>
                         <?php
                     } else {
                         ?>
                         <div class="course-detail">
                             <div class="marginbottom10 text-center"> 
                                 <a class="btn btn-success btn-purchase" href="<?php echo $first_lesson; ?>">  HỌC NGAY </a> 
-                                <?php //if (in_array($curr_id, array(67, 78, 81, 82, 77, 73)) || ($user_id == 2626)) { ?>
-<!--                                    <a class="btn btn-success btn-trial-learn" href="<?php echo $first_lesson_trial_learn; ?>" 
+                                <?php //if (in_array($curr_id, array(67, 78, 81, 82, 77, 73)) || ($user_id == 2626)) {  ?>
+        <!--                                    <a class="btn btn-success btn-trial-learn" href="<?php echo $first_lesson_trial_learn; ?>" 
                                        title="<?php echo $curr_courses[0]['name']; ?>">  HỌC THỬ </a> -->
-                                   <?php //} ?>
+                                <?php //}  ?>
                             </div>
                         </div>
                         <?php
@@ -481,24 +444,24 @@ if (isset($user_id)) {
     ?>
 
     <script>
-                                $(function () {
-                                    $(".btn-trial-learn").click(function (e) {
-                                        e.preventDefault();
-                                        var _this = $(this);
-                                        $.ajax({
-                                            url: "<?php echo base_url(); ?>event/setIDTrial",
-                                            type: "POST",
-                                            data: {
-                                                id: "<?php echo md5($user_id.'trial_learn'); ?>"
-                                            },
-                                            success: function (data) {
-                                                if (data == 1) {
-                                                    location.href = _this.attr("href");
-                                                }
-                                            }
-                                        });
-                                    });
-                                });
+        $(function () {
+            $(".btn-trial-learn").click(function (e) {
+                e.preventDefault();
+                var _this = $(this);
+                $.ajax({
+                    url: "<?php echo base_url(); ?>event/setIDTrial",
+                    type: "POST",
+                    data: {
+                        id: "<?php echo md5($user_id . 'trial_learn'); ?>"
+                    },
+                    success: function (data) {
+                        if (data == 1) {
+                            location.href = _this.attr("href");
+                        }
+                    }
+                });
+            });
+        });
     </script>
 <?php } ?>
 

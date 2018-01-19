@@ -8,40 +8,6 @@ if ($this->agent->is_mobile()) {
     ?>
     <div class="header">
         <?php $this->load->view('home/navbar'); ?>
-        <!--        <div class="row">
-                    <div class="col-md-6  my-row-1">
-                        <div class="row">
-                            <div class="col-md-1 col-md-offset-3 margintop22">
-                                <img src="<?php
-        if (!empty($student[0]['thumbnail'])) {
-            echo 'https://lakita.vn/' . $student[0]['thumbnail'];
-        } else {
-            if (!empty($student[0]['id_fb'])) {
-                echo 'https://graph.facebook.com/' . $student[0]['id_fb'] . '/picture?type=large';
-            } else {
-                echo base_url() . 'styles/images/people/110/user.png';
-            }
-        }
-        ?>" alt="lakita" class="img-circle avatar" />
-                            </div>
-                            <div class="col-md-6 marginleft15">
-                                <h1> <strong> <?php echo $student[0]['name']; ?> </strong></h1>
-                                <p> Khóa học của tôi </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 searchBox">
-                        <div class="row">
-                            <div class="col-md-offset-2 col-md-8">
-                                <form action="<?php echo base_url(); ?>tim-kiem.html" method="post" id="searchForm">
-                                    <label for="exampleInputEmail1" class="sr-only">Search</label>
-                                    <input type="text" class="form-control" id="key_word" name="key_word" value="Tìm các khóa học bạn quan tâm...">
-                                    <img class="searchIcon"src="<?php echo base_url(); ?>styles/v2.0/img/icon_seach.png" />
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
     </div>
     <div class="clearfix"></div>
     <!--*********************************************************DUNG TT***********************************************-->
@@ -103,7 +69,6 @@ if ($this->agent->is_mobile()) {
                     </a>
                 </div>
 
-
                 <section class="group1">
                     <p><a >Trang chủ</a> / <a > Quản lý giao dịch</a> / <a > Khóa học của tôi</a></p>
                     <h3 class="lakita"><i class="fa fa-leanpub" aria-hidden="true"></i> Khóa học của tôi (<?php echo count($courses); ?>)</h3>
@@ -120,12 +85,6 @@ if ($this->agent->is_mobile()) {
                         </thead>
                         <tbody>
                             <?php
-//                            $user_id = $this->session->userdata('user_id');
-//                            if($user_id == 2626) {
-//                                echo '<pre>';
-//                                print_r($courses);
-//                                die;
-//                            }
                             foreach ($courses as $key => $value) {
                                 if (isset($value['speaker'][0])) {
                                     ?>
@@ -177,53 +136,12 @@ if ($this->agent->is_mobile()) {
                                 }
                             }
                             ?>
-    <!--                                <tr>
-    <td></td>
-    <td></td>
-    <td colspan="2">
-    <ul class="nextCourse">
-    <li> &lt; </li>
-    <li class="active">1</li>
-    <li >2</li>
-    <li >3</li>
-    <li >4</li>
-    <li >5</li>
-    <li> &gt; </li>
-    </ul>
-    </td>
-    </tr>-->
                         </tbody>
                     </table>
                 </section>
-    <!--                <section class="group2">
-                    <p style="color: green; margin-left: 5px; font-size: 17px;"><i class="fa fa-toggle-on" aria-hidden="true"></i><strong> Khóa học khác</strong></p>
-                    <div class="row listCourse">
-                <?php
-                $i = 1;
-                foreach ($other_courses as $key => $value) {
-                    ?>
-                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                                    <a href="<?php echo base_url() . $value['slug'] . '-2' . $value['id']; ?>.html" title="<?php echo $value['name']; ?>">
-                                                        <div> <img src="<?php echo 'https://lakita.vn/' . $value['image']; ?>" alt="<?php echo $value['name']; ?>" class="img-responsive"> </div>
-                                                        <p class="courseName"><?php echo $value['name']; ?></p>
-                                                    </a>
-                                                    <p class="teacher"><?php echo $value['speaker_name']; ?></p>
-                                                    <p class="price"> <?php echo number_format(str_replace('.', '', $value['price_root']), 0, ',', '.') . " VNĐ"; ?></p>
-                                                </div>
-                    <?php
-                    if ($i % 3 == 0)
-                        echo '<div class="clearfix visible-md-block visible-lg-block"></div>';
-                    if ($i % 2 == 0)
-                        echo '<div class="clearfix visible-sm-block"></div>';
-                    $i++;
-                }
-                ?>
-                    </div>
-                </section>-->
             </div>
         </div>
     </div>
-
     <!--*********************************************************DUNG TT (hết)***********************************************-->
     <?php
 }

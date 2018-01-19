@@ -68,7 +68,7 @@ function activate() {
             {
                 $.alert({
                     title: "Chúc mừng bạn đã kích hoạt thành công khóa học \"" + resultArr[2] + "\"",
-                    content: 'Chúng tôi sẽ đưa bạn đến trang khóa học để học ngay!',
+                    content: 'Chúc bạn học tốt!',
                     columnClass: 'col-md-6 col-md-offset-3',
                     type: 'green',
                     theme: 'material',
@@ -78,7 +78,10 @@ function activate() {
                         }
                     }
                 });
-                location.replace(resultArr[1]);
+                setTimeout(function(){
+                    location.href = 'https://lakita.vn/khoa-hoc-cua-toi.html';
+                }, 3000);
+                
             } else if (resultArr[0] == 99) {
                 location.assign('nhan-qua-tang.html');
             } else

@@ -7,6 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 $route['quantriketoan'] = 'landingpage/show/1';
+$route['bao-hiem-xa-hoi-tien-luong-thue-thu-nhap-ca-nhan-2018.html'] = 'landingpage/show/bh100';
 $route['ky-thuat-quyet-toan-thue.html'] = 'landingpage/show/kt800';
 $route['quyet-toan-thue-tu-a-den-z.html'] = 'landingpage/show/kt210';
 $route['lap-bao-cao-tai-chinh-2016.html'] = 'landingpage/show/kt400';
