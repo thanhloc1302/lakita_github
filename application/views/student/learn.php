@@ -99,8 +99,10 @@
                                     ?>
                                     <input type="hidden" id="lakitaid" value="<?php echo md5(time()) . '$&((_GNSDADFHGD@!$^&%#' . time() . ')*&^%$@' . time() . '#' . 612 . '#' . time() . '_+1357$*^())!%*$$&' . md5('lakita.vn') . '+135+1357$*^())!%*$$7$*^())!%*$$+1+1357$*^())!%*$$357$*^())!%*$$'; ?>" /><div id="mediaspace"></div>
                                 <?php } ?>
-
-                                <script type="text/javascript" src="https://content.jwplatform.com/libraries/kTgFQviI.js"></script>
+   <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.js?VER=20.01.2018"></script>
+                            <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.html5.js?VER=20.01.2018"></script>
+                            <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>
+<!--                                <script type="text/javascript" src="https://content.jwplatform.com/libraries/kTgFQviI.js"></script>-->
                                 <input type="hidden" id="auto_next" value="1" />
                                 <input type="hidden" id="curr_learn_id" value="<?php echo $curr_id; ?>" />
                                 <?php $this->session->set_tempdata('is_playable', $curr_id, 3600); ?>

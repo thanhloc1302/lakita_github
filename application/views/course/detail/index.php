@@ -1,6 +1,7 @@
 <!--    <script src="<?php echo base_url(); ?>styles/v2.0/js/home.js"></script>-->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/course_detail.css?ver=<?php echo _VER_CACHED_ ?>" />
 <script src="<?php echo base_url(); ?>styles/v2.0/js/course_detail.js?ver=<?php echo _VER_CACHED_ ?>"></script>
+<script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7.5/bitmovinplayer.js"></script>
 <?php
 if ($this->agent->is_mobile()) {
     $this->load->view('mobile/mobile_detail');
@@ -36,7 +37,7 @@ if ($this->agent->is_mobile()) {
                     <div style="width:615px; height:350px">
                         <div class="js-video widescreen">
                             <input type="hidden" id="lakitaid" value="<?php echo $current_course_id ?>" /><div id="mediaspace"></div>
-                            <script type="text/javascript" src="https://content.jwplatform.com/libraries/BhGRfCt5.js"></script>
+                            <div id="player"></div>
                             <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer-trial.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
                         </div>
                     </div>

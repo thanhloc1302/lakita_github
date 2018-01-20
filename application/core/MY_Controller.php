@@ -6,6 +6,7 @@ class MY_Controller extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        header('Access-Control-Allow-Origin: *');
         $this->load->helper('cookie');
         $user_id = $this->session->userdata('user_id');
         $token = $this->session->userdata('token');

@@ -113,7 +113,7 @@ if (!$this->agent->is_mobile()) {
         $('.stop').on('click', function () {
             owl.trigger('stop.owl.autoplay');
         });
-        
+
         function openNav() {
             $('#mySidenav').css('width', '100%');
         }
@@ -123,17 +123,19 @@ if (!$this->agent->is_mobile()) {
         }
 
         var e = document.getElementById('btn-menu-silde');
-        e.addEventListener('click', function () {
-            if (this.className == 'on') {
-                this.classList.remove('on');
-                closeNav();
+        if (e != null) {
+            e.addEventListener('click', function () {
+                if (this.className == 'on') {
+                    this.classList.remove('on');
+                    closeNav();
 
-            } else {
-                this.classList.add('on');
-                openNav();
+                } else {
+                    this.classList.add('on');
+                    openNav();
 
-            }
-        });
+                }
+            });
+        }
     });
 </script>
 </body>

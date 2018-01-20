@@ -1,7 +1,6 @@
-
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/student.css?ver=<?php echo _VER_CACHED_ ?>" />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/style.bootstrap12.lakita.css?ver=<?php echo _VER_CACHED_ ?>" />
-
+<script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7.5/bitmovinplayer.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>plugin/ckeditor/ckeditor.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <style>
     #list_cmt{
@@ -48,7 +47,7 @@
         <div class="col-md-11 col-md-offset-1 col-sm-12 col-sx-12">
             <div class="js-video widescreen">
                 <input type="hidden" id="lakitaid" value="<?php echo $current_course_id ?>" /><div id="mediaspace"></div>
-                <script type="text/javascript" src="https://content.jwplatform.com/libraries/BhGRfCt5.js"></script>
+                <div id="player"></div>
                 <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer-trial.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
             </div>
         </div>
@@ -62,7 +61,7 @@
                             foreach ($all_learn[$key] as $key2 => $lvalue) {
                                 ?>
                                 <li id="scroll<?php echo $lvalue['sort']; ?>" class="list-group-item">
-                                    <a href="<?php echo  base_url() . $lvalue['slug'] . '-4' . $lvalue['id']; ?>.html" 
+                                    <a href="<?php echo base_url() . $lvalue['slug'] . '-4' . $lvalue['id']; ?>.html" 
                                        title="<?php echo $lvalue['name']; ?>"><?php
                                            if (!isset($lvalue['learn_status'])) {
                                                echo "<i class='fa fa-circle-o'></i>";
