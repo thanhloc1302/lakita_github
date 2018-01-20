@@ -207,7 +207,7 @@ $rs = json_decode($result);
             <div id="SECTION36" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
                 <div class="container">
                     <div id="YOUTUBE38" class="widget-element widget-snap wow bounceInRight animated" lp-type="videoyoutube" lp-lang="YOUTUBE" lp-autoplay="0" lp-display="block">
-                        <iframe class="widget-content" src="https://www.youtube.com/embed/vfrku0mwgKw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+<!--                        <iframe class="widget-content" src="https://www.youtube.com/embed/vfrku0mwgKw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>-->
                         <div class="ladi-widget-overlay"></div>
                     </div>
                     <div id="GROUP306" class="widget-element widget-snap widget-group wow bounceInLeft animated" lp-type="widget_group" lp-lang="GROUP" lp-display="block">

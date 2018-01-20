@@ -74,8 +74,6 @@ class Home extends MY_Controller {
 
             //================================= CHI TIẾT KHÓA HỌC ============================================
             if ($sub_flag == 2) {
-                
-        $this->output->enable_profiler(TRUE);
                 $curr_courses = $this->lib_mod->detail('courses', array('id' => $id));
                 if (empty($curr_courses)) {
                     redirect(site_url());
@@ -92,7 +90,9 @@ class Home extends MY_Controller {
                 $user_id = $this->session->userdata('user_id');
                 if (isset($user_id)) {
                     $data['student'] = $this->lib_mod->detail('student', array('id' => $user_id));
-                    $data['first_lesson'] = base_url() . $curr_courses[0]['slug'] . '-7' . $curr_courses[0]['id'] . '.html';
+                    if (count($this->lib_mod->load_all('student_courses', 'id', array('student_id' => $user_id, 'courses_id' => $id, 'trial_learn' => 0)))) {
+                        $data['first_lesson'] = base_url() . $curr_courses[0]['slug'] . '-7' . $curr_courses[0]['id'] . '.html';
+                    }
                     $data['love_course'] = $this->lib_mod->detail('love', array('user_id' => $user_id, 'course_id' => $id));
                 }
                 $data['first_lesson_trial_learn'] = $this->find_first_lesson_trial_learn($id);
@@ -106,7 +106,6 @@ class Home extends MY_Controller {
                 $data['curr_page'] = 'courses';
                 $data['curr_id'] = $id;
                 //  $data['other_courses'] = $this->lib_mod->load_all('courses', '', array('status' => 1, 'id !=' => $id), 12, '', array('sort' => 'desc'));
-                
                 //danh sách bài học
                 $input = [];
                 $input['select'] = 'id, name';
