@@ -54,12 +54,10 @@ class Home extends MY_Controller {
             $data['rates'] = $this->lib_mod->load_all('rate', '', array('status' => 1), 12, '', array('create_date' => 'desc'), 'name');
             $data['title'] = 'Hệ thống học trực tuyến lakita, cùng bạn vươn xa - lakita.vn';
             $user_id = $this->session->userdata('user_id');
-            if (!isset($user_id)) {
-                $data['content'] = 'home/index';
-            } else {
-                $this->_check_exist_login($user_id, false);
-                redirect(base_url() . 'khoa-hoc/xem-tat-ca.html');
+            if (isset($user_id)) {
+                $data['student'] = $this->lib_mod->load_all('student', '', array('id' => $user_id), '', '', '');
             }
+            $data['content'] = 'home/index';
             $this->load->view('template', $data);
             $this->output->cache(20);
         } else {
@@ -538,7 +536,7 @@ class Home extends MY_Controller {
                 $input['where'] = ["courses_id" => $id, 'status' => 1];
                 $input['order'] = array('sort' => 'asc');
                 $data['chapter'] = $this->chapter_model->load_all($input);
-               // echo $this->db->last_query();
+                // echo $this->db->last_query();
                 //$data['chapter'] = $this->lib_mod->load_all('chapter', '', array("courses_id" => $id, 'status' => 1), '', '', array("sort" => 'asc'));
 
                 foreach ($data['chapter'] as $key => $value) {
