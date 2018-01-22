@@ -469,5 +469,9 @@ ul.cardList li {
     background-color: #f1f2f2;
 }
 
+.form_text{
+    float: right;
+    margin-top: 8px;
+}
 
 
