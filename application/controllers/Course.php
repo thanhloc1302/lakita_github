@@ -1050,13 +1050,16 @@ Click vào đây để xem trả lời <a href="' . $url . '"> VÀO NGAY </a> <b
                     'parent' => $parent, 'content' => $content, 'createdate' => time(), 'status' => 0));
                 echo 1;
             }
-            if ($courses_id == 0 || $learn_id == 0 || $parent != '') {
+            if ($courses_id == 0 || $parent != '') {
                 die;
             }
 
             $courses = $this->lib_mod->detail('courses', array('id' => $courses_id));
+            if($learn_id != 0 ){
             $learn = $this->lib_mod->detail('learn', array('id' => $learn_id));
-
+            }else{
+                $learn[0]['sort'] = '';
+            }
             //mẫu gửi mail khi có học viên comment
             //
         //
