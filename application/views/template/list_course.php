@@ -48,10 +48,12 @@ foreach ($courses as $key => $value) {
         <?php } ?>
     </div>
     <?php
-    if ($i % 3 == 0)
+    if ($i % 3 == 0) {
         echo '<div class="clearfix visible-md-block visible-lg-block hidden-sm"></div>';
-    if ($i % 2 == 0)
+    }
+    if ($i % 2 == 0) {
         echo '<div class="clearfix visible-sm-block hidden-md hidden-lg"></div>';
+    }
     $i++;
 }
 ?>

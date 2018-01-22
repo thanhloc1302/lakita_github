@@ -65,7 +65,7 @@ if ($this->agent->is_mobile()) {
             <div class="col-md-9">
                 <div class="alert alert-info" role="alert" style="font-family: roboto; font-size: 18px;"> 
                     <a href="https://lakita.vn/khoa-hoc-yoga-danh-cho-nguoi-lam-van-phong-783.html">
-                        [LAKITA.VN] Chương trình Tri ân khách hàng, Lakita gửi Tặng Miễn Phí 1 tháng học Yoga Online tại Lakita.vn (20/12-20/1).
+                        [LAKITA.VN] Chương trình Tri ân khách hàng, Lakita gửi Tặng Miễn Phí 2 tháng học Yoga Online tại Lakita.vn (20/12-20/02).
                     </a>
                 </div>
 
