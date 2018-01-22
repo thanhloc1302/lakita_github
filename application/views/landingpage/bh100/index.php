@@ -68,6 +68,7 @@ $rs = json_decode($result);
                 js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=315347858825221";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
+
         <div class="ladi-wraper-page">
             <div id="SECTION2" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
                 <div class="container">
@@ -78,7 +79,7 @@ $rs = json_decode($result);
                                 <div class="ladi-widget-overlay"></div>
                             </div><a id="BUTTON170" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-parent="FORM168" lp-group="GROUP374" lp-display="table"><span class="widget-content">ĐĂNG KÍ NGAY</span> </a>
                             <div id="FORM168" class="widget-element widget-snap" lp-type="contact_form" lp-lang="FORM" lp-type-form="email" lp-message-form="Cám ơn bạn đã quan tâm" lp-ss-f="[{&quot;name&quot;:&quot;email&quot;,&quot;value&quot;:&quot;email&quot;,&quot;$$hashKey&quot;:&quot;object:13856&quot;},{&quot;name&quot;:&quot;name&quot;,&quot;value&quot;:&quot;name&quot;,&quot;$$hashKey&quot;:&quot;object:13867&quot;},{&quot;name&quot;:&quot;phone&quot;,&quot;value&quot;:&quot;phone&quot;,&quot;$$hashKey&quot;:&quot;object:13874&quot;},{&quot;name&quot;:&quot;street&quot;,&quot;value&quot;:&quot;street&quot;,&quot;$$hashKey&quot;:&quot;object:13881&quot;}]" lp-group="GROUP374" lp-display="block">
-                                 <form class="widget-contentLeadPanel_form promo-panel_action e_submit e_form_submit" role="form" id="dang-ky-2"  method="POST"  name="fr_register" action="<?php echo $code_ladingpage . '/'; ?>thank-you.html">
+                                <form class="widget-contentLeadPanel_form promo-panel_action e_submit e_form_submit" role="form" id="dang-ky-2"  method="POST"  name="fr_register" action="<?php echo $code_ladingpage . '/'; ?>thank-you.html">
                                     <div id="ITEM_FORM169" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
                                         <input class="widget-content" type="email" placeholder="Nhập Email" name="email" lp-label="Email" required="required">
                                     </div>
@@ -91,7 +92,7 @@ $rs = json_decode($result);
                                     <div id="ITEM_FORM175" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
                                         <input class="widget-content" type="text" placeholder="Nhập địa chỉ" name="dia_chi" lp-label="Địa chỉ" lp-name-id="street" required="required">
                                     </div>
-                                      <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
+                                    <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
                                     <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
                                     <button id="btn-170" class="btn btn-large btn-primary LeadPanel_action button radius e_btn_submit reg_bt" style="color:transparent; background-color: transparent"> MUA HÀNG </button>
 
@@ -177,10 +178,6 @@ $rs = json_decode($result);
                             </div>
                         </div>
                     </div>
-                    <div id="BOX252" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content"></div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
                     <div id="GROUP251" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
                         <div class="widget-content">
                             <div id="GROUP246" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block" lp-group="GROUP251">
@@ -201,15 +198,13 @@ $rs = json_decode($result);
                             </div>
                         </div>
                     </div>
+                    <div id="HEADLINE424" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                        <h3 class="widget-content" lp-node="h3">LỢI ÍCH KHÓA HỌC</h3> </div>
                 </div>
                 <div class="ladi-widget-overlay"></div>
             </div>
             <div id="SECTION36" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
                 <div class="container">
-                    <div id="YOUTUBE38" class="widget-element widget-snap wow bounceInRight animated" lp-type="videoyoutube" lp-lang="YOUTUBE" lp-autoplay="0" lp-display="block">
-<!--                        <iframe class="widget-content" src="https://www.youtube.com/embed/vfrku0mwgKw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>-->
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
                     <div id="GROUP306" class="widget-element widget-snap widget-group wow bounceInLeft animated" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
                         <div class="widget-content">
                             <div id="LISTOP256" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-group="GROUP306" lp-display="block">
@@ -233,6 +228,17 @@ $rs = json_decode($result);
                             <div id="HEADLINE249" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP373" lp-display="block">
                                 <h1 class="widget-content" lp-node="h1">Khóa học này đặc biệt dành cho</h1> </div>
                         </div>
+                    </div>
+                    <div id="IMAGE390" class="widget-element widget-snap ladi-drop" lp-type="image" lp-lang="IMAGE" lp-display="block">
+                        <div class="widget-content">
+                            <div class="lp-show-image" alt="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/laptop-full-1513826762.png"></div>
+                            <div class="lp-show-image"></div>
+                            <div id="YOUTUBE388" class="widget-element widget-snap" lp-type="videoyoutube" lp-lang="YOUTUBE" lp-autoplay="0" lp-display="block">
+                                <iframe class="widget-content" src="https://www.youtube.com/embed/y6Uwpu2Gw28?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+                                <div class="ladi-widget-overlay"></div>
+                            </div>
+                        </div>
+                        <div class="ladi-widget-overlay"></div>
                     </div>
                 </div>
                 <div class="ladi-widget-overlay"></div>
@@ -520,6 +526,8 @@ $rs = json_decode($result);
                                 <h6 class="widget-content" lp-node="h6">Công ty TNHH SX TM DV Vĩnh Xuyên</h6> </div>
                         </div>
                     </div>
+                    <div id="HEADLINE425" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                        <h5 class="widget-content" lp-node="h5"></h5> </div>
                 </div>
                 <div class="ladi-widget-overlay"></div>
             </div>
@@ -553,6 +561,38 @@ $rs = json_decode($result);
             </div>
             <div id="SECTION308" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
                 <div class="container">
+                    <div id="GROUP409" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
+                        <div class="widget-content">
+                            <div id="BOX410" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP409" lp-display="block">
+                                <div class="widget-content">
+                                    <div id="HEADLINE411" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                                        <h2 class="widget-content" lp-node="h2">Ngày</h2> </div>
+                                </div>
+                                <div class="ladi-widget-overlay"></div>
+                            </div>
+                            <div id="BOX412" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP409" lp-display="block">
+                                <div class="widget-content">
+                                    <div id="HEADLINE413" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                                        <h2 class="widget-content" lp-node="h2">Giờ</h2> </div>
+                                </div>
+                                <div class="ladi-widget-overlay"></div>
+                            </div>
+                            <div id="BOX414" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP409" lp-display="block">
+                                <div class="widget-content">
+                                    <div id="HEADLINE415" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                                        <h2 class="widget-content" lp-node="h2">Phút</h2> </div>
+                                </div>
+                                <div class="ladi-widget-overlay"></div>
+                            </div>
+                            <div id="BOX416" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP409" lp-display="block">
+                                <div class="widget-content">
+                                    <div id="HEADLINE417" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                                        <h2 class="widget-content" lp-node="h2">Giây</h2> </div>
+                                </div>
+                                <div class="ladi-widget-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
                     <div id="BOX315" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
                         <div class="widget-content">
                             <div id="FORM316" class="widget-element widget-snap" lp-type="contact_form" lp-lang="FORM" lp-type-form="email" lp-message-form="Cám ơn bạn đã quan tâm" lp-ss-f="[{&quot;name&quot;:&quot;email&quot;,&quot;value&quot;:&quot;email&quot;,&quot;$$hashKey&quot;:&quot;object:5673&quot;}]" lp-display="block">
@@ -619,8 +659,6 @@ $rs = json_decode($result);
                         </div>
                         <div class="ladi-widget-overlay"></div>
                     </div>
-                    <div id="HEADLINE344" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h3 class="widget-content" lp-node="h3">MIỄN PHÍ SHIP TOÀN QUỐC</h3> </div>
                     <div id="GROUP379" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
                         <div class="widget-content">
                             <div id="HEADLINE338" class="widget-element widget-snap wow pulse animated" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP379" lp-display="block">
@@ -633,73 +671,64 @@ $rs = json_decode($result);
                                 <h5 class="widget-content" lp-node="h5">Nhanh tay lên, số lượng có hạn !!!</h5> </div>
                         </div>
                     </div>
-                    <div id="GROUP380" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
-                        <div class="widget-content">
-                            <div id="FORM345" class="widget-element widget-snap" lp-type="contact_form" lp-lang="FORM" lp-type-form="google-sheet" lp-message-form="Cám ơn bạn đã quan tâm" lp-ss-f="[{&quot;name&quot;:&quot;name&quot;,&quot;value&quot;:&quot;name&quot;,&quot;$$hashKey&quot;:&quot;object:5749&quot;},{&quot;name&quot;:&quot;email&quot;,&quot;value&quot;:&quot;email&quot;,&quot;$$hashKey&quot;:&quot;object:5750&quot;},{&quot;name&quot;:&quot;phone&quot;,&quot;value&quot;:&quot;phone&quot;,&quot;$$hashKey&quot;:&quot;object:5751&quot;},{&quot;name&quot;:&quot;message&quot;,&quot;value&quot;:&quot;message&quot;,&quot;$$hashKey&quot;:&quot;object:5752&quot;},{&quot;name&quot;:&quot;street&quot;,&quot;value&quot;:&quot;street&quot;,&quot;$$hashKey&quot;:&quot;object:5919&quot;}]" lp-group="GROUP380" lp-display="block">
-                              <form class="widget-contentLeadPanel_form promo-panel_action e_submit e_form_submit" role="form" id="dang-ky-2"  method="POST"  name="fr_register" action="<?php echo $code_ladingpage . '/'; ?>thank-you.html">
-                                    <div id="ITEM_FORM346" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
-                                        <input class="widget-content" type="text" placeholder="Họ và tên" name="name" lp-label="Họ và tên" lp-name-id="name" required="required">
-                                    </div>
-                                    <div id="ITEM_FORM347" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
-                                        <input class="widget-content" type="email" placeholder="Nhập Email" name="email" lp-label="Email" lp-name-id="email" required="required">
-                                    </div>
-                                    <div id="ITEM_FORM348" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
-                                        <input class="widget-content" type="tel" pattern="((\+[1-9]{1,4}[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9 \-]{6,15}?$" required="required" placeholder="Nhập Số điện thoại" name="phone" lp-label="Điện thoại" lp-name-id="phone">
-                                    </div>
-                                    <div id="ITEM_FORM351" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
-                                        <input class="widget-content" type="text" placeholder="Nhập địa chỉ" name="street" lp-label="Địa chỉ" lp-name-id="street" required="required">
-                                    </div>
-                                     <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
-                                    <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
-                                    <button id="btn-350" class="btn btn-large btn-primary LeadPanel_action button radius e_btn_submit reg_bt" style="color:transparent; background-color: transparent"> MUA HÀNG </button>
-                                </form>
-                            </div><a id="BUTTON350" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-parent="FORM345" lp-group="GROUP380" lp-display="table"><span class="widget-content">ĐĂNG KÍ NGAY</span> </a>
-                            <div id="BOX309" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP380" lp-display="block">
-                                <div class="widget-content">
-                                    <div id="HEADLINE310" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                        <h4 class="widget-content" lp-node="h4">Chương trình khuyến mãi áp dụng đến hết ngày <?php echo date('d/m/Y') ?></h4> </div>
-                                    <div id="HEADLINE352" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                        <h3 class="widget-content" lp-node="h3">Sau khi đăng ký mua khóa học, bộ phận CSKH của Lakita sẽ liên hệ với bạn để xác nhận thông tin, nhân viên bưu điện sẽ giao khóa học tận nơi cho bạn, <span style="color: rgb(244, 67, 54);"><span style="font-weight: bold;" color="">MIỄN PHÍ SHIP TOÀN QUỐC</span>.</span>&nbsp;<br color="" style="color: rgb(255, 255, 255);">Bạn chỉ phải trả tiền khi nhận được khóa học.</h3> </div>
-                                    <div id="BOX332" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                                        <div class="widget-content">
-                                            <div id="HEADLINE342" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                                <h2 class="widget-content" lp-node="h2">295.000đ</h2> </div>
-                                            <div id="SHAPE343" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                                <div class="widget-content">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="#000000">
-                                                    <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,17L17,12H14V8H10V12H7L12,17Z"></path>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div id="HEADLINE340" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                                <h2 class="widget-content" lp-node="h2">895.000đ</h2> </div>
-                                            <div id="COUNTDOWN385" class="widget-element widget-snap" lp-type="countdown" lp-lang="COUNTDOWN" lp-endtime="<?php echo (strtotime('+1 day', strtotime(date('d-m-Y'))) - time()) / 60; ?>" lp-display="block">
-                                                <div class="widget-content">
-                                                    <div><span>00</span></div>
-                                                    <div><span>00</span></div>
-                                                    <div><span>00</span></div>
-                                                    <div><span>00</span></div>
-                                                </div>
-                                            </div>
-                                            <div id="LINE387" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
-                                                <div class="widget-content">
-                                                    <div class="line"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ladi-widget-overlay"></div>
-                                    </div>
-                                </div>
-                                <div class="ladi-widget-overlay"></div>
-                            </div>
-                        </div>
-                    </div>
                     <div id="HEADLINE386" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                         <h5 class="widget-content" lp-node="h5">KM Chỉ dành cho khách hàng đăng ký tại đây!!!</h5> </div>
-                </div>
+                    <div id="COUNTDOWN419" class="widget-element widget-snap" lp-type="countdown" lp-lang="COUNTDOWN" lp-endtime="<?php echo (strtotime('+1 day', strtotime(date('d-m-Y'))) - time()) / 60; ?>" lp-display="block">
+                        <div class="widget-content">
+                            <div><span>00</span></div>
+                            <div><span>00</span></div>
+                            <div><span>00</span></div>
+                            <div><span>00</span></div>
+                        </div>
+                    </div>
+                    <div id="BOX332" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                        <div class="widget-content">
+                            <div id="LINE387" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
+                                <div class="widget-content">
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                            <div id="HEADLINE340" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                                <h2 class="widget-content" lp-node="h2">895.000đ</h2> </div>
+                            <div id="SHAPE343" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                                <div class="widget-content">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="#000000">
+                                    <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,17L17,12H14V8H10V12H7L12,17Z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div id="HEADLINE342" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                                <h2 class="widget-content" lp-node="h2">295.000đ</h2> </div>
+                        </div>
+                        <div class="ladi-widget-overlay"></div>
+                    </div>
+                    <div id="HEADLINE310" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                        <h4 class="widget-content" lp-node="h4">Chương trình khuyến mãi áp dụng đến hết ngày <?php echo date('d/m/Y') ?></h4> </div>
+                    <div id="HEADLINE352" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                        <h3 class="widget-content" lp-node="h3">Sau khi đăng ký mua khóa học, bộ phận CSKH của Lakita sẽ liên hệ với bạn để xác nhận thông tin, nhân viên bưu điện sẽ giao khóa học tận nơi cho bạn, <span style="color: rgb(244, 67, 54);"><span style="font-weight: bold;" color="">MIỄN PHÍ SHIP TOÀN QUỐC</span>.</span>&nbsp;<br color="" style="color: rgb(255, 255, 255);">Bạn chỉ phải trả tiền khi nhận được khóa học.</h3> </div>
+                    <div id="FORM345" class="widget-element widget-snap" lp-type="contact_form" lp-lang="FORM" lp-type-form="google-sheet" lp-message-form="Cám ơn bạn đã quan tâm" lp-ss-f="[{&quot;name&quot;:&quot;name&quot;,&quot;value&quot;:&quot;name&quot;,&quot;$$hashKey&quot;:&quot;object:5749&quot;},{&quot;name&quot;:&quot;email&quot;,&quot;value&quot;:&quot;email&quot;,&quot;$$hashKey&quot;:&quot;object:5750&quot;},{&quot;name&quot;:&quot;phone&quot;,&quot;value&quot;:&quot;phone&quot;,&quot;$$hashKey&quot;:&quot;object:5751&quot;},{&quot;name&quot;:&quot;message&quot;,&quot;value&quot;:&quot;message&quot;,&quot;$$hashKey&quot;:&quot;object:5752&quot;},{&quot;name&quot;:&quot;street&quot;,&quot;value&quot;:&quot;street&quot;,&quot;$$hashKey&quot;:&quot;object:5919&quot;}]" lp-group="GROUP380" lp-display="block">
+                        <form class="widget-contentLeadPanel_form promo-panel_action e_submit e_form_submit" role="form" id="dang-ky-2"  method="POST"  name="fr_register" action="<?php echo $code_ladingpage . '/'; ?>thank-you.html">
+                            <div id="ITEM_FORM346" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
+                                <input class="widget-content" type="text" placeholder="Họ và tên" name="name" lp-label="Họ và tên" lp-name-id="name" required="required">
+                            </div>
+                            <div id="ITEM_FORM347" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
+                                <input class="widget-content" type="email" placeholder="Nhập Email" name="email" lp-label="Email" lp-name-id="email" required="required">
+                            </div>
+                            <div id="ITEM_FORM348" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
+                                <input class="widget-content" type="tel" pattern="((\+[1-9]{1,4}[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9 \-]{6,15}?$" required="required" placeholder="Nhập Số điện thoại" name="phone" lp-label="Điện thoại" lp-name-id="phone">
+                            </div>
+                            <div id="ITEM_FORM351" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
+                                <input class="widget-content" type="text" placeholder="Nhập địa chỉ" name="street" lp-label="Địa chỉ" lp-name-id="street" required="required">
+                            </div>
+                            <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
+                            <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
+                            <button id="btn-350" class="btn btn-large btn-primary LeadPanel_action button radius e_btn_submit reg_bt" style="color:transparent; background-color: transparent"> MUA HÀNG </button>
+                        </form>
+                    </div>
+                    <a id="BUTTON350" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-parent="FORM345" lp-display="table"><span class="widget-content">ĐĂNG KÍ NGAY</span> </a></div>
                 <div class="ladi-widget-overlay"></div>
             </div>
-            <script type="text/javascript" async="" defer="" src="https://static.ladipage.net/source/ladipage.lib.1.js?v=1516332486812"></script>
+            <script type="text/javascript" async="" defer="" src="https://static.ladipage.net/source/ladipage.lib.1.js?v=1516605629701"></script>
         </div>
 
         <!-- ******************** comment fb ********************************** -->
