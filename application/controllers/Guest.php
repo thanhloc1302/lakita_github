@@ -176,7 +176,11 @@ class Guest extends MY_Controller {
             $success = 0;
         }
 
-        if (!$this->execute($email)) {
+        $check_email = file_get_contents('http://api.lakita.vn/email/check?email='.$email);
+        $check_email = json_decode($check_email);
+        $check_email = $check_email->result;
+        
+        if ($check_email == false) {
             $error = 'Email không tồn tại, mời bạn nhập email chính xác để tư vấn tuyển sinh có thể liên hệ !!';
             $success = 0;
         }
