@@ -21,14 +21,14 @@ else {
     ?>
     <div class="header">
         <?php $this->load->view('home/navbar'); ?>
-<!--        <div class="row">
-            <div class="col-md-6  my-row-1">
-                <p class="choose_method"> CHỌN PHƯƠNG THỨC THANH TOÁN </p>
-                <h1><strong><?php echo $curr_courses[0]['name']; ?></strong></h1>
-            </div>
-            <div class="col-md-6 searchBox">
-            </div>
-        </div>-->
+        <!--        <div class="row">
+                    <div class="col-md-6  my-row-1">
+                        <p class="choose_method"> CHỌN PHƯƠNG THỨC THANH TOÁN </p>
+                        <h1><strong><?php echo $curr_courses[0]['name']; ?></strong></h1>
+                    </div>
+                    <div class="col-md-6 searchBox">
+                    </div>
+                </div>-->
     </div>
     <div class="container method margintop10">
         <div class="row">
@@ -98,21 +98,19 @@ else {
                                     </div>
                                 </div>
                             <?php } else { ?>
-                                <div class="my-form-group-1 marginbottom15">
-                                    <div class="my-form-control-1">Họ và tên*</div>
-                                    <div class="my-form-control-1 border">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        <span class="vr"></span>
-                                        <input type="text" name="cod_name" placeholder="Nhập họ và tên">
+                                <div class="col-md-12">
+                                    <div class="col-md-3"><p class="form_text">Họ và tên*</p></div>
+                                    <div class="col-md-9 input-group marginbottom10">
+                                        <span class="input-group-addon"><i class="fa fa-user fa-fw" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="cod_name" placeholder="Nhập họ và tên" aria-describedby="basic-addon1">
                                     </div>
                                     <div class="clr"></div>
                                 </div>
-                                <div class="my-form-group-1 marginbottom15">
-                                    <div class="my-form-control-1">Email*</div>
-                                    <div class="my-form-control-1 border">
-                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                        <span class="vr"></span>
-                                        <input type="text" name="cod_email" placeholder="Email">
+                                <div class="col-md-12">
+                                    <div class="col-md-3"><p class="form_text">Email*</p></div>
+                                    <div class="input-group marginbottom10">
+                                        <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+                                        <input type="email" class="form-control" name="cod_email" placeholder="Nhập email" aria-describedby="basic-addon1">
                                     </div>
                                     <div class="clr"></div>
                                 </div>
@@ -134,21 +132,19 @@ else {
                                     </div>
                                     <div class="clr"></div>
                                 </div>
-                                <div class="my-form-group-1 marginbottom15">
-                                    <div class="my-form-control-1">Địa chỉ*</div>
-                                    <div class="my-form-control-1 border">
-                                        <i class="fa fa-map" aria-hidden="true"></i>
-                                        <span class="vr"></span>
-                                        <input type="text" name="cod_dia_chi" placeholder="Nhập địa chỉ">
+                                <div class="col-md-12">
+                                    <div class="col-md-3"><p class="form_text">Địa chỉ*</p></div>
+                                    <div class="input-group marginbottom10">
+                                        <span class="input-group-addon"><i class="fa fa-map fa-fw" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="cod_dia_chi" id="login_email" placeholder="Nhập địa chỉ" aria-describedby="basic-addon1">
                                     </div>
                                     <div class="clr"></div>
                                 </div>
-                                <div class="my-form-group-1 marginbottom15">
-                                    <div class="my-form-control-1">Nhập số điện thoại*</div>
-                                    <div class="my-form-control-1 border">
-                                        <i class="fa fa-phone" aria-hidden="true"></i>
-                                        <span class="vr"></span>
-                                        <input type="tel" name="cod_phone" placeholder="Nhập số điện thoại">
+                                <div class="col-md-12">
+                                    <div class="col-md-3"><p class="form_text">Nhập số điện thoại*</p></div>
+                                    <div class="input-group marginbottom10">
+                                        <span class="input-group-addon"><i class="fa fa-phone fa-fw" aria-hidden="true"></i></span>
+                                        <input type="tel" class="form-control" name="cod_phone" id="login_email" placeholder="Nhập số điện thoại" aria-describedby="basic-addon1">
                                     </div>
                                     <div class="clr"></div>
                                 </div>
@@ -183,21 +179,19 @@ else {
 
                                 <div class="margintop20">
                                     <p>Mời bạn nhập họ tên và số điện thoại để nhân viên tư vấn liên hệ để xác nhận khóa học cho bạn </p>
-                                    <div class="my-form-group-1 marginbottom15">
-                                        <div class="my-form-control-1">Họ và tên*</div>
-                                        <div class="my-form-control-1 border">
-                                            <i class="fa fa-user" aria-hidden="true"></i>
-                                            <span class="vr"></span>
-                                            <input type="text" name="direct_name" placeholder="Nhập họ và tên">
+                                    <div class="col-md-12">
+                                        <div class="col-md-3"><p class="form_text">Họ và tên*</p></div>
+                                        <div class="input-group marginbottom10">
+                                            <span class="input-group-addon"><i class="fa fa-user fa-fw" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="direct_name" placeholder="Nhập họ và tên" aria-describedby="basic-addon1">
                                         </div>
                                         <div class="clr"></div>
                                     </div>
-                                    <div class="my-form-group-1 marginbottom15">
-                                        <div class="my-form-control-1">Nhập số điện thoại*</div>
-                                        <div class="my-form-control-1 border">
-                                            <i class="fa fa-phone" aria-hidden="true"></i>
-                                            <span class="vr"></span>
-                                            <input type="tel" name="direct_phone" placeholder="Nhập số điện thoại">
+                                    <div class="col-md-12">
+                                        <div class="col-md-3"><p class="form_text">Nhập số điện thoại*</p></div>
+                                        <div class="input-group marginbottom10">
+                                            <span class="input-group-addon"><i class="fa fa-phone fa-fw" aria-hidden="true"></i></span>
+                                            <input type="tel" class="form-control" name="direct_phone" placeholder="Nhập số điện thoại" aria-describedby="basic-addon1">
                                         </div>
                                         <div class="clr"></div>
                                     </div>
@@ -244,21 +238,19 @@ else {
 
                                 <div class="margintop20">
                                     <p>Mời bạn nhập họ tên và số điện thoại để nhân viên tư vấn liên hệ để xác nhận khóa học cho bạn </p>
-                                    <div class="my-form-group-1 marginbottom15">
-                                        <div class="my-form-control-1">Họ và tên*</div>
-                                        <div class="my-form-control-1 border">
-                                            <i class="fa fa-user" aria-hidden="true"></i>
-                                            <span class="vr"></span>
-                                            <input type="text" name="transfer_name" placeholder="Nhập họ và tên">
+                                    <div class="col-md-12">
+                                        <div class="col-md-3"><p class="form_text">Họ và tên*</p></div>
+                                        <div class="input-group marginbottom10">
+                                            <span class="input-group-addon"><i class="fa fa-user fa-fw" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="transfer_name" placeholder="Nhập họ và tên" aria-describedby="basic-addon1">
                                         </div>
                                         <div class="clr"></div>
                                     </div>
-                                    <div class="my-form-group-1 marginbottom15">
-                                        <div class="my-form-control-1">Nhập số điện thoại*</div>
-                                        <div class="my-form-control-1 border">
-                                            <i class="fa fa-phone" aria-hidden="true"></i>
-                                            <span class="vr"></span>
-                                            <input type="tel" name="transfer_phone" placeholder="Nhập số điện thoại">
+                                    <div class="col-md-12">
+                                        <div class="col-md-3"><p class="form_text">Nhập số điện thoại*</p></div>
+                                        <div class="input-group marginbottom10">
+                                            <span class="input-group-addon"><i class="fa fa-phone fa-fw" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="transfer_phone" placeholder="Nhập số điện thoại" aria-describedby="basic-addon1">
                                         </div>
                                         <div class="clr"></div>
                                     </div>
@@ -571,7 +563,7 @@ else {
                                     </div>
                                 <?php } else { ?>
 
-                                <div id="form_visa">
+                                    <div id="form_visa">
                                         <div class="row">
                                             <div class="col-md-6 col-md-offset-3">
                                                 <p class="margintop20 text-center"> <strong> Thanh toán bằng thẻ VISA/MasterCard </strong></p>
