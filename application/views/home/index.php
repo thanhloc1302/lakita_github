@@ -1,3 +1,4 @@
+<?php $user_id = $this->session->userdata('user_id'); ?>
 <link type="text/css" rel="stylesheet"  href="<?php echo base_url(); ?>styles/v2.0/css/home.css?ver=<?php echo _VER_CACHED_ ?>" />
 <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/home.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <link type="text/css" rel="stylesheet"  href="<?php echo base_url(); ?>styles/v2.0/css/media.css?ver=<?php echo _VER_CACHED_ ?>" />
@@ -10,7 +11,7 @@ $(document).ready( function(){
 
 });
 </script>-->
- <?php $this->load->view('home/navbar'); ?>
+<?php $this->load->view('home/navbar'); ?>
 <div class="navBar hidden-sm hidden-xs">
     <div class="navBarCenter">
         <div id="bs-example-navbar-collapse-1">
@@ -20,8 +21,18 @@ $(document).ready( function(){
                 <li role="presentation"> <a href="dich-vu-excel.html"><img style="width:40px;display: inline;margin-top: -30px;margin-right: -20px;" class="img-responsive" src="https://lakita.vn/styles/images/new-logo.png"> DỊCH VỤ EXCEL </a></li>
                 <li role="presentation" class="hidden-sm hidden-xs"> <a href="<?php echo base_url(); ?>"> <img alt="học excel cơ bản, excel cho kế toán, tự học excel" title="học excel cơ bản, excel cho kế toán, tự học excel" src="<?php echo base_url(); ?>styles/v2.0/img/logo2.png" /> </a></li>
                 <li role="presentation"> <a href="tro-thanh-giang-vien.html"> TRỞ THÀNH GIẢNG VIÊN </a></li>
-                <li role="presentation"> <a href="<?php echo base_url(); ?>dang-nhap.html"> ĐĂNG KÝ </a></li>
-                <li role="presentation"> <a href="<?php echo base_url(); ?>dang-nhap.html"> ĐĂNG NHẬP </a></li>
+                <?php
+                if (!isset($user_id)) {
+                    ?>
+                    <li role="presentation"> <a href="<?php echo base_url(); ?>dang-nhap.html"> ĐĂNG KÝ </a></li>
+                    <li role="presentation"> <a href="<?php echo base_url(); ?>dang-nhap.html"> ĐĂNG NHẬP </a></li>
+                <?php } else { ?>
+                    <li role="presentation"> 
+                        <a href="<?php echo base_url(); ?>khoa-hoc-cua-toi.html">
+                            KHÓA HỌC CỦA TÔI
+                        </a>  
+                    </li>
+                <?php } ?>
                 <li role="presentation"> <a href="#footer_link"> LIÊN HỆ </a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -228,11 +239,11 @@ $(document).ready( function(){
             });
             $('#popup_29').click(function () {
                 $("#event-ladi")[0].click();
-                
-               /* $('#modal2_9').modal('hide');
-                if (!close) {
-                    $('#modal_event').modal('show');
-                } */
+
+                /* $('#modal2_9').modal('hide');
+                 if (!close) {
+                 $('#modal_event').modal('show');
+                 } */
             });
         }
     });
