@@ -67,7 +67,7 @@
                                                echo "<i class='fa fa-circle-o'></i>";
                                            } else {
                                                switch ($lvalue['learn_status']) {
-                                                   case 0:
+                                                   case 1:
                                                        echo "<i class='fa fa-check-circle lakita'></i>";
                                                        break;
                                                    default:

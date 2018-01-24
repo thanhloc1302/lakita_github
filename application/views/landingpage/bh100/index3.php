@@ -113,10 +113,6 @@ $rs = json_decode($result);
                     </div>
                     <div id="HEADLINE372" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                         <h3 class="widget-content" lp-node="h3">&nbsp;Cập nhật những điểm mới nhất của BHXH và quy định mới của pháp luật về cấu trúc tiền lương 2018</h3> </div>
-                    <div id="HEADLINE429" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h3 class="widget-content" lp-node="h3">(giá gốc 895K)</h3> </div>
-                    <div id="HEADLINE430" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h5 class="widget-content" lp-node="h5">Chỉ <span style="color: rgb(255, 0, 0);">295K</span></h5> </div>
                 </div>
                 <div class="ladi-widget-overlay"></div>
             </div>
@@ -238,7 +234,7 @@ $rs = json_decode($result);
                             <div class="lp-show-image" alt="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/laptop-full-1513826762.png"></div>
                             <div class="lp-show-image"></div>
                             <div id="YOUTUBE388" class="widget-element widget-snap" lp-type="videoyoutube" lp-lang="YOUTUBE" lp-autoplay="0" lp-display="block">
-                                <iframe class="widget-content" src="https://www.youtube.com/embed/bIGjLJTQXq0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+                                <iframe class="widget-content" src="https://www.youtube.com/embed/y6Uwpu2Gw28?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
                                 <div class="ladi-widget-overlay"></div>
                             </div>
                         </div>
@@ -531,7 +527,7 @@ $rs = json_decode($result);
                         </div>
                     </div>
                     <div id="HEADLINE425" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h5 class="widget-content" lp-node="h5">Tiêu đề nhỏ</h5> </div>
+                        <h5 class="widget-content" lp-node="h5"></h5> </div>
                 </div>
                 <div class="ladi-widget-overlay"></div>
             </div>
@@ -710,7 +706,7 @@ $rs = json_decode($result);
                         <h4 class="widget-content" lp-node="h4">Chương trình khuyến mãi áp dụng đến hết ngày <?php echo date('d/m/Y') ?></h4> </div>
                     <div id="HEADLINE352" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                         <h3 class="widget-content" lp-node="h3">Sau khi đăng ký mua khóa học, bộ phận CSKH của Lakita sẽ liên hệ với bạn để xác nhận thông tin, nhân viên bưu điện sẽ giao khóa học tận nơi cho bạn, <span style="color: rgb(244, 67, 54);"><span style="font-weight: bold;" color="">MIỄN PHÍ SHIP TOÀN QUỐC</span>.</span>&nbsp;<br color="" style="color: rgb(255, 255, 255);">Bạn chỉ phải trả tiền khi nhận được khóa học.</h3> </div>
-                   <div id="FORM345" class="widget-element widget-snap" lp-type="contact_form" lp-lang="FORM" lp-type-form="google-sheet" lp-message-form="Cám ơn bạn đã quan tâm" lp-ss-f="[{&quot;name&quot;:&quot;name&quot;,&quot;value&quot;:&quot;name&quot;,&quot;$$hashKey&quot;:&quot;object:5749&quot;},{&quot;name&quot;:&quot;email&quot;,&quot;value&quot;:&quot;email&quot;,&quot;$$hashKey&quot;:&quot;object:5750&quot;},{&quot;name&quot;:&quot;phone&quot;,&quot;value&quot;:&quot;phone&quot;,&quot;$$hashKey&quot;:&quot;object:5751&quot;},{&quot;name&quot;:&quot;message&quot;,&quot;value&quot;:&quot;message&quot;,&quot;$$hashKey&quot;:&quot;object:5752&quot;},{&quot;name&quot;:&quot;street&quot;,&quot;value&quot;:&quot;street&quot;,&quot;$$hashKey&quot;:&quot;object:5919&quot;}]" lp-group="GROUP380" lp-display="block">
+                    <div id="FORM345" class="widget-element widget-snap" lp-type="contact_form" lp-lang="FORM" lp-type-form="google-sheet" lp-message-form="Cám ơn bạn đã quan tâm" lp-ss-f="[{&quot;name&quot;:&quot;name&quot;,&quot;value&quot;:&quot;name&quot;,&quot;$$hashKey&quot;:&quot;object:5749&quot;},{&quot;name&quot;:&quot;email&quot;,&quot;value&quot;:&quot;email&quot;,&quot;$$hashKey&quot;:&quot;object:5750&quot;},{&quot;name&quot;:&quot;phone&quot;,&quot;value&quot;:&quot;phone&quot;,&quot;$$hashKey&quot;:&quot;object:5751&quot;},{&quot;name&quot;:&quot;message&quot;,&quot;value&quot;:&quot;message&quot;,&quot;$$hashKey&quot;:&quot;object:5752&quot;},{&quot;name&quot;:&quot;street&quot;,&quot;value&quot;:&quot;street&quot;,&quot;$$hashKey&quot;:&quot;object:5919&quot;}]" lp-group="GROUP380" lp-display="block">
                         <form class="widget-contentLeadPanel_form promo-panel_action e_submit e_form_submit" role="form" id="dang-ky-2"  method="POST"  name="fr_register" action="<?php echo $code_ladingpage . '/'; ?>thank-you.html">
                             <div id="ITEM_FORM346" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
                                 <input class="widget-content" type="text" placeholder="Họ và tên" name="name" lp-label="Họ và tên" lp-name-id="name" required="required">
@@ -732,7 +728,7 @@ $rs = json_decode($result);
                     <a id="BUTTON350" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-parent="FORM345" lp-display="table"><span class="widget-content">ĐĂNG KÍ NGAY</span> </a></div>
                 <div class="ladi-widget-overlay"></div>
             </div>
-            <script type="text/javascript" async="" defer="" src="https://static.ladipage.net/source/ladipage.lib.1.js?v=1516692740878"></script>
+            <script type="text/javascript" async="" defer="" src="https://static.ladipage.net/source/ladipage.lib.1.js?v=1516605629701"></script>
         </div>
 
         <!-- ******************** comment fb ********************************** -->
