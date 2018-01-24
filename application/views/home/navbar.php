@@ -35,10 +35,19 @@
                                    value="<?php echo $this->security->get_csrf_hash(); ?>">
                             <sup><span class="badge"> <?php echo $have_news; ?></span></sup>
                         <?php } ?>
-                    </span>
-                    <a href="<?php echo base_url(); ?>kich-hoat-khoa-hoc.html" class="navbar-btn btn active-khoa-hoc">
-                        <i class="fa fa-unlock-alt" aria-hidden="true"></i> &nbsp; Kích hoạt khóa học
-                    </a>
+                    </span> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn navbar-btn" style="background-color: #fbfb8a; ">
+                        <!--<a href="#">-->
+                            <!--<i id="flexi_form_start" class="fa" href="javascript:void(0);" ></i>  Hướng Dẫn--> 
+                        <i id="flexi_form_start" class="fa" aria-hidden="true" href="javascript:void(0);"><img src="https://media.kyna.vn/img/tutorial.png"> &nbsp;<b>Hướng Dẫn</b></i>
+                        <!--</a>-->
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-default navbar-btn active-khoa-hoc">
+                        <a href="<?php echo base_url(); ?>kich-hoat-khoa-hoc.html">
+                            <i class="fa fa-unlock-alt" aria-hidden="true"></i> <b>&nbsp; Kích hoạt khóa học </b>
+                        </a>
+                    </button>
                     <div class="content-notification">
                         <?php
                         if (isset($noti)) {
@@ -111,13 +120,15 @@
                     <?php
                     if (!isset($user_id)) {
                         ?>
-                        <a href="<?php echo base_url('dang-nhap.html'); ?>" class="btn navbar-btn button-login button-right white">
-                            <i aria-hidden="true"></i>Đăng nhâp / Đăng ký
-                        </a>
+                        <button type="button" class="btn navbar-btn button-login button-right" data-step="1" data-intro="<b>Đăng nhập / Đăng ký</b>">
+                            <a href="<?php echo base_url('dang-nhap.html'); ?>">
+                                <i aria-hidden="true"></i>Đăng nhâp / Đăng ký
+                            </a>
+                        </button>
                         <?php
                     } else {
                         ?>
-                    <li>
+                    <li data-step="2" data-intro="Khi bạn đăng nhập thành công thì sẽ hiện ra <b>Ảnh và Tên Bạn</b> ở đây">
                         <div class="dropdown" style="height: 69px;">
                             <img class="img-avatar img-circle navbar-btn"
                                  src="<?php echo getUserPictureSrc($student); ?>"
@@ -266,3 +277,50 @@
 </div>
 <script src="<?php echo base_url(); ?>styles/v2.0/js/navbar.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/notification.js?ver=<?php echo _VER_CACHED_ ?>"></script>
+<link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/introjs.css"/>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/intro.js"></script>
+<script type="text/javascript">
+    $('#flexi_form_start').click(function () {
+        introJs().start().oncomplete(function () {
+//                        window.location.href = 'complete.html';
+        }).onexit(function () {
+//                        window.location.href = 'complete.html';
+        }).onbeforechange(function (targetElement) {
+            $(".steps").hide();
+
+
+            $(".left").css("float", "left");
+            $("input").removeClass("error");
+            $(".right").hide();
+
+
+
+            switch ($(targetElement).attr("data-step")) {
+
+                case '2':
+                    $(".flexi_form").hide();
+                    $(targetElement).show();
+                    break;
+                case '3':
+                    $("input").addClass("error");
+                    $(targetElement).show();
+                    break;
+
+                case '4':
+                    $(".left").css("float", "none");
+                    $(targetElement).show();
+                    break;
+
+                case '5':
+                    $(".right").show();
+                    $(targetElement).show();
+                    break;
+
+                case '6':
+                    $(targetElement).show();
+                    break;
+            }
+        });
+    });
+
+</script>

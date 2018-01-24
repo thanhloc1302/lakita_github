@@ -29,7 +29,7 @@ if ($this->agent->is_mobile()) {
                                 <hr>
                                 <li><a href="nap-tien-vao-tai-khoan.html"><i class="fa fa-usd" aria-hidden="true"></i> &nbsp; Nạp tiền vào tài khoản</a></li>
                                 <hr>
-                                <li class="active_course"><a href="kich-hoat-khoa-hoc.html"><i class="fa fa-compress" aria-hidden="true"></i> &nbsp; Kích hoạt khóa học</a></li>
+                                <li class="active_course" data-step="4" data-intro="Để tiến hành kích hoạt khóa học. bạn chọn nút <b>Kích hoạt khóa học</b> ở Menu bên tay trái màn hình."><a href="kich-hoat-khoa-hoc.html"><i class="fa fa-compress" aria-hidden="true"></i> &nbsp; Kích hoạt khóa học</a></li>
                                 <hr>
                                 <li><a ><i class="fa fa-list-alt" aria-hidden="true"></i> &nbsp; Đơn hàng của tôi</a></li>
                                 <hr>
@@ -43,7 +43,7 @@ if ($this->agent->is_mobile()) {
                         <div class="row side-row-2">
                             <button type="text"><strong>QUẢN LÝ TÀI KHOẢN</strong></button>
                             <ul style="margin-left: 35px;">
-                                <li><a href="thong-tin-tai-khoan.html"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;  Thông tin tài khoản</a></li>
+                                <li style="height: 30px;" data-step="3" data-intro="Bạn có thể thay đổi mật khẩu và các thông ti cá nhân trong tài khoản học của bạn bằng cách vào <b>Thông tin tài khoản.</b> Điền thông tin cá nhân, cập nhật mật khẩu."><a href="thong-tin-tai-khoan.html"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;  Thông tin tài khoản</a></li>
                                 <hr>
                                 <li><a href="lich-su-thanh-toan.html"><i class="fa fa-list-alt" aria-hidden="true"></i> &nbsp; Lịch sử thanh toán</a></li>
                                 <hr> 
@@ -72,7 +72,7 @@ if ($this->agent->is_mobile()) {
                 <section class="group1">
                     <p><a >Trang chủ</a> / <a > Quản lý giao dịch</a> / <a > Khóa học của tôi</a></p>
                     <h3 class="lakita"><i class="fa fa-leanpub" aria-hidden="true"></i> Khóa học của tôi (<?php echo count($courses); ?>)</h3>
-                    <table class="table table-bordered" >
+                    <table class="table table-bordered" data-step="5" data-intro="Bạn chọn khóa học bạn muốn theo dõi bằng cách chọn vào <b>Ảnh</b> hoặc vào <b>Tên khóa học.</b>">
                         <thead>
                             <tr>
                                 <th>Khóa học (<?php echo count($courses); ?>)</th>
