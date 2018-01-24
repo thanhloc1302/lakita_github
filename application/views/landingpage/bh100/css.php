@@ -1269,12 +1269,34 @@
                 top: 272.84px;
                 left: -135.457px;
                 padding: 0px;
-                width: 683.75px;
+                width: 610.5078125px;
                 height: 60px;
             }
             #HEADLINE372 > .widget-content {
                 font-size: 24px;
-                text-align: center;
+                text-align: left;
+            }
+            #HEADLINE429 {
+                top: 349.398px;
+                left: 298.953px;
+                padding: 0px;
+                width: 170px;
+                height: 30px;
+            }
+            #HEADLINE429 > .widget-content {
+                font-size: 24px;
+                text-align: left;
+            }
+            #HEADLINE430 {
+                top: 337.832px;
+                left: 123.973px;
+                padding: 0px;
+                width: 170px;
+                height: 45px;
+            }
+            #HEADLINE430 > .widget-content {
+                font-size: 40px;
+                text-align: left;
             }
             #GROUP11 {
                 top: 30.4375px;
@@ -3122,8 +3144,36 @@
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
             color: rgba(0, 0, 0, 1);
-            font-weight: 600;
+            font-weight: 700;
             line-height: 30px;
+        }
+        
+        #HEADLINE429 {
+            display: block;
+        }
+        
+        #HEADLINE429 > .widget-content {
+            font-family: "Open Sans", sans-serif;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            color: rgba(0, 0, 0, 1);
+            font-weight: 700;
+            text-decoration: line-through;
+            -webkit-text-decoration-line: line-through;
+            line-height: 30px;
+        }
+        
+        #HEADLINE430 {
+            display: block;
+        }
+        
+        #HEADLINE430 > .widget-content {
+            font-family: "Open Sans", sans-serif;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            color: rgba(0, 0, 0, 1);
+            font-weight: 700;
+            line-height: 46px;
         }
         
         #GROUP11 {
@@ -5441,7 +5491,7 @@
             }
             #SECTION2 {
                 width: 100%;
-                height: 515.421875px;
+                height: 531.421875px;
             }
             #SECTION2 .container {}
             #SECTION2 {
@@ -5656,7 +5706,7 @@
             }
             #SECTION42 {
                 width: 100%;
-                height: 487.359375px;
+                height: 499.171875px;
             }
             #SECTION42 .container {}
             #SECTION42 {
@@ -5727,7 +5777,7 @@
                 background-repeat: no-repeat;
             }
             #GROUP374 {
-                top: 211px;
+                top: 237px;
                 left: 27px;
                 width: 320.96875px;
                 height: 271.96875px;
@@ -5824,15 +5874,37 @@
                 height: 32.96875px;
             }
             #HEADLINE372 {
-                top: 126.453px;
-                left: -2.5px;
+                top: 119.84px;
+                left: 12px;
                 padding: 0px;
-                width: 378.96875px;
-                height: 60px;
+                width: 363.5px;
+                height: 90px;
             }
             #HEADLINE372 > .widget-content {
                 font-size: 15px;
-                text-align: center;
+                text-align: left;
+            }
+            #HEADLINE429 {
+                top: 179.828px;
+                left: 237.5px;
+                padding: 0px;
+                width: 170px;
+                height: 30px;
+            }
+            #HEADLINE429 > .widget-content {
+                font-size: 20px;
+                text-align: left;
+            }
+            #HEADLINE430 {
+                top: 170px;
+                left: 104.5px;
+                padding: 0px;
+                width: 170px;
+                height: 46px;
+            }
+            #HEADLINE430 > .widget-content {
+                font-size: 31px;
+                text-align: left;
             }
             #GROUP11 {
                 top: 716.563px;
@@ -6883,6 +6955,7 @@
                 text-align: left;
             }
             #HEADLINE425 {
+                display: none!important;
                 top: 66.5938px;
                 left: 87.5px;
                 padding: 0px;
@@ -7316,4 +7389,4 @@
         }
     </style>
     <link rel="stylesheet" href="https://static.ladipage.net/googlefonts/css?family=Open+Sans:400,600,700|Roboto+Slab:300,400,700|Roboto:300,400,700|Pattaya|Lobster|Montserrat:300,400,600,700&amp;subset=latin-ext,vietnamese" media="none" onload="if(media!='all')media='all'">
-    <link rel="stylesheet" href="https://static.ladipage.net/source/animate.min.css?v=1516605629700" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="https://static.ladipage.net/source/animate.min.css?v=1516692740878" media="none" onload="if(media!='all')media='all'">
