@@ -141,9 +141,7 @@
     <script type="text/javascript">
         $('#flexi_form_start').click(function () {
             introJs().start().oncomplete(function () {
-                //                        window.location.href = 'complete.html';
             }).onexit(function () {
-                //                        window.location.href = 'complete.html';
             }).onbeforechange(function (targetElement) {
                 $(".steps").hide();
 
