@@ -35,19 +35,7 @@
                                    value="<?php echo $this->security->get_csrf_hash(); ?>">
                             <sup><span class="badge"> <?php echo $have_news; ?></span></sup>
                         <?php } ?>
-                    </span> &nbsp;&nbsp;&nbsp;&nbsp;
-                    <button type="button" class="btn navbar-btn" style="background-color: #fbfb8a; ">
-                        <!--<a href="#">-->
-                            <!--<i id="flexi_form_start" class="fa" href="javascript:void(0);" ></i>  Hướng Dẫn--> 
-                        <i id="flexi_form_start" class="fa" aria-hidden="true" href="javascript:void(0);"><img src="https://media.kyna.vn/img/tutorial.png"> &nbsp;<b>Hướng Dẫn</b></i>
-                        <!--</a>-->
-                    </button>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <button type="button" class="btn btn-default navbar-btn active-khoa-hoc">
-                        <a href="<?php echo base_url(); ?>kich-hoat-khoa-hoc.html">
-                            <i class="fa fa-unlock-alt" aria-hidden="true"></i> <b>&nbsp; Kích hoạt khóa học </b>
-                        </a>
-                    </button>
+                    </span> 
                     <div class="content-notification">
                         <?php
                         if (isset($noti)) {
@@ -117,19 +105,35 @@
                     </div>
                 </li>
                 <li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button id="flexi_form_start" type="button" class="btn btn-default navbar-btn nav-tutorial">
+                        <i  class="fa" aria-hidden="true" href="javascript:void(0);"><img src="https://media.kyna.vn/img/tutorial.png"> &nbsp;<b>Hướng Dẫn</b></i>
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li>
+                    <a href="<?php echo base_url(); ?>kich-hoat-khoa-hoc.html">
+                        <button type="button" class="btn btn-default navbar-btn active-khoa-hoc">
+                            <i class="fa fa-unlock-alt" aria-hidden="true"></i> <b>&nbsp; Kích hoạt khóa học </b>
+                        </button>
+                    </a>
+                </li>
+                <li>
                     <?php
                     if (!isset($user_id)) {
                         ?>
-                        <button type="button" class="btn navbar-btn button-login button-right" data-step="1" data-intro="<b>Đăng nhập / Đăng ký</b>">
-                            <a href="<?php echo base_url('dang-nhap.html'); ?>">
-                                <i aria-hidden="true"></i>Đăng nhâp / Đăng ký
-                            </a>
-                        </button>
+
+                        <a href="<?php echo base_url('dang-nhap.html'); ?>">
+                            <button type="button" class="btn navbar-btn button-login button-right" data-step="1" data-intro="<b>Đăng nhập / Đăng ký</b>">
+                                <i aria-hidden="true"></i>Đăng nhâp / Đăng ký 
+                            </button>
+                        </a>
+
                         <?php
                     } else {
                         ?>
                     <li data-step="2" data-intro="Khi bạn đăng nhập thành công thì sẽ hiện ra <b>Ảnh và Tên Bạn</b> ở đây">
-                        <div class="dropdown" style="height: 69px;">
+                        <div class="dropdown">
                             <img class="img-avatar img-circle navbar-btn"
                                  src="<?php echo getUserPictureSrc($student); ?>"
                                  alt="">
@@ -248,7 +252,7 @@
 </div><!--Kết thúc menu trên mobie-->
 
 
-<div class="container-fluid"> <!--Body Content-->
+<div class="container-fluid" style="margin-top: 18px"> <!--Body Content-->
     <!-- Set up your HTML -->
     <div>
         <div class="owl-carousel owl-theme slider">

@@ -19,8 +19,6 @@
                         <label for="">Mật khẩu</label>
                         <input type="password" class="form-control" id="login_password" placeholder="Nhập mật khẩu">
                     </div>
-
-
                 </div>
             </div>
             <div class="row">
@@ -42,29 +40,35 @@
 
         </div>
     </div>
+</div>
     <div class="row body" style="font-family: roboto;">
         <div class="col-md-5 col-md-offset-1 hidden-sm hidden-xs padding0">
             <img style="max-height: 510px" class="img img-responsive" src="<?php echo base_url(); ?>styles/v2.0/img/logo5.png">
         </div>
         <div class="col-md-5 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
             <div class="register">
-                <div class="col-md-8 col-xs-12 social-login padding0">
+                <div class="col-md-12 col-xs-12 social-login padding0">
                     <p> Hoặc đăng nhập bằng tài khoản sau: </p>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <a href="<?php echo $facebook_login_url; ?>" class="my-btn bgfb"> 
                             <i class="fa fa-facebook" aria-hidden="true"></i> &nbsp; Facebook </a>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <a id="customBtn2" class="my-btn bggg" href="https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=125422840079-ars8uilref93d7jaic148nkqm41vao9u.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flakita.vn%2Fplugin%2Fgg.php&state&scope=email%20profile&approval_prompt=auto"> 
                             <i class="fa fa-google-plus" aria-hidden="true"></i> &nbsp; Google+ </a>
                     </div>
-                </div>
-                <div class="col-md-4"></div>
-                <div class="col-md-7 col-xs-12 padding0" data-step="1" data-intro="Nếu bạn chưa có tài khoản, mời bạn điền các thông tin vào phần đóng khu dưới đây và ấn <b>Tạo tài khoản</b>. Nếu đã có tài khoản rồi có thể bỏ qua bước này."> 
-                    <div class="col-md-6 hidden-xs pull-right">
-                        <button class="my-btn bgfb" style="width: 200px;background-color: #fbfb8a;border: solid 1px red; margin-top: 20px; margin-left: -25px;"><a id="flexi_form_start" class="" style="" href="javascript:void(0);"><img src="https://media.kyna.vn/img/tutorial.png"><b style="color: black"> &nbsp;Hướng Dẫn</b></a></button>
+                    <div class="col-md-4 hidden-xs pull-right">
+                        <button id="flexi_form_start" class="btn btn-default btn-tutorial" >
+                            <a class="" style="" href="javascript:void(0);"><img src="https://media.kyna.vn/img/tutorial.png">
+                                <b style="color: black"> &nbsp;Hướng Dẫn</b>
+                            </a>
+                        </button>
                     </div>
-                    <div class="col-md-6 pull-left">
+                </div>
+               
+                <div class="col-md-12 col-xs-12 padding0" data-step="1" data-intro="Nếu bạn chưa có tài khoản, mời bạn điền các thông tin vào phần đóng khu dưới đây và ấn <b>Tạo tài khoản</b>. Nếu đã có tài khoản rồi có thể bỏ qua bước này."> 
+                    
+                    <div class="col-md-12 pull-left">
                         <h1 style="display: inline-block">Đăng ký</h1> 
                     </div>
                     <div class="col-md-12">
