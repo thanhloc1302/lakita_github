@@ -53,6 +53,11 @@ class Download extends MY_Controller {
                     $this->load->helper('download');
                     force_download(FCPATH . 'public/tai-lieu/phu-cap-bao-hiem-xa-hoi.docx', NULL);
                     break;
+                 case 8:
+                    $this->load->helper('download');
+                    force_download(FCPATH . 'public/tai-lieu/cac-doi-tuong-bat-buoc-tham-gia-bhxh.docx', NULL);
+                    break;
+                
             }
             redirect('https://lakita.vn');
         }
