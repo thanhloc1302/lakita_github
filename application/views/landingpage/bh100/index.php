@@ -238,7 +238,7 @@ $rs = json_decode($result);
                             <div class="lp-show-image" alt="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/laptop-full-1513826762.png"></div>
                             <div class="lp-show-image"></div>
                             <div id="YOUTUBE388" class="widget-element widget-snap" lp-type="videoyoutube" lp-lang="YOUTUBE" lp-autoplay="0" lp-display="block">
-                                <iframe class="widget-content" src="https://www.youtube.com/embed/bIGjLJTQXq0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+                                <iframe class="widget-content" src="https://www.youtube.com/embed/y6Uwpu2Gw28?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
                                 <div class="ladi-widget-overlay"></div>
                             </div>
                         </div>
