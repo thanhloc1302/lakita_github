@@ -119,7 +119,7 @@ class Guest extends MY_Controller {
                     $this->load->helper('cookie');
                     $randStr = sha1(md5(time(). $this->session->userdata('user_name') . '6f12d7e322d7e0424952150ab~!@#`>?:"<'));
                     $year = 92536000;
-                    set_cookie('357a466f0c8940e87378a641479e9ff8d9770318', $randStr, $year);
+                    set_cookie('tk_lkt_n', $randStr, $year);
                     $this->load->model('remember_login_model');
                     $insert = array(
                         'uid' => $member[0]['id'],

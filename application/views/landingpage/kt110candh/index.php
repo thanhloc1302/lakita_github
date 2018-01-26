@@ -73,23 +73,48 @@ $rs = json_decode($result);
         <div class="ladi-wraper-page">
             <div id="SECTION34" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
                 <div class="container">
+                    <div id="BOX349" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                        <div class="widget-content">
+                            <div id="FORM343" class="widget-element widget-snap" lp-type="contact_form" lp-lang="FORM" lp-type-form="google-sheet" lp-message-form="Cám ơn bạn đã quan tâm" lp-ss-f="[{&quot;name&quot;:&quot;name&quot;,&quot;value&quot;:&quot;name&quot;,&quot;$$hashKey&quot;:&quot;object:7295&quot;},{&quot;name&quot;:&quot;email&quot;,&quot;value&quot;:&quot;email&quot;,&quot;$$hashKey&quot;:&quot;object:7296&quot;},{&quot;name&quot;:&quot;phone&quot;,&quot;value&quot;:&quot;phone&quot;,&quot;$$hashKey&quot;:&quot;object:7297&quot;},{&quot;name&quot;:&quot;message&quot;,&quot;value&quot;:&quot;message&quot;,&quot;$$hashKey&quot;:&quot;object:7298&quot;}]" lp-display="block">
+                                <form class="widget-contentLeadPanel_form promo-panel_action e_submit e_form_submit" role="form" id="dang-ky-2"  method="POST"  name="fr_register" action="<?php echo $code_ladingpage . '/'; ?>thank-you.html">
+                                    <div id="ITEM_FORM344" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
+                                        <input class="widget-content" type="text" placeholder="Họ và tên" name="name" lp-label="Họ và tên" lp-name-id="name" required="required">
+                                    </div>
+                                    <div id="ITEM_FORM345" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
+                                        <input class="widget-content" type="email" placeholder="Nhập Email" name="email" lp-label="Email" lp-name-id="email" required="required">
+                                    </div>
+                                    <div id="ITEM_FORM346" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
+                                        <input class="widget-content" type="tel" pattern="((\+[1-9]{1,4}[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9 \-]{6,15}?$" required="required" placeholder="Nhập Số điện thoại" name="phone" lp-label="Điện thoại" lp-name-id="phone">
+                                    </div>
+                                    <div id="ITEM_FORM347" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
+                                        <textarea class="widget-content" type="text" placeholder="Địa chỉ:" name="dia_chi" rows="4" lp-label="Lời nhắn" lp-name-id="message" required="required"></textarea>
+                                    </div>
+                                     <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
+                                    <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
+                                    <button id="btn-348" class="btn btn-large btn-primary LeadPanel_action button radius e_btn_submit reg_bt" style="color:transparent; background-color: transparent"> MUA HÀNG </button>
+
+                                </form>
+                            </div>
+                            <a id="BUTTON348" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-parent="FORM343" lp-display="table"><span class="widget-content">ĐĂNG KÝ</span> </a></div>
+                        <div class="ladi-widget-overlay"></div>
+                    </div>
                     <div id="LINE35" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
                         <div class="widget-content">
                             <div class="line"></div>
                         </div>
                     </div>
                     <div id="HEADLINE37" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h1 class="widget-content" lp-node="h1">KHÓA HỌC ONLINE ĐỘC QUYỀN</h1> </div><a id="BUTTON52" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table" lp-action-link="SECTION54" lp-action-type="page" lp-target="" href=""><span class="widget-content">Tìm hiểu ngay</span> </a>
+                        <h1 class="widget-content" lp-node="h1">KHÓA HỌC ONLINE ĐỘC QUYỀN</h1> </div>
                     <div id="GROUP258" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block" lp-sticky="1" lp-sticky-pos="top" lp-sticky-kc="2px">
                         <div class="widget-content">
                             <div id="BOX248" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP258" lp-display="block">
                                 <div class="widget-content">
+                                    <div id="HEADLINE250" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="SECTION226" lp-action-type="page" lp-target="" href="">
+                                        <h3 class="widget-content" lp-node="h3">Liên hệ</h3> </div>
                                     <div id="HEADLINE251" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="SECTION130" lp-action-type="page" lp-target="" href="">
                                         <h3 class="widget-content" lp-node="h3">Giảng viên</h3> </div>
                                     <div id="HEADLINE255" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="SECTION75" lp-action-type="page" lp-target="" href="">
                                         <h3 class="widget-content" lp-node="h3">Nội dung</h3> </div>
-                                    <div id="HEADLINE250" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="SECTION226" lp-action-type="page" lp-target="" href="">
-                                        <h3 class="widget-content" lp-node="h3">Liên hệ</h3> </div>
                                     <div id="IMAGE342" class="widget-element widget-snap ladi-drop" lp-type="image" lp-lang="IMAGE" lp-display="block">
                                         <div class="widget-content">
                                             <div class="lp-show-image" alt="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/logo-1515293868.png"></div>
@@ -125,6 +150,8 @@ $rs = json_decode($result);
                     </div>
                     <div id="HEADLINE265" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                         <h3 class="widget-content" lp-node="h3">CÔNG CỤ GIẢI TRÌNH VÀ BẢO VỆ DOANH NGHIỆP TRONG CÁC KÌ THANH TRA&nbsp;</h3> </div>
+                    <div id="HEADLINE350" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                        <h3 class="widget-content" lp-node="h3">Đăng ký ngay hôm nay để nhận được khóa học "<span style="font-style: italic;"><span style="color: rgb(255, 255, 255);">Yoga cho dân văn phòng</span>"</span> Hoàn toán miễn phí</h3> </div>
                 </div>
                 <div class="ladi-widget-overlay"></div>
             </div>
@@ -525,7 +552,8 @@ $rs = json_decode($result);
                                     <button id="btn-207" class="btn btn-large btn-primary LeadPanel_action button radius e_btn_submit reg_bt" style="color:transparent; background-color: transparent"> MUA HÀNG </button>
 
                                 </form>
-                            </div><a id="BUTTON207" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-parent="FORM202" lp-group="GROUP259" lp-display="table"><span class="widget-content">ĐĂNG KÝ NGAY</span> </a>
+                            </div>
+                            <a id="BUTTON207" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-parent="FORM202" lp-group="GROUP259" lp-display="table"><span class="widget-content">ĐĂNG KÝ NGAY</span> </a>
                             <div id="HEADLINE190" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP259" lp-display="block">
                                 <h2 class="widget-content" lp-node="h2">NHANH TAY LÊN!</h2> </div>
                             <div id="LINEVERTICAL192" class="widget-element widget-snap" lp-type="linevertical" lp-lang="LINEVERTICAL" lp-group="GROUP259" lp-display="block">
@@ -559,7 +587,7 @@ $rs = json_decode($result);
                     <div id="HEADLINE340" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                         <h3 class="widget-content" lp-node="h3"></h3> </div>
                     <div id="HEADLINE341" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h3 class="widget-content" lp-node="h3">Đăng kí ngay trong hôm nay để là một trong những người may mắn nhận được khóa học "<span style="font-weight: bold; color: rgb(244, 67, 54);" color="">18 thủ thuật Excel</span>" dành cho dân văn phòng!</h3> </div>
+                        <h3 class="widget-content" lp-node="h3">Đăng kí ngay trong hôm nay để là một trong những người may mắn nhận được khóa học "<span style="color: rgb(244, 67, 54); font-weight: 700;">Yoga cho dân văn phòng</span>" dành cho dân văn phòng!</h3> </div>
                 </div>
                 <div class="ladi-widget-overlay"></div>
             </div>
@@ -620,7 +648,7 @@ $rs = json_decode($result);
                         </div>
                         <div class="ladi-widget-overlay"></div>
                     </div>
-                    <div id="FORM196" class="widget-element widget-snap" lp-type="contact_form" lp-lang="FORM" lp-type-form="google" lp-message-form="Cám ơn bạn đã quan tâm" lp-data-form="{}" lp-display="block">
+                   <div id="FORM196" class="widget-element widget-snap" lp-type="contact_form" lp-lang="FORM" lp-type-form="google" lp-message-form="Cám ơn bạn đã quan tâm" lp-data-form="{}" lp-display="block">
                         <form class="widget-contentLeadPanel_form promo-panel_action e_submit e_form_submit" role="form" id="dang-ky-2"  method="POST"  name="fr_register" action="<?php echo $code_ladingpage . '/'; ?>thank-you.html">
                             <div id="ITEM_FORM197" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
                                 <input class="widget-content" type="text" placeholder="Họ và tên" name="name" lp-label="Họ và tên" required="required">
@@ -636,7 +664,8 @@ $rs = json_decode($result);
                             <button id="btn-200" class="btn btn-large btn-primary LeadPanel_action button radius e_btn_submit reg_bt" style="color:transparent; background-color: transparent"> MUA HÀNG </button>
 
                         </form>
-                    </div><a id="BUTTON200" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-parent="FORM196" lp-display="table"><span class="widget-content">HOÀN TẤT ĐĂNG KÝ</span> </a>
+                    </div>
+                    <a id="BUTTON200" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-parent="FORM196" lp-display="table"><span class="widget-content">HOÀN TẤT ĐĂNG KÝ</span> </a>
                     <div id="PARAGRAPH201" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
                         <p class="widget-content" lp-node="p">This is a paragraph. Click here to add / edit your own text. This should be used to tell a story and let your users know a little more about your product or service. How can you benefit them?</p>
                     </div>
@@ -745,9 +774,8 @@ $rs = json_decode($result);
                 </div>
                 <div class="ladi-widget-overlay"></div>
             </div>
-            <script type="text/javascript" async="" defer="" src="https://static.ladipage.net/source/ladipage.lib.1.js?v=1515484099325"></script>
+            <script type="text/javascript" async="" defer="" src="https://static.ladipage.net/source/ladipage.lib.1.js?v=1516779618176"></script>
         </div>
-
 
         <!-- ******************** comment fb ********************************** -->
         <div class="container">
@@ -780,6 +808,12 @@ $rs = json_decode($result);
                     e.preventDefault();
                     $("#btn-200").click();
                 });
+                
+                $("#BUTTON348").click(function (e) {
+                    e.preventDefault();
+                    $("#btn-348").click();
+                });
+                
             });
         </script>
     </div>

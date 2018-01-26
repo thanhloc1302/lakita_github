@@ -299,11 +299,11 @@ class Student extends MY_Controller {
     function logout() {
         $this->lib_mod->update('watching_time', array('student_id' => $this->session->userdata('user_id')), array('time' => 0));
         $this->load->helper('cookie');
-        if (get_cookie('357a466f0c8940e87378a641479e9ff8d9770318') != NULL) {
+        if (get_cookie('tk_lkt_n') != NULL) {
             $this->load->model('remember_login_model');
-            $token = get_cookie('357a466f0c8940e87378a641479e9ff8d9770318');
+            $token = get_cookie('tk_lkt_n');
             $this->remember_login_model->delete(['token' => $token]);
-            delete_cookie('357a466f0c8940e87378a641479e9ff8d9770318');
+            delete_cookie('tk_lkt_n');
         }
         $this->session->unset_userdata('user_name');
         $this->session->unset_userdata('user_id');

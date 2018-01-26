@@ -24,9 +24,9 @@ class Home extends MY_Controller {
         //==========================================================TRANG CHỦ =======================================================
         if (empty($page)) {
             $this->load->helper('cookie');
-            if (get_cookie('357a466f0c8940e87378a641479e9ff8d9770318') != '') {
+            if (get_cookie('tk_lkt_n') != '') {
                 $this->load->model('remember_login_model');
-                $token = get_cookie('357a466f0c8940e87378a641479e9ff8d9770318');
+                $token = get_cookie('tk_lkt_n');
                 $input = [];
                 $input['where'] = ['token' => $token, 'time <' => time() - 30 * 24 * 3600];
                 $uid = $this->remember_login_model->load_all($input);
