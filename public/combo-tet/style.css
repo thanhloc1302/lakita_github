@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+  
+}
+.row{
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.top{
+  background:  url('img/header.png');
+  background-repeat: no-repeat;
+ -webkit-background-size: 100%;
+  
+}
+li{
+  float: left;
+}
+li a{
+  display: block;
+  color: white;
+  padding-left: 15px;
+  font-weight: bold;
+
+}
+h1{
+  font-weight: bold;
+}
+#list-top{
+  list-style-type: none;
+}
+.form-top{
+  border: dotted #f4e46d;
+  background: #ba101d;
+  text-align: center;
+  color: #f4e46d;
+  margin-bottom: 30px;
+}
+.text-top{
+  margin-top: 330px
+}
+.bot-header{
+  background-image: url('img/song.png');
+  background-repeat: no-repeat;
+  
+}
+.content-1{
+  background-image: url('img/bg2.png');
+  -webkit-background-size: 100%;
+}
+.c1-a{
+background-image: url('img/border-1a.png');
+background-position: inherit;
+-webkit-background-size: 100%;
+margin-left: -75px;
+margin-top: 10px;
+height: 200px;
+text-align: center;
+padding: 10px;
+color: #ab1519;
+font-size: 20px;
+}
+.c1-a h3{
+  font-size: 40px;
+
+}
+.c1-text{
+
+  text-align: center;
+  color: #ab1519;
+  font-size: 30px;
+}
+.btn-dki{
+  
+  margin-bottom: 10px;
+}
+.box{
+background-image: url('img/border-1b.png');
+background-position: inherit;
+-webkit-background-size: 100%;
+
+text-align: center;
+height: 300px;
+
+
+}
+.dbox{
+
+ margin-bottom:35px;
+ margin-left:  -40px;
+}
+h3{
+
+  color: #ab1519;
+   font-weight: bold;
+}
+.content-2{
+  background-image: url('img/bg3.png');
+ -webkit-background-size: 100%;   
+}
+.text2{
+  text-align: center;
+  font-size: 50px;
+ color:#faebab; 
+}
+.text3{
+   color:#faebab;
+    font-size: 20px;
+}
+.border-content-2{
+  background: url('img/border-2.png');
+  background-position: inherit;
+-webkit-background-size: 100%;
+height: 500px;
+
+text-align: center;
+color:#faebab;
+ font-weight: bold;
+ margin-top: 60px;
+ padding-left: 35px;
+ padding-right: 35px;
+ 
+}
+.content-3{
+  background-image: url('img/bg2.png');
+   -webkit-background-size: 100%;
+
+}
+.text4{
+  text-align: center;
+  color: #9f0002;
+   font-weight: bold;
+ }
+ .text4 h1{
+  font-size: 50px;
+ }
+ .text5{
+  text-align: center;
+  color: #9f0002;
+   font-weight: bold;
+   font-size: 30px;
+ }
+ .text6{
+  text-align: center;
+  color: #9f0002;
+   
+   font-size: 15px;
+ }
+
+ .content-4{
+  background-image: url('img/bg4.png');
+   -webkit-background-size: 100%;
+  background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+ }
+ .over{
+  background: rgba(0,0,0,0.50);  
+  text-align: center; 
+  margin-top: 4%;
+  margin-left: 10%;
+ }
+ .footer{
+  background-image: url('img/map.jpg');
+  -webkit-background-size: 100%;
+  height: 300px;
+
+ }
+
+ @media screen and (max-width: 991px) {
+.dbox{
+  margin-left: 0px;
+}
+
+ .text-top{
+  margin-top: 5%;
+ }
+ .c1-a{
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  .box{
+    height: 400px;
+  }
+  .content-3{
+    margin-left: 20px;
+  }
+ .btn-dki{
+  margin-left: 35%;
+  
+}
+  
+}
+@media screen and (max-width: 768px) {
+  .text-1{
+    font-size: 18px;
+  }
+  .text-1 h3{
+    font-size: 25px;
+  }
+  .c1-text{
+    font-size: 18px;
+  }
+  .c1-text h1{
+    font-size: 25px;
+  }
+  .form-top h1{
+      font-size: 20px;
+  }
+  .c1-a{
+    margin-left: 20px;
+  }
+  .dbox{
+  margin-left: 15px;
+}
+  .text2{
+    font-size: 25px;
+  }
+  .text4 h1 h4{
+    font-size: 20px;
+  }
+
+ .img2{
+  height: 100px;
+ }
+ .text-top{
+  margin-top: 5%;
+ }
+.btn-dki{
+  margin-left: 40%;
+  
+}
+}
+@media screen and (max-width: 480px) {
+  .text-1{
+    font-size: 13px;
+  }
+  .text-1 h3{
+    font-size: 17px;
+  }
+  .c1-text{
+    font-size: 13px;
+  }
+  .c1-text h1{
+    font-size: 17px;
+  }
+  .form-top h1{
+    font-size: 15px;
+  }
+  .c1-a{
+    margin-left: 20px;
+
+  }
+  .dbox{
+  margin-left: 15px;
+}
+  .text4 h4 h1{
+    font-size: 10px;
+  }
+ 
+ .img2{
+  height: 50px;
+ }
+ .text-top{
+  margin-top: 5%;
+ }
+.btn-dki{
+  margin-left: 35%;
+  
+}
+}
+@media screen and (min-width: 991px) {
+ .b{
+  margin-left: -35px;
+ }
+ .c{
+  margin-left: -35px;
+ }
+  .btn-dki{
+  margin-left: 33%;
+  
+}
+}

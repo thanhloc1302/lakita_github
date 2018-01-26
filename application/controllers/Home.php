@@ -114,7 +114,8 @@ class Home extends MY_Controller {
                     //danh sách các bài học của chương đó
                     $input = [];
                     $input['select'] = 'id, name, sort,  length, slug, trial_learn';
-                    $input['where'] = ['chapter_id' => $value['id']];
+                    $input['where'] = ['chapter_id' => $value['id'],'status' =>1];
+                    $input['order'] = ['sort' => 'asc'];
                     $learnDetail = $this->learn_model->load_all($input);
                     $data['all_learn'][$key] = $learnDetail;
                 }
@@ -199,8 +200,8 @@ class Home extends MY_Controller {
                 $uri = substr($curr, strlen(base_url()));
 
                 $token = $this->session->userdata('token');
-                // redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
-                redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
+                redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
+                //redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
                 echo $uri;
                 die;
 
@@ -545,7 +546,7 @@ class Home extends MY_Controller {
                     //danh sách các bài học của chương đó
                     $input = [];
                     $input['select'] = 'id, name, sort,  length, slug';
-                    $input['where'] = ['chapter_id' => $value['id']];
+                    $input['where'] = ['chapter_id' => $value['id'], 'status' => 1];
                     $input['order'] = array('sort' => 'asc');
                     $learnDetail = $this->learn_model->load_all($input);
 
