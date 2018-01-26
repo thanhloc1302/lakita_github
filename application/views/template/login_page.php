@@ -71,7 +71,7 @@
                     <div class="col-md-12 pull-left">
                         <h1 style="display: inline-block">Đăng ký</h1> 
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-8 col-sm-12 col-xs-12">
                         <div class="form-register" style="margin-left: -15px;margin-top: 10px;">
                             <div class="form-group col-md-12">
                                 <input type="text" style="height: 40px;" class="form-control" name="name" id="signup_name" placeholder="Họ và tên">
@@ -90,11 +90,12 @@
                             </div>
                         </div><br>
                     </div>
-                    <div class="col-md-12 col-xs-12 padding0">
+                    <div class="col-md-4 col-sm-12 col-xs-12"></div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding0">
                         <p>Bằng cách nhấp vào Tạo tài khoản, bạn đồng ý với <a class="lakita" data-toggle="modal" href="#modal-terms" style="color: #2c944a"> Điều khoản & dịch vụ </a> của chúng tôi</p>
                         <?php $this->load->view('home/terms'); ?>
                     </div>
-                    <div class="col-md-12 padding0">
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding0">
                         <button class="btn btn-success click_login" value="signup">Tạo tài khoản</button>
                     </div>
                 </div>
