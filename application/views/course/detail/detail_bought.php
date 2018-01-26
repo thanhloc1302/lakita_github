@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="col-md-11 col-md-offset-1 col-sm-12 col-sx-12" id="dsbaihoc">
-            <div class="tab-content">
+            <div class="tab-content" data-step="2" data-intro="Sau khi chọn khóa học sẽ tới trang <b>Tổng quan khóa học.</b> Trong trang này bạn có thể chọn danh sách bài học hoặc Đăng cũng như trả lời các thảo luận">
                 <div role="tabpanel" class="tab-pane active" id="dsbaihoc">
                     <?php foreach ($chapter as $key => $value) { ?>
                         <p class="category"><?php echo $value['name']; ?></p>
@@ -89,7 +89,7 @@
     </div>
     <div class="col-md-5 col-sm-12-sol-xs-12">
         <div class="row gr1-row4-2">
-            <div class="col-md-12">
+            <div class="col-md-12" data-step="1" data-intro="Bạn có thể để lại bình luận về bài giảng ở đây. ">
                 <div class="form-group">
                     <label for=""><h3><?php echo $total_cmt; ?> Bình luận</h3></label>
                     <input type="text" class="form-control" id="content_cmt" style="padding: 23px 12px;" placeholder="Nhập nội dung tiêu đề cần thảo luận">

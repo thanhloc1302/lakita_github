@@ -37,6 +37,7 @@ a, a:hover, a:visited {
     .navbar-brand {
         padding: 0px;
         padding-left: 35px;
+        margin-top : 10px;
         .logo-navbar {
             width: 180px;
         }
@@ -44,6 +45,7 @@ a, a:hover, a:visited {
     .navbar-form {
         width: 28%;
         padding-right: 5px;
+        margin-top: 15px;
         .search {
             width: 100%;
             input {
@@ -60,10 +62,17 @@ a, a:hover, a:visited {
         }
     }
     .navbar-btn {
-        /*        height: 41px;*/
+        height: 41px;
     }
     .notification {
         color: #fff;
+        margin-top: 20px
+    }
+    
+    .nav-tutorial{
+        font-family: RobotoCondensed-Regular;
+        margin-top: 18px;
+        background-color: #ffff8a
     }
 
     .navbar-text {
@@ -84,6 +93,11 @@ a, a:hover, a:visited {
     font-size: 12px;
 }
 
+.dropdown{
+    height: 70px;
+    margin-top: 10px;
+}
+
 .button-right {
     display: inline-block;
     font-weight: normal;
@@ -97,11 +111,8 @@ a, a:hover, a:visited {
     border-radius: 5px;
     background: #ffffff;
     margin-left: 15px;
-    padding: 0px;
-    a{
-        padding: 2px 10px;
-        display: block;
-    }
+    padding: 0px 5px 0px 5px;
+    color: #FFF
 
 }
 
@@ -111,6 +122,8 @@ a, a:hover, a:visited {
     border: 1px solid #ffffff;
     opacity: 0.9;
     &:hover {
+        background: #187533;
+        color: #FFF;
         opacity: 1;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 

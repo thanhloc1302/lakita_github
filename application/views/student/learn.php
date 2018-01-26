@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/style.bootstrap12.lakita.css?ver=<?php echo _VER_CACHED_ ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/navbar_fix.css?ver=<?php echo _VER_CACHED_ ?>" />
 <script type="text/javascript" src="<?php echo base_url(); ?>plugin/ckeditor/ckeditor.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/swfobject.js?ver=<?php echo _VER_CACHED_ ?>" ></script>
 <style>
@@ -21,37 +22,7 @@
     }
 </style>
 <?php if (!$this->agent->is_mobile()) { ?>
-    <header>
-        <div class="row header-row-1">
-            <div class="col-md-5">
-                <a href="khoa-hoc-cua-toi.html" class="back"><i class="fa fa-reply" aria-hidden="true"></i> Trở lại  </a>
-            </div>
-            <div class="col-md-6">
-
-            </div>
-            <div class="col-md-1" id="ring">
-                <i class="fa fa-bell" aria-hidden="true"></i>
-            </div>
-        </div>
-        <div class="row header-row-2">
-            <h3> <?php echo $course_name; ?></h3>
-            <div class="row">
-                <div class="col-md-3">
-                    <p id="head-text1">Tổng số <?php echo $total_video; ?> bài học</p>
-                    <p id="head-text1">Bạn đã hoàn thành:</p>
-                </div>
-                <div class="col-md-6">
-                    <p id="head-text2"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $count_all_learn; ?>/ <?php echo $total_video; ?> </p>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped active" role="progressbar"
-                             aria-valuenow="<?php echo 100 * $count_all_learn / $total_video; ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo 100 * $count_all_learn / $total_video; ?>%">
-                            <?php echo round(100 * $count_all_learn / $total_video); ?>%
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+  <?php $this->load->view('home/navbar.php'); ?>
 <?php } else { ?>
     <?php $this->load->view('mobile/navbar'); ?>
 <?php } ?>
@@ -64,7 +35,7 @@
                     <div class="st-content-inner padding-none">
                         <div class="container-fluid videolayout">
 
-                            <div class="js-video widescreen">
+                            <div class="js-video widescreen" data-step="1" data-intro="Các bạn có thể tang giảm âm lượng, bật full màn hình hoặc dừng, tua nhanh video ở phần đóng khung dưới đây.">
                                 <button class="js-video-btn btn btn-success">Đóng</button>
                                 <?php
                                 if (!empty($curr_learn[0]['video_file'])) {
@@ -99,10 +70,10 @@
                                     ?>
                                     <input type="hidden" id="lakitaid" value="<?php echo md5(time()) . '$&((_GNSDADFHGD@!$^&%#' . time() . ')*&^%$@' . time() . '#' . 612 . '#' . time() . '_+1357$*^())!%*$$&' . md5('lakita.vn') . '+135+1357$*^())!%*$$7$*^())!%*$$+1+1357$*^())!%*$$357$*^())!%*$$'; ?>" /><div id="mediaspace"></div>
                                 <?php } ?>
-   <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.js?VER=20.01.2018"></script>
-                            <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.html5.js?VER=20.01.2018"></script>
-                            <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>
-<!--                                <script type="text/javascript" src="https://content.jwplatform.com/libraries/kTgFQviI.js"></script>-->
+                                <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.js?VER=20.01.2018"></script>
+                                <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.html5.js?VER=20.01.2018"></script>
+                                <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>
+    <!--                                <script type="text/javascript" src="https://content.jwplatform.com/libraries/kTgFQviI.js"></script>-->
                                 <input type="hidden" id="auto_next" value="1" />
                                 <input type="hidden" id="curr_learn_id" value="<?php echo $curr_id; ?>" />
                                 <?php $this->session->set_tempdata('is_playable', $curr_id, 3600); ?>
@@ -186,7 +157,7 @@
                         }
                         ?>" alt="" class="img-circle img-responsive avatar" />
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8" data-step="4" data-intro="Bạn có thể để lại comment ở đây">
                         <div class="form-group">
                             <label for="">Tiêu đề</label>
                             <input type="text" class="form-control" id="content_cmt" style="padding: 23px 12px;" placeholder="Nhập nội dung tiêu đề cần thảo luận">
@@ -219,7 +190,7 @@
         <div class="col-md-4">
             <div role="tabpanel" class="panel">
                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
+                <ul class="nav nav-tabs" role="tablist" data-step="2" data-intro="Các tương tác bạn nên chú ý">
                     <li role="presentation" class="active">
                         <a href="#dsbaihoc" aria-controls="home" role="tab" data-toggle="tab">
                             <i class="fa fa-list" aria-hidden="true"></i></br>
@@ -246,7 +217,7 @@
                     </li>
                 </ul>
                 <!-- Tab panes -->
-                <div class="tab-content">
+                <div class="tab-content" data-step="3" data-intro="Chọn bài học trong Danh sách sau">
                     <div role="tabpanel" class="tab-pane active" id="dsbaihoc">
                         <?php foreach ($chapter as $key => $value) { ?>
                             <p class="category"><?php echo $value['name']; ?></p>
@@ -593,4 +564,3 @@ if ($trial_learn == 1) {
     </a>
     <?php
 }
-    

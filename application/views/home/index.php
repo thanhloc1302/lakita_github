@@ -41,11 +41,7 @@ $(document).ready( function(){
 <?php if (!$this->agent->is_mobile()) { ?>
     <hr class="hidden-xs">
 <?php } ?>
-<?php
-//if ($this->agent->is_mobile()) {
-//    $this->load->view('mobile/navbar');
-//}
-?>
+
 <div class="row my-row-1">
     <p class="top-course"> <strong> CÁC KHÓA HỌC HÀNG ĐẦU CỦA LAKITA </strong></p>
     <p> Hãy chọn cho mình một khóa học, tôi tin bạn sẽ hài lòng </p>
@@ -220,9 +216,7 @@ $(document).ready( function(){
         <?php } ?>
     </div>
 </div>
-<?php
-// $this->load->view('home/popup_tang_sub');
-?>
+
 
 
 
