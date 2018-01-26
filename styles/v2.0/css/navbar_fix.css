@@ -55,7 +55,9 @@ a, a:hover, a:visited {
     color: #fff;
     margin-top: 20px; }
   .navbar .nav-tutorial {
-    margin-top: 18px; }
+    font-family: RobotoCondensed-Regular;
+    margin-top: 18px;
+    background-color: #ffff8a; }
   .navbar .navbar-text {
     color: #fff;
     margin-right: 21px; }
@@ -95,6 +97,8 @@ a, a:hover, a:visited {
   border: 1px solid #ffffff;
   opacity: 0.9; }
   .button-login:hover {
+    background: #187533;
+    color: #FFF;
     opacity: 1;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
   .button-login a {

@@ -28,9 +28,7 @@ $(function () {
     var d = new Date();
     $(".fullyear").text(d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear());
     $("a[href^='#']").click(function () {
-        var url = window.location.href;
         var idDiv = $(this).attr("href").substr(1, $(this).attr("href").length);
-        var sizeEnough = $(window).height() - $('#' + idDiv).height();
         $('html,body').animate({
             scrollTop: $($(this).attr("href")).offset().top - ($(window).height() - $('#' + idDiv).height())
         }, 1000);

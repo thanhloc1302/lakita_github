@@ -238,7 +238,7 @@ $rs = json_decode($result);
                             <div class="lp-show-image" alt="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/laptop-full-1513826762.png"></div>
                             <div class="lp-show-image"></div>
                             <div id="YOUTUBE388" class="widget-element widget-snap" lp-type="videoyoutube" lp-lang="YOUTUBE" lp-autoplay="0" lp-display="block">
-                                <iframe class="widget-content" src="https://www.youtube.com/embed/bIGjLJTQXq0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+                                <iframe class="widget-content" src="https://www.youtube.com/embed/y6Uwpu2Gw28?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
                                 <div class="ladi-widget-overlay"></div>
                             </div>
                         </div>
@@ -722,7 +722,7 @@ $rs = json_decode($result);
                                 <input class="widget-content" type="tel" pattern="((\+[1-9]{1,4}[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9 \-]{6,15}?$" required="required" placeholder="Nhập Số điện thoại" name="phone" lp-label="Điện thoại" lp-name-id="phone">
                             </div>
                             <div id="ITEM_FORM351" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
-                                <input class="widget-content" type="text" placeholder="Nhập địa chỉ" name="street" lp-label="Địa chỉ" lp-name-id="street" required="required">
+                                <input class="widget-content" type="text" placeholder="Nhập địa chỉ" name="dia_chi" lp-label="Địa chỉ" lp-name-id="street" required="required">
                             </div>
                             <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
                             <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />

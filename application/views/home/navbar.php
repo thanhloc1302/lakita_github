@@ -106,7 +106,7 @@
                 </li>
                 <li>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <button id="flexi_form_start" type="button" class="btn btn-default navbar-btn nav-tutorial">
+                    <button id="flexi_form_start" type="button" class="btn navbar-btn nav-tutorial">
                         <i  class="fa" aria-hidden="true" href="javascript:void(0);"><img src="https://media.kyna.vn/img/tutorial.png"> &nbsp;<b>Hướng Dẫn</b></i>
                     </button>
                     &nbsp;&nbsp;&nbsp;&nbsp;

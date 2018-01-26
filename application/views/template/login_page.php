@@ -58,7 +58,7 @@
                             <i class="fa fa-google-plus" aria-hidden="true"></i> &nbsp; Google+ </a>
                     </div>
                     <div class="col-md-4 hidden-xs pull-right">
-                        <button id="flexi_form_start" class="btn btn-default btn-tutorial" >
+                        <button id="flexi_form_start" class="btn btn-tutorial" >
                             <a class="" style="" href="javascript:void(0);"><img src="https://media.kyna.vn/img/tutorial.png">
                                 <b style="color: black"> &nbsp;Hướng Dẫn</b>
                             </a>
