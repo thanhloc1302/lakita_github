@@ -40,6 +40,7 @@ $rs = json_decode($result);
         <script src="https://use.fontawesome.com/0b216c5f11.js"></script>
 
         <script src="<?php echo base_url(); ?>public/my.js?ver=<?php echo _VER_CACHED_ ?>" type="text/javascript"></script>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
 
 
 
@@ -335,9 +336,9 @@ $rs = json_decode($result);
                                 <div class="col-md-8 col-sm-12 col-xs-12">
                                     <p> <i class="fa fa-check" aria-hidden="true"></i>  Kế toán Trưởng tại công ty 100% vốn của Pháp tại Hà Nội </p>
                                     <p> <i class="fa fa-check" aria-hidden="true"></i>  Đã có hơn 6 năm kinh nghiệm trong lĩnh vực kế toán, 
-                        đã đi qua những công việc của Kế toán viên, 
-                        kế toán tổng hợp và đang là Kế toán trưởng tại công ty TNHH Geroc – công ty 100% vốn của Pháp tại Việt Nam. 
-                        Cung cấp dịch vụ tư vấn đầu tư cho các Tập đoàn nước ngoài vào Việt Nam </p>
+                                        đã đi qua những công việc của Kế toán viên, 
+                                        kế toán tổng hợp và đang là Kế toán trưởng tại công ty TNHH Geroc – công ty 100% vốn của Pháp tại Việt Nam. 
+                                        Cung cấp dịch vụ tư vấn đầu tư cho các Tập đoàn nước ngoài vào Việt Nam </p>
                                 </div>
                             </div>
                         </div>
@@ -347,7 +348,7 @@ $rs = json_decode($result);
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-3 col-sm-4 col-md-offset-1 text6">
                 <img src="<?php echo base_url() ?>public/combo-tet/img/nhu.png" width="100%" height="100%" style="cursor: pointer" data-toggle="modal" data-target="#NhungPT">
                 <p>Giảng viên</p>
@@ -685,10 +686,10 @@ $rs = json_decode($result);
 
 
     <script>
-    $(".cb").on('click',function(){
-        var cb = $(this).attr('combo');
-        $("#select_combo").val(cb);
-    });
+        $(".cb").on('click', function () {
+            var cb = $(this).attr('combo');
+            $("#select_combo").val(cb);
+        });
     </script>
 </body>
 </html>

@@ -1,6 +1,9 @@
 <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/login_page.css?ver=<?php echo _VER_CACHED_ ?>" />
 <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/introjs.css"/>
 <script src="<?php echo base_url(); ?>styles/v2.0/js/intro.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/datepicker.css" />
+<script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/bootstrap-datepicker.js"></script>
+
 <div class="header row" style="font-family: roboto;">
     <div class="container">
         <div class="col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
@@ -71,7 +74,7 @@
                     <div class="col-md-12 pull-left">
                         <h1 style="display: inline-block">Đăng ký</h1> 
                     </div>
-                    <div class="col-md-8 col-sm-12 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="form-register" style="margin-left: -15px;margin-top: 10px;">
                             <div class="form-group col-md-12">
                                 <input type="text" style="height: 40px;" class="form-control" name="name" id="signup_name" placeholder="Họ và tên">
@@ -83,6 +86,9 @@
                                 <input type="phone" style="height: 40px;" class="form-control" name="phone" id="signup_phone" placeholder="Số điện thoại">
                             </div>
                             <div class="form-group col-md-12">
+                                <input type="text" style="height: 40px;" class="form-control" name="dob" id="signup_dob" data-date-format="dd/mm/yyyy" placeholder="Ngày sinh">
+                            </div>
+                            <div class="form-group col-md-12">
                                 <input type="password" style="height: 40px;" class="form-control" name="password" id="signup_password" placeholder="Nhập mật khẩu">
                             </div>
                             <div class="form-group col-md-12">
@@ -90,7 +96,6 @@
                             </div>
                         </div><br>
                     </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12"></div>
                     <div class="col-md-12 col-sm-12 col-xs-12 padding0">
                         <p>Bằng cách nhấp vào Tạo tài khoản, bạn đồng ý với <a class="lakita" data-toggle="modal" href="#modal-terms" style="color: #2c944a"> Điều khoản & dịch vụ </a> của chúng tôi</p>
                         <?php $this->load->view('home/terms'); ?>
@@ -144,6 +149,10 @@
 
     </div>
     <script type="text/javascript">
+        $(function () {
+        $('#signup_dob').datepicker();
+    });
+        
         $('#flexi_form_start').click(function () {
             introJs().start().oncomplete(function () {
             }).onexit(function () {
