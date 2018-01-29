@@ -247,7 +247,7 @@
              style="cursor: pointer; background-size: contain; width: 506px;">
             <button onclick="close_modal();" type="button" style="position: absolute;right: 0;padding: 0px;"> 
                 <img src="https://cdn3.iconfinder.com/data/icons/line/36/cancel-512.png" style="width: 20px;"> </button>
-            <img style="width: 100%" src="https://lakita.vn/styles/v2.0/img/event/popup.png?ver=<?php echo time(); ?>">
+                <a target="_blank" href="https://lakita.vn/combo-qua-khung-tet-nguyen-dan.html"> <img style="width: 100%" src="https://lakita.vn/styles/v2.0/img/event/popup.png?ver=<?php echo time(); ?>"> </a>
         </div>
     </div>
 </div>

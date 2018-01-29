@@ -257,7 +257,7 @@
     <div>
         <div class="owl-carousel owl-theme slider">
             <div class="img-slider">
-                <a href="https://lakita.vn/combo-qua-khung-dip-giang-sinh.html" target="_blank">
+                <a href="https://lakita.vn/combo-qua-khung-tet-nguyen-dan.html" target="_blank">
                     <picture>
                         <source srcset="styles/v2.0/img/banner/banner-tet-ipad.png" media="(max-width: 700px)">
                         <source srcset="styles/v2.0/img/banner/banner-tet-mobile.png" media="(max-width: 450px)">

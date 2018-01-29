@@ -769,7 +769,7 @@ $rs = json_decode($result);
                                                 <input class="widget-content" type="tel" pattern="((\+[1-9]{1,4}[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9 \-]{6,15}?$" required="required" placeholder="Nhập Số điện thoại" name="phone" lp-label="Điện thoại">
                                             </div>
                                             <div id="ITEM_FORM444" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
-                                                <input class="widget-content" type="text" placeholder="Nhập địa chỉ" name="street" lp-label="Địa chỉ" lp-name-id="street" required="required">
+                                                <input class="widget-content" type="text" placeholder="Nhập địa chỉ" name="dia_chi" lp-label="Địa chỉ" lp-name-id="street" required="required">
                                             </div>
                                             <input type="hidden" value="lakita.vn@gmail.com" name="email" />
                                             <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />

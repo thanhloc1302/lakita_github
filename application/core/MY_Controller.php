@@ -6,6 +6,7 @@ class MY_Controller extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        //echo time(); die;
         $this->load->helper('cookie');
         $user_id = $this->session->userdata('user_id');
         $token = $this->session->userdata('token');
