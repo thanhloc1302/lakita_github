@@ -24,13 +24,14 @@ jQuery(function () {
     });
 
     function action_process(this_click)
-    {
+    {   
         var url = '';
         var login_email = '';
         var login_password = '';
         var signup_name = '';
         var signup_email = '';
         var signup_phone = '';
+        var signup_dob = '';
         var signup_password = '';
         var signup_repassword = '';
         var is_remember = '';
@@ -95,8 +96,11 @@ jQuery(function () {
             signup_name = jQuery("#signup_name").val();
             signup_email = jQuery("#signup_email").val();
             signup_phone = jQuery("#signup_phone").val();
+            signup_dob = jQuery("#signup_dob").val();
             signup_password = jQuery("#signup_password").val();
             signup_repassword = jQuery("#signup_repassword").val();
+
+            
 
             if (signup_name == '')
             {
@@ -168,6 +172,28 @@ jQuery(function () {
             {
                 $.alert({
                     title: 'Bạn phải nhập số điện thoại',
+                    content: 'Mời bạn nhập lại',
+                    theme: 'material',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                        tryAgain: {
+                            text: 'Thử lại',
+                            btnClass: 'btn-red',
+                            action: function () {
+                            }
+                        },
+                        close: function () {
+                        }
+                    }
+                });
+                return;
+            }
+            
+            if (signup_dob == '')
+            {
+                $.alert({
+                    title: 'Hãy chọn ngày sinh',
                     content: 'Mời bạn nhập lại',
                     theme: 'material',
                     type: 'red',
@@ -288,6 +314,7 @@ jQuery(function () {
                 signup_name: signup_name,
                 signup_email: signup_email,
                 signup_phone: signup_phone,
+                signup_dob: signup_dob,
                 signup_password: signup_password,
                 signup_repassword: signup_repassword,
                 is_remember: is_remember,

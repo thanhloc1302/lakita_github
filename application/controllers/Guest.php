@@ -118,7 +118,7 @@ class Guest extends MY_Controller {
                 if ($this->input->post('is_remember') == '1') {
                     $this->load->helper('cookie');
                     $randStr = sha1(md5(time(). $this->session->userdata('user_name') . '6f12d7e322d7e0424952150ab~!@#`>?:"<'));
-                    $year = 92536000;
+                    $year = time() + 92536000;
                     set_cookie('tk_lkt_n', $randStr, $year);
                     $this->load->model('remember_login_model');
                     $insert = array(
@@ -149,9 +149,10 @@ class Guest extends MY_Controller {
         $username = trim($this->input->post('signup_name'));
         $email = trim($this->input->post('signup_email'));
         $phone = trim($this->input->post('signup_phone'));
+        $dob = trim($this->input->post('signup_dob'));
         $password = trim($this->input->post('signup_password'));
         $repassword = trim($this->input->post('signup_repassword'));
-
+        
         $success = 1;
         $error = 1;
 
@@ -199,6 +200,7 @@ class Guest extends MY_Controller {
             'email' => htmlspecialchars($email),
             'phone' => $phone,
             'password' => md5(md5($password)),
+            'birthday' => strtotime($dob),
             'createdate' => time(),
             'balance' => 0,
             'contact_cc_call' => 1

@@ -40,6 +40,7 @@ $rs = json_decode($result);
         <script src="https://use.fontawesome.com/0b216c5f11.js"></script>
 
         <script src="<?php echo base_url(); ?>public/my.js?ver=<?php echo _VER_CACHED_ ?>" type="text/javascript"></script>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
 
 
 
@@ -188,7 +189,7 @@ $rs = json_decode($result);
                     </div>
                 </div>
                 <div>
-                    <a href="#e_form_submit"><button type="button" class="btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a></div>
+                    <a href="#e_form_submit"><button type="button" combo="Combo1" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a></div>
             </div>
 
             <div class="col-md-3 col-sm-6 col-md-offset-2">
@@ -199,7 +200,7 @@ $rs = json_decode($result);
                     <strike style="font-size: 30px;">840.000Đ</strike><br>
                     <spam style="font-size: 20px;">chỉ còn</spam><br><span style="color: #e4ff00;font-size: 30px;">645.000Đ</span>
                 </div>
-                <a href="#e_form_submit"><button type="submit" class="btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
+                <a href="#e_form_submit"><button type="submit" combo="Combo2" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
             </div>
 
         </div>
@@ -222,7 +223,7 @@ $rs = json_decode($result);
                     <spam style="font-size: 20px;">chỉ còn</spam><br><span style="color: #e4ff00;font-size: 30px;">645.000Đ</span>
 
                 </div>
-                <a href="#e_form_submit"><button type="submit" class="btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3"  style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
+                <a href="#e_form_submit"><button type="submit" combo="Combo3" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3"  style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
             </div>
 
             <div class="col-md-3 col-sm-6 col-md-offset-1 ">
@@ -234,7 +235,7 @@ $rs = json_decode($result);
                     <spam style="font-size: 20px;">chỉ còn</spam><br><span style="color: #e4ff00;font-size: 30px;">645.000Đ</span>
 
                 </div>
-                <a href="#e_form_submit"><button type="submit" class="btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
+                <a href="#e_form_submit"><button type="submit" combo="Combo4" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
             </div>
 
             <div class="col-md-3 col-sm-6 col-sm-offset-3 col-md-offset-1">
@@ -246,7 +247,7 @@ $rs = json_decode($result);
                     <spam style="font-size: 20px;">chỉ còn</spam><br><span style="color: #e4ff00;font-size: 30px;">645.000Đ</span>
 
                 </div>
-                <a href="#e_form_submit"><button type="submit" class="btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
+                <a href="#e_form_submit"><button type="submit" combo="Combo5" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
             </div>
         </div>
 
@@ -267,7 +268,7 @@ $rs = json_decode($result);
                     <strike style="font-size: 30px;">790.000Đ</strike><br>
                     <spam style="font-size: 20px; ">chỉ còn</spam><br><span style="color: #e4ff00;font-size: 30px;">545.000Đ</span>
                 </div>
-                <a href="#e_form_submit"><button type="submit" class="btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
+                <a href="#e_form_submit"><button type="submit" combo="Combo6" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
             </div>
         </div>
         <div class="col-md-12" style="margin-bottom: 20px"></div>
@@ -334,6 +335,10 @@ $rs = json_decode($result);
                                 </div>
                                 <div class="col-md-8 col-sm-12 col-xs-12">
                                     <p> <i class="fa fa-check" aria-hidden="true"></i>  Kế toán Trưởng tại công ty 100% vốn của Pháp tại Hà Nội </p>
+                                    <p> <i class="fa fa-check" aria-hidden="true"></i>  Đã có hơn 6 năm kinh nghiệm trong lĩnh vực kế toán, 
+                                        đã đi qua những công việc của Kế toán viên, 
+                                        kế toán tổng hợp và đang là Kế toán trưởng tại công ty TNHH Geroc – công ty 100% vốn của Pháp tại Việt Nam. 
+                                        Cung cấp dịch vụ tư vấn đầu tư cho các Tập đoàn nước ngoài vào Việt Nam </p>
                                 </div>
                             </div>
                         </div>
@@ -343,7 +348,7 @@ $rs = json_decode($result);
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-3 col-sm-4 col-md-offset-1 text6">
                 <img src="<?php echo base_url() ?>public/combo-tet/img/nhu.png" width="100%" height="100%" style="cursor: pointer" data-toggle="modal" data-target="#NhungPT">
                 <p>Giảng viên</p>
@@ -589,7 +594,7 @@ $rs = json_decode($result);
                             <input class="form-control" type="text" name="address" value="" placeholder="Nhập địa chỉ">
                         </div>
                         <div class="col-md-12 form-group form-group-lg">
-                            <select class="form-control">
+                            <select id="select_combo" class="form-control">
                                 <option value="#" selected="true">Combo bạn muốn lựa chọn</option>
                                 <option value="Combo1">Combo 1</option>
                                 <option value="Combo2">Combo 2</option>
@@ -680,6 +685,11 @@ $rs = json_decode($result);
     </div>
 
 
-
+    <script>
+        $(".cb").on('click', function () {
+            var cb = $(this).attr('combo');
+            $("#select_combo").val(cb);
+        });
+    </script>
 </body>
 </html>
