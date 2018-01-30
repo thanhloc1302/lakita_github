@@ -122,6 +122,7 @@ $rs = json_decode($result);
                 js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=315347858825221";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
+                <?php include_once("plugin/messenger.php") ?>
     <header class="nav-down">
         <!-- Top Bar -->
         <div class="top">

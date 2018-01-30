@@ -47,7 +47,7 @@ $rs = json_decode($result);
     </style>
 </head>
 <body>
-
+  <?php include_once("plugin/messenger.php") ?>
     <div class="row top">
         <div style="margin-top: 20px">
             <div class="col-md-2 col-xs-2 col-sm-2 col-xs-2 col-sm-2 col-lg-2">
@@ -189,7 +189,9 @@ $rs = json_decode($result);
                     </div>
                 </div>
                 <div>
-                    <a href="#e_form_submit"><button type="button" combo="Combo1" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a></div>
+                    <a href="#e_form_submit"><button type="button" combo="Combo1: Kế toán dành cho người mới bắt đầu và Trọn bộ lập BCTC" 
+                                                     class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" 
+                                                     style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a></div>
             </div>
 
             <div class="col-md-3 col-sm-6 col-md-offset-2">
@@ -200,7 +202,7 @@ $rs = json_decode($result);
                     <strike style="font-size: 30px;">840.000Đ</strike><br>
                     <spam style="font-size: 20px;">chỉ còn</spam><br><span style="color: #e4ff00;font-size: 30px;">645.000Đ</span>
                 </div>
-                <a href="#e_form_submit"><button type="submit" combo="Combo2" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
+                <a href="#e_form_submit"><button type="submit" combo="Combo2: Kế toán dành cho người mới bắt đầu và Quyết toán thuế từ A đến Z" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
             </div>
 
         </div>
@@ -223,7 +225,7 @@ $rs = json_decode($result);
                     <spam style="font-size: 20px;">chỉ còn</spam><br><span style="color: #e4ff00;font-size: 30px;">645.000Đ</span>
 
                 </div>
-                <a href="#e_form_submit"><button type="submit" combo="Combo3" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3"  style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
+                <a href="#e_form_submit"><button type="submit" combo="Combo3: Kế toán thuế từ A đến Z và Trọn bộ lập BCTC" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3"  style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
             </div>
 
             <div class="col-md-3 col-sm-6 col-md-offset-1 ">
@@ -235,7 +237,7 @@ $rs = json_decode($result);
                     <spam style="font-size: 20px;">chỉ còn</spam><br><span style="color: #e4ff00;font-size: 30px;">645.000Đ</span>
 
                 </div>
-                <a href="#e_form_submit"><button type="submit" combo="Combo4" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
+                <a href="#e_form_submit"><button type="submit" combo="Combo4: Kĩ thuật Quyết toán thuế công tác chuẩn bị cho Thanh Tra Thuế, Tối ưu thế và Trọn bộ lập BCTC" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
             </div>
 
             <div class="col-md-3 col-sm-6 col-sm-offset-3 col-md-offset-1">
@@ -247,7 +249,7 @@ $rs = json_decode($result);
                     <spam style="font-size: 20px;">chỉ còn</spam><br><span style="color: #e4ff00;font-size: 30px;">645.000Đ</span>
 
                 </div>
-                <a href="#e_form_submit"><button type="submit" combo="Combo5" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
+                <a href="#e_form_submit"><button type="submit" combo="Combo5: Hướng dẫn kê khai và quyết toán thuế thu nhập cá nhân và Trọn bộ lập BCTC" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
             </div>
         </div>
 
@@ -268,7 +270,7 @@ $rs = json_decode($result);
                     <strike style="font-size: 30px;">790.000Đ</strike><br>
                     <spam style="font-size: 20px; ">chỉ còn</spam><br><span style="color: #e4ff00;font-size: 30px;">545.000Đ</span>
                 </div>
-                <a href="#e_form_submit"><button type="submit" combo="Combo6" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
+                <a href="#e_form_submit"><button type="submit" combo="Combo6: Quyết toán thuế từ A đến Z và Đào tạo kỹ thuật Quyết toán thuế, công tác chuẩn bị cho Thanh Tra Thuế, Tối ưu thuế" class="cb btn btn-danger col-md-6 col-sm-6  col-xs-6 col-md-offset-3 col-ms-offset-3 col-xs-offset-3" style="color: #f4e46d; margin-bottom: 10px; margin-top: 2%">Đăng Kí Ngay</button></a>
             </div>
         </div>
         <div class="col-md-12" style="margin-bottom: 20px"></div>
@@ -594,14 +596,14 @@ $rs = json_decode($result);
                             <input class="form-control" type="text" name="address" value="" placeholder="Nhập địa chỉ">
                         </div>
                         <div class="col-md-12 form-group form-group-lg">
-                            <select id="select_combo" class="form-control">
+                            <select id="select_combo" class="form-control" name="select_combo">
                                 <option value="#" selected="true">Combo bạn muốn lựa chọn</option>
-                                <option value="Combo1">Combo 1</option>
-                                <option value="Combo2">Combo 2</option>
-                                <option value="Combo3">Combo 3</option>
-                                <option value="Combo4">Combo 4</option>
-                                <option value="Combo5">Combo 5</option>
-                                <option value="Combo6">Combo 6</option>
+                                <option value="Combo1: Kế toán dành cho người mới bắt đầu và Trọn bộ lập BCTC">Combo 1</option>
+                                <option value="Combo2: Kế toán dành cho người mới bắt đầu và Quyết toán thuế từ A đến Z">Combo 2</option>
+                                <option value="Combo3: Kế toán thuế từ A đến Z và Trọn bộ lập BCTC">Combo 3</option>
+                                <option value="Combo4: Kĩ thuật Quyết toán thuế công tác chuẩn bị cho Thanh Tra Thuế, Tối ưu thế và Trọn bộ lập BCTC">Combo 4</option>
+                                <option value="Combo5: Hướng dẫn kê khai và quyết toán thuế thu nhập cá nhân và Trọn bộ lập BCTC">Combo 5</option>
+                                <option value="Combo6: Quyết toán thuế từ A đến Z và Đào tạo kỹ thuật Quyết toán thuế, công tác chuẩn bị cho Thanh Tra Thuế, Tối ưu thuế">Combo 6</option>
                             </select>
                         </div>
                         <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />

@@ -8,3 +8,4 @@
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=315347858825221";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
+        <?php include_once("plugin/messenger.php") ?>

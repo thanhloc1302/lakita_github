@@ -69,6 +69,7 @@ $rs = json_decode($result);
                 js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=315347858825221";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
+                <?php include_once("plugin/messenger.php") ?>
         <div class="ladi-wraper-page">
             <div id="SECTION499" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
                 <div class="container">
