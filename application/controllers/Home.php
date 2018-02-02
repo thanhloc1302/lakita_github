@@ -23,16 +23,18 @@ class Home extends MY_Controller {
     function index($page = '') {
         //==========================================================TRANG CHỦ =======================================================
         if (empty($page)) {
+
             $this->load->helper('cookie');
-            if (get_cookie('tk_lkt_n') != '') {
+            $a = get_cookie('tk_lkt_n');
+            if ($a != '') {
                 $this->load->model('remember_login_model');
                 $token = get_cookie('tk_lkt_n');
-                $input = [];
-                $input['where'] = ['token' => $token, 'time <' => time() - 30 * 24 * 3600];
+                $input = array();
+                $input['where'] = ['token' => $token];
                 $uid = $this->remember_login_model->load_all($input);
                 if (!empty($uid)) {
-                    $member = $this->student_model->getUserInfo($uid[0]['uid']);
-                    if (count($member)) {
+                    $member = $this->student_model->load_all(array('where' => array('id' => $uid[0]['uid'])));
+                    if (!empty($member)) {
                         $this->session->set_userdata('user_id', $member[0]['id']);
                         $this->session->set_userdata('user_name', $member[0]['name']);
                     }
@@ -114,7 +116,7 @@ class Home extends MY_Controller {
                     //danh sách các bài học của chương đó
                     $input = [];
                     $input['select'] = 'id, name, sort,  length, slug, trial_learn';
-                    $input['where'] = ['chapter_id' => $value['id'],'status' =>1];
+                    $input['where'] = ['chapter_id' => $value['id'], 'status' => 1];
                     $input['order'] = ['sort' => 'asc'];
                     $learnDetail = $this->learn_model->load_all($input);
                     $data['all_learn'][$key] = $learnDetail;
