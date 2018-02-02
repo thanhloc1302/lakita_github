@@ -5,7 +5,7 @@
         <div id="fb-root"></div>
 
         <div class="fb-customerchat"
-             page_id="872893369492994">
+             page_id="872893369492994" ref="<?php echo current_url(); ?>">
         </div>
 
 <!--        <script>(function (d, s, id) {

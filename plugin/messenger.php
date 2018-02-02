@@ -18,6 +18,6 @@
    }(document, 'script', 'facebook-jssdk'));
 </script> -->
 
-<div class="fb-customerchat"
-     page_id="872893369492994">
-</div>
+<!--<div class="fb-customerchat"
+     page_id="872893369492994" ref="<?php echo current_url();?>">
+</div>-->
