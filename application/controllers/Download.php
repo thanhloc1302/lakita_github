@@ -37,11 +37,11 @@ class Download extends MY_Controller {
                     $this->load->helper('download');
                     force_download(FCPATH . 'public/tai-lieu/theo-doi-dinh-muc-xang-xe-chi-tiet.xlsx', NULL);
                     break;
-                 case 4:
+                case 4:
                     $this->load->helper('download');
                     force_download(FCPATH . 'public/tai-lieu/slide-cach-xac-dinh-chi-phi-hop-ly.rar', NULL);
                     break;
-                 case 5:
+                case 5:
                     $this->load->helper('download');
                     force_download(FCPATH . 'public/tai-lieu/tinh-huong-ke-toan-thuc-te.rar', NULL);
                     break;
@@ -49,15 +49,18 @@ class Download extends MY_Controller {
                     $this->load->helper('download');
                     force_download(FCPATH . 'public/tai-lieu/bo-tai-lieu-yoga.rar', NULL);
                     break;
-                 case 7:
+                case 7:
                     $this->load->helper('download');
                     force_download(FCPATH . 'public/tai-lieu/phu-cap-bao-hiem-xa-hoi.docx', NULL);
                     break;
-                 case 8:
+                case 8:
                     $this->load->helper('download');
                     force_download(FCPATH . 'public/tai-lieu/cac-doi-tuong-bat-buoc-tham-gia-bhxh.docx', NULL);
                     break;
-                
+                case 9:
+                    $this->load->helper('download');
+                    force_download(FCPATH . 'public/tai-lieu/11-dieu-luu-y-de-giam-chi-phi-bhxh.docx', NULL);
+                    break;
             }
             redirect('https://lakita.vn');
         }
