@@ -110,7 +110,7 @@ $rs = json_decode($result);
                     <div class="text-1">
                         <h3>Tết này có gì đặc biệt</h3>
                         <span>Nhân dịp chào đón TẾT NGUYÊN ĐÁN MẬU TUẤT, nhận ngay <b>QUÀ KHỦNG</b> từ LAKITA.<br>
-                            Giảm giá khủng</span> <b>tất cả các khóa học KẾ TOÁN</b> <span>và còn nhiều ưu đái hơn
+                            Giảm giá khủng</span> <b>tất cả các khóa học KẾ TOÁN</b> <span>và còn nhiều ưu đãi hơn
                             khi mua theo combo bất kì!</span>
                     </div>
                 </div>

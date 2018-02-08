@@ -25,21 +25,7 @@ class Home extends MY_Controller {
         if (empty($page)) {
 
             $this->load->helper('cookie');
-            $a = get_cookie('tk_lkt_n');
-            if ($a != '') {
-                $this->load->model('remember_login_model');
-                $token = get_cookie('tk_lkt_n');
-                $input = array();
-                $input['where'] = ['token' => $token];
-                $uid = $this->remember_login_model->load_all($input);
-                if (!empty($uid)) {
-                    $member = $this->student_model->load_all(array('where' => array('id' => $uid[0]['uid'])));
-                    if (!empty($member)) {
-                        $this->session->set_userdata('user_id', $member[0]['id']);
-                        $this->session->set_userdata('user_name', $member[0]['name']);
-                    }
-                }
-            }
+            
             $data = $this->data;
             $data['group_courses'] = $this->lib_mod->load_all('group_courses', 'id,name,slug', array('status' => 1), 5, '', array('sort' => 'asc'));
             $this->load->model('courses_model');
@@ -198,14 +184,14 @@ class Home extends MY_Controller {
 
             //==============================================TRANG HỌC ============================================
             else if ($sub_flag == 4) {
-                $curr = current_url();
-                $uri = substr($curr, strlen(base_url()));
+//                $curr = current_url();
+//                $uri = substr($curr, strlen(base_url()));
 
-                $token = $this->session->userdata('token');
-                redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
-                //redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
-                echo $uri;
-                die;
+//                $token = $this->session->userdata('token');
+//                redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
+//                //redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
+//                echo $uri;
+//                die;
 
 
                 $user_id = $this->session->userdata('user_id');

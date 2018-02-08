@@ -15,11 +15,31 @@ class MY_Controller extends CI_Controller {
             $this->session->set_userdata('token', $token_str);
         }
         if (!isset($user_id)) {
-          //  $this->load->model('facebook_model');
-          //  $this->data['facebook_login_url'] = $this->facebook_model->loginUrl();
+            //  $this->load->model('facebook_model');
+            //  $this->data['facebook_login_url'] = $this->facebook_model->loginUrl();
             $this->data['facebook_login_url'] = 'https://www.facebook.com/v2.11/dialog/oauth?client_id=315347858825221&response_type=code&sdk=php-sdk-5.4.4&redirect_uri=https%3A%2F%2Flakita.vn%2Fguest%2Flogin_via_fb2&scope=email%2Cuser_friends';
             //$user_id = $this->session->userdata('user_id');
+
+            $a = get_cookie('tk_lkt_n');
+            if ($a != '') {
+                $this->load->model('remember_login_model');
+                $token = get_cookie('tk_lkt_n');
+                $input = array();
+                $input['where'] = ['token' => $token];
+                $uid = $this->remember_login_model->load_all($input);
+                if (!empty($uid)) {
+                    $member = $this->student_model->load_all(array('where' => array('id' => $uid[0]['uid'])));
+                    if (!empty($member)) {
+                        $this->session->set_userdata('user_id', $member[0]['id']);
+                        $this->session->set_userdata('user_name', $member[0]['name']);
+                        $user_id = $this->session->userdata('user_id');
+                    }
+                }
+            }
         }
+
+
+
         if (isset($user_id)) {
             $tokenStr = md5(uniqid() . microtime() . rand());
             $this->session->set_userdata('token_video', $tokenStr);
@@ -42,7 +62,7 @@ class MY_Controller extends CI_Controller {
                 redirect($last_page);
             }
             $this->_check_exist_login($user_id);
-           
+
 
             //locnt 
             set_cookie('first_time_login', time(), 92536000);
@@ -78,7 +98,7 @@ class MY_Controller extends CI_Controller {
             }
             //hết locnt
         }
-       
+
         /*
          * Campaign giờ vàng giá sốc
          */
@@ -159,7 +179,7 @@ class MY_Controller extends CI_Controller {
     }
 
     protected function _check_exist_login($id, $load_from_ajax = true) {
-       // return true;
+        // return true;
         // kiểm tra tài khoản có đăng nhập từ máy tính khác không
         $check_watching = $this->lib_mod->load_all('watching_time', 'time, token', array('student_id' => $id), '', '', '');
         //   echo  (!empty($check_watching) && abs($check_watching[0]['time'] - time()) < 60);die;

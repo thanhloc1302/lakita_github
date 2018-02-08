@@ -41,6 +41,7 @@ $route['yoga-danh-cho-nguoi-lam-van-phong-3.html'] = 'landingpage/show/y1003';
 $route['yoga-danh-cho-nguoi-lam-van-phong-4.html'] = 'landingpage/show/y1004';
 $route['yoga-danh-cho-nguoi-lam-van-phong-5.html'] = 'landingpage/show/y1005';
 $route['combo-qua-khung-tet-nguyen-dan.html'] = 'landingpage/show/combo-tet';
+$route['tron-bo-thuc-hanh-ke-toan-tong-hop-tren-phan-mem-excel.html'] = 'landingpage/show/kt250';
 $route['save_c3'] = 'landingpage/save_c3';
 $route['thank-you.html'] = 'landingpage/save_c3';
 $route['(:any)/thank-you.html'] = 'landingpage/save_c3';
