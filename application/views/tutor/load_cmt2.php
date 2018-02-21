@@ -71,6 +71,10 @@
                 <td><span class="lakita"> <?php
                         if (isset($student[0])) {
                             echo $student[0]['name'];
+                            echo '<br>';
+                            echo $student[0]['email'];
+                            echo '<br>';
+                            echo $student[0]['phone'];
                         } else {
                             echo'Không xác định được học viên';
                         }

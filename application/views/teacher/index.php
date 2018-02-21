@@ -6,14 +6,8 @@
     
         </div>-->
     <?php
-    if ($this->agent->is_mobile())
-        $this->load->view('mobile/navbar');
-    else {
-        ?>
-        <div class="header">
-            <?php $this->load->view('home/navbar-teacher'); ?>
-        </div>
-    <?php } ?>
+    $this->load->view('home/navbar');
+    ?>
     <!--form đăng ký-->
     <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
         <div class="modal-dialog modal-lg" role="document">
@@ -235,7 +229,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2"><hr style="border-top: 1px solid #a6a7a7;"></div>
             <div class="clearfix"></div>
             <b style="font-size: 40px">Dành cho Đối tác Nội dung</b>
-            <p class="xam fontlonhon1500">Bạn có phải là trường học, trung tâm hay nhà xuất bản?</p>
+            <p class="xam fontlonhon1500" style="text-align: center">Bạn có phải là trường học, trung tâm hay nhà xuất bản?</p>
 
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 margintop30px">
                 <div>
@@ -278,6 +272,168 @@
 
         <!--nhận xét đánh giá của giảng viên-->
         <div id="nhanxetdanhgia">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margintop30px" style="text-align: center">
+                <p style="font-size: 40px">Nhận xét và Đánh giá</p>
+                <p class="xam margintop-10px marginbot50 can2ben30px" >Giảng viên và Đối tác nói gì về chúng tôi ?</p>
+            </div>
+            <div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+                                    <div class="textcangiua">
+                                        <p class="hidden-sm hidden-xs fontlonhon1500 font20a">Th.S</p>
+                                        <p class="margintop-10px" style="font-size: 25px"><span class="hidden-lg hidden-md">Th.S </span>Nguyễn Danh Tú</p>
+                                        <p class="margintop-10px fontlonhon1500 font20a">Nhà sáng lập BKINDEX GROUP</p>
+                                    </div>
+                                    <p class="margintop30px font20a fontlonhon1500">"Mục đích của tôi từ ngày đầu đi dạy đến giờ vẫn luôn là chia sẻ càng nhiều càng tốt, với nhiều người nhất có thể. Tuy nhiên, dù cố gắng thế nào, tôi cùng không thể tiếp cận được với hàng nghìn người ở khắp mọi vùng miền để chia sẻ kiến thức. Và Lakita đã trở thành cầu nối giúp tôi thực hiện mong ước bấy lâu nay"</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <img class="img img-responsive anhcangiua avatogv" src="<?php echo base_url(); ?>styles/v2.0/img/teacher/avagv1.png">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+                                    <p class="hidden-sm hidden-xs fontlonhon1500 font20a">Giảng viên</p>
+                                    <p class="margintop-10px" style="font-size: 25px"><span class="hidden-lg hidden-md"></span>Phạm Thị Nhung</p>
+                                    <p class="margintop-10px fontlonhon1500 font20a">
+                                        Kế toán tổng hợp tại chi nhánh công ty TNHH Dịch vụ Thực phẩm và Giải khát Cánh Diều Xanh, 
+                                        thuộc tập đoàn Tập đoàn Liên Thái Bình Dương (Imex Pan Pacific Group).</p>
+                                    <p class="margintop30px font20a fontlonhon1500">
+                                        "
+                                        Tôi đã làm việc với Lakita gần 2 năm nay, và hoàn toàn hài lòng. 
+                                        Lakita với một đội ngũ nhân viên nhiệt tình và đầy tâm huyết. 
+                                        Họ đã rất hiểu và nắm bắt được yêu cầu cũng như mong đợi của học viên và giảng viên 
+                                        Khi làm việc với Lakita tôi tin tưởng giao phó mọi nhiệm vụ từ khâu ý tưởng, đến khi thực hiện chương trình giáo án.
+                                        "
+                                    </p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <img class="img img-responsive anhcangiua avatogv" src="<?php echo base_url(); ?>styles/v2.0/img/teacher/nhungpt.png">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+                                    <p class="hidden-sm hidden-xs fontlonhon1500 font20a">Giảng viên </p>
+                                    <p class="margintop-10px" style="font-size: 25px"><span class="hidden-lg hidden-md"> </span>Đinh Hồng Lĩnh</p>
+                                    <p class="margintop-10px fontlonhon1500 font20a">	Trưởng phòng công nghệ thông tin, Tổ hợp công nghệ giáo dục TOPICA</p>
+                                    <p class="margintop30px font20a fontlonhon1500">
+                                        "
+                                        Lakita có 1 đặc điểm mà mình vô cùng nể phục là chuyên nghiệp. Khi mình làm việc với Lakita mình có 
+                                        1 niềm tin rất là vững chắc và chắc chắn Lakita là 1 đơn vị uy tín để mình gắn bó lâu dài.
+                                        Và chính phong cách làm việc chuyên nghiệp của Lakita đã giúp công việc, khóa học online của mình phát triển rất là thuận lợi.
+                                        Cám ơn Lakita! Những người bạn những người cộng sự tuyệt vời.
+                                        "</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <img class="img img-responsive anhcangiua avatogv" src="<?php echo base_url(); ?>styles/v2.0/img/teacher/linhdh.png">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+                                    <div class="textcangiua">
+                                        <p class="hidden-sm hidden-xs fontlonhon1500 font20a">T.S</p>
+                                        <p class="margintop-10px" style="font-size: 25px"><span class="hidden-lg hidden-md">T.S </span>Hoàng Quang Trung</p>
+                                        <p class="margintop-10px fontlonhon1500 font20a">Giám đốc Công ty DV kế toán Việt Nam - VINAFAS</p>
+                                    </div>
+                                    <p class="margintop30px font20a fontlonhon1500">""</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <img class="img img-responsive anhcangiua avatogv" src="<?php echo base_url(); ?>styles/v2.0/img/teacher/avagv1.png">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+                                    <div class="textcangiua">
+                                        <p class="hidden-sm hidden-xs fontlonhon1500 font20a">Kế Toán Trưởng</p>
+                                        <p class="margintop-10px" style="font-size: 25px"><span class="hidden-lg hidden-md">Kế Toán Trưởng </span>Đào Thị Thơ</p>
+                                        <p class="margintop-10px fontlonhon1500 font20a">Kế toán Trưởng tại công ty 100% vốn của Pháp tại Hà Nội</p>
+                                    </div>
+                                    <p class="margintop30px font20a fontlonhon1500">" "</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <img class="img img-responsive anhcangiua avatogv" src="http://lakita.vn/data/source/speaker/thodt1.jpg">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+                                    <div class="textcangiua">
+                                        <p class="hidden-sm hidden-xs fontlonhon1500 font20a">Thầy</p>
+                                        <p class="margintop-10px" style="font-size: 25px"><span class="hidden-lg hidden-md">Thầy </span>Đặng Hùng</p>
+                                        <p class="margintop-10px fontlonhon1500 font20a">Giám đốc học viện Yoga Việt Nam, Ủy viên thường trực hiệp hội Yoga trị liệu Châu Á</p>
+                                    </div>
+                                    <p class="margintop30px font20a fontlonhon1500">" "</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <img class="img img-responsive anhcangiua avatogv" src="<?php echo base_url(); ?>styles/v2.0/img/teacher/avagv1.png">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+                                    <div class="textcangiua">
+                                        <p class="hidden-sm hidden-xs fontlonhon1500 font20a">Chuyên gia</p>
+                                        <p class="margintop-10px" style="font-size: 25px"><span class="hidden-lg hidden-md">Chuyên gia </span>Nguyễn Thị Trang</p>
+                                        <p class="margintop-10px fontlonhon1500 font20a">/  /</p>
+                                    </div>
+                                    <p class="margintop30px font20a fontlonhon1500">" "</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <img class="img img-responsive anhcangiua avatogv" src="http://lakita.vn/data/source/speaker/trang.jpg">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+                                    <div class="textcangiua">
+                                        <p class="hidden-sm hidden-xs fontlonhon1500 font20a">Giảng viên</p>
+                                        <p class="margintop-10px" style="font-size: 25px"><span class="hidden-lg hidden-md">Giảng viên </span>Phạm Văn Học</p>
+                                        <p class="margintop-10px fontlonhon1500 font20a">Chuyên gia kế toán trên Excel</p>
+                                    </div>
+                                    <p class="margintop30px font20a fontlonhon1500">" "</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <img class="img img-responsive anhcangiua avatogv" src="http://lakita.vn/data/source/speaker/19748507_318480435269876_8913814211028710061_n.jpg">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
+                                    <div class="textcangiua">
+                                        <p class="hidden-sm hidden-xs fontlonhon1500 font20a">Giảng viên</p>
+                                        <p class="margintop-10px" style="font-size: 25px"><span class="hidden-lg hidden-md">Giảng viên </span>Nguyễn Biên Cương</p>
+                                        <p class="margintop-10px fontlonhon1500 font20a">CEO - Sáng lập ĐAM MÊ KẾ TOÁN - ĐẠI LÝ THUẾ Uy tín hàng đầu tại Hà Nội - Trung tâm đào tạo kế toán THỰC TẾ CHUYÊN SÂU.</p>
+                                    </div>
+                                    <p class="margintop30px font20a fontlonhon1500">" "</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <img class="img img-responsive anhcangiua avatogv" src="https://lakita.vn/data/source/speaker/23905758_1180273848739295_240002528493401620_n.jpg">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Nav tabs -->
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+<!--        <div id="nhanxetdanhgia">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margintop30px" style="text-align: center">
                 <p style="font-size: 40px">Nhận xét và Đánh giá</p>
                 <p class="xam margintop-10px marginbot50 can2ben30px" >Giảng viên và Đối tác nói gì về chúng tôi ?</p>
@@ -335,7 +491,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Nav tabs -->
+                 Nav tabs 
                 <div class="col-lg-1 col-md-2 col-sm-12 col-xs-12 margintop-10px" >
                     <ul class="nav nav-tabs batapavagv cantop10px" role="tablist" style="border: none">
                         <li class="active">
@@ -359,7 +515,7 @@
                     </ul>
                 </div>  
             </div>
-        </div>
+        </div>-->
 
         <div class="clearfix"></div>
 
@@ -367,45 +523,45 @@
         <div id="quytrinhtaokhoahoc">
             <div style="text-align: center">
                 <p class="can2ben30px" style="font-size: 40px; padding-top: 40px">Quy trình Tạo khóa học</p>
-                <p class="xam can2ben30px fontlonhon1500">Chia sẻ tri thức không hề dễ dàng. Chúng tôi làm mọi thứ đơn giản nhất có thể</p>
+                <p class="xam can2ben30px fontlonhon1500" style="text-align: center">Chia sẻ tri thức không hề dễ dàng. Chúng tôi làm mọi thứ đơn giản nhất có thể</p>
             </div>
             <div class="clearfix"></div>
             <div class="col-lg-2 col-md-2 col-sm-4 nenxam">
                 <img class="img img-responsive anhcangiua margintop30px" src="<?php echo base_url(); ?>styles/v2.0/img/teacher/icon7.png">
                 <span class="glyphicon glyphicon-chevron-right hidden-sm hidden-xs iconmuiten" aria-hidden="true"></span>
                 <p class="textgiua margintop10px quytrinh">Đăng ký</p>
-                <p class="textgiua can2ben15px fontlonhon1500">Đăng ký để bật tính năng Giảng viên / Đối tác nội dung. Rất đơn giản, bạn chỉ cần cung cấp một số thông tin, chúng tôi sẽ phản hồi trong vòng 3 ngày làm việc.</p>
+                <p class="can2ben15px fontlonhon1500">Đăng ký để bật tính năng Giảng viên / Đối tác nội dung. Rất đơn giản, bạn chỉ cần cung cấp một số thông tin, chúng tôi sẽ phản hồi trong vòng 3 ngày làm việc.</p>
 
             </div>
             <div class="col-lg-2 col-md-2 col-sm-4 nenxam">
                 <img class="img img-responsive anhcangiua margintop30px" src="<?php echo base_url(); ?>styles/v2.0/img/teacher/icon8.png">
                 <span class="glyphicon glyphicon-chevron-right hidden-sm hidden-xs iconmuiten" aria-hidden="true"></span>
                 <p class="textgiua margintop10px quytrinh">Soạn bài</p>
-                <p class="textgiua can2ben15px fontlonhon1500">Chia sẻ những gì bạn biết. Truyền đạt những điều bạn đam mê. Hãy bắt đầu với những chủ đề ưa thích của bạn và soạn bài dựa trên kinh nghiệm đó.</p>
+                <p class="can2ben15px fontlonhon1500">Chia sẻ những gì bạn biết. Truyền đạt những điều bạn đam mê. Hãy bắt đầu với những chủ đề ưa thích của bạn và soạn bài dựa trên kinh nghiệm đó.</p>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-4 nenxam">
                 <img class="img img-responsive anhcangiua margintop30px" src="<?php echo base_url(); ?>styles/v2.0/img/teacher/icon9.png">
                 <span class="glyphicon glyphicon-chevron-right hidden-sm hidden-xs iconmuiten" aria-hidden="true"></span>
                 <p class="textgiua margintop10px quytrinh">Làm phim</p>
-                <p class="textgiua can2ben15px fontlonhon1500">Videos chiếm đến 90% thời lượng nội dung số. Vì vậy bạn nên biết cách quay phim và làm phim. Hoặc ít nhất là biết diễn tự nhiên trước ống kính. Phần còn lại, chúng tôi có thể giúp.</p>
+                <p class="can2ben15px fontlonhon1500">Videos chiếm đến 90% thời lượng nội dung số. Vì vậy bạn nên biết cách quay phim và làm phim. Hoặc ít nhất là biết diễn tự nhiên trước ống kính. Phần còn lại, chúng tôi có thể giúp.</p>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-4 nenxam">
                 <img class="img img-responsive anhcangiua margintop30px" src="<?php echo base_url(); ?>styles/v2.0/img/teacher/icon10.png">
                 <span class="glyphicon glyphicon-chevron-right hidden-sm hidden-xs iconmuiten" aria-hidden="true"></span>
                 <p class="textgiua margintop10px quytrinh">Tạo khóa học</p>
-                <p class="textgiua can2ben15px fontlonhon1500">Dễ dàng tải lên các video bài giảng, hội thảo, nội dung, hình ảnh, câu hỏi, tài liệu để tạo khóa học nền tảng của Lakita.</p>
+                <p class="can2ben15px fontlonhon1500">Dễ dàng tải lên các video bài giảng, hội thảo, nội dung, hình ảnh, câu hỏi, tài liệu để tạo khóa học nền tảng của Lakita.</p>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-4 nenxam">
                 <img class="img img-responsive anhcangiua margintop30px" src="<?php echo base_url(); ?>styles/v2.0/img/teacher/icon11.png">
                 <span class="glyphicon glyphicon-chevron-right hidden-sm hidden-xs iconmuiten" aria-hidden="true"></span>
                 <p class="textgiua margintop10px quytrinh">Xuất bản</p>
-                <p class="textgiua can2ben15px fontlonhon1500">Sau khi được phê duyệt, nội dung của bạn sẽ được xuất bản và truy cập trên mọi thiết bị, ở bất kỳ đâu. Chúng tôi sẽ lo các vấn đề hạ tầng, thanh toán, quy trình. Bạn chỉ cần chăm sóc học viên và chăm chút nội dung của mình.</p>
+                <p class="can2ben15px fontlonhon1500">Sau khi được phê duyệt, nội dung của bạn sẽ được xuất bản và truy cập trên mọi thiết bị, ở bất kỳ đâu. Chúng tôi sẽ lo các vấn đề hạ tầng, thanh toán, quy trình. Bạn chỉ cần chăm sóc học viên và chăm chút nội dung của mình.</p>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-4 nenxam">
                 <img class="img img-responsive anhcangiua margintop30px" src="<?php echo base_url(); ?>styles/v2.0/img/teacher/icon12.png">
                 <span style="color:#f3f1f1" class="glyphicon glyphicon-chevron-right hidden-sm hidden-xs iconmuiten" aria-hidden="true"></span>
                 <p class="textgiua margintop10px quytrinh">Thu nhập</p>
-                <p class="textgiua can2ben15px fontlonhon1500">Tạo ra nguồn thu nhập mới, xây dựng thương hiệu cá nhân, trong khi vẫn truyền cảm hứng và chia sẻ tri thức có thể giúp thay đổi cuộc sống của biết bao người.</p>
+                <p class="can2ben15px fontlonhon1500">Tạo ra nguồn thu nhập mới, xây dựng thương hiệu cá nhân, trong khi vẫn truyền cảm hứng và chia sẻ tri thức có thể giúp thay đổi cuộc sống của biết bao người.</p>
             </div>
             <div class="clearfix" style="padding-bottom: 50px"></div>
         </div>
@@ -478,7 +634,7 @@
         <!--footer-->
         <div id="footer">
             <b class="paddingtop40 font40">Bạn đã sẵn sàng ?</b>
-            <p class="xam fontlonhon1500">Bắt đầu xẻ chia tri thức ngay hôm nay.</p>
+            <p class="xam fontlonhon1500" style="text-align: center">Bắt đầu xẻ chia tri thức ngay hôm nay.</p>
 
             <button type="button" class=" btdangky margintop40px" data-toggle="modal" data-target=".bs-example-modal-lg" style="padding: 13px 40px;">
                 Đăng ký ngay

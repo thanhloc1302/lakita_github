@@ -106,6 +106,9 @@ $route['tri-an-hoc-vien-(:num).html'] = 'news/index/$1';
 $route['nhan-qua-tang.html'] = 'student/active_special_cod';
 $route['tai-ve.html/(:any)'] = 'course/download/$1';
 $route['tai-bai-chua.html/(:any)'] = 'student2/studying/download2/$1';
+
+$route['dang-phat-trien.html']='home/dangphattrien';
+
 $route['(:any).html'] = "home/index/$1";
 
 $route['default_controller'] = 'home';

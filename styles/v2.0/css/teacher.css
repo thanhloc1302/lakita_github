@@ -2,16 +2,16 @@
 @font-face{
     font-family: UTM Helve;
     src:    url('../fonts/UTM-Helve.ttf') format('truetype'),
-            url('../fonts/UTM-HelveBold.ttf') format('truetype')
+        url('../fonts/UTM-HelveBold.ttf') format('truetype')
 }
 b{
-    font-family: UTM Helve;
+    font-family: RobotoCondensed-Regular;;
 }
 p{
-    font-family: UTM Helve;
+    font-family: RobotoCondensed-Regular;;
 }
 span{
-    font-family: UTM Helve;
+    font-family: RobotoCondensed-Regular;;
 }
 .chutrang:hover{
     color: #FFF
@@ -47,7 +47,7 @@ span{
     z-index: 5;
     width: 100%;
     margin-top: 500px;
-    
+
 }
 
 
@@ -109,15 +109,15 @@ span{
 
 #header{
     width: 100%;
-    
+
     height: 644px;
     background-image:url(../img/teacher/header.png); 
-/*    background-size: cover;*/
-    
+    /*    background-size: cover;*/
+
 }
 
 .fontlonhon1500{
-    
+text-align: justify
 }
 
 .font20{
@@ -129,21 +129,23 @@ span{
 }
 @media (min-width:1500px) and (max-width:2000px){
     #header{
-    width: 100%;
-    height: auto;
-    background-image:url(../img/teacher/header.png); 
-    background-size: cover;
-    height: 800px;
+        width: 100%;
+        height: auto;
+        background-image:url(../img/teacher/header.png); 
+        background-size: cover;
+        height: 800px;
     }
     #hoptac{
         font-size: 30px;
         font-family: UTM Helve;
     }
     #gioithieulakita{
-        font-size: 20px
+        font-size: 20px;
+        text-align: justify
     }
     .fontlonhon1500{
-        font-size: 23px
+        font-size: 23px;
+        text-align: justify
     }
     .font20{
         font-size: 20px
@@ -152,27 +154,32 @@ span{
 
 @media (min-width:2001px){
     #header{
-    width: 100%;
-    height: auto;
-    background-image:url(../img/teacher/header.png); 
-    background-size: cover;
-    height: 850px;
+        width: 100%;
+        height: auto;
+        background-image:url(../img/teacher/header.png); 
+        background-size: cover;
+        height: 850px;
     }
     #hoptac{
         font-size: 35px;
         font-family: UTM Helve;
     }
     #gioithieulakita{
-        font-size: 25px
+        font-size: 25px;
+        text-align: justify
     }
     .fontlonhon1500{
-        font-size: 28px
+        font-size: 28px;
+        text-align: justify
     }
     .font20{
         font-size: 29px
     }
 }
 
+ #gioithieulakita{
+        text-align: justify
+    }
 
 .intro1{
     text-align: center;
@@ -185,7 +192,7 @@ span{
 
 @media (max-width:500px){
     .intro1 b{
-    font-size: 20px;
+        font-size: 20px;
     }
 }
 
@@ -195,7 +202,7 @@ span{
 
 @media (max-width:400px){
     .intro1 p{
-    padding: 2em 1em;
+        padding: 2em 1em;
     }
 }
 
@@ -235,28 +242,28 @@ span{
 }
 
 @media (max-width:991px){
-.margintop40px1{
-    margin-top: 40px;
-}
+    .margintop40px1{
+        margin-top: 40px;
+    }
 }
 @media (min-width:1285px) and (max-width:1586px){
-.margintop40px1{
-    margin-top: 40px;
-}
+    .margintop40px1{
+        margin-top: 40px;
+    }
 }
 
 
 @media (min-width:992px) and (max-width:1284px){
     .textmargintop40px1{
         margin-top: 0px;
-        
+
     }
 }
 
 @media (min-width:1153px) and (max-width:1429px){
     .margintop40px{
         margin-top: 40px;
-        
+
     }
 }
 
@@ -270,38 +277,38 @@ span{
 
 @media (min-width:720px) and (max-width:991px){
     #nhanxetdanhgia{
-    background-color: #1c1f25;
-    color: #FFF;
-    width: 100%;
-    height: 950px;
-}
+        background-color: #1c1f25;
+        color: #FFF;
+        width: 100%;
+        height: 950px;
+    }
 }
 
 @media (min-width:480px) and (max-width:719px){
     #nhanxetdanhgia{
-    background-color: #1c1f25;
-    color: #FFF;
-    width: 100%;
-    height: 1000px;
-}
+        background-color: #1c1f25;
+        color: #FFF;
+        width: 100%;
+        height: 1000px;
+    }
 }
 
 @media (min-width:370px) and (max-width:479px){
     #nhanxetdanhgia{
-    background-color: #1c1f25;
-    color: #FFF;
-    width: 100%;
-    height: 1100px;
-}
+        background-color: #1c1f25;
+        color: #FFF;
+        width: 100%;
+        height: 1100px;
+    }
 }
 
 @media (min-width:200px) and (max-width:369px){
     #nhanxetdanhgia{
-    background-color: #1c1f25;
-    color: #FFF;
-    width: 100%;
-    height: 1200px;
-}
+        background-color: #1c1f25;
+        color: #FFF;
+        width: 100%;
+        height: 1200px;
+    }
 }
 
 
@@ -399,14 +406,14 @@ span{
         margin-top: 25px;
     }
 }
-    
+
 @media (min-width:901px ) and (max-width:950px ){
     .batapavagv{
         margin-left:17em ;
         margin-top: 25px;
     }
 }
-    
+
 @media (min-width:951px ) and (max-width:991px ){
     .batapavagv{
         margin-left:19em ;
@@ -527,7 +534,7 @@ span{
 }
 
 .nenxam{
-     background-color: #f3f1f1;
+    background-color: #f3f1f1;
 }
 
 @media (min-width:1453px){
@@ -585,7 +592,7 @@ span{
         width: 100%;
         height: 700px;
         text-align: center;
-        
+
     }
 }
 
@@ -625,12 +632,12 @@ span{
 
 
 @media (max-width:469px){
-.vitrirelative{
-    position: relative;
-}
-.vitriabsolute{
-    position: absolute;
-}
+    .vitrirelative{
+        position: relative;
+    }
+    .vitriabsolute{
+        position: absolute;
+    }
 }
 
 @media (max-width:991px){

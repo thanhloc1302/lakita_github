@@ -8886,7 +8886,7 @@ $rs = json_decode($result);
                             <div id="HEADLINE232" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                                 <h3 class="widget-content" lp-node="h3">KHÓA HỌC PHÙ HỢP VỚI</h3>
                             </div>
-                            <a id="BUTTON229" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table" lp-action-link="SECTION174" lp-action-type="page" lp-target="" href="">
+                            <a id="BUTTON229" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table" lp-action-link="SECTION174" lp-action-type="page" lp-target="" href="#e_form_submit">
                                 <span class="widget-content">ĐĂNG KÝ NGAY</span>
                             </a>
                             <div id="HEADLINE445" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
@@ -9853,7 +9853,7 @@ $rs = json_decode($result);
                             </div>
                             <div id="GROUP188" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
                                 <div class="widget-content">
-                                    
+
                                     <div id="FORM190" class="widget-element widget-snap" lp-type="contact_form" lp-lang="FORM" lp-vt-item="[{&quot;id&quot;:&quot;ITEM_FORM191&quot;,&quot;vt&quot;:0,&quot;name&quot;:&quot;name&quot;,&quot;valueName&quot;:&quot;name&quot;,&quot;$$hashKey&quot;:&quot;object:8880&quot;},{&quot;id&quot;:&quot;ITEM_FORM192&quot;,&quot;vt&quot;:1,&quot;name&quot;:&quot;email&quot;,&quot;valueName&quot;:&quot;email&quot;,&quot;$$hashKey&quot;:&quot;object:8881&quot;},{&quot;id&quot;:&quot;ITEM_FORM193&quot;,&quot;vt&quot;:2,&quot;name&quot;:&quot;phone&quot;,&quot;valueName&quot;:&quot;phone&quot;,&quot;$$hashKey&quot;:&quot;object:8882&quot;},{&quot;id&quot;:&quot;ITEM_FORM444&quot;,&quot;vt&quot;:3,&quot;name&quot;:&quot;street&quot;,&quot;valueName&quot;:&quot;street&quot;,&quot;$$hashKey&quot;:&quot;object:8883&quot;}]"
                                          lp-type-form="email" lp-message-form="Cám ơn bạn đã quan tâm" lp-ss-f="[{&quot;name&quot;:&quot;name&quot;,&quot;value&quot;:&quot;name&quot;},{&quot;name&quot;:&quot;email&quot;,&quot;value&quot;:&quot;email&quot;},{&quot;name&quot;:&quot;phone&quot;,&quot;value&quot;:&quot;phone&quot;},{&quot;name&quot;:&quot;street&quot;,&quot;value&quot;:&quot;street&quot;}]"
                                          lp-group="GROUP188" lp-display="block">
@@ -9874,6 +9874,7 @@ $rs = json_decode($result);
                                             <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
                                             <input style="background : #00aeef; color : #FFF; font-weight: bold" id="BUTTON189" class="widget-element widget-snap style-1 ladi-drop LeadPanel_action button radius e_btn_submit reg_bt" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-parent="FORM190" lp-group="GROUP188" lp-display="table" type="submit"  name="submit" value="Đăng ký ngay">
                                         </form>
+                                        <div id="e_form_submit"></div>
                                     </div>
                                 </div>
                             </div>
@@ -9911,7 +9912,7 @@ $rs = json_decode($result);
             }(document, 'script', 'facebook-jssdk'));
         </script>
         <div class="container">
-            <div class="fb-comments" data-href="https://lakita.vn/combo-qua-khung-tet-nguyen-dan.html" data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
+            <div class="fb-comments" data-href="https://lakita.vn/tron-bo-thuc-hanh-ke-toan-tong-hop-tren-phan-mem-excel.html" data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
         </div>
     </body>
 

@@ -8,6 +8,10 @@ class Home extends MY_Controller {
         parent::__construct();
     }
 
+    function dangphattrien() {
+        $this->load->view('home/dangphattrien');
+    }
+
     function login_page() {
         $user_id = $this->session->userdata('user_id');
         if (isset($user_id)) {
@@ -25,7 +29,7 @@ class Home extends MY_Controller {
         if (empty($page)) {
 
             $this->load->helper('cookie');
-            
+
             $data = $this->data;
             $data['group_courses'] = $this->lib_mod->load_all('group_courses', 'id,name,slug', array('status' => 1), 5, '', array('sort' => 'asc'));
             $this->load->model('courses_model');
@@ -186,7 +190,6 @@ class Home extends MY_Controller {
             else if ($sub_flag == 4) {
 //                $curr = current_url();
 //                $uri = substr($curr, strlen(base_url()));
-
 //                $token = $this->session->userdata('token');
 //                redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
 //                //redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
