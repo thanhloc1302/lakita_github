@@ -240,8 +240,8 @@
     });
 </script>
 
-
-<div class="modal fade" id="modal2_9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- popup khuyến mại mà thay đổi giá trong file excel có thay đổi đc banner -->
+<!--<div class="modal fade" id="modal2_9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div id="popup_29" data-toggle="modal" data-target="#myModal" class="modal-content" 
              style="cursor: pointer; background-size: contain; width: 506px;">
@@ -250,7 +250,10 @@
                 <a target="_blank" href="https://lakita.vn/combo-qua-khung-tet-nguyen-dan.html"> <img style="width: 100%" src="https://lakita.vn/styles/v2.0/img/event/popup.png?ver=<?php echo time(); ?>"> </a>
         </div>
     </div>
-</div>
+</div>-->
+<!-- tắt tạm đã -->
+
+
 
 <script>
     function close_modal() {

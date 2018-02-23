@@ -188,13 +188,13 @@ class Home extends MY_Controller {
 
             //==============================================TRANG HỌC ============================================
             else if ($sub_flag == 4) {
-//                $curr = current_url();
-//                $uri = substr($curr, strlen(base_url()));
-//                $token = $this->session->userdata('token');
-//                redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
-//                //redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
-//                echo $uri;
-//                die;
+                $curr = current_url();
+                $uri = substr($curr, strlen(base_url()));
+                $token = $this->session->userdata('token');
+                redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
+                //redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
+                echo $uri;
+                die;
 
 
                 $user_id = $this->session->userdata('user_id');

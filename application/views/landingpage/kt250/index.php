@@ -9833,7 +9833,7 @@ $rs = json_decode($result);
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="COUNTDOWN187" class="widget-element widget-snap" lp-type="countdown" lp-lang="COUNTDOWN" lp-endtime="78602" lp-endtimetype="timedown" lp-group="GROUP177" lp-display="block">
+                                    <div id="COUNTDOWN187" class="widget-element widget-snap" lp-type="countdown" lp-group="GROUP177" lp-display="block">
                                         <div class="widget-content">
                                             <div>
                                                 <span class="num-day" >0</span>
@@ -9872,7 +9872,8 @@ $rs = json_decode($result);
                                             </div>
                                             <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
                                             <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
-                                            <input style="background : #00aeef; color : #FFF; font-weight: bold" id="BUTTON189" class="widget-element widget-snap style-1 ladi-drop LeadPanel_action button radius e_btn_submit reg_bt" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-parent="FORM190" lp-group="GROUP188" lp-display="table" type="submit"  name="submit" value="Đăng ký ngay">
+                                             <input style="background : #00aeef; color : #FFF; font-weight: bold; margin-top: 230px; cursor: pointer" id="BUTTON189" class="e_btn_submit reg_bt"  type="submit"  name="submit" value="Đăng ký ngay">
+<!--                                            <input style="background : #00aeef; color : #FFF; font-weight: bold" id="BUTTON189" class="widget-element widget-snap style-1 ladi-drop LeadPanel_action button radius e_btn_submit reg_bt" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-group="GROUP188" lp-display="table" type="submit"  name="submit" value="Đăng ký ngay">-->
                                         </form>
                                         <div id="e_form_submit"></div>
                                     </div>
@@ -9894,7 +9895,7 @@ $rs = json_decode($result);
                 </div>
                 <div class="ladi-widget-overlay"></div>
             </div>
-<!--            <script type="text/javascript" async="" defer="" src="https://static.ladipage.net/source/ladipage.lib.1.js?v=1517991511062"></script>-->
+            <script type="text/javascript" async="" defer="" src="https://static.ladipage.net/source/ladipage.lib.1.js?v=1517991511062"></script>
         </div>
 
 
