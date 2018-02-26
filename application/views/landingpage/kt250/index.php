@@ -9883,7 +9883,8 @@ $rs = json_decode($result);
                         <div class="ladi-widget-overlay"></div>
                     </div>
                     <div id="HEADLINE196" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h2 class="widget-content" lp-node="h2">ĐĂNG KÝ KHÓA HỌC NGAY TIẾT KIỆM NGAY 50.52%</h2>
+                        <h2 class="widget-content" lp-node="h2">ĐĂNG KÝ KHÓA HỌC NGAY TIẾT KIỆM NGAY <?php echo round((1 - $rs->price / $rs->price_root) * 100, 2) ?>%</h2>
+                        <h4 class="widget-content" lp-node="h4" ><span style="text-decoration:line-through; color: rgb(255, 193, 7)"> <?php echo number_format($rs->price_root, 0, ",", "."); ?>đ</span> chỉ còn <span style="color:rgb(255, 193, 7)"><?php echo number_format($rs->price, 0, ",", "."); ?>đ</span></h4>
                     </div>
                     <div id="PARAGRAPH197" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
                         <h6 class="widget-content" lp-node="h6">Đăng ký hôm nay để là một trong những khách hàng may mắn được tặng một
