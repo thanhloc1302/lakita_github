@@ -109,7 +109,7 @@ a, a:hover, a:visited {
   padding-top: 60px;
   padding-bottom: 20px; }
   .slider .img-slider img {
-    height: 200px; }
+    }
 
 .owl-carousel {
   position: relative; }

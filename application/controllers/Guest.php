@@ -130,7 +130,7 @@ class Guest extends MY_Controller {
                     );
                     $this->remember_login_model->insert($insert);
                 }
-                $tutor = array('2626', '5844', '4909', '3073', '7252', '7346', '7949', '7950', '7951','8844', '9225');
+                $tutor = array('2626', '5844', '4909', '3073', '7252', '7346', '7949', '7950', '7951','8844', '9225', '9287');
                 if (in_array($member[0]['id'], $tutor)) {
                     echo 'tutor';
                 } else {

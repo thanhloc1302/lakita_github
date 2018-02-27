@@ -225,7 +225,7 @@ class Tutor extends MY_Controller {
     function index2($status = '1', $course = '0', $type = '0', $start_date = '0', $end_date = '0') {
 
         $user_id = $this->session->userdata('user_id');
-        $tutor = array('2626', '5844', '4909', '3073', '7252', '7346', '7671','8844', '9225');
+        $tutor = array('2626', '5844', '4909', '3073', '7252', '7346', '7671','8844', '9225', '9287');
         if (!isset($user_id) && !in_array($user_id, $tutor))
             die;
 
@@ -376,7 +376,7 @@ class Tutor extends MY_Controller {
         $comments_no_rep = $this->comment_model->load_all($input_no_rep);
         $check = array_shift($comments_no_rep);
 
-        $list_tutor = array(4909, 3073, 3294, 2668, 7252, 7346, 7671,8844, 9225);
+        $list_tutor = array(4909, 3073, 3294, 2668, 7252, 7346, 7671,8844, 9225, 9287);
 
         if (in_array($check['student_id'], $list_tutor)) {
             return TRUE;

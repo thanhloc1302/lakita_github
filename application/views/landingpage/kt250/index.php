@@ -8642,7 +8642,7 @@ $rs = json_decode($result);
                     height: 49.96875px;
                 }
                 #PARAGRAPH219 {
-                    top: 67px;
+                    top: 90px;
                     left: 9.48438px;
                     padding: 0px;
                     width: 336px;
@@ -8664,7 +8664,7 @@ $rs = json_decode($result);
                     text-align: center;
                 }
                 #BOX175 {
-                    top: 215.109px;
+                    top: 230.109px;
                     left: 21.5px;
                     width: 333px;
                     height: 469.390625px;
@@ -8841,7 +8841,7 @@ $rs = json_decode($result);
                     text-align: center;
                 }
                 #PARAGRAPH197 {
-                    top: 90.8594px;
+                    top: 114.8594px;
                     left: 12px;
                     padding: 0px;
                     width: 355px;
@@ -8891,13 +8891,13 @@ $rs = json_decode($result);
                             </a>
                             <div id="HEADLINE445" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                                 <h5 class="widget-content" lp-node="h5">Đăng ký hôm nay để được giảm
-                                    <span style="color: rgba(255, 152, 0, 1);">50.52%</span> và tặng khóa học
+                                    <span style="color: rgba(255, 152, 0, 1);"><?php echo round((1 - $rs->price / $rs->price_root) * 100, 2) ?>%</span> và tặng khóa học
                                     <span style="font-weight: bold; color: rgba(255, 152, 0, 1);" color="">Yoga và Excel</span> giá không đôi chỉ
-                                    <span style="font-weight: bold;">495K</span>
+                                    <span style="font-weight: bold;"><?php echo substr($rs->price, 0, 3); ?>K</span>
                                 </h5>
                             </div>
                             <div id="HEADLINE446" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h5 class="widget-content" lp-node="h5">(giá gốc 895K)</h5>
+                                <h5 class="widget-content" lp-node="h5">(giá gốc <?php echo substr($rs->price_root, 0, 3); ?>K)</h5>
                             </div>
                         </div>
                         <div class="ladi-widget-overlay"></div>
