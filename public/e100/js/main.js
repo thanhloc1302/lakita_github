@@ -105,7 +105,7 @@ $(document).ready(function(){
 
   $("#stop_day").text(stop_time.getDate());
   $("#stop_month").text(stop_time.getMonth() + 1);
-  $("#stop_year").text(stop_time.getFullYear());
+  $("#stop_year").text(stop_time.getFullYear()+1);
 
   //var tag_day = $(".countdown-amount")[0];
   var tag_hour = $(".countdown-amount")[0];
