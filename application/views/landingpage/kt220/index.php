@@ -81,7 +81,7 @@ $rs = json_decode($result);
                         <div class="ladi-widget-overlay"></div>
                     </div>
                     <div id="PARAGRAPH543" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                        <p class="widget-content" lp-node="p">Đăng ký ngay hôm nay để nhận được khuyến mãi 54.39% và tặng kèm khóa <span style="color: rgb(255, 152, 0);"><span style="font-weight: bold;">18 THỦ THUẬT EXCEL</span> </span>giá KHÔNG ĐỔI. Giá KM <span style="font-weight: bold; color: rgb(255, 0, 0);">545.000đ</span> (Giá gốc <span style="text-decoration-line: line-through;" class="lp-strikeThrough">1195k</span>)</p>
+                        <p class="widget-content" lp-node="p">Đăng ký ngay hôm nay để nhận được khuyến mãi <?php echo round((1 - $rs->price / $rs->price_root) * 100, 2) ?>% và tặng kèm khóa <span style="color: rgb(255, 152, 0);"><span style="font-weight: bold;">18 THỦ THUẬT EXCEL</span> </span>giá KHÔNG ĐỔI. Giá KM <span style="font-weight: bold; color: rgb(255, 0, 0);"><?php echo number_format($rs->price, 0, ",", "."); ?>đ</span> (Giá gốc <span style="text-decoration-line: line-through;" class="lp-strikeThrough"><?php echo substr($rs->price_root, 0, strlen($rs->price_root) - 3); ?>k</span>)</p>
                     </div>
                     <div id="BOX575" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
                         <div class="widget-content"></div>
@@ -813,11 +813,11 @@ $rs = json_decode($result);
                     <div id="BOX894" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
                         <div class="widget-content">
                             <div id="HEADLINE895" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h2 class="widget-content" lp-node="h2">1195.000Đ</h2> </div>
+                                <h2 class="widget-content" lp-node="h2"><?php echo number_format($rs->price_root, 0, ",", "."); ?>Đ</h2> </div>
                             <div id="HEADLINE896" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h2 class="widget-content" lp-node="h2">chỉ còn 545.000đ</h2> </div>
+                                <h2 class="widget-content" lp-node="h2">chỉ còn <?php echo number_format($rs->price, 0, ",", "."); ?>đ</h2> </div>
                             <div id="HEADLINE897" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h1 class="widget-content" lp-node="h1">ƯU ĐÃI 54,39%</h1> </div>
+                                <h1 class="widget-content" lp-node="h1">ƯU ĐÃI <?php echo round((1 - $rs->price / $rs->price_root) * 100, 2) ?>%</h1> </div>
                             <div id="LINE898" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
                                 <div class="widget-content">
                                     <div class="line"></div>
@@ -829,7 +829,7 @@ $rs = json_decode($result);
                                 </div>
                             </div>
                             <div id="PARAGRAPH900" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                                <h5 class="widget-content" lp-node="h5">Học online chỉ còn 545K khi đăng ký trước ngày <?php echo date('d/m/Y');?></h5> </div>
+                                <h5 class="widget-content" lp-node="h5">Học online chỉ còn <?php echo substr($rs->price, 0, strlen($rs->price) - 3); ?>K khi đăng ký trước ngày <?php echo date('d/m/Y');?></h5> </div>
                             <div id="HEADLINE901" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                                 <h2 class="widget-content" lp-node="h2">NHANH TAY LÊN !</h2> </div>
                         </div>
