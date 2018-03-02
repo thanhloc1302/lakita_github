@@ -97,7 +97,7 @@ $(document).ready(function(){
   var stop_time = new Date(exprired[1]+"/"+exprired[0]+"/"+exprired[2]+" 23:59:59");
   $("#stop_day").text(stop_time.getDate());
   $("#stop_month").text(stop_time.getMonth() + 1);
-  $("#stop_year").text(stop_time.getFullYear());
+  $("#stop_year").text(stop_time.getFullYear() + 1);
 
   //var tag_day = $(".countdown-amount")[0];
   var tag_hour = $(".countdown-amount")[0];

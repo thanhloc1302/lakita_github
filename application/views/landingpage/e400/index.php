@@ -1080,7 +1080,8 @@ $rs = json_decode($result);
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
     <script>
-        var time = new Date("2016-02-28");
+        var d= new Date();
+        var time = new Date(d.getFullYear(),d.getMonth(),d.getDate()+1,0,0,0);
         if (time > 0) {
             $('.e_time_count').countdown({
                 until: time
