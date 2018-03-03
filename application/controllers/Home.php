@@ -188,13 +188,13 @@ class Home extends MY_Controller {
 
             //==============================================TRANG HỌC ============================================
             else if ($sub_flag == 4) {
-                $curr = current_url();
-                $uri = substr($curr, strlen(base_url()));
-                $token = $this->session->userdata('token');
-                //redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
-                redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
-                echo $uri;
-                die;
+//                $curr = current_url();
+//                $uri = substr($curr, strlen(base_url()));
+//                $token = $this->session->userdata('token');
+//                //redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
+//                redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
+//                echo $uri;
+//                die;
 
 
                 $user_id = $this->session->userdata('user_id');
@@ -213,7 +213,6 @@ class Home extends MY_Controller {
                 $this->load->model('chapter_model');
                 //thông tin bài học hiện tại
                 $input = [];
-                $input['select'] = 'id, courses_id, title, slug';
                 $input['where'] = ['id' => $id];
                 $curr_learn = $this->learn_model->load_all($input);
                 //$curr_learn = $this->lib_mod->detail('learn', array('id' => $id));
@@ -310,6 +309,7 @@ class Home extends MY_Controller {
                     $input = [];
                     $input['select'] = 'id, name, sort,  length, slug';
                     $input['where'] = ['chapter_id' => $value['id']];
+                    $input['order'] = ['sort' => 'asc'];
                     $learnDetail = $this->learn_model->load_all($input);
 
                     //và kèm theo trạng thái đã học hay chưa các bài đó
@@ -324,7 +324,6 @@ class Home extends MY_Controller {
                 }
 
                 $data['curr_learn'] = $curr_learn;
-
                 $data['curr_id'] = $id;
                 $data['title'] = $curr_learn[0]['name'] . ' - lakita.vn';
                 $data['learn'] = 1;
@@ -341,7 +340,7 @@ class Home extends MY_Controller {
                         'status' => 0,
                         'courseID' => $course[0]['id'],
                         'time' => time());
-                    $this->student_learn_model->insert();
+                    $this->student_learn_model->insert($insert);
                 }
                 $data['love_course'] = $this->lib_mod->detail('love', array('user_id' => $user_id, 'course_id' => $course[0]['id']));
                 $data['student'] = $this->lib_mod->detail('student', array('id' => $user_id));

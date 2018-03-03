@@ -19,7 +19,6 @@ class Player extends MY_Controller {
         $this->load->model('learn_model');
         $input2 = array();
         $input2['where'] = array('id' => $id);
-        $input2['select'] = 'courses_id';
         $primary_video = $this->learn_model->load_all($input2);
 
         //$primary_video = $this->lib_mod->detail('learn', array('id' => $id));
@@ -30,30 +29,73 @@ class Player extends MY_Controller {
         /*
          * Tìm course code
          */
+        
+        
+        
         $this->load->model('courses_model');
         $courseCode = $this->courses_model->GetCourseCode($primary_video[0]['courses_id']);
-        echo 'https://lakita.vn/public/video-demo/' . $courseCode . '.mp4';
-        die;
+//        echo 'https://lakita.vn/public/video-demo/' . $courseCode . '.mp4';
+//        die;
+        $iPod = stripos($_SERVER['HTTP_USER_AGENT'], "iPod");
+        $iPhone = stripos($_SERVER['HTTP_USER_AGENT'], "iPhone");
+        $iPad = stripos($_SERVER['HTTP_USER_AGENT'], "iPad");
+        $Android = stripos($_SERVER['HTTP_USER_AGENT'], "Android");
+        $webOS = stripos($_SERVER['HTTP_USER_AGENT'], "webOS");
+        if ($iPod || $iPhone || $iPad) {
+            echo "http://lakita.vn:1935/vod/mp4://" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']) . "/playlist.m3u8";
+            die;
+        } else if ($Android) {
+            echo "rtsp://lakita.vn:1935/vod/mp4:" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
+            die;
+        } else {
+            // if ($this->input->post('hayFlash') == 'yes')
+            echo "http://171.244.19.161:1935/vod/_definst_/mp4:" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']) .'/manifest.mpd';
+            //echo 'http://171.244.19.161:1935/vod/_definst_/mp4:2016/01/12/22-mp4-1452578436.mp4/manifest.mpd';
+            // // else
+            //   echo 'https://lakita.vn/' . $primary_video[0]['video_file'];
+            //  echo "rtmpt://video.lakita.com.vn:1935/vod/mp4:" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
+            die;
+        }
+    }
+    
+//    function index() {        
+//        $input = $this->input->post('video_id');
+//        if (empty($input)) {
+//            die;
+//        }
+//        $arr_id = explode('#', $input);
+//        $id = $arr_id[2];
+//        if (!isset($arr_id[2]) || empty($arr_id[2])) {
+//            die;
+//        }
+//        $this->load->model('learn_model');
+//        $input = [];
+//        $input['select'] = 'video_file';
+//        $input['where'] = ['id' => $id];
+//        $primary_video = $this->learn_model->load_all($input);
+//        //$primary_video = $this->lib_mod->detail('learn', array('id' => $id));
+//
+//        if (empty($primary_video)) {
+//            die;
+//        }
+//
 //        $iPod = stripos($_SERVER['HTTP_USER_AGENT'], "iPod");
 //        $iPhone = stripos($_SERVER['HTTP_USER_AGENT'], "iPhone");
 //        $iPad = stripos($_SERVER['HTTP_USER_AGENT'], "iPad");
-//        $Android = stripos($_SERVER['HTTP_USER_AGENT'], "Android");
-//        $webOS = stripos($_SERVER['HTTP_USER_AGENT'], "webOS");
+//        // $Android = stripos($_SERVER['HTTP_USER_AGENT'], "Android");
 //        if ($iPod || $iPhone || $iPad) {
-//            echo "http://lakita.vn:1935/vod/mp4://" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']) . "/playlist.m3u8";
-//            die;
-//        } else if ($Android) {
-//            echo "rtsp://lakita.vn:1935/vod/mp4:" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
+//            echo "http://171.244.19.161:1935/vod/mp4://" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']) . "/playlist.m3u8";
 //            die;
 //        } else {
-//            // if ($this->input->post('hayFlash') == 'yes')
-//            echo "rtmpt://lakita.vn:1935/vod/mp4:" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
-//            // else
-//            //   echo 'https://lakita.vn/' . $primary_video[0]['video_file'];
-//            //  echo "rtmpt://video.lakita.com.vn:1935/vod/mp4:" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
+//            //echo "http://171.244.19.161:1935/vod/_definst_/mp4:" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']) . '/manifest.mpd';
+//            echo base64_encode(str_replace('data/source/video_source/', '', $primary_video[0]['video_file']) . '/manifest.mpd');
 //            die;
 //        }
-    }
+////        else if ($Android) {
+////            echo "rtsp://lakita.vn:1935/vod/mp4:" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
+////            die;
+////        } 
+//    }
     
      function PlayDemo() {
         $input = $this->input->post('video_id');

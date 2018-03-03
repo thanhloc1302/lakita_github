@@ -9872,7 +9872,7 @@ $rs = json_decode($result);
                                             </div>
                                             <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
                                             <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
-                                             <input style="background : #00aeef; color : #FFF; font-weight: bold; margin-top: 230px; cursor: pointer" id="BUTTON189" class="e_btn_submit reg_bt"  type="submit"  name="submit" value="Đăng ký ngay">
+                                            <input style="background : #00aeef; color : #FFF; font-weight: bold; margin-top: 230px; cursor: pointer" id="BUTTON189" class="e_btn_submit reg_bt"  type="submit"  name="submit" value="Đăng ký ngay">
 <!--                                            <input style="background : #00aeef; color : #FFF; font-weight: bold" id="BUTTON189" class="widget-element widget-snap style-1 ladi-drop LeadPanel_action button radius e_btn_submit reg_bt" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-group="GROUP188" lp-display="table" type="submit"  name="submit" value="Đăng ký ngay">-->
                                         </form>
                                         <div id="e_form_submit"></div>
@@ -9916,6 +9916,28 @@ $rs = json_decode($result);
         <div class="container">
             <div class="fb-comments" data-href="https://lakita.vn/tron-bo-thuc-hanh-ke-toan-tong-hop-tren-phan-mem-excel.html" data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
         </div>
+        <!-- sau này 16/3/2018 thì xóa đoạn script dưới để đếm ngược hết ngày reset đếm lại từ đầu -->
+        <script>
+            countdown();
+            setInterval(function () {
+                countdown();
+            }, 1000);
+            function countdown() {
+                var d = new Date();
+                var r_date = 16 - d.getDate();
+                r_date = (r_hours < 10) ? '0' + r_date : r_date;
+                var r_hours = 24 - d.getHours();
+                r_hours = (r_hours < 10) ? '0' + r_hours : r_hours;
+                var r_minus = 59 - d.getMinutes();
+                r_minus = (r_minus < 10) ? '0' + r_minus : r_minus;
+                var r_seconds = 59 - d.getSeconds();
+                r_seconds = (r_seconds < 10) ? '0' + r_seconds : r_seconds;
+                $(".num-day").text(r_date);
+                $(".num-hour").text(r_hours);
+                $(".num-minute").text(r_minus);
+                $(".num-second").text(r_seconds);
+            }
+        </script>
     </body>
 
 </html>

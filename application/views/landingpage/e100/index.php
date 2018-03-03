@@ -473,10 +473,16 @@ $rs = json_decode($result);
                                     <div style="    font-size: 22pt;"><?php echo number_format($rs->price, 0, ",", "."); ?>đ</div>
                                 </div>
                             </div>
+                            <!-- comment 
                             <p style="font-size:20px; text-decoration:none;font-weight:400;margin-top:20px">
                                 Áp dụng đến hết <span id="stop_day">28</span>/<span id="stop_month">02</span>/<span id="stop_year">2018</span> <br>
                                 NHANH TAY LÊN !
+                            </p> -->
+                            <p style="font-size:20px; text-decoration:none;font-weight:400;margin-top:20px">
+                                Áp dụng đến hết <span>14</span>/<span>03</span>/<span>2018</span> <br>
+                                NHANH TAY LÊN !
                             </p>
+                            
                             <div class="countdown row">
                                 <h5 class="line-1">Thời gian ưu đãi còn</h5>
                                 <div class="e_time_count">
@@ -828,8 +834,10 @@ $rs = json_decode($result);
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
     <script>
-        var d= new Date();
-        var time = new Date(d.getFullYear(),d.getMonth(),d.getDate()+1,0,0,0);
+        /* hiện tại tắt tạm đến hết ngày 14/3/2018
+         * var d= new Date();
+        var time = new Date(d.getFullYear(),d.getMonth(),d.getDate()+1,0,0,0); */
+        var time = new Date(2018,2,15,0,0,0);
         if (time > 0) {
             $('.e_time_count').countdown({
                 until: time

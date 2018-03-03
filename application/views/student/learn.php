@@ -3,6 +3,10 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>plugin/ckeditor/ckeditor.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/swfobject.js?ver=<?php echo _VER_CACHED_ ?>" ></script>
 <style>
+    .videolayout{
+   width: 97%;
+   float: right
+    }
     .float_video{
         position: fixed;
         width: 500px;
@@ -70,10 +74,11 @@
                                     ?>
                                     <input type="hidden" id="lakitaid" value="<?php echo md5(time()) . '$&((_GNSDADFHGD@!$^&%#' . time() . ')*&^%$@' . time() . '#' . 612 . '#' . time() . '_+1357$*^())!%*$$&' . md5('lakita.vn') . '+135+1357$*^())!%*$$7$*^())!%*$$+1+1357$*^())!%*$$357$*^())!%*$$'; ?>" /><div id="mediaspace"></div>
                                 <?php } ?>
+                                    <script src="http://jwpsrv.com/library/cv_TvsH0EeO4_CIACmOLpg.js"></script>
                                 <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.js?VER=20.01.2018"></script>
                                 <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.html5.js?VER=20.01.2018"></script>
                                 <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>
-    <!--                                <script type="text/javascript" src="https://content.jwplatform.com/libraries/kTgFQviI.js"></script>-->
+                                 <!--  <script type="text/javascript" src="https://content.jwplatform.com/libraries/kTgFQviI.js"></script> -->
                                 <input type="hidden" id="auto_next" value="1" />
                                 <input type="hidden" id="curr_learn_id" value="<?php echo $curr_id; ?>" />
                                 <?php $this->session->set_tempdata('is_playable', $curr_id, 3600); ?>
@@ -552,7 +557,7 @@
 
 
 <script src="<?php echo base_url(); ?>styles/v2.0/js/learn.js?ver=<?php echo _VER_CACHED_ ?>"></script>
-<script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
+<script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <!--<script src="<?php echo base_url(); ?>styles/v2.0/js/scrt.js"></script>  -->
 <?php $this->load->view('student/action_comment'); ?>
 <?php

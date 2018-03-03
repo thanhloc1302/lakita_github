@@ -720,8 +720,13 @@ $rs = json_decode($result);
                                     <div style="    font-size: 22pt;"><?php echo number_format($rs->price, 0, ",", "."); ?>đ</div>
                                 </div>
                             </div>
+                            <!-- tắt tạm đến hết ngày 15/3 thì bật lại để đếm ngược từng ngày 1
                             <p style="font-size:20px; text-decoration:none;font-weight:400;margin-top:20px">
                                 Áp dụng đến hết <span id="stop_day">28</span>/<span id="stop_month">02</span>/<span id="stop_year">2017</span> <br>
+                                NHANH TAY LÊN !
+                            </p> -->
+                            <p style="font-size:20px; text-decoration:none;font-weight:400;margin-top:20px">
+                                Áp dụng đến hết <span>15</span>/<span>03</span>/<span>2018</span> <br>
                                 NHANH TAY LÊN !
                             </p>
                             <div class="countdown row">
@@ -1080,8 +1085,9 @@ $rs = json_decode($result);
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
     <script>
-        var d= new Date();
-        var time = new Date(d.getFullYear(),d.getMonth(),d.getDate()+1,0,0,0);
+        /*var d= new Date();
+        var time = new Date(d.getFullYear(),d.getMonth(),d.getDate()+1,0,0,0);*/
+        var time = new Date(2018,2,16,0,0,0);
         if (time > 0) {
             $('.e_time_count').countdown({
                 until: time
