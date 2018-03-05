@@ -61,7 +61,7 @@ class MY_Controller extends CI_Controller {
                 $this->session->unset_userdata('last_page');
                 redirect($last_page);
             }
-            $this->_check_exist_login($user_id);
+//            $this->_check_exist_login($user_id);
 
 
             //locnt 

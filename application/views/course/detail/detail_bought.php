@@ -47,8 +47,12 @@
         <div class="col-md-11 col-md-offset-1 col-sm-12 col-sx-12">
             <div class="js-video widescreen">
                 <input type="hidden" id="lakitaid" value="<?php echo $current_course_id ?>" /><div id="mediaspace"></div>
-                <div id="player"></div>
-                <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer-trial.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
+                <div id="mediaspace"></div>
+                <script src="http://jwpsrv.com/library/cv_TvsH0EeO4_CIACmOLpg.js"></script>
+                <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.js?VER=20.01.2018"></script>
+                <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.html5.js?VER=20.01.2018"></script>
+                <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>
+                <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer-trial.js?ver=<?php echo _VER_CACHED_ ?>"></script>
             </div>
         </div>
         <div class="col-md-11 col-md-offset-1 col-sm-12 col-sx-12" id="dsbaihoc">

@@ -6,8 +6,12 @@
         <div class="col-xs-12 col-sm-6">
             <div class="js-video widescreen">
                 <input type="hidden" id="lakitaid" value="<?php echo $current_course_id ?>" /><div id="mediaspace"></div>
-                <script type="text/javascript" src="https://content.jwplatform.com/libraries/BhGRfCt5.js"></script>
-                <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer-trial.min.js?ver=<?php echo _VER_CACHED_ ?>"></script>
+                <div id="player"></div>
+                <script src="http://jwpsrv.com/library/cv_TvsH0EeO4_CIACmOLpg.js"></script>
+                <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.js?VER=20.01.2018"></script>
+                <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.html5.js?VER=20.01.2018"></script>
+                <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>
+                <script src="<?php echo base_url(); ?>styles/v2.0/js/lktlayer-trial.js?ver=<?php echo _VER_CACHED_ ?>"></script>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 course_detail_mobile">
@@ -211,19 +215,19 @@
 </div>
 
 <script>
-    var show_more = true;
-    $(".show_more").click(function () {
-        if (show_more) {
-            $(".course_outline_mobile").css({"height": "inherit"});
-            $(this).html('Thu gọn <i class="fa fa-arrow-up" aria-hidden="true"></i>');
-            show_more = false;
-        } else {
-            $(".course_outline_mobile").css({"height": "500px"});
-            $('html,body').animate({
-                scrollTop: $(this).offset().top - 700
-            }, 1000);
-            $(this).html('Xem đầy đủ <i class="fa fa-sort-amount-desc" aria-hidden="true"></i>');
-            show_more = true;
-        }
-    });
+                                    var show_more = true;
+                                    $(".show_more").click(function () {
+                                        if (show_more) {
+                                            $(".course_outline_mobile").css({"height": "inherit"});
+                                            $(this).html('Thu gọn <i class="fa fa-arrow-up" aria-hidden="true"></i>');
+                                            show_more = false;
+                                        } else {
+                                            $(".course_outline_mobile").css({"height": "500px"});
+                                            $('html,body').animate({
+                                                scrollTop: $(this).offset().top - 700
+                                            }, 1000);
+                                            $(this).html('Xem đầy đủ <i class="fa fa-sort-amount-desc" aria-hidden="true"></i>');
+                                            show_more = true;
+                                        }
+                                    });
 </script>

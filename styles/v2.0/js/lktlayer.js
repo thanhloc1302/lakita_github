@@ -33,7 +33,7 @@ $(function () {
         success: function (response)
         {
             console.log(response);
-            console.log(hayFlash);
+        //    console.log(hayFlash);
 //            var rs = response.split(":");
         //    console.log(rs[0]);
             if (response == '')

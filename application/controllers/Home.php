@@ -188,13 +188,13 @@ class Home extends MY_Controller {
 
             //==============================================TRANG HỌC ============================================
             else if ($sub_flag == 4) {
-//                $curr = current_url();
-//                $uri = substr($curr, strlen(base_url()));
-//                $token = $this->session->userdata('token');
-//                //redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
-//                redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
-//                echo $uri;
-//                die;
+                $curr = current_url();       
+                $uri = substr($curr, strlen(base_url()));
+                $token = $this->session->userdata('token_video');
+                redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
+                //redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
+                echo $uri;
+                die;
 
 
                 $user_id = $this->session->userdata('user_id');
@@ -226,8 +226,8 @@ class Home extends MY_Controller {
                 /*
                  * quà tặng khóa yoga
                  */
-                if ($curr_learn[0]['courses_id'] == 83) {
-                    
+                if ($curr_learn[0]['courses_id'] == 83 && time() < $student[0]['createdate'] + 5259487) {
+                  
                 } else {
                     $input = [];
                     $input['select'] = 'id, trial_learn';

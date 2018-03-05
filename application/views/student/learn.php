@@ -4,8 +4,8 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/swfobject.js?ver=<?php echo _VER_CACHED_ ?>" ></script>
 <style>
     .videolayout{
-   width: 97%;
-   float: right
+        width: 97%;
+        float: right
     }
     .float_video{
         position: fixed;
@@ -26,7 +26,7 @@
     }
 </style>
 <?php if (!$this->agent->is_mobile()) { ?>
-  <?php $this->load->view('home/navbar.php'); ?>
+    <?php $this->load->view('home/navbar.php'); ?>
 <?php } else { ?>
     <?php $this->load->view('mobile/navbar'); ?>
 <?php } ?>
@@ -50,20 +50,11 @@
                                     $Android = stripos($_SERVER['HTTP_USER_AGENT'], "Android");
                                     if ($iPod || $iPhone || $iPad) {
                                         ?>
-                                        <input type="hidden" id="lakitaid" value="<?php echo md5(time()) . '$&((_GNSDADFHGD@!$^&%#' . time() . ')*&^%$@' . time() . '#' . $value . '#' . time() . '_+1357$*^())!%*$$&' . md5('lakita.vn') . '+135+1357$*^())!%*$$7$*^())!%*$$+1+1357$*^())!%*$$357$*^())!%*$$'; ?>" /><div id="mediaspace"></div>
-                                        <?php
-                                    } else if ($Android) {
-                                        ?>
-                                        <div class="text-center">
-                                            <a href="
-                                            <?php
-                                            $primary_video = $this->lib_mod->detail('learn', array('id' => $value), '');
-                                            echo "rtsp://lakita.vn:1935/vod/mp4://" . str_replace('data/source/video_source/', '', $primary_video[0]['video_file']);
-                                            ?>
-                                               ">
-                                                <img src="<?php echo base_url(); ?>styles/v2.0/img/mobi/player.png" style="max-width: 100%"/>
-                                            </a>
-                                        </div>
+                                        <video src="https://lakita.vn/<?php echo $curr_learn[0]['video_file']; ?>"  width="100%" controls>
+                                            Your browser does not support the element.   
+                                        </video>
+                                        <input type="hidden" id="lakitaid" value="<?php echo md5(time()) . '$&((_GNSDADFHGD@!$^&%#' . time() . ')*&^%$@' . time() . '#' . $value . '#' . time() . '_+1357$*^())!%*$$&' . md5('lakita.vn') . '+135+1357$*^())!%*$$7$*^())!%*$$+1+1357$*^())!%*$$357$*^())!%*$$'; ?>" />
+
                                         <?php
                                     } else {
                                         ?>
@@ -74,7 +65,7 @@
                                     ?>
                                     <input type="hidden" id="lakitaid" value="<?php echo md5(time()) . '$&((_GNSDADFHGD@!$^&%#' . time() . ')*&^%$@' . time() . '#' . 612 . '#' . time() . '_+1357$*^())!%*$$&' . md5('lakita.vn') . '+135+1357$*^())!%*$$7$*^())!%*$$+1+1357$*^())!%*$$357$*^())!%*$$'; ?>" /><div id="mediaspace"></div>
                                 <?php } ?>
-                                    <script src="http://jwpsrv.com/library/cv_TvsH0EeO4_CIACmOLpg.js"></script>
+<!--                                <script src="http://jwpsrv.com/library/cv_TvsH0EeO4_CIACmOLpg.js"></script>-->
                                 <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.js?VER=20.01.2018"></script>
                                 <script type="text/javascript" src="<?php echo 'https://lakita.vn/'; ?>plugin/jwplayer/jwplayer.html5.js?VER=20.01.2018"></script>
                                 <script type="text/javascript">jwplayer.key = "N8zhkmYvvRwOhz4aTGkySoEri4x+9pQwR7GHIQ==";</script>
