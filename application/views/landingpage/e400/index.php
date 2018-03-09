@@ -163,7 +163,7 @@ $rs = json_decode($result);
                     <div class="gr1">
                         <p style="color: #fff;text-align: center;line-height: 35px;font-size: 40px;margin-top:60px">KHÓA HỌC</p>
 
-                        <h3 id="intro"><strong>EXCEL TỪ A ĐẾN Z NĂM 2017</strong>
+                        <h3 id="intro"><strong>EXCEL TỪ A ĐẾN Z NĂM 2018</strong>
                         </h3>
                         <p style="text-align: center;line-height: 35px;">Khóa học dành cho nhân viên hành chính văn phòng, kế toán, tài chính, ngân hàng</p>
 
@@ -212,7 +212,7 @@ $rs = json_decode($result);
     <section class="container steps generic-section">
         <div class="row-fluid">
             <div class="span12">
-                <h2><span><em>Excel từ A đến Z</em> năm 2017</span></h2>
+                <h2><span><em>Excel từ A đến Z</em> năm 2018</span></h2>
             </div>
         </div>
         <div class="row-fluid">

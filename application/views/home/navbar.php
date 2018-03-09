@@ -251,21 +251,30 @@
     <?php } ?>
 </div><!--Kết thúc menu trên mobie-->
 
-
+<?php if($this->controller != 'event' && $this->method != 'get_full_infor_student' ){ ?>
 <div class="container-fluid" style="margin-top: 18px"> <!--Body Content-->
     <!-- Set up your HTML -->
     <div>
         <div class="owl-carousel owl-theme slider">
 <!--            <div class="img-slider">
-                <a href="https://lakita.vn/combo-qua-khung-tet-nguyen-dan.html" target="_blank">
                     <picture>
-                        <source srcset="styles/v2.0/img/banner/banner-tet-ipad.png" media="(max-width: 700px)">
-                        <source srcset="styles/v2.0/img/banner/banner-tet-mobile.png" media="(max-width: 450px)">
-                        <img srcset="styles/v2.0/img/banner/banner-tet.png">
+                        <source srcset="styles/v2.0/img/banner/banner_83_mobi.png" media="(max-width: 700px)">
+                        <source srcset="styles/v2.0/img/banner/banner_83_mobi.png" media="(max-width: 450px)">
+                        <img srcset="styles/v2.0/img/banner/banner_83.png">
                     </picture>
-                    <img class="img-rounded" src="styles/v2.0/img/banner/banner-tet.png"/>
-                </a>
+                    <img class="img-rounded" src="styles/v2.0/img/banner/banner_group_fb.png"/>
+                
             </div>-->
+            <div class="img-slider">
+                <a href="https://www.facebook.com/groups/congdonghocvienlakita/" target="_blank">
+                    <picture>
+                        <source srcset="styles/v2.0/img/banner/popup_group_fb.png" media="(max-width: 700px)">
+                        <source srcset="styles/v2.0/img/banner/popup_group_fb.png" media="(max-width: 450px)">
+                        <img srcset="styles/v2.0/img/banner/banner_group_fb.png">
+                    </picture>
+<!--                    <img class="img-rounded" src="styles/v2.0/img/banner/banner_group_fb.png"/>-->
+                </a>
+            </div>
             <div class="img-slider">
                 <a href="<?php echo base_url('dich-vu-excel.html'); ?>" target="_blank">
                     <picture>
@@ -279,6 +288,9 @@
         </div>
     </div>
 </div>
+
+<?php } ?>
+
 <script src="<?php echo base_url(); ?>styles/v2.0/js/navbar.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>styles/v2.0/js/notification.js?ver=<?php echo _VER_CACHED_ ?>"></script>
 <link type="text/css" rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/v2.0/css/introjs.css"/>

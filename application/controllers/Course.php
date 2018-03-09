@@ -873,10 +873,10 @@ class Course extends MY_Controller {
         if (!isset($filename) && empty($filename)) {
             redirect(site_url());
         }
-        $user_id = $this->session->userdata('user_id');
-        if (!isset($user_id)) {
-            die('Xin lỗi, bạn không có quyền truy cập vào khu vực này!');
-        }
+//        $user_id = $this->session->userdata('user_id');
+//        if (!isset($user_id)) {
+//            die('Xin lỗi, bạn không có quyền truy cập vào khu vực này!');
+//        }
         $file = base64_decode($filename);
         $file_path = '/home/lakita.com.vn/public_html/' . $file;
 

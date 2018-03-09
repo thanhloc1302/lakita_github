@@ -3,10 +3,15 @@
 class MY_Controller extends CI_Controller {
 
     var $data = array();
+    var $controller = '';
+    var $method = '';
 
     function __construct() {
         parent::__construct();
         //echo time(); die;
+        $this->controller = $this->router->fetch_class();
+        $this->method = $this->router->fetch_method();
+
         $this->load->helper('cookie');
         $user_id = $this->session->userdata('user_id');
         $token = $this->session->userdata('token');
@@ -41,6 +46,15 @@ class MY_Controller extends CI_Controller {
 
 
         if (isset($user_id)) {
+
+            $input = [];
+            $input['where'] = array('id' => $user_id);
+            $student = $this->student_model->load_all($input);
+            $student = array('student' => $student);
+            $this->load->vars($student);
+            if ($this->controller != 'event' && $this->method != 'get_full_infor_student' && $student['student'][0]['birthday'] == '' &&$this->controller != 'student' && $this->method != 'logout' ) {
+                redirect('event/get_full_infor_student');
+            }
             $tokenStr = md5(uniqid() . microtime() . rand());
             $this->session->set_userdata('token_video', $tokenStr);
             $this->load->model('uid_model');
@@ -62,8 +76,6 @@ class MY_Controller extends CI_Controller {
                 redirect($last_page);
             }
 //            $this->_check_exist_login($user_id);
-
-
             //locnt 
             set_cookie('first_time_login', time(), 92536000);
             if (!is_null(get_cookie('first_time_login')) && !is_null(get_cookie('date_read_noti'))) {

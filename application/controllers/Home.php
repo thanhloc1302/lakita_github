@@ -191,8 +191,8 @@ class Home extends MY_Controller {
                 $curr = current_url();       
                 $uri = substr($curr, strlen(base_url()));
                 $token = $this->session->userdata('token_video');
-                redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
-                //redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
+                //redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
+                redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
                 echo $uri;
                 die;
 
@@ -226,6 +226,12 @@ class Home extends MY_Controller {
                 /*
                  * quà tặng khóa yoga
                  */
+                $this->load->model('student_model');
+                $input =[];
+                $input['select'] = 'createdate';
+                $input['where'] = array('id' => $user_id);
+                $student = $this->student_model->load_all($input);
+                
                 if ($curr_learn[0]['courses_id'] == 83 && time() < $student[0]['createdate'] + 5259487) {
                   
                 } else {

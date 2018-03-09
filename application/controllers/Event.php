@@ -118,6 +118,24 @@ class Event extends MY_Controller {
             die;
         }
     }
+    
+    function get_full_infor_student(){
+        $get = $this->input->post();
+        $user_id = $this->session->userdata['user_id'];
+        if(empty($get)){
+            //nếu không có submit form thì
+            $data['title'] = 'Cập nhật thông tin học viên - lakita';
+            $data['content'] = 'event/get_full_infor_student';
+            $this->load->view('template', $data);
+        }else{
+            //nếu có submit form thì
+            $get['birthday'] = strtotime($get['birthday']);
+            $where = array('id' => $user_id);
+            $this->student_model->update($where,$get);
+            redirect('khoa-hoc-cua-toi.html');
+            die;
+        }
+    }
 
 //    function price_combo() {
 //        $this->load->model('courses_model');
