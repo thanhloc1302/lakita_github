@@ -70,6 +70,14 @@ class MY_Controller extends CI_Controller {
                 $this->uid_model->update($where, $data);
             }
 
+            // BEGIN popup HuyNV
+            $notify_cookie = get_cookie('notify_day_quantity');
+            if (!isset($notify_cookie)) {
+                $this->data['notify'] = true;
+                $this->set_date_notify();
+            }
+            // END HuyNV
+
             $last_page = $this->session->userdata('last_page');
             if (isset($last_page)) {
                 $this->session->unset_userdata('last_page');
@@ -221,5 +229,19 @@ class MY_Controller extends CI_Controller {
         }
         //  hết kiểm tra
     }
+
+    // BEGIN function set notify_day_quantity 15 days to cookie by HuyNV
+    private function set_date_notify()
+    {
+        $this->load->helper('cookie');
+        $name = "notify_day_quantity";
+        $value = '15';
+        $expire = 15*24*24*60;
+        $domain = "";
+
+        set_cookie($name, $value, $expire, $domain);
+
+    }
+    // END function
 
 }

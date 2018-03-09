@@ -27,6 +27,11 @@
             // $this->load->view('home/combo300');
             // $this->load->view('home/bannerExcel');
         }
+        // HuyNV popup
+        if (isset($notify)) {
+            $this->load->view('home/popup_join_group');
+        }
+        // END HuyNV
         ?>
         <?php $this->load->view('home/try_learn'); ?>
         <?php //$this->load->view('home/event2'); ?>
@@ -38,4 +43,12 @@
         ?>
         <?php $this->load->view('footer') ?>
     </body>
+
+    <script type="text/javascript">
+        $('#notify-popup').modal('show');
+
+        $('#notify-popup').click(function(){
+            $(this).modal('hide');
+        });
+    </script>
 </html>
