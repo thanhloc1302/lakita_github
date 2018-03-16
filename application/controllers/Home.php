@@ -192,7 +192,7 @@ class Home extends MY_Controller {
                 $uri = substr($curr, strlen(base_url()));
                 $token = $this->session->userdata('token_video');
                 //redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
-                redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
+                redirect('http://localhost/lakita-video/' . $uri . '?token=' . $token);
                 echo $uri;
                 die;
 
