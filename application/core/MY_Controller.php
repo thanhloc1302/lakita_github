@@ -46,13 +46,12 @@ class MY_Controller extends CI_Controller {
 
 
         if (isset($user_id)) {
-
             $input = [];
             $input['where'] = array('id' => $user_id);
             $student = $this->student_model->load_all($input);
             $student = array('student' => $student);
             $this->load->vars($student);
-            if ($this->controller != 'event' && $this->method != 'get_full_infor_student' && $student['student'][0]['birthday'] == '' &&$this->controller != 'student' && $this->method != 'logout' ) {
+            if ($this->controller != 'event' && $this->method != 'get_full_infor_student' && $student['student'][0]['birthday'] == '' && $this->controller != 'student' && $this->method != 'logout') {
                 redirect('event/get_full_infor_student');
             }
             $tokenStr = md5(uniqid() . microtime() . rand());
@@ -71,10 +70,13 @@ class MY_Controller extends CI_Controller {
             }
 
             // BEGIN popup HuyNV
-            $notify_cookie = get_cookie('notify_day_quantity');
-            if (!isset($notify_cookie)) {
-                $this->data['notify'] = true;
-                $this->set_date_notify();
+
+            if ($student['student'][0]['createdate'] + 259200 <= time()) {
+                $notify_cookie = get_cookie('notify_day_quantity');
+                if (!isset($notify_cookie)) {
+                    $this->data['notify'] = true;
+                    $this->set_date_notify();
+                }
             }
             // END HuyNV
 
@@ -231,17 +233,15 @@ class MY_Controller extends CI_Controller {
     }
 
     // BEGIN function set notify_day_quantity 15 days to cookie by HuyNV
-    private function set_date_notify()
-    {
+    private function set_date_notify() {
         $this->load->helper('cookie');
         $name = "notify_day_quantity";
         $value = '15';
-        $expire = 15*24*24*60;
+        $expire = 15 * 24 * 60 * 60;
         $domain = "";
 
         set_cookie($name, $value, $expire, $domain);
-
     }
-    // END function
 
+    // END function
 }

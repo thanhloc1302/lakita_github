@@ -49,6 +49,7 @@ class Home extends MY_Controller {
             if (isset($user_id)) {
                 $data['student'] = $this->lib_mod->load_all('student', '', array('id' => $user_id), '', '', '');
             }
+            $data['home'] = 'home';
             $data['content'] = 'home/index';
             $this->load->view('template', $data);
             $this->output->cache(20);
@@ -191,8 +192,8 @@ class Home extends MY_Controller {
                 $curr = current_url();       
                 $uri = substr($curr, strlen(base_url()));
                 $token = $this->session->userdata('token_video');
-                //redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
-                redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
+                redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
+                //redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
                 echo $uri;
                 die;
 

@@ -4,8 +4,41 @@
     <body style="overflow-x: hidden;">
         <div id="fb-root"></div>
 
-        <div class="fb-customerchat"
-             page_id="872893369492994" ref="<?php echo current_url(); ?>">
+        <script>
+            window.fbMessengerPlugins = window.fbMessengerPlugins || {
+                init: function () {
+                    FB.init({
+                        appId: '1678638095724206',
+                        autoLogAppEvents: true,
+                        xfbml: true,
+                        version: 'v2.10'
+                    });
+                }, callable: []
+            };
+            window.fbAsyncInit = window.fbAsyncInit || function () {
+                window.fbMessengerPlugins.callable.forEach(function (item) {
+                    item();
+                });
+                window.fbMessengerPlugins.init();
+            };
+            setTimeout(function () {
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {
+                        return;
+                    }
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/en_US/sdk.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            }, 0);
+        </script>
+
+        <div
+            class="fb-customerchat"
+            page_id="872893369492994"
+            ref="">
         </div>
 
 <!--        <script>(function (d, s, id) {
@@ -47,7 +80,7 @@
     <script type="text/javascript">
         $('#notify-popup').modal('show');
 
-        $('#notify-popup').click(function(){
+        $('#notify-popup').click(function () {
             $(this).modal('hide');
         });
     </script>

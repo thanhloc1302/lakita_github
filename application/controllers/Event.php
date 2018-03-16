@@ -132,8 +132,12 @@ class Event extends MY_Controller {
             $get['birthday'] = strtotime($get['birthday']);
             $where = array('id' => $user_id);
             $this->student_model->update($where,$get);
-            redirect('khoa-hoc-cua-toi.html');
-            die;
+            $data['title'] = 'Cập nhật thông tin học viên - lakita';
+            $data['content'] = 'event/get_full_infor_student';
+            $data['thanks'] = 'thanks';
+            $this->load->view('template', $data);
+//            redirect('khoa-hoc-cua-toi.html');
+//            die;
         }
     }
 

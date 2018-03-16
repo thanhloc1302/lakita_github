@@ -241,16 +241,21 @@
 </script>
 
 <!-- popup khuyến mại mà thay đổi giá trong file excel có thay đổi đc banner -->
-<!--<div class="modal fade" id="modal2_9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<?php if(isset($home) && $home='home'){ ?>
+<div class="modal fade" id="modal2_9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div id="popup_29" data-toggle="modal" data-target="#myModal" class="modal-content" 
              style="cursor: pointer; background-size: contain; width: 506px;">
             <button onclick="close_modal();" type="button" style="position: absolute;right: 0;padding: 0px;"> 
                 <img src="https://cdn3.iconfinder.com/data/icons/line/36/cancel-512.png" style="width: 20px;"> </button>
-                <img style="width: 100%" src="https://lakita.vn/styles/v2.0/img/event/popup.png?ver=<?php echo time(); ?>"> </a>
+<!--                <img style="width: 100%" src="https://lakita.vn/styles/v2.0/img/event/popup.png?ver=<?php echo time(); ?>">-->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe1wXnAgc1w67-9DqEngrjjUnFg2CrAcSJuLyAvWPFjshKOWQ/viewform" target="_blank">
+                <img style="width: 100%" src="https://lakita.vn/styles/v2.0/img/banner/popup_live_stream.png">
+            </a>
         </div>
     </div>
-</div>-->
+</div>
+<?php } ?>
 <!-- tắt tạm đã -->
 
 

@@ -1,5 +1,5 @@
 <?php
-$code_ladingpage = str_replace('.html', '', str_replace('https://lakita.vn/', '', current_url()));
+$code_ladingpage = str_replace('.html', '', str_replace(base_url(), '', current_url()));
 $config = array(
     'server' => 'https://crm2.lakita.vn/',
     'api_key' => 'RrF3rcmYdWQbviO5tuki3fdgfgr4',
@@ -8856,1088 +8856,1120 @@ $rs = json_decode($result);
         </style>
         <link rel="stylesheet" href="https://static.ladipage.net/googlefonts/css?family=Open+Sans:400,600,700|Montserrat:300,400,600,700|Roboto:300,400,700&amp;subset=latin-ext,vietnamese" media="none" onload="if (media != 'all')
                     media = 'all'">
-    </head>
-
-    <body>
-        <?php include_once("plugin/messenger.php") ?>
-
-        <div class="ladi-wraper-page">
-            <div id="SECTION2" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
-                <div class="container">
-                    <div id="IMAGE225" class="widget-element widget-snap ladi-drop" lp-type="image" lp-lang="IMAGE" lp-display="block">
-                        <div class="widget-content">
-                            <div class="lp-show-image" alt="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/logo-1517828858.png"></div>
-                            <div class="lp-show-image"></div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="BOX226" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="LISTOP228" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                                <ol class="widget-content">
-                                    <li color="" style="color: rgb(0, 0, 0);">Kế toán viên, kế toán nội bộ thực sự muốn trở thành kế toán tổng hợp</li>
-                                    <li color="" style="color: rgb(0, 0, 0);">&nbsp;Kế toán đã làm nhiều năm nhưng vẫn còn làm Kế toán viên, kế toán nội bộ</li>
-                                    <li color="" style="color: rgb(0, 0, 0);">&nbsp;Đã học kế toán thực hành nhưng chưa tự tay mình làm dược báo cáo tài chính, sổ sách&nbsp;</li>
-                                    <li color="" style="color: rgb(0, 0, 0);">&nbsp;Kế toán, đối tượng khác muốn thành thạo kỹ năng làm kế toán trên Excel</li>
-                                    <li color="" style="color: rgb(0, 0, 0);">Sinh viên kế toán cần định hướng phát triển lâu dài sau khi ra trường</li>
-                                    <li color="" style="color: rgb(0, 0, 0);">Sinh viên kế toán muốn tích lũy kinh nghiệm thực tế làm hành trang cho con đường phía trước</li>
-                                </ol>
-                            </div>
-                            <div id="HEADLINE232" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">KHÓA HỌC PHÙ HỢP VỚI</h3>
-                            </div>
-                            <a id="BUTTON229" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table" lp-action-link="SECTION174" lp-action-type="page" lp-target="" href="#e_form_submit">
-                                <span class="widget-content">ĐĂNG KÝ NGAY</span>
-                            </a>
-                            <div id="HEADLINE445" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h5 class="widget-content" lp-node="h5">Đăng ký hôm nay để được giảm
-                                    <span style="color: rgba(255, 152, 0, 1);"><?php echo round((1 - $rs->price / $rs->price_root) * 100, 2) ?>%</span> và tặng khóa học
-                                    <span style="font-weight: bold; color: rgba(255, 152, 0, 1);" color="">Yoga và Excel</span> giá không đôi chỉ
-                                    <span style="font-weight: bold;"><?php echo substr($rs->price, 0, 3); ?>K</span>
-                                </h5>
-                            </div>
-                            <div id="HEADLINE446" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h5 class="widget-content" lp-node="h5">(giá gốc <?php echo substr($rs->price_root, 0, 3); ?>K)</h5>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="HEADLINE227" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h1 class="widget-content" lp-node="h1">KHÓA HỌC THỰC HÀNH KẾ TOÁN TỔNG HỢP TRÊN PHẦN MỀM EXCEL</h1>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP370" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="LISTOP373" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 71: Hai bộ sách gối đầu giường của dân kế toán&nbsp;</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 72: Kênh học kê khai thuế không tốn phí</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 73: Những kênh giúp nâng cao, mở rộng kiến thức hiệu quả</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 74: Chiến lược trở thành kế toán thuế cho người đang làm kế toán nội bộ</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 75: Chiến lược quay lại chinh phục doanh nghiệp lớn</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 76: Chiến lược phát triển 10 năm cho kế toán mới ra trường</li>
-                        </ol>
-                    </div>
-                    <div id="BOX371" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content"></div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="HEADLINE372" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h3 class="widget-content" lp-node="h3">CHƯƠNG X: Chiến lược phát triển dành cho kế toán chưa có kinh nghiệm</h3>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP366" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="BOX367" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE368" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG XIV: Tổng kết</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="LISTOP369" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 84: Báo cáo kết quả kinh doanh nội bộ</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 85: Lời chia sẽ từ giảng viên</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP362" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="BOX363" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE364" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG XIII: Quỳ trình kế toán&nbsp;</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="LISTOP365" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 82: Quỳ trình kế toán cơ bản</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 83: Những việc quan trọng cần làm trong kỳ và cuối kỳ&nbsp;</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP358" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="BOX359" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE360" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG XII: Cách lưu hóa đơn</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="LISTOP361" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 80: Lưu hóa đơn đối với công ty lớn</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 81: Lưu hóa đơn đối với công ty vừa và nhỏ</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP354" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="BOX355" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE356" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG XI: Một số thủ thủ thuật excel liên quan</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="LISTOP357" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 77: Set vùng in</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 78: Hai cách ẩn ô có giá trị bằng Zero</li>
-                            <li color="" style="color: rgb(255, 255, 255);">&nbsp;Bài 79: Đánh số trang tự động</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP346" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="BOX347" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE348" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG IX: Thuế Thu nhập doanh nghiệp tạm tính</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="LISTOP349" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 69: Xác định số tiền thuế thu nhập doanh nghiệp tạm tính</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 70: Xác định số tiền thuế thu nhập doanh nghiệp cần tạm nộp trong kỳ</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP342" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="BOX343" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE344" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG VIII: Quy trình Kê khai và nộp thuế qua internet</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="LISTOP345" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 65: Kê khai thuế qua website của Tổng Cục thuế</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 66: Tải và cài đặt phần mềm kê khai thuế</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 67: Quy trình kê khai qua HTKK và nộp qua website của Cục thuế</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 68: Hướng dẫn Lập giấy nộp tiền và nộp thuế qua website của Cục thuế</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP338" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="BOX339" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE340" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG VII: Làm Sổ cái và sổ chi tiết</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="LISTOP341" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 58: Tổng quan về sổ cái và các bước chuẩn bị&nbsp;</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 59: Lập công thức cho tiêu thức Số tiền</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 60: Lập công thức cho tiêu thức Tài khoản đối ứng</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 61: Lập công thức cho tiêu thức Diễn giải, ngày chứng từ, số chứng từ, ngày tháng ghi sổ</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 62: Hoàn thiện sổ cái từ tháng 1 đến tháng 12</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 63: Hoàn thiện sổ cái năm</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 64: Thực hành làm sổ chi tiết tài khoản</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP334" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="BOX335" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE336" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG VI: Tờ khai Quyết toán thuế thu nhập doanh nghiệp</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="LISTOP337" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 54: Phụ lục chuyển lỗ và các phụ lục khác phần 1</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 55: Phụ lục chuyển lỗ và các phụ lục khác phần 2</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 56: Lập Tờ khai quyết toán thuế thu nhập doanh nghiệp phần 1</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 57: Lập Tờ khai quyết toán thuế thu nhập doanh nghiệp phần 2</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP330" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="BOX331" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE332" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG V: Lập và kiểm tra&nbsp;
-                                    <br>Báo cáo tài chính</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="LISTOP333" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 38: Lên Bảng cân đối tài khoản - Phần 1</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 39: Lên Bảng cân đối tài khoản - phần 2</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 40: Lên Bảng cân đối kế toán - phần Tài Sản - Phần 1</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 41: Lên Bảng cân đối kế toán - phần Tài Sản - Phần 2</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 42: Lên Bảng cân đối kế toán - phần Nguồn vốn - Phần 1</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 43: Lên Bảng cân đối kế toán - phần Nguồn vốn - Phần 2</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 44: Hướng dẫn lập bảng cân đối kế toán nâng cao - Phần 1</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 45: Hướng dẫn lập bảng cân đối kế toán nâng cao - Phần 2</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 46: Lên Báo cáo kết quả hoạt động kinh doanh - Phần 1</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 47: Lên Báo cáo kết quả hoạt động kinh doanh - Phần 2</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 48: Kiểm tra lại báo cáo kết quả hoạt động kinh doanh</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 49: Lên Báo cáo lưu chuyển tiền tệ phần 1</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 50: Lên Báo cáo lưu chuyển tiền tệ phần 2</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 51: Lên Báo cáo lưu chuyển tiền tệ phần 3&nbsp;</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 52: Thuyết minh báo cáo tài chính phần 1</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 53: Thuyết minh báo cáo tài chính phần 2</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP326" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="LISTOP329" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 28: Tổng quan về sổ Nhật ký chung</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 29: Các bước cần chuẩn bị để lên sổ Nhật ký chung</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 30: Hướng dẫn sử dụng hàm OFFSET&nbsp;</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 31: Lập công thức cho tiêu thức SỐ TIỀN NỢ</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 32: Lập công thức cho tiêu thức SỐ TIỀN CÓ</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 33: Lập công thức cho cột phụ: Mã xử lý</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 34: Lập công thức cho tiêu thức Số hiệu tài khoản&nbsp;</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 35: Lập công thức cho tiêu thức Đã ghi sổ cá</li>
-                            <li color="" style="color: rgb(255, 255, 255);">iBài 36: Lập công thức cho tiêu thức Diễn giải</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 37: Lập công thức cho tiêu thức ngày chứng từ, số hiệu chứng từ. Hoàn thiện Nhật ký chung</li>
-                        </ol>
-                    </div>
-                    <div id="BOX327" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE328" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG IV: Lên sổ Nhật ký chung</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP322" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="LISTOP325" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 12: Hướng dẫn sử dụng hàm SUMIF làm công thức kết chuyển cuối kỳ</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 13: Tổng hợp công cụ dụng cụ sang chi phí trả trước phần 1</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 14: Tổng hợp công cụ dụng cụ sang chi phí trả trước phần 2</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 15: Kết chuyển thuế môn bài vào chi phí quản lý</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 16: Kết chuyển thuế GTGT đầu vào với đầu ra</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 17: Chênh lệch tỷ giá tiền gửi có gốc ngoại tệ</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 18: Thực hành kết chuyển lãi, lỗ tỷ giá</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 19: Thực hành tổng hợp chi phí nguyên vật liệu trực tiếp phần 1</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 20: Thực hành tổng hợp chi phí nguyên vật liệu trực tiếp phần 2</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 21: Kết chuyển chi phí tiền lương vào chi phí sản xuất</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 22: Tổng hợp chi chí sản xuất kinh doanh dở dang</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 23: Xác định giá vốn</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 24: Kết chuyển doanh thu sang Xác định kết quả kinh doanh</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 25: Kết chuyển chi phí sang xác định kết quả kinh doanh</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 26: Xác định kết quả kinh doanh lãi, lỗ phần 1</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 27: Xác định kết quả kinh doanh lãi, lỗ phần 2</li>
-                        </ol>
-                    </div>
-                    <div id="BOX323" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE324" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">PHẦN III: KẾT CHUYỂN CUỐI KỲ</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP318" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="BOX319" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE320" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG II: Những bút toán cần lưu ý</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="LISTOP321" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 6: 4 Nguyên tắc cân đối khi hạch toán cần nhớ</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 7: Cơ sở hạch toán tài khoản 214; 242; 3383; 3384; 3386</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 8: Bảng lương và hạch toán tiền lương</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 9: Hạch toán kết chuyển tài khoản 4212 sang 4211</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 10: Đánh giá chênh lệch tỷ giá tài khoản tiền gửi có gốc ngoại tệ</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 11: Hạch toán tài khoản 8211</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="SECTION3" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
-                <div class="container">
-                    <div id="BOX4" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE234" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">Làm nhiều năm ở vị trí kế toán nội bộ ... ngại thay đổi</h3>
-                            </div>
-                            <div id="HEADLINE236" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">Bạn đã làm kế toán nội bộ nhiều năm nên đã quên kiến thức hạch toán, càng không biết lập và kiểm tra báo cáo tài chính, sổ sách, quyết toán cuối năm</h3>
-                            </div>
-                            <div id="HEADLINE237" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">Đã học kế toán thực hành nhưng chưa tự tay làm được báo cáo tài chính sổ sách, chưa biết kiểm tra lại nên bạn không tự tin</h3>
-                            </div>
-                            <div id="HEADLINE238" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">Nhà tuyển dụng luôn ưu tiên người đã có kinh nghiệm và bạn chưa biết cách vượt qua</h3>
-                            </div>
-                            <div id="HEADLINE239" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">Sinh viên mới ra trường thiếu kinh nghiệm thực tế</h3>
-                            </div>
-                            <div id="SHAPE241" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,234,6,1)">
-                                    <path d="M20,16V10H22V16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H16V4H8V16H20M10.91,7.08L14,10.17L20.59,3.58L22,5L14,13L9.5,8.5L10.91,7.08M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="SHAPE244" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,234,6,1)">
-                                    <path d="M20,16V10H22V16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H16V4H8V16H20M10.91,7.08L14,10.17L20.59,3.58L22,5L14,13L9.5,8.5L10.91,7.08M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="SHAPE243" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,234,6,1)">
-                                    <path d="M20,16V10H22V16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H16V4H8V16H20M10.91,7.08L14,10.17L20.59,3.58L22,5L14,13L9.5,8.5L10.91,7.08M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="SHAPE242" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,234,6,1)">
-                                    <path d="M20,16V10H22V16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H16V4H8V16H20M10.91,7.08L14,10.17L20.59,3.58L22,5L14,13L9.5,8.5L10.91,7.08M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="SHAPE240" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,234,6,1)">
-                                    <path d="M20,16V10H22V16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H16V4H8V16H20M10.91,7.08L14,10.17L20.59,3.58L22,5L14,13L9.5,8.5L10.91,7.08M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="SHAPE245" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,234,6,1)">
-                                    <path d="M20,16V10H22V16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H16V4H8V16H20M10.91,7.08L14,10.17L20.59,3.58L22,5L14,13L9.5,8.5L10.91,7.08M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="HEADLINE235" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">Bạn bế tắc, không biết bắt đầu từ đâu để trở thành&nbsp;kế toán tổng hợp
-                                    <br>kế toán thuế&nbsp;</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="IMAGE6" class="widget-element widget-snap ladi-drop" lp-type="image" lp-lang="IMAGE" lp-display="block">
-                        <div class="widget-content">
-                            <div class="lp-show-image" alt="https://static.ladipage.net/57b167c9ca57d39c18a1c57c/6687568-0-owl.png"></div>
-                            <div class="lp-show-image"></div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="HEADLINE9" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h6 class="widget-content" lp-node="h6">"Chúng tôi luôn nỗ lực hết mình để phục vụ khách hàng"</h6>
-                    </div>
-                    <div id="HEADLINE10" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h6 class="widget-content" lp-node="h6">- Hãy để chúng tôi được phục vụ bạn -</h6>
-                    </div>
-                    <div id="HEADLINE233" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h2 class="widget-content" lp-node="h2">LÝ DO BẠN CHƯA TRỞ THÀNH KẾ TOÁN TỔNG HỢP</h2>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="SECTION11" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
-                <div class="container">
-                    <div id="BOX28" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE29" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">Giảng viên đồng hành cùng bạn</h3>
-                            </div>
-                            <div id="LINE30" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
-                                <div class="widget-content">
-                                    <div class="line"></div>
-                                </div>
-                            </div>
-                            <div id="LISTOP18" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                                <ol class="widget-content">
-                                    <li>10 năm kinh nghiệm là kế toán, là kế toán tổng hợp, kế toán trưởng các công ty may mặc, bệnh viện, trường học; làm kế toán dịch vụ cho các công ty vừa và nhỏ.&nbsp;&nbsp;</li>
-                                    <li>Thành công với nhiều chương trình hướng dẫn làm kế toán trên excel miễn phí như khóa Offline Lập và kiểm tra Báo cáo tài chính và cả có phí như Thực hành làm kế toán tổng hợp trên excle&nbsp;</li>
-                                    <li>Diễn giả đồng thời là nhà tổ chức chương trình THAY ĐỔI TƯ DUY - THÀNH CÔNG VỚI NGHỀ KẾ TOÁN, giúp tạo động lực và định hướng cho kế toán trẻ</li>
-                                    <li>Chủ nhân chương trình "Kế toán trên Excel" theo thông tư 133 của ông đã được ra mắt năm 2017 và nhận được sự đánh giá cao về chuyên môn và cả tính ứng dụng của các đồng nghiệp.&nbsp;</li>
-                                </ol>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="IMAGE247" class="widget-element widget-snap ladi-drop" lp-type="image" lp-lang="IMAGE" lp-display="block">
-                        <div class="widget-content">
-                            <div class="lp-show-image" alt="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/2-1517907429.png"></div>
-                            <div class="lp-show-image"></div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="BOX248" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE249" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">CHUYÊN GIA KẾ TOÁN TỔNG HỢP</h3>
-                            </div>
-                            <div id="HEADLINE250" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">PHẠM VĂN HỌC</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="SECTION33" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
-                <div class="container">
-                    <div id="HEADLINE35" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h3 class="widget-content" lp-node="h3">Bạn học được gì từ khóa học này?</h3>
-                    </div>
-                    <div id="LINE49" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
-                        <div class="widget-content">
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                    <div id="LINE50" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
-                        <div class="widget-content">
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                    <div id="LINE51" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
-                        <div class="widget-content">
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                    <div id="LINE58" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
-                        <div class="widget-content">
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                    <div id="LINE251" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
-                        <div class="widget-content">
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                    <div id="LINE252" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
-                        <div class="widget-content">
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                    <div id="SHAPE255" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                        <div class="widget-content">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
-                            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div id="HEADLINE256" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h6 class="widget-content" lp-node="h6">Thành thạo công thức excel để lập công thức kết chuyển cuối kỳ, lên bảng cân đối tài khoản</h6>
-                    </div>
-                    <div id="HEADLINE257" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h6 class="widget-content" lp-node="h6">Thành thạo công thức excel để lên sổ cái, sổ chi tiết một cách đơn giản, chính xác nhất</h6>
-                    </div>
-                    <div id="SHAPE259" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                        <div class="widget-content">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
-                            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div id="HEADLINE39" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h6 class="widget-content" lp-node="h6">Thành thạo kỹ năng làm kế toán tổng hợp. Đặc biệt là làm kế toán trên Excel</h6>
-                    </div>
-                    <div id="SHAPE260" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                        <div class="widget-content">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
-                            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div id="HEADLINE54" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h6 class="widget-content" lp-node="h6">Biết làm kế toán trên Excel với cả 2 hình thức phổ biến là NKC và CTGS</h6>
-                    </div>
-                    <div id="SHAPE261" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                        <div class="widget-content">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
-                            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div id="SHAPE262" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                        <div class="widget-content">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
-                            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div id="HEADLINE57" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h6 class="widget-content" lp-node="h6">Tìm thấy định hướng phù hợp để nhanh chóng trở thành kế toán tổng hợp khi chưa có nhiều kinh nghiệm</h6>
-                    </div>
-                    <div id="SHAPE263" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                        <div class="widget-content">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
-                            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div id="HEADLINE62" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h6 class="widget-content" lp-node="h6">Lập và kiểm tra Báo cáo tài chính dễ dàng bằng công thức Excel đơn giản</h6>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="SECTION82" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
-                <div class="container">
-                    <div id="BOX279" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block" lp-action-link="POPUP299" lp-action-type="popup" lp-target="" href="">
-                        <div class="widget-content">
-                            <div id="HEADLINE265" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP305" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG I: Chứng từ ghi sổ</h3>
-                            </div>
-                            <div id="SHAPE281" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="SHAPE282" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="HEADLINE266" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP318" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG II: Những bút toán cần lưu ý</h3>
-                            </div>
-                            <div id="HEADLINE267" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP322" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG III: Kết chuyển cuối kỳ</h3>
-                            </div>
-                            <div id="SHAPE283" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="HEADLINE268" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP326" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG IV: Lên sổ Nhật ký chung</h3>
-                            </div>
-                            <div id="SHAPE284" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="HEADLINE269" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP330" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG V: Lập và kiểm tra Báo cáo tài chính</h3>
-                            </div>
-                            <div id="HEADLINE270" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP334" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG VI: Tờ khai Quyết toán thuế thu nhập doanh nghiệp</h3>
-                            </div>
-                            <div id="SHAPE285" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="SHAPE286" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="HEADLINE271" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP338" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG VII: Làm Sổ cái và sổ chi tiết</h3>
-                            </div>
-                            <div id="HEADLINE272" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP342" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG VIII: Quy trình Kê khai và nộp thuế qua internet</h3>
-                            </div>
-                            <div id="SHAPE288" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="SHAPE287" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="HEADLINE274" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP370" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG X: Chiến lược phát triển dành cho kế toán chưa có kinh nghiệm</h3>
-                            </div>
-                            <div id="HEADLINE273" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP346" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG IX: Thuế Thu nhập doanh nghiệp tạm tính</h3>
-                            </div>
-                            <div id="HEADLINE278" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP366" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG XIV: Tổng kết</h3>
-                            </div>
-                            <div id="HEADLINE277" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP362" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG XIII: Quỳ trình kế toán&nbsp;</h3>
-                            </div>
-                            <div id="HEADLINE276" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP358" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG XII:&nbsp; Cách lưu hóa đơn</h3>
-                            </div>
-                            <div id="SHAPE289" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="SHAPE291" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="SHAPE290" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="SHAPE292" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="SHAPE294" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="SHAPE293" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
-                                    <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="HEADLINE275" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP354" lp-action-type="popup" lp-target="" href="">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG XI: Một số thủ thủ thuật excel liên quan</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="LINE100" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
-                        <div class="widget-content">
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                    <div id="HEADLINE101" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h3 class="widget-content" lp-node="h3">LỘ TRÌNH KHÓA HỌC</h3>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="SECTION63" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
-                <div class="container">
-                    <div id="BOX386" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="PARAGRAPH387" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                                <p class="widget-content" lp-node="p"></p>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="BOX384" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content"></div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="BOX382" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="PARAGRAPH383" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                                <p class="widget-content" lp-node="p"></p>
-                            </div>
-                            <div id="PARAGRAPH375" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                                <p class="widget-content" lp-node="p">Được tư vấn, hỗ trợ nghiệp vụ kế toán sau khóa học mãi mãi qua điện thoại, email, Facebook ...&nbsp;</p>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="HEADLINE65" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h3 class="widget-content" lp-node="h3">LỢI ÍCH ĐI KÈM KHÓA HỌC</h3>
-                    </div>
-                    <div id="LINE69" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
-                        <div class="widget-content">
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                    <div id="BOX374" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="PARAGRAPH376" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                                <p class="widget-content" lp-node="p">Thực hành thực tế trên excel giúp bạn hiểu quy trình làm các báo cáo, sổ sách, hiểu bản chất các con số&nbsp;</p>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="PARAGRAPH378" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                        <p class="widget-content" lp-node="p">Có luôn File kế toán excel theo TT 200 để sử dụng vào công việc mà không phải mua thêm.&nbsp;</p>
-                    </div>
-                    <div id="PARAGRAPH377" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                        <p class="widget-content" lp-node="p">Số liệu thực hành: Số liệu thực tế 1 năm của công ty sản xuất. Và các file tham khảo liên quan</p>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="SECTION423" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
-                <div class="container">
-                    <div id="HEADLINE424" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h2 class="widget-content" lp-node="h2">KHÁCH HÀNG NÓI GÌ VỀ LAKITA</h2>
-                    </div>
-                    <div id="IMAGE441" class="widget-element widget-snap ladi-drop" lp-type="image" lp-lang="IMAGE" lp-display="block">
-                        <div class="widget-content">
-                            <div class="lp-show-image" alt="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/Apple-Mac-Computer-Screen-PNG-1513826485.png"></div>
-                            <div class="lp-show-image"></div>
-                            <div id="YOUTUBE442" class="widget-element widget-snap" lp-type="videoyoutube" lp-lang="YOUTUBE" lp-autoplay="0" lp-display="block">
-                                <iframe class="widget-content" src="https://www.youtube.com/embed/oAit5IWP-Qk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
-                                <div class="ladi-widget-overlay"></div>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="PARAGRAPH443" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                        <p class="widget-content" lp-node="p">"Chúng tôi luôn nỗ lực hết mình để làm hài lòng khách hàng"</p>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="POPUP305" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
-                <div class="container">
-                    <div class="overlay-container-popup"></div>
-                    <div id="LISTOP308" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
-                        <ol class="widget-content">
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 1: Tôi đã học kế toán thực hành như thế nào
-                                <br>
-                            </li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 2: Hướng dẫn cách thức thực hành</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 3: Hướng dẫn xây dựng Hệ thống tài khoản</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 4: Cách thức tổ chức hạch toán trên excel</li>
-                            <li color="" style="color: rgb(255, 255, 255);">Bài 5: Bí quyết giúp Bảng cân đối tài khoản luôn cân bằng</li>
-                        </ol>
-                    </div>
-                    <div id="BOX306" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE307" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h3 class="widget-content" lp-node="h3">CHƯƠNG I: CHỨNG TỪ GHI SỔ</h3>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="SECTION127" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
-                <div class="container">
-                    <div id="BOX143" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="SHAPE132" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg [removed]="" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 32 32" fill="rgba(255,255,255,1)">
-                                    <path d="M4 4v20h7v-2H6V6h12v1h2V4H4zm8 4v20h16V8H12zm2 2h12v16H14V10z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="HEADLINE134" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h4 class="widget-content" lp-node="h4">KỸ NĂNG</h4>
-                            </div>
-                            <div id="PARAGRAPH133" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                                <p class="widget-content" lp-node="p">Tự tay bạn sẽ làm được công thức kết chuyển, lên báo tài chính, sổ sách bằng công thức excel thật dễ dàng</p>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="LINE144" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
-                        <div class="widget-content">
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                    <div id="BOX151" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="SHAPE153" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
-                                    <path d="M12,11A1,1 0 0,0 11,12A1,1 0 0,0 12,13A1,1 0 0,0 13,12A1,1 0 0,0 12,11M12,16.5C9.5,16.5 7.5,14.5 7.5,12C7.5,9.5 9.5,7.5 12,7.5C14.5,7.5 16.5,9.5 16.5,12C16.5,14.5 14.5,16.5 12,16.5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="PARAGRAPH154" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                                <p class="widget-content" lp-node="p">Được hoàn tiền 100% nếu không hài lòng với bất kỳ lý do gì sau 60 ngày kể từ ngày bắt đầu học</p>
-                            </div>
-                            <div id="HEADLINE155" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h4 class="widget-content" lp-node="h4">HOÀN TIỀN NẾU KHÔNG HÀI LÒNG</h4>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="HEADLINE145" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h3 class="widget-content" lp-node="h3">CHÚNG TÔI CAM KẾT</h3>
-                    </div>
-                    <div id="BOX221" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="SHAPE222" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg [removed]="" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 32 32" fill="rgba(255,255,255,1)">
-                                    <path d="M4 4v20h7v-2H6V6h12v1h2V4H4zm8 4v20h16V8H12zm2 2h12v16H14V10z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="HEADLINE223" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h4 class="widget-content" lp-node="h4">HỖ TRỢ</h4>
-                            </div>
-                            <div id="PARAGRAPH224" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                                <p class="widget-content" lp-node="p">Hỗ trợ thắc mắc về bài học và công việc của học viên hết khả năng của mình</p>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="BOX217" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="SHAPE218" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
-                                <div class="widget-content">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
-                                    <path d="M12,11A1,1 0 0,0 11,12A1,1 0 0,0 12,13A1,1 0 0,0 13,12A1,1 0 0,0 12,11M12,16.5C9.5,16.5 7.5,14.5 7.5,12C7.5,9.5 9.5,7.5 12,7.5C14.5,7.5 16.5,9.5 16.5,12C16.5,14.5 14.5,16.5 12,16.5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div id="PARAGRAPH219" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                                <p class="widget-content" lp-node="p">Cam kết cập nhật tất cả các thông tư chính sách mới nhất cho tất cả học viên của Lakita một cách tự động hoàn toàn miễn phí</p>
-                            </div>
-                            <div id="HEADLINE220" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h4 class="widget-content" lp-node="h4">LUÔN CẬP NHẬT</h4>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <div id="SECTION174" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
-                <div class="container">
-                    <div id="BOX175" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
-                        <div class="widget-content">
-                            <div id="HEADLINE176" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h4 class="widget-content" lp-node="h4">Nhanh tay lên!
-                                    <br>Bạn muốn nhận được Ưu đãi tốt</h4>
-                            </div>
-                            <div id="GROUP177" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
-                                <div class="widget-content">
-                                    <div id="GROUP178" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block" lp-group="GROUP177">
-                                        <div class="widget-content">
-                                            <div id="BOX179" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP178" lp-display="block">
-                                                <div class="widget-content"></div>
-                                                <div class="ladi-widget-overlay"></div>
-                                            </div>
-                                            <div id="HEADLINE180" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP178" lp-display="block">
-                                                <h6 class="widget-content" lp-node="h6">NGÀY</h6>
-                                            </div>
-                                            <div id="HEADLINE181" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP178" lp-display="block">
-                                                <h6 class="widget-content" lp-node="h6">GIỜ</h6>
-                                            </div>
-                                            <div id="BOX182" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP178" lp-display="block">
-                                                <div class="widget-content"></div>
-                                                <div class="ladi-widget-overlay"></div>
-                                            </div>
-                                            <div id="BOX183" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP178" lp-display="block">
-                                                <div class="widget-content"></div>
-                                                <div class="ladi-widget-overlay"></div>
-                                            </div>
-                                            <div id="HEADLINE184" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP178" lp-display="block">
-                                                <h6 class="widget-content" lp-node="h6">GIÂY</h6>
-                                            </div>
-                                            <div id="HEADLINE185" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP178" lp-display="block">
-                                                <h6 class="widget-content" lp-node="h6">PHÚT</h6>
-                                            </div>
-                                            <div id="BOX186" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP178" lp-display="block">
-                                                <div class="widget-content"></div>
-                                                <div class="ladi-widget-overlay"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="COUNTDOWN187" class="widget-element widget-snap" lp-type="countdown" lp-group="GROUP177" lp-display="block">
-                                        <div class="widget-content">
-                                            <div>
-                                                <span class="num-day" >0</span>
-                                            </div>
-                                            <div>
-                                                <span class="num-hour" >14</span>
-                                            </div>
-                                            <div>
-                                                <span class="num-minute">2</span>
-                                            </div>
-                                            <div>
-                                                <span class="num-second">0</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="GROUP188" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
-                                <div class="widget-content">
-
-                                    <div id="FORM190" class="widget-element widget-snap" lp-type="contact_form" lp-lang="FORM" lp-vt-item="[{&quot;id&quot;:&quot;ITEM_FORM191&quot;,&quot;vt&quot;:0,&quot;name&quot;:&quot;name&quot;,&quot;valueName&quot;:&quot;name&quot;,&quot;$$hashKey&quot;:&quot;object:8880&quot;},{&quot;id&quot;:&quot;ITEM_FORM192&quot;,&quot;vt&quot;:1,&quot;name&quot;:&quot;email&quot;,&quot;valueName&quot;:&quot;email&quot;,&quot;$$hashKey&quot;:&quot;object:8881&quot;},{&quot;id&quot;:&quot;ITEM_FORM193&quot;,&quot;vt&quot;:2,&quot;name&quot;:&quot;phone&quot;,&quot;valueName&quot;:&quot;phone&quot;,&quot;$$hashKey&quot;:&quot;object:8882&quot;},{&quot;id&quot;:&quot;ITEM_FORM444&quot;,&quot;vt&quot;:3,&quot;name&quot;:&quot;street&quot;,&quot;valueName&quot;:&quot;street&quot;,&quot;$$hashKey&quot;:&quot;object:8883&quot;}]"
-                                         lp-type-form="email" lp-message-form="Cám ơn bạn đã quan tâm" lp-ss-f="[{&quot;name&quot;:&quot;name&quot;,&quot;value&quot;:&quot;name&quot;},{&quot;name&quot;:&quot;email&quot;,&quot;value&quot;:&quot;email&quot;},{&quot;name&quot;:&quot;phone&quot;,&quot;value&quot;:&quot;phone&quot;},{&quot;name&quot;:&quot;street&quot;,&quot;value&quot;:&quot;street&quot;}]"
-                                         lp-group="GROUP188" lp-display="block">
-                                        <form class="widget-content LeadPanel_form promo-panel_action e_submit e_form_submit" role="form" id="dang-ky-2" method="POST"  name="fr_register" action="<?php echo $code_ladingpage . '/'; ?>thank-you.html">
-                                            <div id="ITEM_FORM191" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
-                                                <input class="widget-content" type="text" placeholder="Họ và tên" name="name" lp-label="Họ và tên" required="required">
-                                            </div>
-                                            <div id="ITEM_FORM192" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
-                                                <input class="widget-content" type="email" placeholder="Nhập Email" name="email" lp-label="Email" required="required">
-                                            </div>
-                                            <div id="ITEM_FORM193" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
-                                                <input class="widget-content" type="tel" pattern="((\+[1-9]{1,4}[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9 \-]{6,15}?$" required="required" placeholder="Nhập Số điện thoại" name="phone" lp-label="Điện thoại">
-                                            </div>
-                                            <div id="ITEM_FORM444" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
-                                                <input class="widget-content" type="text" placeholder="Nhập địa chỉ" name="address" lp-label="Địa chỉ" lp-name-id="street" required="required">
-                                            </div>
-                                            <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
-                                            <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
-                                            <input style="background : #00aeef; color : #FFF; font-weight: bold; margin-top: 230px; cursor: pointer" id="BUTTON189" class="e_btn_submit reg_bt"  type="submit"  name="submit" value="Đăng ký ngay">
-<!--                                            <input style="background : #00aeef; color : #FFF; font-weight: bold" id="BUTTON189" class="widget-element widget-snap style-1 ladi-drop LeadPanel_action button radius e_btn_submit reg_bt" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-group="GROUP188" lp-display="table" type="submit"  name="submit" value="Đăng ký ngay">-->
-                                        </form>
-                                        <div id="e_form_submit"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ladi-widget-overlay"></div>
-                    </div>
-                    <div id="HEADLINE196" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                        <h2 class="widget-content" lp-node="h2">ĐĂNG KÝ KHÓA HỌC NGAY TIẾT KIỆM NGAY <?php echo round((1 - $rs->price / $rs->price_root) * 100, 2) ?>%</h2>
-                        <h4 class="widget-content" lp-node="h4" ><span style="text-decoration:line-through; color: rgb(255, 193, 7)"> <?php echo number_format($rs->price_root, 0, ",", "."); ?>đ</span> chỉ còn <span style="color:rgb(255, 193, 7)"><?php echo number_format($rs->price, 0, ",", "."); ?>đ</span></h4>
-                    </div>
-                    <div id="PARAGRAPH197" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                        <h6 class="widget-content" lp-node="h6">Đăng ký hôm nay để là một trong những khách hàng may mắn được tặng một
-                            <span style="color: rgb(255, 193, 7); font-style: italic;">khóa học Yoga và Excel</span> khi đăng ký tại đây!!!
-                            <br>
-                            <span style="font-style: italic;">Miễn phí giao hàng toàn quốc!!!</span>
-                        </h6>
-                    </div>
-                </div>
-                <div class="ladi-widget-overlay"></div>
-            </div>
-            <script type="text/javascript" async="" defer="" src="https://static.ladipage.net/source/ladipage.lib.1.js?v=1517991511062"></script>
-        </div>
-
-
-
-
-        <div id="fb-root"></div>
-        <script>(function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
-                    return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=315347858825221";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
-        <div class="container">
-            <div class="fb-comments" data-href="https://lakita.vn/tron-bo-thuc-hanh-ke-toan-tong-hop-tren-phan-mem-excel.html" data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
-        </div>
-        <!-- sau này 16/3/2018 thì xóa đoạn script dưới để đếm ngược hết ngày reset đếm lại từ đầu -->
+        <!-- Facebook Pixel Code -->
         <script>
-            countdown();
-            setInterval(function () {
-                countdown();
-            }, 1000);
-            function countdown() {
-                var d = new Date();
-                var r_date = 16 - d.getDate();
-                r_date = (r_hours < 10) ? '0' + r_date : r_date;
-                var r_hours = 24 - d.getHours();
-                r_hours = (r_hours < 10) ? '0' + r_hours : r_hours;
-                var r_minus = 59 - d.getMinutes();
-                r_minus = (r_minus < 10) ? '0' + r_minus : r_minus;
-                var r_seconds = 59 - d.getSeconds();
-                r_seconds = (r_seconds < 10) ? '0' + r_seconds : r_seconds;
-                $(".num-day").text(r_date);
-                $(".num-hour").text(r_hours);
-                $(".num-minute").text(r_minus);
-                $(".num-second").text(r_seconds);
-            }
+            !function (f, b, e, v, n, t, s)
+            {
+                if (f.fbq)
+                    return;
+                n = f.fbq = function () {
+                    n.callMethod ?
+                            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq)
+                    f._fbq = n;
+                n.push = n;
+                n.loaded = !0;
+                n.version = '2.0';
+                n.queue = [];
+                t = b.createElement(e);
+                t.async = !0;
+                t.src = v;
+                s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                    'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '189614121625476');
+            fbq('track', 'PageView');
         </script>
-    </body>
+        <noscript>
+    <img height="1" width="1" 
+         src="https://www.facebook.com/tr?id=189614121625476&ev=PageView
+         &noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+    <?php include_once("plugin/messenger.php") ?>
+
+    <div class="ladi-wraper-page">
+        <div id="SECTION2" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
+            <div class="container">
+                <div id="IMAGE225" class="widget-element widget-snap ladi-drop" lp-type="image" lp-lang="IMAGE" lp-display="block">
+                    <div class="widget-content">
+                        <div class="lp-show-image" alt="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/logo-1517828858.png"></div>
+                        <div class="lp-show-image"></div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="BOX226" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="LISTOP228" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                            <ol class="widget-content">
+                                <li color="" style="color: rgb(0, 0, 0);">Kế toán viên, kế toán nội bộ thực sự muốn trở thành kế toán tổng hợp</li>
+                                <li color="" style="color: rgb(0, 0, 0);">&nbsp;Kế toán đã làm nhiều năm nhưng vẫn còn làm Kế toán viên, kế toán nội bộ</li>
+                                <li color="" style="color: rgb(0, 0, 0);">&nbsp;Đã học kế toán thực hành nhưng chưa tự tay mình làm dược báo cáo tài chính, sổ sách&nbsp;</li>
+                                <li color="" style="color: rgb(0, 0, 0);">&nbsp;Kế toán, đối tượng khác muốn thành thạo kỹ năng làm kế toán trên Excel</li>
+                                <li color="" style="color: rgb(0, 0, 0);">Sinh viên kế toán cần định hướng phát triển lâu dài sau khi ra trường</li>
+                                <li color="" style="color: rgb(0, 0, 0);">Sinh viên kế toán muốn tích lũy kinh nghiệm thực tế làm hành trang cho con đường phía trước</li>
+                            </ol>
+                        </div>
+                        <div id="HEADLINE232" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">KHÓA HỌC PHÙ HỢP VỚI</h3>
+                        </div>
+                        <a id="BUTTON229" class="widget-element widget-snap style-1 ladi-drop" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-display="table" lp-action-link="SECTION174" lp-action-type="page" lp-target="" href="#e_form_submit">
+                            <span class="widget-content">ĐĂNG KÝ NGAY</span>
+                        </a>
+                        <div id="HEADLINE445" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h5 class="widget-content" lp-node="h5">Đăng ký hôm nay để được giảm
+                                <span style="color: rgba(255, 152, 0, 1);"><?php echo round((1 - $rs->price / $rs->price_root) * 100, 2) ?>%</span> và tặng khóa học
+                                <span style="font-weight: bold; color: rgba(255, 152, 0, 1);" color="">Yoga và Excel</span> giá không đôi chỉ
+                                <span style="font-weight: bold;"><?php echo substr($rs->price, 0, 3); ?>K</span>
+                            </h5>
+                        </div>
+                        <div id="HEADLINE446" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h5 class="widget-content" lp-node="h5">(giá gốc <?php echo substr($rs->price_root, 0, 3); ?>K)</h5>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="HEADLINE227" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h1 class="widget-content" lp-node="h1">KHÓA HỌC THỰC HÀNH KẾ TOÁN TỔNG HỢP TRÊN PHẦN MỀM EXCEL</h1>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP370" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="LISTOP373" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 71: Hai bộ sách gối đầu giường của dân kế toán&nbsp;</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 72: Kênh học kê khai thuế không tốn phí</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 73: Những kênh giúp nâng cao, mở rộng kiến thức hiệu quả</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 74: Chiến lược trở thành kế toán thuế cho người đang làm kế toán nội bộ</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 75: Chiến lược quay lại chinh phục doanh nghiệp lớn</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 76: Chiến lược phát triển 10 năm cho kế toán mới ra trường</li>
+                    </ol>
+                </div>
+                <div id="BOX371" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content"></div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="HEADLINE372" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h3 class="widget-content" lp-node="h3">CHƯƠNG X: Chiến lược phát triển dành cho kế toán chưa có kinh nghiệm</h3>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP366" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="BOX367" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE368" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG XIV: Tổng kết</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="LISTOP369" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 84: Báo cáo kết quả kinh doanh nội bộ</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 85: Lời chia sẽ từ giảng viên</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP362" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="BOX363" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE364" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG XIII: Quỳ trình kế toán&nbsp;</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="LISTOP365" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 82: Quỳ trình kế toán cơ bản</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 83: Những việc quan trọng cần làm trong kỳ và cuối kỳ&nbsp;</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP358" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="BOX359" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE360" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG XII: Cách lưu hóa đơn</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="LISTOP361" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 80: Lưu hóa đơn đối với công ty lớn</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 81: Lưu hóa đơn đối với công ty vừa và nhỏ</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP354" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="BOX355" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE356" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG XI: Một số thủ thủ thuật excel liên quan</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="LISTOP357" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 77: Set vùng in</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 78: Hai cách ẩn ô có giá trị bằng Zero</li>
+                        <li color="" style="color: rgb(255, 255, 255);">&nbsp;Bài 79: Đánh số trang tự động</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP346" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="BOX347" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE348" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG IX: Thuế Thu nhập doanh nghiệp tạm tính</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="LISTOP349" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 69: Xác định số tiền thuế thu nhập doanh nghiệp tạm tính</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 70: Xác định số tiền thuế thu nhập doanh nghiệp cần tạm nộp trong kỳ</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP342" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="BOX343" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE344" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG VIII: Quy trình Kê khai và nộp thuế qua internet</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="LISTOP345" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 65: Kê khai thuế qua website của Tổng Cục thuế</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 66: Tải và cài đặt phần mềm kê khai thuế</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 67: Quy trình kê khai qua HTKK và nộp qua website của Cục thuế</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 68: Hướng dẫn Lập giấy nộp tiền và nộp thuế qua website của Cục thuế</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP338" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="BOX339" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE340" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG VII: Làm Sổ cái và sổ chi tiết</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="LISTOP341" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 58: Tổng quan về sổ cái và các bước chuẩn bị&nbsp;</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 59: Lập công thức cho tiêu thức Số tiền</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 60: Lập công thức cho tiêu thức Tài khoản đối ứng</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 61: Lập công thức cho tiêu thức Diễn giải, ngày chứng từ, số chứng từ, ngày tháng ghi sổ</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 62: Hoàn thiện sổ cái từ tháng 1 đến tháng 12</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 63: Hoàn thiện sổ cái năm</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 64: Thực hành làm sổ chi tiết tài khoản</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP334" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="BOX335" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE336" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG VI: Tờ khai Quyết toán thuế thu nhập doanh nghiệp</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="LISTOP337" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 54: Phụ lục chuyển lỗ và các phụ lục khác phần 1</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 55: Phụ lục chuyển lỗ và các phụ lục khác phần 2</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 56: Lập Tờ khai quyết toán thuế thu nhập doanh nghiệp phần 1</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 57: Lập Tờ khai quyết toán thuế thu nhập doanh nghiệp phần 2</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP330" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="BOX331" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE332" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG V: Lập và kiểm tra&nbsp;
+                                <br>Báo cáo tài chính</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="LISTOP333" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 38: Lên Bảng cân đối tài khoản - Phần 1</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 39: Lên Bảng cân đối tài khoản - phần 2</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 40: Lên Bảng cân đối kế toán - phần Tài Sản - Phần 1</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 41: Lên Bảng cân đối kế toán - phần Tài Sản - Phần 2</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 42: Lên Bảng cân đối kế toán - phần Nguồn vốn - Phần 1</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 43: Lên Bảng cân đối kế toán - phần Nguồn vốn - Phần 2</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 44: Hướng dẫn lập bảng cân đối kế toán nâng cao - Phần 1</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 45: Hướng dẫn lập bảng cân đối kế toán nâng cao - Phần 2</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 46: Lên Báo cáo kết quả hoạt động kinh doanh - Phần 1</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 47: Lên Báo cáo kết quả hoạt động kinh doanh - Phần 2</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 48: Kiểm tra lại báo cáo kết quả hoạt động kinh doanh</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 49: Lên Báo cáo lưu chuyển tiền tệ phần 1</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 50: Lên Báo cáo lưu chuyển tiền tệ phần 2</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 51: Lên Báo cáo lưu chuyển tiền tệ phần 3&nbsp;</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 52: Thuyết minh báo cáo tài chính phần 1</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 53: Thuyết minh báo cáo tài chính phần 2</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP326" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="LISTOP329" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 28: Tổng quan về sổ Nhật ký chung</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 29: Các bước cần chuẩn bị để lên sổ Nhật ký chung</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 30: Hướng dẫn sử dụng hàm OFFSET&nbsp;</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 31: Lập công thức cho tiêu thức SỐ TIỀN NỢ</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 32: Lập công thức cho tiêu thức SỐ TIỀN CÓ</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 33: Lập công thức cho cột phụ: Mã xử lý</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 34: Lập công thức cho tiêu thức Số hiệu tài khoản&nbsp;</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 35: Lập công thức cho tiêu thức Đã ghi sổ cá</li>
+                        <li color="" style="color: rgb(255, 255, 255);">iBài 36: Lập công thức cho tiêu thức Diễn giải</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 37: Lập công thức cho tiêu thức ngày chứng từ, số hiệu chứng từ. Hoàn thiện Nhật ký chung</li>
+                    </ol>
+                </div>
+                <div id="BOX327" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE328" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG IV: Lên sổ Nhật ký chung</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP322" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="LISTOP325" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 12: Hướng dẫn sử dụng hàm SUMIF làm công thức kết chuyển cuối kỳ</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 13: Tổng hợp công cụ dụng cụ sang chi phí trả trước phần 1</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 14: Tổng hợp công cụ dụng cụ sang chi phí trả trước phần 2</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 15: Kết chuyển thuế môn bài vào chi phí quản lý</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 16: Kết chuyển thuế GTGT đầu vào với đầu ra</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 17: Chênh lệch tỷ giá tiền gửi có gốc ngoại tệ</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 18: Thực hành kết chuyển lãi, lỗ tỷ giá</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 19: Thực hành tổng hợp chi phí nguyên vật liệu trực tiếp phần 1</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 20: Thực hành tổng hợp chi phí nguyên vật liệu trực tiếp phần 2</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 21: Kết chuyển chi phí tiền lương vào chi phí sản xuất</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 22: Tổng hợp chi chí sản xuất kinh doanh dở dang</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 23: Xác định giá vốn</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 24: Kết chuyển doanh thu sang Xác định kết quả kinh doanh</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 25: Kết chuyển chi phí sang xác định kết quả kinh doanh</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 26: Xác định kết quả kinh doanh lãi, lỗ phần 1</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 27: Xác định kết quả kinh doanh lãi, lỗ phần 2</li>
+                    </ol>
+                </div>
+                <div id="BOX323" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE324" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">PHẦN III: KẾT CHUYỂN CUỐI KỲ</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP318" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="BOX319" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE320" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG II: Những bút toán cần lưu ý</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="LISTOP321" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 6: 4 Nguyên tắc cân đối khi hạch toán cần nhớ</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 7: Cơ sở hạch toán tài khoản 214; 242; 3383; 3384; 3386</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 8: Bảng lương và hạch toán tiền lương</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 9: Hạch toán kết chuyển tài khoản 4212 sang 4211</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 10: Đánh giá chênh lệch tỷ giá tài khoản tiền gửi có gốc ngoại tệ</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 11: Hạch toán tài khoản 8211</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="SECTION3" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
+            <div class="container">
+                <div id="BOX4" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE234" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">Làm nhiều năm ở vị trí kế toán nội bộ ... ngại thay đổi</h3>
+                        </div>
+                        <div id="HEADLINE236" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">Bạn đã làm kế toán nội bộ nhiều năm nên đã quên kiến thức hạch toán, càng không biết lập và kiểm tra báo cáo tài chính, sổ sách, quyết toán cuối năm</h3>
+                        </div>
+                        <div id="HEADLINE237" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">Đã học kế toán thực hành nhưng chưa tự tay làm được báo cáo tài chính sổ sách, chưa biết kiểm tra lại nên bạn không tự tin</h3>
+                        </div>
+                        <div id="HEADLINE238" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">Nhà tuyển dụng luôn ưu tiên người đã có kinh nghiệm và bạn chưa biết cách vượt qua</h3>
+                        </div>
+                        <div id="HEADLINE239" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">Sinh viên mới ra trường thiếu kinh nghiệm thực tế</h3>
+                        </div>
+                        <div id="SHAPE241" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,234,6,1)">
+                                <path d="M20,16V10H22V16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H16V4H8V16H20M10.91,7.08L14,10.17L20.59,3.58L22,5L14,13L9.5,8.5L10.91,7.08M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="SHAPE244" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,234,6,1)">
+                                <path d="M20,16V10H22V16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H16V4H8V16H20M10.91,7.08L14,10.17L20.59,3.58L22,5L14,13L9.5,8.5L10.91,7.08M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="SHAPE243" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,234,6,1)">
+                                <path d="M20,16V10H22V16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H16V4H8V16H20M10.91,7.08L14,10.17L20.59,3.58L22,5L14,13L9.5,8.5L10.91,7.08M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="SHAPE242" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,234,6,1)">
+                                <path d="M20,16V10H22V16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H16V4H8V16H20M10.91,7.08L14,10.17L20.59,3.58L22,5L14,13L9.5,8.5L10.91,7.08M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="SHAPE240" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,234,6,1)">
+                                <path d="M20,16V10H22V16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H16V4H8V16H20M10.91,7.08L14,10.17L20.59,3.58L22,5L14,13L9.5,8.5L10.91,7.08M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="SHAPE245" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,234,6,1)">
+                                <path d="M20,16V10H22V16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H16V4H8V16H20M10.91,7.08L14,10.17L20.59,3.58L22,5L14,13L9.5,8.5L10.91,7.08M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="HEADLINE235" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">Bạn bế tắc, không biết bắt đầu từ đâu để trở thành&nbsp;kế toán tổng hợp
+                                <br>kế toán thuế&nbsp;</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="IMAGE6" class="widget-element widget-snap ladi-drop" lp-type="image" lp-lang="IMAGE" lp-display="block">
+                    <div class="widget-content">
+                        <div class="lp-show-image" alt="https://static.ladipage.net/57b167c9ca57d39c18a1c57c/6687568-0-owl.png"></div>
+                        <div class="lp-show-image"></div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="HEADLINE9" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h6 class="widget-content" lp-node="h6">"Chúng tôi luôn nỗ lực hết mình để phục vụ khách hàng"</h6>
+                </div>
+                <div id="HEADLINE10" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h6 class="widget-content" lp-node="h6">- Hãy để chúng tôi được phục vụ bạn -</h6>
+                </div>
+                <div id="HEADLINE233" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h2 class="widget-content" lp-node="h2">LÝ DO BẠN CHƯA TRỞ THÀNH KẾ TOÁN TỔNG HỢP</h2>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="SECTION11" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
+            <div class="container">
+                <div id="BOX28" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE29" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">Giảng viên đồng hành cùng bạn</h3>
+                        </div>
+                        <div id="LINE30" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
+                            <div class="widget-content">
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div id="LISTOP18" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                            <ol class="widget-content">
+                                <li>10 năm kinh nghiệm là kế toán, là kế toán tổng hợp, kế toán trưởng các công ty may mặc, bệnh viện, trường học; làm kế toán dịch vụ cho các công ty vừa và nhỏ.&nbsp;&nbsp;</li>
+                                <li>Thành công với nhiều chương trình hướng dẫn làm kế toán trên excel miễn phí như khóa Offline Lập và kiểm tra Báo cáo tài chính và cả có phí như Thực hành làm kế toán tổng hợp trên excle&nbsp;</li>
+                                <li>Diễn giả đồng thời là nhà tổ chức chương trình THAY ĐỔI TƯ DUY - THÀNH CÔNG VỚI NGHỀ KẾ TOÁN, giúp tạo động lực và định hướng cho kế toán trẻ</li>
+                                <li>Chủ nhân chương trình "Kế toán trên Excel" theo thông tư 133 của ông đã được ra mắt năm 2017 và nhận được sự đánh giá cao về chuyên môn và cả tính ứng dụng của các đồng nghiệp.&nbsp;</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="IMAGE247" class="widget-element widget-snap ladi-drop" lp-type="image" lp-lang="IMAGE" lp-display="block">
+                    <div class="widget-content">
+                        <div class="lp-show-image" alt="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/2-1517907429.png"></div>
+                        <div class="lp-show-image"></div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="BOX248" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE249" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">CHUYÊN GIA KẾ TOÁN TỔNG HỢP</h3>
+                        </div>
+                        <div id="HEADLINE250" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">PHẠM VĂN HỌC</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="SECTION33" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
+            <div class="container">
+                <div id="HEADLINE35" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h3 class="widget-content" lp-node="h3">Bạn học được gì từ khóa học này?</h3>
+                </div>
+                <div id="LINE49" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
+                    <div class="widget-content">
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div id="LINE50" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
+                    <div class="widget-content">
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div id="LINE51" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
+                    <div class="widget-content">
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div id="LINE58" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
+                    <div class="widget-content">
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div id="LINE251" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
+                    <div class="widget-content">
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div id="LINE252" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
+                    <div class="widget-content">
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div id="SHAPE255" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                    <div class="widget-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                        <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="HEADLINE256" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h6 class="widget-content" lp-node="h6">Thành thạo công thức excel để lập công thức kết chuyển cuối kỳ, lên bảng cân đối tài khoản</h6>
+                </div>
+                <div id="HEADLINE257" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h6 class="widget-content" lp-node="h6">Thành thạo công thức excel để lên sổ cái, sổ chi tiết một cách đơn giản, chính xác nhất</h6>
+                </div>
+                <div id="SHAPE259" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                    <div class="widget-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                        <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="HEADLINE39" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h6 class="widget-content" lp-node="h6">Thành thạo kỹ năng làm kế toán tổng hợp. Đặc biệt là làm kế toán trên Excel</h6>
+                </div>
+                <div id="SHAPE260" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                    <div class="widget-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                        <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="HEADLINE54" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h6 class="widget-content" lp-node="h6">Biết làm kế toán trên Excel với cả 2 hình thức phổ biến là NKC và CTGS</h6>
+                </div>
+                <div id="SHAPE261" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                    <div class="widget-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                        <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="SHAPE262" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                    <div class="widget-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                        <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="HEADLINE57" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h6 class="widget-content" lp-node="h6">Tìm thấy định hướng phù hợp để nhanh chóng trở thành kế toán tổng hợp khi chưa có nhiều kinh nghiệm</h6>
+                </div>
+                <div id="SHAPE263" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                    <div class="widget-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                        <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div id="HEADLINE62" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h6 class="widget-content" lp-node="h6">Lập và kiểm tra Báo cáo tài chính dễ dàng bằng công thức Excel đơn giản</h6>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="SECTION82" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
+            <div class="container">
+                <div id="BOX279" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block" lp-action-link="POPUP299" lp-action-type="popup" lp-target="" href="">
+                    <div class="widget-content">
+                        <div id="HEADLINE265" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP305" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG I: Chứng từ ghi sổ</h3>
+                        </div>
+                        <div id="SHAPE281" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="SHAPE282" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="HEADLINE266" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP318" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG II: Những bút toán cần lưu ý</h3>
+                        </div>
+                        <div id="HEADLINE267" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP322" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG III: Kết chuyển cuối kỳ</h3>
+                        </div>
+                        <div id="SHAPE283" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="HEADLINE268" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP326" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG IV: Lên sổ Nhật ký chung</h3>
+                        </div>
+                        <div id="SHAPE284" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="HEADLINE269" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP330" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG V: Lập và kiểm tra Báo cáo tài chính</h3>
+                        </div>
+                        <div id="HEADLINE270" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP334" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG VI: Tờ khai Quyết toán thuế thu nhập doanh nghiệp</h3>
+                        </div>
+                        <div id="SHAPE285" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="SHAPE286" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="HEADLINE271" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP338" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG VII: Làm Sổ cái và sổ chi tiết</h3>
+                        </div>
+                        <div id="HEADLINE272" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP342" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG VIII: Quy trình Kê khai và nộp thuế qua internet</h3>
+                        </div>
+                        <div id="SHAPE288" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="SHAPE287" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="HEADLINE274" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP370" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG X: Chiến lược phát triển dành cho kế toán chưa có kinh nghiệm</h3>
+                        </div>
+                        <div id="HEADLINE273" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP346" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG IX: Thuế Thu nhập doanh nghiệp tạm tính</h3>
+                        </div>
+                        <div id="HEADLINE278" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP366" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG XIV: Tổng kết</h3>
+                        </div>
+                        <div id="HEADLINE277" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP362" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG XIII: Quỳ trình kế toán&nbsp;</h3>
+                        </div>
+                        <div id="HEADLINE276" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP358" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG XII:&nbsp; Cách lưu hóa đơn</h3>
+                        </div>
+                        <div id="SHAPE289" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="SHAPE291" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="SHAPE290" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="SHAPE292" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="SHAPE294" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="SHAPE293" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(243,225,33,1)">
+                                <path d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="HEADLINE275" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block" lp-action-link="POPUP354" lp-action-type="popup" lp-target="" href="">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG XI: Một số thủ thủ thuật excel liên quan</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="LINE100" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
+                    <div class="widget-content">
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div id="HEADLINE101" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h3 class="widget-content" lp-node="h3">LỘ TRÌNH KHÓA HỌC</h3>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="SECTION63" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
+            <div class="container">
+                <div id="BOX386" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="PARAGRAPH387" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
+                            <p class="widget-content" lp-node="p"></p>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="BOX384" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content"></div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="BOX382" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="PARAGRAPH383" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
+                            <p class="widget-content" lp-node="p"></p>
+                        </div>
+                        <div id="PARAGRAPH375" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
+                            <p class="widget-content" lp-node="p">Được tư vấn, hỗ trợ nghiệp vụ kế toán sau khóa học mãi mãi qua điện thoại, email, Facebook ...&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="HEADLINE65" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h3 class="widget-content" lp-node="h3">LỢI ÍCH ĐI KÈM KHÓA HỌC</h3>
+                </div>
+                <div id="LINE69" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
+                    <div class="widget-content">
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div id="BOX374" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="PARAGRAPH376" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
+                            <p class="widget-content" lp-node="p">Thực hành thực tế trên excel giúp bạn hiểu quy trình làm các báo cáo, sổ sách, hiểu bản chất các con số&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="PARAGRAPH378" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
+                    <p class="widget-content" lp-node="p">Có luôn File kế toán excel theo TT 200 để sử dụng vào công việc mà không phải mua thêm.&nbsp;</p>
+                </div>
+                <div id="PARAGRAPH377" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
+                    <p class="widget-content" lp-node="p">Số liệu thực hành: Số liệu thực tế 1 năm của công ty sản xuất. Và các file tham khảo liên quan</p>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="SECTION423" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
+            <div class="container">
+                <div id="HEADLINE424" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h2 class="widget-content" lp-node="h2">KHÁCH HÀNG NÓI GÌ VỀ LAKITA</h2>
+                </div>
+                <div id="IMAGE441" class="widget-element widget-snap ladi-drop" lp-type="image" lp-lang="IMAGE" lp-display="block">
+                    <div class="widget-content">
+                        <div class="lp-show-image" alt="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/Apple-Mac-Computer-Screen-PNG-1513826485.png"></div>
+                        <div class="lp-show-image"></div>
+                        <div id="YOUTUBE442" class="widget-element widget-snap" lp-type="videoyoutube" lp-lang="YOUTUBE" lp-autoplay="0" lp-display="block">
+                            <iframe class="widget-content" src="https://www.youtube.com/embed/oAit5IWP-Qk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+                            <div class="ladi-widget-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="PARAGRAPH443" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
+                    <p class="widget-content" lp-node="p">"Chúng tôi luôn nỗ lực hết mình để làm hài lòng khách hàng"</p>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="POPUP305" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-popup="true" lp-display="block" style="display: none;">
+            <div class="container">
+                <div class="overlay-container-popup"></div>
+                <div id="LISTOP308" class="widget-element widget-snap widget-dragg" lp-type="listop" lp-editor="true" lp-lang="LISTOP" lp-display="block">
+                    <ol class="widget-content">
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 1: Tôi đã học kế toán thực hành như thế nào
+                            <br>
+                        </li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 2: Hướng dẫn cách thức thực hành</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 3: Hướng dẫn xây dựng Hệ thống tài khoản</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 4: Cách thức tổ chức hạch toán trên excel</li>
+                        <li color="" style="color: rgb(255, 255, 255);">Bài 5: Bí quyết giúp Bảng cân đối tài khoản luôn cân bằng</li>
+                    </ol>
+                </div>
+                <div id="BOX306" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE307" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h3 class="widget-content" lp-node="h3">CHƯƠNG I: CHỨNG TỪ GHI SỔ</h3>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="SECTION127" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
+            <div class="container">
+                <div id="BOX143" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="SHAPE132" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg [removed]="" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 32 32" fill="rgba(255,255,255,1)">
+                                <path d="M4 4v20h7v-2H6V6h12v1h2V4H4zm8 4v20h16V8H12zm2 2h12v16H14V10z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="HEADLINE134" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h4 class="widget-content" lp-node="h4">KỸ NĂNG</h4>
+                        </div>
+                        <div id="PARAGRAPH133" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
+                            <p class="widget-content" lp-node="p">Tự tay bạn sẽ làm được công thức kết chuyển, lên báo tài chính, sổ sách bằng công thức excel thật dễ dàng</p>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="LINE144" class="widget-element widget-snap" lp-type="line" lp-lang="LINE" lp-display="block">
+                    <div class="widget-content">
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div id="BOX151" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="SHAPE153" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                                <path d="M12,11A1,1 0 0,0 11,12A1,1 0 0,0 12,13A1,1 0 0,0 13,12A1,1 0 0,0 12,11M12,16.5C9.5,16.5 7.5,14.5 7.5,12C7.5,9.5 9.5,7.5 12,7.5C14.5,7.5 16.5,9.5 16.5,12C16.5,14.5 14.5,16.5 12,16.5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="PARAGRAPH154" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
+                            <p class="widget-content" lp-node="p">Được hoàn tiền 100% nếu không hài lòng với bất kỳ lý do gì sau 60 ngày kể từ ngày bắt đầu học</p>
+                        </div>
+                        <div id="HEADLINE155" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h4 class="widget-content" lp-node="h4">HOÀN TIỀN NẾU KHÔNG HÀI LÒNG</h4>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="HEADLINE145" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h3 class="widget-content" lp-node="h3">CHÚNG TÔI CAM KẾT</h3>
+                </div>
+                <div id="BOX221" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="SHAPE222" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg [removed]="" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 32 32" fill="rgba(255,255,255,1)">
+                                <path d="M4 4v20h7v-2H6V6h12v1h2V4H4zm8 4v20h16V8H12zm2 2h12v16H14V10z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="HEADLINE223" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h4 class="widget-content" lp-node="h4">HỖ TRỢ</h4>
+                        </div>
+                        <div id="PARAGRAPH224" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
+                            <p class="widget-content" lp-node="p">Hỗ trợ thắc mắc về bài học và công việc của học viên hết khả năng của mình</p>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="BOX217" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="SHAPE218" class="widget-element widget-snap" lp-type="shape" lp-lang="SHAPE" lp-display="block">
+                            <div class="widget-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 24 24" fill="rgba(255,255,255,1)">
+                                <path d="M12,11A1,1 0 0,0 11,12A1,1 0 0,0 12,13A1,1 0 0,0 13,12A1,1 0 0,0 12,11M12,16.5C9.5,16.5 7.5,14.5 7.5,12C7.5,9.5 9.5,7.5 12,7.5C14.5,7.5 16.5,9.5 16.5,12C16.5,14.5 14.5,16.5 12,16.5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div id="PARAGRAPH219" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
+                            <p class="widget-content" lp-node="p">Cam kết cập nhật tất cả các thông tư chính sách mới nhất cho tất cả học viên của Lakita một cách tự động hoàn toàn miễn phí</p>
+                        </div>
+                        <div id="HEADLINE220" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h4 class="widget-content" lp-node="h4">LUÔN CẬP NHẬT</h4>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <div id="SECTION174" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
+            <div class="container">
+                <div id="BOX175" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
+                    <div class="widget-content">
+                        <div id="HEADLINE176" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                            <h4 class="widget-content" lp-node="h4">Nhanh tay lên!
+                                <br>Bạn muốn nhận được Ưu đãi tốt</h4>
+                        </div>
+                        <div id="GROUP177" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
+                            <div class="widget-content">
+                                <div id="GROUP178" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block" lp-group="GROUP177">
+                                    <div class="widget-content">
+                                        <div id="BOX179" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP178" lp-display="block">
+                                            <div class="widget-content"></div>
+                                            <div class="ladi-widget-overlay"></div>
+                                        </div>
+                                        <div id="HEADLINE180" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP178" lp-display="block">
+                                            <h6 class="widget-content" lp-node="h6">NGÀY</h6>
+                                        </div>
+                                        <div id="HEADLINE181" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP178" lp-display="block">
+                                            <h6 class="widget-content" lp-node="h6">GIỜ</h6>
+                                        </div>
+                                        <div id="BOX182" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP178" lp-display="block">
+                                            <div class="widget-content"></div>
+                                            <div class="ladi-widget-overlay"></div>
+                                        </div>
+                                        <div id="BOX183" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP178" lp-display="block">
+                                            <div class="widget-content"></div>
+                                            <div class="ladi-widget-overlay"></div>
+                                        </div>
+                                        <div id="HEADLINE184" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP178" lp-display="block">
+                                            <h6 class="widget-content" lp-node="h6">GIÂY</h6>
+                                        </div>
+                                        <div id="HEADLINE185" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-group="GROUP178" lp-display="block">
+                                            <h6 class="widget-content" lp-node="h6">PHÚT</h6>
+                                        </div>
+                                        <div id="BOX186" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP178" lp-display="block">
+                                            <div class="widget-content"></div>
+                                            <div class="ladi-widget-overlay"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="COUNTDOWN187" class="widget-element widget-snap" lp-type="countdown" lp-group="GROUP177" lp-display="block">
+                                    <div class="widget-content">
+                                        <div>
+                                            <span class="num-day" >0</span>
+                                        </div>
+                                        <div>
+                                            <span class="num-hour" >14</span>
+                                        </div>
+                                        <div>
+                                            <span class="num-minute">2</span>
+                                        </div>
+                                        <div>
+                                            <span class="num-second">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="GROUP188" class="widget-element widget-snap widget-group" lp-type="widget_group" lp-lang="GROUP" lp-display="block">
+                            <div class="widget-content">
+
+                                <div id="FORM190" class="widget-element widget-snap" lp-type="contact_form" lp-lang="FORM" lp-vt-item="[{&quot;id&quot;:&quot;ITEM_FORM191&quot;,&quot;vt&quot;:0,&quot;name&quot;:&quot;name&quot;,&quot;valueName&quot;:&quot;name&quot;,&quot;$$hashKey&quot;:&quot;object:8880&quot;},{&quot;id&quot;:&quot;ITEM_FORM192&quot;,&quot;vt&quot;:1,&quot;name&quot;:&quot;email&quot;,&quot;valueName&quot;:&quot;email&quot;,&quot;$$hashKey&quot;:&quot;object:8881&quot;},{&quot;id&quot;:&quot;ITEM_FORM193&quot;,&quot;vt&quot;:2,&quot;name&quot;:&quot;phone&quot;,&quot;valueName&quot;:&quot;phone&quot;,&quot;$$hashKey&quot;:&quot;object:8882&quot;},{&quot;id&quot;:&quot;ITEM_FORM444&quot;,&quot;vt&quot;:3,&quot;name&quot;:&quot;street&quot;,&quot;valueName&quot;:&quot;street&quot;,&quot;$$hashKey&quot;:&quot;object:8883&quot;}]"
+                                     lp-type-form="email" lp-message-form="Cám ơn bạn đã quan tâm" lp-ss-f="[{&quot;name&quot;:&quot;name&quot;,&quot;value&quot;:&quot;name&quot;},{&quot;name&quot;:&quot;email&quot;,&quot;value&quot;:&quot;email&quot;},{&quot;name&quot;:&quot;phone&quot;,&quot;value&quot;:&quot;phone&quot;},{&quot;name&quot;:&quot;street&quot;,&quot;value&quot;:&quot;street&quot;}]"
+                                     lp-group="GROUP188" lp-display="block">
+                                    <form class="widget-content LeadPanel_form promo-panel_action e_submit e_form_submit" role="form" id="dang-ky-2" method="POST"  name="fr_register" action="<?php echo $code_ladingpage . '/'; ?>thank-you.html">
+                                        <div id="ITEM_FORM191" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
+                                            <input class="widget-content" type="text" placeholder="Họ và tên" name="name" lp-label="Họ và tên" required="required">
+                                        </div>
+                                        <div id="ITEM_FORM192" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
+                                            <input class="widget-content" type="email" placeholder="Nhập Email" name="email" lp-label="Email" required="required">
+                                        </div>
+                                        <div id="ITEM_FORM193" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
+                                            <input class="widget-content" type="tel" pattern="((\+[1-9]{1,4}[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9 \-]{6,15}?$" required="required" placeholder="Nhập Số điện thoại" name="phone" lp-label="Điện thoại">
+                                        </div>
+                                        <div id="ITEM_FORM444" class="widget-element widget-snap widget-dragg widget-item-child" lp-type="item_form" lp-lang="ITEM_FORM" lp-display="block">
+                                            <input class="widget-content" type="text" placeholder="Nhập địa chỉ" name="address" lp-label="Địa chỉ" lp-name-id="street" required="required">
+                                        </div>
+                                        <input type="hidden" value="<?php echo (isset($_GET['link'])) ? $_GET['link'] : 0; ?>" name="link_id" />
+                                        <input type="hidden" value="<?php echo $code_ladingpage; ?>" name="code_landingpage" />
+                                        <input style="background : #00aeef; color : #FFF; font-weight: bold; margin-top: 230px; cursor: pointer" id="BUTTON189" class="e_btn_submit reg_bt"  type="submit"  name="submit" value="Đăng ký ngay">
+<!--                                            <input style="background : #00aeef; color : #FFF; font-weight: bold" id="BUTTON189" class="widget-element widget-snap style-1 ladi-drop LeadPanel_action button radius e_btn_submit reg_bt" lp-type="button" lp-lang="BUTTON" lp-background="button" lp-group="GROUP188" lp-display="table" type="submit"  name="submit" value="Đăng ký ngay">-->
+                                    </form>
+                                    <div id="e_form_submit"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ladi-widget-overlay"></div>
+                </div>
+                <div id="HEADLINE196" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
+                    <h2 class="widget-content" lp-node="h2">ĐĂNG KÝ KHÓA HỌC NGAY TIẾT KIỆM NGAY <?php echo round((1 - $rs->price / $rs->price_root) * 100, 2) ?>%</h2>
+                    <h4 class="widget-content" lp-node="h4" ><span style="text-decoration:line-through; color: rgb(255, 193, 7)"> <?php echo number_format($rs->price_root, 0, ",", "."); ?>đ</span> chỉ còn <span style="color:rgb(255, 193, 7)"><?php echo number_format($rs->price, 0, ",", "."); ?>đ</span></h4>
+                </div>
+                <div id="PARAGRAPH197" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
+                    <h6 class="widget-content" lp-node="h6">Đăng ký hôm nay để là một trong những khách hàng may mắn được tặng một
+                        <span style="color: rgb(255, 193, 7); font-style: italic;">khóa học Yoga và Excel</span> khi đăng ký tại đây!!!
+                        <br>
+                        <span style="font-style: italic;">Miễn phí giao hàng toàn quốc!!!</span>
+                    </h6>
+                </div>
+            </div>
+            <div class="ladi-widget-overlay"></div>
+        </div>
+        <script type="text/javascript" async="" defer="" src="https://static.ladipage.net/source/ladipage.lib.1.js?v=1517991511062"></script>
+    </div>
+
+
+
+
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id))
+        return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=315347858825221";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="container">
+        <div class="fb-comments" data-href="https://lakita.vn/tron-bo-thuc-hanh-ke-toan-tong-hop-tren-phan-mem-excel.html" data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
+    </div>
+    <!-- sau này 16/3/2018 thì xóa đoạn script dưới để đếm ngược hết ngày reset đếm lại từ đầu -->
+    <script>
+        countdown();
+        setInterval(function () {
+            countdown();
+        }, 1000);
+        function countdown() {
+            var d = new Date();
+            var r_date = 16 - d.getDate();
+            r_date = (r_hours < 10) ? '0' + r_date : r_date;
+            var r_hours = 24 - d.getHours();
+            r_hours = (r_hours < 10) ? '0' + r_hours : r_hours;
+            var r_minus = 59 - d.getMinutes();
+            r_minus = (r_minus < 10) ? '0' + r_minus : r_minus;
+            var r_seconds = 59 - d.getSeconds();
+            r_seconds = (r_seconds < 10) ? '0' + r_seconds : r_seconds;
+            $(".num-day").text(r_date);
+            $(".num-hour").text(r_hours);
+            $(".num-minute").text(r_minus);
+            $(".num-second").text(r_seconds);
+        }
+    </script>
+</body>
 
 </html>

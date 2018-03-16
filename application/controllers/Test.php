@@ -119,5 +119,7 @@ class Test extends CI_Controller {
         $this->load->view('template', $data);
         // $this->load->view('test/index');
     }
+    
+    
 
 }
