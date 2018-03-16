@@ -191,9 +191,9 @@ class Home extends MY_Controller {
             else if ($sub_flag == 4) {
                 $curr = current_url();       
                 $uri = substr($curr, strlen(base_url()));
-                $token = $this->session->userdata('token_video');
                 redirect('http://video.lakita.vn/' . $uri . '?token=' . $token);
                 //redirect('http://thanhloc.com/lakita-video/' . $uri . '?token=' . $token);
+
                 echo $uri;
                 die;
 
