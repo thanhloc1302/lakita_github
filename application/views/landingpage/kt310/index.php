@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta property="fb:admins" content="100004021107387"/>
+        <meta property="fb:app_id" content="162078224495583" />
         <title>KT310</title>
         <script src="<?php echo base_url() ?>public/kt310/js/jquery.min.js" type="text/javascript" ></script>
         <script src="<?php echo base_url() ?>public/kt310/js/bootstrap.min.js" type="text/javascript"></script>
@@ -46,15 +48,13 @@
 </script>
 <body>
     <div id="fb-root"></div>
-    <script>(function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id))
-                return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=162078224495583&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 
 
@@ -389,6 +389,6 @@
             $(this).css('display', 'none');
         });
     </script>
-    <div class="fb-comments" data-href="https://lakita.vn/" data-width="100%" data-numposts="5"></div>
+    <div class="fb-comments" data-href="<?php echo current_url(); ?>" data-width="100%" data-numposts="5"></div>
 </body>
 </html>

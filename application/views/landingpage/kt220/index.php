@@ -17,8 +17,8 @@ $rs = json_decode($result);
         <title>KHÓA HỌC KẾ TOÁN CHO NGƯỜI MỚI BẮT ĐẦU</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="fb:admins" content="100001432238036"/>
-        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="fb:admins" content="100004021107387"/>
+        <meta property="fb:app_id" content="162078224495583" />
         <meta property="og:type"   content="website" /> 
         <meta property="og:url" content="https://lakita.vn/ke-toan-cho-nguoi-moi-bat-dau.html" />
         <meta property="og:title" content="KHÓA HỌC KẾ TOÁN CHO NGƯỜI MỚI BẮT ĐẦU - lakita.vn" />
@@ -55,21 +55,19 @@ $rs = json_decode($result);
             ladiViewport();
         </script>
         <?php $this->load->view('landingpage/kt220/css'); ?>
-        <?php include_once("plugin/analyticstracking.php") ?>
+        <?php include_once("plugin/analyticstracking.php"); ?>
     </head>
 
     <body>
         <div id="fb-root"></div>
-        <script>(function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
-                    return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=315347858825221";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
-                <?php include_once("plugin/messenger.php") ?>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=162078224495583&autoLogAppEvents=1';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+                <?php include_once("plugin/messenger.php"); ?>
         <div class="ladi-wraper-page">
             <div id="SECTION499" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
                 <div class="container">

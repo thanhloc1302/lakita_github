@@ -9,8 +9,8 @@ and open the template in the editor.
         <title>KHÓA HỌC QUYẾT TOÁN THUẾ TỪ A-Z</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="fb:admins" content="100001432238036"/>
-        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="fb:admins" content="100004021107387"/>
+        <meta property="fb:app_id" content="162078224495583" />
         <meta property="og:type"   content="website" /> 
         <meta property="og:url" content="https://lakita.vn/quyet-toan-thue-tu-a-den-z.html" />
         <meta property="og:title" content="KHÓA HỌC QUYẾT TOÁN THUẾ TỪ A-Z - lakita.vn" />

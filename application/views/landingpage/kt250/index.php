@@ -51,8 +51,8 @@ $rs = json_decode($result);
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="fb:admins" content="100001432238036"/>
-        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="fb:admins" content="100004021107387"/>
+        <meta property="fb:app_id" content="162078224495583" />
         <meta property="og:type"   content="website" />
         <meta property="og:url" content="https://lakita.vn/combo-qua-khung-tet-nguyen-dan.html" />
         <meta property="og:title" content="KHÓA HỌC THỰC HÀNH KẾ TOÁN TỔNG HỢP TRÊN PHẦN MỀM EXCEL" />
@@ -8891,7 +8891,7 @@ $rs = json_decode($result);
 </head>
 
 <body>
-    <?php include_once("plugin/messenger.php") ?>
+    <?php include_once("plugin/messenger.php"); ?>
 
     <div class="ladi-wraper-page">
         <div id="SECTION2" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">
@@ -9935,16 +9935,13 @@ $rs = json_decode($result);
 
 
     <div id="fb-root"></div>
-    <script>(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id))
-        return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=315347858825221";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-    </script>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=162078224495583&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <div class="container">
         <div class="fb-comments" data-href="https://lakita.vn/tron-bo-thuc-hanh-ke-toan-tong-hop-tren-phan-mem-excel.html" data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
     </div>
