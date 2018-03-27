@@ -54,7 +54,7 @@ $rs = json_decode($result);
         <meta property="fb:admins" content="100004021107387"/>
         <meta property="fb:app_id" content="162078224495583" />
         <meta property="og:type"   content="website" />
-        <meta property="og:url" content="https://lakita.vn/combo-qua-khung-tet-nguyen-dan.html" />
+        <meta property="og:url" content="https://lakita.vn/tron-bo-thuc-hanh-ke-toan-tong-hop-tren-phan-mem-excel.html" />
         <meta property="og:title" content="KHÓA HỌC THỰC HÀNH KẾ TOÁN TỔNG HỢP TRÊN PHẦN MỀM EXCEL" />
         <meta property="og:image" content="https://lakita.vn/data/source/courses/360x260/5f09062860a4b078b885d98539897b3e-1513246709.jpg" />
         <meta property="og:description" content="THỰC HÀNH KẾ TOÁN TỔNG HỢP TRÊN PHẦN MỀM EXCEL" />
