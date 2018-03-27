@@ -1004,14 +1004,14 @@ $rs = json_decode($result);
                             <div id="BOX368" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP370" lp-display="block">
                                 <div class="widget-content">
                                     <div id="HEADLINE706" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                        <h3 class="widget-content" lp-node="h3">1.195.000</h3> </div>
+                                        <h3 class="widget-content" lp-node="h3"><?php echo number_format($rs->price_root, 0, ",", ".") ?></h3> </div>
                                 </div>
                                 <div class="ladi-widget-overlay"></div>
                             </div>
                             <div id="BOX369" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-group="GROUP370" lp-display="block">
                                 <div class="widget-content">
                                     <div id="HEADLINE705" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                        <h3 class="widget-content" lp-node="h3">545.000</h3> </div>
+                                        <h3 class="widget-content" lp-node="h3"><?php echo number_format($rs->price, 0, ",", ".") ?></h3> </div>
                                 </div>
                                 <div class="ladi-widget-overlay"></div>
                             </div>

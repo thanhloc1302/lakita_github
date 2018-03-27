@@ -65,7 +65,7 @@
                             foreach ($all_learn[$key] as $key2 => $lvalue) {
                                 ?>
                                 <li id="scroll<?php echo $lvalue['sort']; ?>" class="list-group-item">
-                                    <a href="<?php echo base_url() . $lvalue['slug'] . '-4' . $lvalue['id']; ?>.html" 
+                                    <a target="_blank" href="<?php echo base_url() . $lvalue['slug'] . '-4' . $lvalue['id']; ?>.html" 
                                        title="<?php echo $lvalue['name']; ?>"><?php
                                            if (!isset($lvalue['learn_status'])) {
                                                echo "<i class='fa fa-circle-o'></i>";
