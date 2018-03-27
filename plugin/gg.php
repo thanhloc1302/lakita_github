@@ -4,8 +4,8 @@
 require_once 'vendor/autoload.php';
  
 // Lấy những giá trị này từ https://console.google.com
-$client_id = '125422840079-ars8uilref93d7jaic148nkqm41vao9u.apps.googleusercontent.com'; 
-$client_secret = 'opRXahuLdKivgXU_utim6G42';
+$client_id = '1098022716278-7a587t0qenrd33fvlo7vovusphh76938.apps.googleusercontent.com'; 
+$client_secret = 'EXhx4415VG92yoOTU0wxLuUA';
 //$redirect_uri = 'https://lakita.vn/plugin/gg.php';
 $redirect_uri = 'https://lakita.vn/plugin/gg.php';
 

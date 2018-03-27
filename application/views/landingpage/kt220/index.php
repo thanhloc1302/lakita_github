@@ -60,6 +60,7 @@ $rs = json_decode($result);
 
     <body>
         <div id="fb-root"></div>
+
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
@@ -211,14 +212,14 @@ $rs = json_decode($result);
                     <div id="BOX655" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
                         <div class="widget-content">
                             <div id="HEADLINE656" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h5 class="widget-content" lp-node="h5">NGƯỜI KHÔNG CÓ KIẾN THỨC KẾ TOÁN MUỐN HỌC ĐỂ LÀM ĐƯỢC CÔNG VIÊC KẾ TOÁN</h5> </div>
+                                <h5 class="widget-content" lp-node="h5">NGƯỜI KHÔNG CÓ KIẾN THỨC KẾ TOÁN MUỐN HỌC ĐỂ LÀM ĐƯỢC CÔNG VIỆC KẾ TOÁN</h5> </div>
                         </div>
                         <div class="ladi-widget-overlay"></div>
                     </div>
                     <div id="BOX657" class="widget-element widget-snap ladi-drop" lp-type="box" lp-lang="BOX" lp-display="block">
                         <div class="widget-content">
                             <div id="HEADLINE658" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
-                                <h5 class="widget-content" lp-node="h5">MUỐN HỆ THỐNG KIỆN THỨC KẾ TOÁN CĂN BẢN</h5> </div>
+                                <h5 class="widget-content" lp-node="h5">MUỐN HỆ THỐNG KIẾN THỨC KẾ TOÁN CĂN BẢN</h5> </div>
                         </div>
                         <div class="ladi-widget-overlay"></div>
                     </div>
@@ -390,9 +391,12 @@ $rs = json_decode($result);
                     <div id="HEADLINE785" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                         <h3 class="widget-content" lp-node="h3">THÔNG TIN GIẢNG VIÊN</h3> </div>
                     <div id="IMAGE786" class="widget-element widget-snap ladi-drop" lp-type="image" lp-lang="IMAGE" lp-display="block">
-                        <div class="widget-content">
+                        <div class="widget-content" style="margin-top:-70px">
                             <div class="lp-show-image" alt="https://static.ladipage.net/5a28c4f8c3f6592b3acabec8/2-1513766663.png"></div>
                             <div class="lp-show-image"></div>
+                        </div>
+                        <div class="widget-content">
+                            <h2 style="font-size: 25px; margin-top: 10px; color: #FFF; text-align: center"> Giảng viên : Phạm Thị Nhung </h1>
                         </div>
                         <div class="ladi-widget-overlay"></div>
                     </div>
@@ -827,7 +831,7 @@ $rs = json_decode($result);
                                 </div>
                             </div>
                             <div id="PARAGRAPH900" class="widget-element widget-snap" lp-type="textparagraph" lp-editor="true" lp-lang="PARAGRAPH" lp-display="block">
-                                <h5 class="widget-content" lp-node="h5">Học online chỉ còn <?php echo substr($rs->price, 0, strlen($rs->price) - 3); ?>K khi đăng ký trước ngày <?php echo date('d/m/Y');?></h5> </div>
+                                <h5 class="widget-content" lp-node="h5">Học online chỉ còn <?php echo substr($rs->price, 0, strlen($rs->price) - 3); ?>K khi đăng ký trước ngày <?php echo date('d/m/Y'); ?></h5> </div>
                             <div id="HEADLINE901" class="widget-element widget-snap" lp-type="textinline" lp-editor="true" lp-lang="HEADLINE" lp-display="block">
                                 <h2 class="widget-content" lp-node="h2">NHANH TAY LÊN !</h2> </div>
                         </div>
