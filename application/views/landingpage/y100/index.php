@@ -48,8 +48,8 @@ $rs = json_decode($result);
             ;
             ladiViewport();
         </script> 
-        <meta property="fb:admins" content="100001432238036"/>
-        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="fb:admins" content="100004021107387"/>
+        <meta property="fb:app_id" content="162078224495583" />
         <meta property="og:type"   content="website" /> 
         <meta property="og:title" content="Yoga dành cho người làm văn phòng" />
         <meta property="og:url" content="https://lakita.vn/yoga-danh-cho-nguoi-lam-van-phong.html" />
@@ -57,19 +57,17 @@ $rs = json_decode($result);
         <meta property="og:description" content="Hỗ trợ điều trị và phòng tránh những vấn đề về sức khỏe và tinh thần thường gặp cho người làm việc văn phòng." />
         <meta name="format-detection" content="telephone=no" />
         <?php $this->load->view('landingpage/y100/css'); ?>
-        <?php include_once("plugin/analyticstracking.php") ?>
+        <?php include_once("plugin/analyticstracking.php"); ?>
     </head>
     <body>
         <div id="fb-root"></div>
-        <script>(function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
-                    return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=315347858825221";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=162078224495583&autoLogAppEvents=1';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
         <div class="ladi-wraper-page">
 
             <div id="SECTION340" class="widget-section ladi-drop" lp-type="widget_section" lp-widget="widget" lp-lang="SECTION" lp-display="block">

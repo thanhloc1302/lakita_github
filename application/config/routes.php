@@ -6,7 +6,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-$route['quantriketoan'] = 'landingpage/show/1';
 $route['bao-hiem-xa-hoi-tien-luong-thue-thu-nhap-ca-nhan-2018.html'] = 'landingpage/show/bh100';
 $route['ky-thuat-quyet-toan-thue.html'] = 'landingpage/show/kt800';
 $route['quyet-toan-thue-tu-a-den-z.html'] = 'landingpage/show/kt210';
@@ -32,7 +31,7 @@ $route['ke-toan-danh-cho-giam-doc.html'] = 'landingpage/show/kt1202';
 $route['bi-quyet-lam-chu-excel-2017.html'] = 'landingpage/show/e100';
 $route['excel-tu-a-den-z.html'] = 'landingpage/show/e400';
 $route['combo-ke-toan-excel-van-phong-2017.html'] = 'landingpage/show/cb110';
-$route['combo-qua-khung-dip-giang-sinh.html'] = 'landingpage/show/combo-noel';
+$route['combo-qua-khung-dip-giang-sinh.html'] = 'landingpage/show/combogiangsinh';
 $route['quan-tri-tai-chinh-ke-toan.html'] = 'landingpage/show/kt120';
 $route['yoga-danh-cho-nguoi-lam-van-phong.html'] = 'landingpage/show/y100';
 $route['yoga-danh-cho-nguoi-lam-van-phong-2.html'] = 'landingpage/show/y1002';

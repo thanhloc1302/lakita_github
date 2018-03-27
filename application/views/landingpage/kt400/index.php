@@ -16,8 +16,8 @@ $rs = json_decode($result);
         <title>TRỌN BỘ HƯỚNG DẪN LẬP BÁO CÁO TÀI CHÍNH NĂM 2017 - lakita.vn</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta property="fb:admins" content="100001432238036"/>
-        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="fb:admins" content="100004021107387"/>
+        <meta property="fb:app_id" content="162078224495583" />
         <meta property="og:type"   content="website" /> 
         <meta property="og:url" content="https://lakita.vn/lap-bao-cao-tai-chinh-2017.html" />
         <meta property="og:title" content="Trọn bộ hướng dẫn lập báo cáo tài chính năm 2017" />
@@ -42,7 +42,7 @@ $rs = json_decode($result);
         <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/styles.css?ver=<?php echo _VER_CACHED_ ?>" />
         <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/media.css?ver=<?php echo _VER_CACHED_ ?>" />
         <link rel ="stylesheet" type="text/css" href="<?php echo base_url(); ?>public/kt400/define.css?ver=<?php echo _VER_CACHED_ ?>" />
-        <?php include_once("plugin/analyticstracking.php") ?>
+        <?php include_once("plugin/analyticstracking.php"); ?>
         <!-- Facebook Pixel Code -->
         <script>
             !function (f, b, e, v, n, t, s)
@@ -87,16 +87,13 @@ $rs = json_decode($result);
 <body style="overflow-x: hidden">
 
     <div id="fb-root"></div>
-    <script>(function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id))
-                return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=315347858825221";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=162078224495583&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <header>
         <nav class="navbar">
             <div class="container-fluid nav-menu">

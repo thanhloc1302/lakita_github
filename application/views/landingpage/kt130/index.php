@@ -9,8 +9,8 @@ and open the template in the editor.
         <title>HƯỚNG DẪN LẬP BCTC HỢP LÝ VÀ PHÂN TÍCH CÁC CHỈ SỐ HỖ TRỢ DỰ THẦU, VAY VỐN NGÂN HÀNG</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="fb:admins" content="100001432238036"/>
-        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="fb:admins" content="100004021107387"/>
+        <meta property="fb:app_id" content="162078224495583" />
         <meta property="og:type"   content="website" /> 
         <meta property="og:url" content="<?php echo current_url(); ?>" />
         <meta property="og:title" content="Hướng dẫn lập báo cáo tài chính hợ lý và phân tích các chỉ số hỗ trợ dự thầu, vay vốn ngân hàng" />

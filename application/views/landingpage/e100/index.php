@@ -17,8 +17,8 @@ $rs = json_decode($result);
         <title>Lakita - Bí quyết làm chủ Excel</title>
         <meta name="description" content="description">
         <meta name="author" content="Coralix Themes">
-        <meta property="fb:admins" content="100001432238036"/>
-        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="fb:admins" content="100004021107387"/>
+        <meta property="fb:app_id" content="162078224495583" />
         <meta property="og:type"   content="website" /> 
         <meta property="og:url" content="https://lakita.vn/bi-quyet-lam-chu-excel-2017.html" />
         <meta property="og:title" content="Bí quyết làm chủ Excel" />
@@ -109,20 +109,18 @@ $rs = json_decode($result);
     <script>
         fbq('track', 'CompleteRegistration');
     </script>
-<?php include_once("plugin/analyticstracking.php") ?>
+<?php include_once("plugin/analyticstracking.php"); ?>
 <body>
 
-      <div id="fb-root"></div>
-        <script>(function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
-                    return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=315347858825221";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
-                <?php include_once("plugin/messenger.php") ?>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=162078224495583&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <?php include_once("plugin/messenger.php"); ?>
     <header class="nav-down">
         <!-- Top Bar -->
         <div class="top">

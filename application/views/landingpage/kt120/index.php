@@ -9,8 +9,8 @@ and open the template in the editor.
         <title>Khóa học đào tạo kiến thức kiểm tra kế toán dành cho giám đốc doanh nghiệp</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="fb:admins" content="100001432238036"/>
-        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="fb:admins" content="100004021107387"/>
+        <meta property="fb:app_id" content="162078224495583" />
         <meta property="og:type"   content="website" /> 
         <meta property="og:url" content="<?php echo current_url(); ?>" />
         <meta property="og:title" content="Kế toán dành cho giám đốc và các nhà quản lý" />

@@ -16,6 +16,8 @@ $rs = json_decode($result);
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width , initial-scale=1" />
+        <meta property="fb:admins" content="100004021107387"/>
+        <meta property="fb:app_id" content="162078224495583" />
         <title>Kế toán cho giám đốc</title>
         <link rel="icon" href="https://lakita.vn/data/source/setting/favicon.png" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -57,6 +59,14 @@ var google_remarketing_only = false;
 <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/836926464/?label=uWw8CMzZvnQQgPiJjwM&amp;guid=ON&amp;script=0"/>
 </div>
 </noscript>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=162078224495583&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
         <header>
             <div class="menu hidden-xs">
                 <div class="section-inner">
@@ -658,7 +668,15 @@ var google_remarketing_only = false;
                 </div>
             </div>
         </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-xs-12">
+                    <div class="fb-comments" data-href="<?php echo current_url(); ?>" data-width="100%" data-numposts="10" data-order-by="reverse_time"></div>
+                </div>
+            </div>
+        </div>
         <footer>
+
             <!-- Nav Bar -->
             <script type="text/javascript">
                 function scrollToAnchor(aid) {

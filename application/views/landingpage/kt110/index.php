@@ -9,8 +9,8 @@ and open the template in the editor.
         <title>KHÓA HỌC CÁCH XÁC ĐỊNH CHI PHÍ HỢP LÝ THEO CHÍNH SÁCH THUẾ MỚI, CÔNG CỤ BẢO VỆ CHI PHÍ VÀ KỸ NĂNG GIẢI TRÌNH THANH TRA KIỂM TRA THUẾ</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="fb:admins" content="100001432238036"/>
-        <meta property="fb:app_id" content="315347858825221" />
+        <meta property="fb:admins" content="100004021107387"/>
+        <meta property="fb:app_id" content="162078224495583" />
         <meta property="og:type"   content="website" /> 
         <meta property="og:url" content="https://lakita.vn/cach-xac-dinh-chi-phi-hop-ly.html" />
         <meta property="og:title" content="Cách xác định chi phí hợp lý theo chính sách thuế mới, công cụ bảo vệ chi phí và kỹ năng giải trình thanh tra kiểm tra thuế" />
